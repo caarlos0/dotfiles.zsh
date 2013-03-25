@@ -18,6 +18,7 @@ alias gco='git checkout'
 alias gb='git branch'
 alias ga='git add'
 alias gaa='git add -A'
+alias gcm='git commit -m'
 alias gcam='git commit -a -m'
 alias gs='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
