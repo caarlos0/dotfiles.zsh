@@ -1,4 +1,26 @@
 {
-	"font_size": 12.0,
-	"theme": "Soda Dark.sublime-theme"
+	"color_scheme": "Packages/User/Espresso Soda.tmTheme",
+	"drawWhiteSpace": true,
+	"ensure_newline_at_eof_on_save": true,
+	"font_size": 12,
+	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"matchBracketsAngle": true,
+	"matchBracketsBraces": true,
+	"matchBracketsSquare": true,
+	"rulers":
+	[
+		80, // most langs
+		120 // java
+	],
+	"show_minimap": false,
+	"soda_folder_icons": true,
+	"tab_size": 2,
+	"theme": "Soda Light.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+	"vintage_start_in_command_mode": true
 }
