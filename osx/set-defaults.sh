@@ -39,6 +39,11 @@ defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 # Set sidebar icon size to small
 defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
 
+# Finder: show status bar
+defaults write com.apple.finder ShowStatusBar -bool true
+ 
+# Finder: show path bar
+defaults write com.apple.finder ShowPathbar -bool true
 
 # Set up Safari for development.
 defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
