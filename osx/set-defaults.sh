@@ -33,6 +33,13 @@ defaults write com.apple.dock wvous-bl-modifier -int 0
 # Hide Safari's bookmark bar.
 defaults write com.apple.Safari ShowFavoritesBar -bool false
 
+# Expand save panel by default
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+
+# Set sidebar icon size to small
+defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
+
+
 # Set up Safari for development.
 defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
 defaults write com.apple.Safari IncludeDevelopMenu -bool true
