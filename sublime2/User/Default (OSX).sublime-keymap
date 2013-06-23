@@ -1,2 +1,8 @@
 [
+  { "keys": ["ctrl+super+r"], "command": "reveal_in_side_bar" },
+  { "keys": ["super+v"], "command": "paste_and_indent" },
+  { "keys": ["super+shift+v"], "command": "paste" },
+  { "keys": ["ctrl+t"], "command": "side_bar_new_file2" },
+  { "keys": ["f2"], "command": "side_bar_rename" },
+  { "keys": ["ctrl+alt+f"], "command": "side_bar_find_files_path_containing" }
 ]
