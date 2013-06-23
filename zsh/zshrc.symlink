@@ -39,5 +39,3 @@ done
 
 unset config_files
 
-export PATH="/Applications/play:${PATH}"
-
