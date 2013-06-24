@@ -42,7 +42,7 @@ defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
 
 # Finder: show status bar
 defaults write com.apple.finder ShowStatusBar -bool true
- 
+
 # Finder: show path bar
 defaults write com.apple.finder ShowPathbar -bool true
 
@@ -92,10 +92,30 @@ defaults write org.m0k.transmission WarningLegal -bool false
 
 
 #
+# SizeUP
+#
+
+# Start SizeUp at login
+defaults write com.irradiatedsoftware.SizeUp StartAtLogin -bool true
+
+# Don’t show the preferences window on next start
+defaults write com.irradiatedsoftware.SizeUp ShowPrefsOnNextStart -bool false
+
+#
+# Mail
+#
+
+# Add the keyboard shortcut ⌘ + Enter to send an email in Mail.app
+defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" "@\\U21a9"
+
+
+
+#
 # Kill related apps
 #
 
-for app in "Dashboard" "Dock" "Finder" "Safari" "Transmission"; do
+for app in "Dashboard" "Dock" "Finder" "Safari" "Transmission" \
+"SizeUp" "Mail"; do
 	killall "$app" > /dev/null 2>&1
 done
 
