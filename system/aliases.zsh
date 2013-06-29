@@ -8,3 +8,6 @@ then
   alias ll="gls -l --color"
   alias la='gls -A --color'
 fi
+
+alias grep='grep --color=auto'
+alias lsopenports='lsof -i -n -P'
