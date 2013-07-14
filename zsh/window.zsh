@@ -12,7 +12,7 @@ function title() {
     print -Pn "\ek$a:$3\e\\" # screen title (in ^A")
     ;;
   xterm*|rxvt)
-    print -Pn "\e]2;$2\a" # plain xterm title ($3 for pwd)
+    print -Pn "\e]2;$3\a" # plain xterm title ($3 for pwd)
     ;;
   esac
 }
