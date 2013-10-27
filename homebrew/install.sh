@@ -13,6 +13,10 @@ then
 fi
 
 # Install homebrew packages
-brew install grc coreutils spark
+brew install grc coreutils spark z ack
+brew tap phinze/homebrew-cask
+brew install brew-cask
+brew cask install caffeine dropbox iterm2 sequel-pro virtualbox vagrant \
+  the-unarchiver vlc google-chrome skype transmission
 
 exit 0
