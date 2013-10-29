@@ -2,7 +2,9 @@
 	"installed_packages":
 	[
 		"Better CoffeeScript",
+		"DashDoc",
 		"LESS",
+		"Ruby Slim",
 		"Sass",
 		"ScalaWorksheet",
 		"SideBarEnhancements",
