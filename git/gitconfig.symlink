@@ -4,7 +4,7 @@
 [hub]
         protocol = https
 [user]
-        name = Carlos Alexandro Becker
+	name = Carlos Alexandro Becker
         email = caarlos0@gmail.com
 [credential]
         helper = osxkeychain
@@ -40,6 +40,7 @@
 	helper = osxkeychain
 [core]
         whitespace = trailing-space,space-before-tab
+	precomposeunicode = true
 [apply]
         whitespace = fix
 [url "https://github.com/"]
