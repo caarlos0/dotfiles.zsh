@@ -2,9 +2,11 @@
 	"installed_packages":
 	[
 		"Better CoffeeScript",
+		"CTags",
 		"DashDoc",
 		"LESS",
 		"LESS-build",
+		"Ruby 1.9 Hash Converter",
 		"Ruby Slim",
 		"Sass",
 		"ScalaWorksheet",
