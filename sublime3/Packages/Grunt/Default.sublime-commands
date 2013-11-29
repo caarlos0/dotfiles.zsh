@@ -1,0 +1,24 @@
+[
+    {
+        "caption": "Grunt",
+        "command": "grunt"
+    },
+    {
+        "caption": "Grunt: Kill Running Tasks",
+        "command": "grunt_kill"
+    },
+    {
+        "caption": "Preferences: Grunt - Settings – Default",
+        "command": "open_file", "args":
+        {
+            "file": "${packages}/Grunt/SublimeGrunt.sublime-settings"
+        }
+    },
+    {
+        "caption": "Preferences: Grunt - Settings – User",
+        "command": "open_file", "args":
+        {
+            "file": "${packages}/User/SublimeGrunt.sublime-settings"
+        }
+    }
+]

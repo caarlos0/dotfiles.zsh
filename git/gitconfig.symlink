@@ -5,7 +5,7 @@
         protocol = https
 [user]
 	name = Carlos Alexandro Becker
-        email = caarlos0@gmail.com
+	email = caarlos0@gmail.com
 [credential]
         helper = osxkeychain
 [alias]
@@ -20,7 +20,7 @@
         branch = auto
         ui = true
 [core]
-        excludesfile = ~/.gitignore
+	excludesfile = /Users/carlos/.gitignore
         editor = vim
 [apply]
         whitespace = nowarn
@@ -45,3 +45,9 @@
         whitespace = fix
 [url "https://github.com/"]
         insteadOf = "gh:"
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

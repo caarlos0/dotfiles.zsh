@@ -1,9 +1,15 @@
 {
 	"installed_packages":
 	[
+		"AngularJS",
 		"Better CoffeeScript",
+		"Bootstrap 3 Jade Snippets",
 		"CTags",
 		"DashDoc",
+		"Dracula Color Scheme",
+		"Grunt",
+		"Jade",
+		"Jade Snippets",
 		"LESS",
 		"LESS-build",
 		"Ruby 1.9 Hash Converter",
