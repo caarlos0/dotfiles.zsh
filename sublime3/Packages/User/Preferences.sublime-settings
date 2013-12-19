@@ -6,6 +6,8 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
+		"BeautifyRuby",
+		"ScalaWorksheet",
 		"Vintage"
 	],
 	"matchBracketsAngle": true,

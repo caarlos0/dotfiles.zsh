@@ -6,3 +6,7 @@ export PATH="/Users/carlos/Downloads/adt-bundle-mac-x86_64-20130522/sdk/platform
 
 export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 
+
+export JAVA_HOME=$(/usr/libexec/java_home)
+
+

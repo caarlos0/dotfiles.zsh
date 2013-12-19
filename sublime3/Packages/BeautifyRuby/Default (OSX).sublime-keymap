@@ -1,0 +1,4 @@
+[{
+    "keys": ["ctrl+super+k"],
+    "command": "beautify_ruby"
+}]

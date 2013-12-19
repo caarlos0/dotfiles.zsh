@@ -2,6 +2,7 @@
 	"installed_packages":
 	[
 		"AngularJS",
+		"BeautifyRuby",
 		"Better CoffeeScript",
 		"Bootstrap 3 Jade Snippets",
 		"CTags",
@@ -12,6 +13,8 @@
 		"Jade Snippets",
 		"LESS",
 		"LESS-build",
+		"Rails Developer Snippets",
+		"Rails Migrations List",
 		"Ruby 1.9 Hash Converter",
 		"Ruby Slim",
 		"Sass",

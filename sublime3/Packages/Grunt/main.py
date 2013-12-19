@@ -1,14 +1,13 @@
 import sublime
 import sublime_plugin
 import os
-import re
 import subprocess
 import json
+from hashlib import sha1 
 
 package_name = "Grunt"
 package_url = "https://github.com/tvooo/sublime-grunt"
-
-regex_json = re.compile(r'EXPOSE_BEGIN(.*)EXPOSE_END', re.M | re.I | re.DOTALL)
+cache_file_name = ".sublime-grunt.cache"
 
 
 class GruntRunner(object):
@@ -17,6 +16,17 @@ class GruntRunner(object):
         self.list_gruntfiles()
 
     def list_tasks(self):
+        try:
+            self.callcount = 0
+            json_result = self.fetch_json()
+        except TypeError as e:
+            self.window.new_file().run_command("grunt_error", {"message": "SublimeGrunt: JSON is malformed\n\n%s\n\n" % e})
+            sublime.error_message("Could not read available tasks\n")
+        else:
+            tasks = [[name, task['info'], task['meta']['info']] for name, task in json_result.items()]
+            return sorted(tasks, key=lambda task: task)
+
+    def run_expose(self):
         package_path = os.path.join(sublime.packages_path(), package_name)
 
         args = r'grunt --no-color --tasks "%s" expose' % package_path
@@ -28,25 +38,33 @@ class GruntRunner(object):
             sublime.error_message("\"grunt\" command not found.\nPlease add Grunt's location to your PATH.")
             return
 
-        stdout = stdout.decode('utf8')
-        if stderr:
-            stderr = stderr.decode('utf8')
-        else:
-            stderr = u''
-        json_match = regex_json.search(stdout)
+        return self.fetch_json()
 
-        if json_match is not None:
-            try:
-                json_result = json.loads(json_match.groups()[0])
-            except TypeError:
-                self.window.new_file().run_command("grunt_error", {"message": "SublimeGrunt: JSON is malformed\n\n" + json_match.groups()[0]})
-                sublime.error_message("Could not read available tasks\n")
-            else:
-                tasks = [[name, task['info'], task['meta']['info']] for name, task in json_result.items()]
-                return sorted(tasks, key=lambda task: task)
-        else:
-            self.window.new_file().run_command("grunt_error", {"message": "SublimeGrunt: Could not expose available tasks\n\n" + stdout + "\n\n" + stderr})
-            sublime.error_message("Could not expose available tasks\n")
+    def fetch_json(self):
+        jsonfilename = os.path.join(self.wd, cache_file_name)
+        gruntfile = os.path.join(self.wd, "Gruntfile.js")
+
+        if os.path.exists(jsonfilename):
+           filesha1 = hashfile(gruntfile)
+
+           json_data=open(jsonfilename)
+
+           try:
+                data = json.load(json_data)
+
+                if data[gruntfile]["sha1"] == filesha1:
+                    return data[gruntfile]["tasks"]
+           finally:
+               json_data.close()
+        self.callcount += 1
+
+        if self.callcount == 1: 
+            return self.run_expose()
+
+        if data is None:
+            raise TypeError("Could not expose gruntfile")
+
+        raise TypeError("Sha1 from grunt expose ({0}) is not equal to calculated ({1})".format(data[gruntfile]["sha1"], filesha1))
 
     def list_gruntfiles(self):
         self.grunt_files = []
@@ -76,6 +94,15 @@ class GruntRunner(object):
             path = get_env_path()
             exec_args = {'cmd': "grunt --no-color " + self.tasks[task][0], 'shell': True, 'working_dir': self.wd, 'path': path}
             self.window.run_command("exec", exec_args)
+
+
+def hashfile(filename):
+    with open(filename, mode='rb') as f:
+        filehash = sha1()
+        content = f.read();
+        filehash.update(str("blob " + str(len(content)) + "\0").encode('UTF-8'))
+        filehash.update(content)
+        return filehash.hexdigest()
 
 
 def get_env_path():
