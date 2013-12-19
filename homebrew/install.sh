@@ -18,7 +18,9 @@ brew tap phinze/homebrew-cask
 brew install brew-cask
 brew cask install caffeine dropbox iterm2 sequel-pro virtualbox vagrant \
   the-unarchiver vlc google-chrome skype transmission dash cloudapp \
-  postgres sizeup rdio github disk-inventory-x tvshows subtitle-master \
-  sourcetree kindle pgadmin3 lastfm
+  sizeup rdio github disk-inventory-x tvshows subtitle-master eclipse-ide \
+  sourcetree kindle pgadmin3 lastfm alfred google-drive
+# postgres formulae was deleted for now due to some issues.. waiting...
+brew cask alfred
 
 exit 0
