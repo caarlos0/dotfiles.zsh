@@ -18,6 +18,7 @@ brew tap phinze/homebrew-cask
 brew install brew-cask
 brew cask install caffeine dropbox iterm2 sequel-pro virtualbox vagrant \
   the-unarchiver vlc google-chrome skype transmission dash cloudapp \
-  postgres divvy rdio github disk-inventory-x
+  postgres sizeup rdio github disk-inventory-x tvshows subtitle-master \
+  sourcetree kindle pgadmin3 lastfm
 
 exit 0
