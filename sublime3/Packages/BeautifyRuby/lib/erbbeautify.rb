@@ -2,8 +2,15 @@ require 'rubygems'
 require 'htmlbeautifier'
 
 def beautify(input, output)
-  HtmlBeautifier::Beautifier.new(output).scan(input)
-  output << "\n"
+  dest = ""
+  beautifier = HtmlBeautifier::Beautifier.new(dest)
+  begin
+    beautifier.scan(input)
+    dest << "\n"
+  rescue
+    dest = ""
+  end
+  output.write(dest)
 end
 
 beautify $stdin.read, $stdout
