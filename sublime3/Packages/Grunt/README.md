@@ -37,6 +37,7 @@ You may override your `PATH` environment variable as follows:
 
 ## Releases
 
+* 1.0 Jumping to 1.0 to support ST versioning with tags
 * 0.3 Grunt tasks are cached
 * 0.2 Rewrite; supports Grunt >= 0.4, tasks can be killed (for example the `watch` task)
 * 0.1 Initial release
