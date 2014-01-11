@@ -13,7 +13,7 @@ then
 fi
 
 # Install homebrew packages
-brew install grc coreutils spark z ack
+brew install grc coreutils spark z ack the_silver_searcher
 brew tap phinze/homebrew-cask
 brew install brew-cask
 brew cask install caffeine dropbox iterm2 sequel-pro virtualbox vagrant \
@@ -21,6 +21,12 @@ brew cask install caffeine dropbox iterm2 sequel-pro virtualbox vagrant \
   sizeup rdio github disk-inventory-x tvshows subtitle-master eclipse-ide \
   sourcetree kindle pgadmin3 lastfm alfred google-drive
 # postgres formulae was deleted for now due to some issues.. waiting...
+
+# quick look plugins - https://github.com/sindresorhus/quick-look-plugins
+brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json \
+  qlprettypatch quicklook-csv betterzipql webp-quicklook suspicious-package
+
+# make alfred look into caskroom folder
 brew cask alfred
 
 exit 0

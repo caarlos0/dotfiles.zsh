@@ -46,6 +46,9 @@ defaults write com.apple.finder ShowStatusBar -bool true
 # Finder: show path bar
 defaults write com.apple.finder ShowPathbar -bool true
 
+# Finder: allow text selection in the Quick Look window
+defaults write com.apple.finder QLEnableTextSelection -bool true
+
 #
 # Safari
 #
