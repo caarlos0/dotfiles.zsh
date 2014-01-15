@@ -29,4 +29,11 @@ brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json \
 # make alfred look into caskroom folder
 brew cask alfred
 
+# more things
+brew tap caskroom/versions
+
+# chrome canary!
+brew cask install google-chrome-canary
+
+
 exit 0
