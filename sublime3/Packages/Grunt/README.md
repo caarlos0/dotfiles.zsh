@@ -52,3 +52,4 @@ Thanks for some contributions go to
 * [lavrton](https://github.com/lavrton)
 * [adamcbrewer](https://github.com/adamcbrewer)
 * [thebjorn](https://github.com/thebjorn)
+* [maliayas](https://github.com/maliayas)

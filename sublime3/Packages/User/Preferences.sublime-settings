@@ -7,6 +7,7 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
+		"Vintage"
 	],
 	"matchBracketsAngle": true,
 	"matchBracketsBraces": true,
