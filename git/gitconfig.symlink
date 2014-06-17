@@ -46,12 +46,14 @@
         whitespace = fix
 [url "https://github.com/"]
         insteadOf = "gh:"
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
 [grep]
 	extendRegexp = true
 	lineNumber = true
+
+[merge]
+    tool = diffmerge
+[mergetool "diffmerge"]
+    cmd = diffmerge --merge\n--result=$MERGED $LOCAL $BASE $REMOTE
+    trustExitCode = true
+    keepBackup = false
+

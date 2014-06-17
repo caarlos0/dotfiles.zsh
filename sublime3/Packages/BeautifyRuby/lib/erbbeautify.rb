@@ -13,4 +13,4 @@ def beautify(input, output)
   output.write(dest)
 end
 
-beautify $stdin.read, $stdout
+beautify $stdin.read.force_encoding('utf-8'), $stdout

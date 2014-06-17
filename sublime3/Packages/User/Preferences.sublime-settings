@@ -3,13 +3,13 @@
 	"drawWhiteSpace": true,
 	"ensure_newline_at_eof_on_save": true,
 	"font_face": "Source Code Pro",
-	"font_size": 12.0,
+	"font_size": 15.0,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"Vintage",
 		"Jade",
 		"Sass",
+		"Vintage",
 		"SideBarEnhancements"
 	],
 	"matchBracketsAngle": true,
