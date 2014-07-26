@@ -3,6 +3,8 @@ sublime-grunt
 
 A Grunt task runner for Sublime Text
 
+![Screencast of sublime-grunt](screencast.gif)
+
 ## Installation
 
 sublime-grunt can be installed via [Sublime Package Control](https://sublime.wbond.net/). In Package Control, it is called **Grunt**. Please refer to the offical Package Control documentation to learn how to install packages.

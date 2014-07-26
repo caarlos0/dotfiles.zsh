@@ -29,7 +29,7 @@ class GruntRunner(object):
     def run_expose(self):
         package_path = os.path.join(sublime.packages_path(), package_name)
 
-        args = r'grunt --no-color --tasks "%s" expose' % package_path
+        args = r'grunt --no-color --tasks "%s" expose:%s' % (package_path, os.path.basename(self.chosen_gruntfile))
 
         expose = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, env=get_env_with_exec_args_path(), cwd=self.wd, shell=True)
         (stdout, stderr) = expose.communicate()
@@ -42,18 +42,17 @@ class GruntRunner(object):
 
     def fetch_json(self):
         jsonfilename = os.path.join(self.wd, cache_file_name)
-        gruntfile = os.path.join(self.wd, "Gruntfile.js")
+        data = None
 
         if os.path.exists(jsonfilename):
-           filesha1 = hashfile(gruntfile)
+           filesha1 = hashfile(self.chosen_gruntfile)
 
            json_data=open(jsonfilename)
 
            try:
                 data = json.load(json_data)
-
-                if data[gruntfile]["sha1"] == filesha1:
-                    return data[gruntfile]["tasks"]
+                if data[self.chosen_gruntfile]["sha1"] == filesha1:
+                    return data[self.chosen_gruntfile]["tasks"]
            finally:
                json_data.close()
         self.callcount += 1
@@ -64,7 +63,7 @@ class GruntRunner(object):
         if data is None:
             raise TypeError("Could not expose gruntfile")
 
-        raise TypeError("Sha1 from grunt expose ({0}) is not equal to calculated ({1})".format(data[gruntfile]["sha1"], filesha1))
+        raise TypeError("Sha1 from grunt expose ({0}) is not equal to calculated ({1})".format(data[self.chosen_gruntfile]["sha1"], filesha1))
 
     def list_gruntfiles(self):
         self.grunt_files = []
@@ -75,6 +74,7 @@ class GruntRunner(object):
                 self.grunt_files.append(os.path.join(f, "Gruntfile.js"))
             elif os.path.exists(os.path.join(f, "Gruntfile.coffee")):
                 self.grunt_files.append(os.path.join(f, "Gruntfile.coffee"))
+
         if len(self.grunt_files) > 0:
             if len(self.grunt_files) == 1:
                 self.choose_file(0)
@@ -85,6 +85,8 @@ class GruntRunner(object):
 
     def choose_file(self, file):
         self.wd = os.path.dirname(self.grunt_files[file])
+        self.chosen_gruntfile = self.grunt_files[file]
+
         self.tasks = self.list_tasks()
         if self.tasks is not None:
             self.window.show_quick_panel(self.tasks, self.on_done)

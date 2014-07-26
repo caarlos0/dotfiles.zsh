@@ -7,10 +7,10 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"Jade",
-		"Sass",
+		"SideBarEnhancements",
 		"Vintage",
-		"SideBarEnhancements"
+		"Sass",
+		"Jade"
 	],
 	"matchBracketsAngle": true,
 	"matchBracketsBraces": true,

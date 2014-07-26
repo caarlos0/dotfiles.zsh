@@ -18,9 +18,9 @@ module.exports = function(grunt) {
   }
 
   grunt.registerTask(
-    'expose', "Expose available tasks as JSON object.", function () {
+    'expose', "Expose available tasks as JSON object.", function (gruntFileName) {
       var cwd = process.cwd();
-      var gruntFileName = path.join(cwd, 'Gruntfile.js');
+      gruntFileName = path.join(cwd, gruntFileName);
       var cacheFileName = path.join(cwd, '.sublime-grunt.cache');
       var sha1 = generatesha1(gruntFileName);
         
