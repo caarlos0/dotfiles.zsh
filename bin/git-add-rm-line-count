@@ -1,0 +1,5 @@
+#!/bin/sh
+added=`git diff | grep '^+' | wc -l`
+deleted=`git diff | grep '^-' | wc -l`
+
+echo "${added} addition and ${deleted} deletions."
