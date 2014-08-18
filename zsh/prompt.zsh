@@ -2,13 +2,6 @@ autoload colors && colors
 # cheers, @ehrenmurdick
 # http://github.com/ehrenmurdick/config/blob/master/zsh/prompt.zsh
 
-if (( $+commands[git] ))
-then
-  git="$commands[git]"
-else
-  git="/usr/bin/git"
-fi
-
 git_branch() {
   echo $($git symbolic-ref HEAD 2>/dev/null | awk -F/ {'print $NF'})
 }
@@ -30,7 +23,6 @@ git_dirty() {
 
 git_prompt_info () {
  ref=$($git symbolic-ref HEAD 2>/dev/null) || return
-# echo "(%{\e[0;33m%}${ref#refs/heads/}%{\e[0m%})"
  echo "${ref#refs/heads/}"
 }
 
@@ -51,7 +43,7 @@ directory_name() {
   echo "%{$fg_bold[cyan]%}%1/%\/%{$reset_color%}"
 }
 
-export PROMPT=$'\n$(directory_name) $(git_dirty)$(need_push)\n› '
+export PROMPT=$'$(directory_name) $(git_dirty)$(need_push)λ '
 set_prompt () {
   export RPROMPT="%{$fg_bold[cyan]%}%{$reset_color%}"
 }
