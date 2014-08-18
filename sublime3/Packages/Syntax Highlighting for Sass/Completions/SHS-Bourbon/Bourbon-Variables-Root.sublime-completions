@@ -1,0 +1,22 @@
+{
+	"scope": "source.sass variable.other.root, source.scss variable.other.root",
+
+	"completions": [
+
+		// Flex-grid
+		"fg-column: ",
+		"fg-gutter: ",
+		"fg-max-columns: ",
+
+		// Grid-width
+		"gw-column: ",
+		"gw-gutter: ",
+
+		// Prefixer Settings
+		"prefix-for-webkit: ",
+		"prefix-for-mozilla: ",
+		"prefix-for-microsoft: ",
+		"prefix-for-opera: ",
+		"prefix-for-spec: "
+	]
+}

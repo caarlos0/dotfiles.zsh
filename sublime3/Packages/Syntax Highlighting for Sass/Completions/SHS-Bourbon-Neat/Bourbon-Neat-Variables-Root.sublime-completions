@@ -1,0 +1,17 @@
+{
+	"scope": "source.sass variable.other.root , source.scss variable.other.root",
+
+	"completions": [
+		"border-box-sizing: ",
+		"column: ",
+		"default-feature: ",
+		"default-layout-direction: ",
+		"grids-columns: ",
+		"gutter: ",
+		"max-width: ",
+		"visual-grid-color: ",
+		"visual-grid-index: ",
+		"visual-grid-opacity: ",
+		"visual-grid: "
+	]
+}

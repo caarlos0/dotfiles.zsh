@@ -1,0 +1,43 @@
+
+Thank you for using Syntax Highlighting for Sass.
+
+With over 80 improvements this package now works much better than ever! Here are some new features:
+
+## Improved lots of highlighting rules and fully support Sass 3.3 syntax
+
+## Built-in Completion Packages
+
+    There are 8 built-in completion packages. Pick up the package name which you are not intend to use, then add it/them into the `ignored_packages` list of your settings file. (If you know a better way to do this please please let me know.)
+
+    * SHS-At-Rule
+    * SHS-Bourbon
+    * SHS-Bourbon-Neat
+    * SHS-Compass-Mixins
+    * SHS-Compass-Variables
+    * SHS-CSS-Properties
+    * SHS-CSS-Property-Values
+    * SHS-Sass-Functions
+
+## Smart Completion Rule
+
+    1. Typing @-rule, ID, class, placeholder-selector, mixin name, function name, comment, and quoted content will never popup any completions.
+    2. ** When typing property values, property name and other completions will no longer popup.
+    3. Built-in mixin name completions will only popup directly behind `@include` or `+`.
+    4. Built-in variable compltions will only popup when you typing variables.
+
+    ** The latest version of [Emmet CSS Snippets](https://sublime.wbond.net/packages/Emmet%20Css%20Snippets) now fully supports this feature. I recommend to use it instead of the built-in properties completion package.
+
+## Improved support for Goto Symbol and Goto Definition features
+
+## Comment Tag
+
+    Use `{{` and `}}` to wrap a keyword inside comment, then this keyword (comment tag) will be indexed by the Goto Symbol and Goto Definition features.
+
+
+
+-------
+For more details please check https://github.com/P233/Syntax-highlighting-for-Sass/
+-------
+
+-------------
+Enjoy coding!

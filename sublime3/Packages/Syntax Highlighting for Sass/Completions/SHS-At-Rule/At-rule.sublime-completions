@@ -1,0 +1,21 @@
+{
+	"scope": "source.sass - meta.property-list - support.function.name.sass.library - variable.other.root, source.scss - meta.property-list - support.function.name.sass.library - variable.other.root",
+
+	"completions":
+	[
+		{ "trigger": "inc\t@include", "contents": "@include " },
+		{ "trigger": "ext\t@extend", "contents": "@extend " },
+		{ "trigger": "mix\t@mixin", "contents": "@mixin " },
+		{ "trigger": "fun\t@function", "contents": "@function " },
+		{ "trigger": "ret\t@return", "contents": "@return " },
+		{ "trigger": "if\t@if", "contents": "@if " },
+		{ "trigger": "els\t@else", "contents": "@else " },
+		{ "trigger": "eif\t@else if", "contents": "@else if " },
+		{ "trigger": "for\t@for", "contents": "@for " },
+		{ "trigger": "each\t@each", "contents": "@each " },
+		{ "trigger": "whi\t@while", "contents": "@while " },
+		{ "trigger": "deb\t@debug", "contents": "@debug " },
+		{ "trigger": "war\t@warn", "contents": "@warn " },
+		{ "trigger": "atr\t@at-root", "contents": "@at-root " }
+	]
+}

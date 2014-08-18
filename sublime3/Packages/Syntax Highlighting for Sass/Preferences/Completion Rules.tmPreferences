@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>Cancel Completion</string>
+	<key>scope</key>
+	<string>source.sass comment, source.sass string.quoted, source.sass entity.other, source.sass keyword.control, source.sass support.function.name.sass.no-completions, source.sass sass-script-maps, source.scss comment, source.scss string.quoted, source.scss entity.other, source.scss keyword.control, source.scss support.function.name.sass.no-completions, source.scss sass-script-maps</string>
+	<key>settings</key>
+	<dict>
+		<key>cancelCompletion</key>
+		<string>.*</string>
+	</dict>
+	<key>uuid</key>
+	<string>AE9934E0-AC89-11E3-A5E2-0800200C9A66</string>
+</dict>
+</plist>

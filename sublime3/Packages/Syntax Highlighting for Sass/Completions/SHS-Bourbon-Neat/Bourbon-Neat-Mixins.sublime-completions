@@ -1,0 +1,29 @@
+{
+	"scope": "source.sass support.function.name.sass.library, source.scss support.function.name.sass.library",
+
+	"completions":
+	[
+		// Fill-parent
+		{ "trigger": "fill-parent\tBourbon-Neat", "contents": "fill-parent($1)" },
+		// Media
+		{ "trigger": "media\tBourbon-Neat", "contents": "media($1)" },
+		// Span-columns
+		{ "trigger": "span-columns\tBourbon-Neat", "contents": "span-columns($1)" },
+		// Pad
+		{ "trigger": "pad\tBourbon-Neat", "contents": "pad($1)" },
+		// Omega
+		{ "trigger": "omega\tBourbon-Neat", "contents": "omega($1)" },
+		// Outer-container
+		{ "trigger": "outer-container\tBourbon-Neat", "contents": "outer-container($1)" },
+		// Rest-display
+		{ "trigger": "rest-display\tBourbon-Neat", "contents": "rest-display($1)" },
+		// Rest-layout
+		{ "trigger": "rest-layout-direction\tBourbon-Neat", "contents": "rest-layout-direction($1)" },
+		// Rest-all
+		{ "trigger": "reset-all\tBourbon-Neat", "contents": "reset-all($1)" },
+		// Row
+		{ "trigger": "row\tBourbon-Neat", "contents": "row($1)" },
+		// Shift
+		{ "trigger": "shift\tBourbon-Neat", "contents": "shift($1)" }
+	]
+}

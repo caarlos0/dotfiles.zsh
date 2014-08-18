@@ -1,0 +1,129 @@
+{
+	"scope": "source.sass support.function.name.sass.library, source.scss support.function.name.sass.library",
+
+	"completions":
+	[
+
+// Mxins
+
+		// Animation
+		{ "trigger": "animation\tBourbon", "contents": "animation($1)" },
+		{ "trigger": "animation-delay\tBourbon", "contents": "animation-delay($1)" },
+		{ "trigger": "animation-direction\tBourbon", "contents": "animation-direction($1)" },
+		{ "trigger": "animation-duration\tBourbon", "contents": "animation-duration($1)" },
+		{ "trigger": "animation-fill-mode\tBourbon", "contents": "animation-fill-mode($1)" },
+		{ "trigger": "animation-iteration-count\tBourbon", "contents": "animation-iteration-count($1)" },
+		{ "trigger": "animation-name\tBourbon", "contents": "animation-name($1)" },
+		{ "trigger": "animation-play-state\tBourbon", "contents": "animation-play-state($1)" },
+		{ "trigger": "animation-timing-function\tBourbon", "contents": "animation-timing-function($1)" },
+
+		// Background
+		{ "trigger": "background\tBourbon", "contents": "background($1)" },
+		{ "trigger": "background-image\tBourbon", "contents": "background-image($1)" },
+
+		// Appearance
+		{ "trigger": "appearance\tBourbon", "contents": "appearance(${1:none})" },
+
+		// Backface-visibility
+		{ "trigger": "backface-visibility\tBourbon", "contents": "backface-visibility(${1:visible})" },
+
+		// Border-image
+		{ "trigger": "border-image\tBourbon", "contents": "border-image($1)" },
+
+		// Box-sizing
+		{ "trigger": "box-sizing\tBourbon", "contents": "box-sizing(${1:border-box})" },
+
+		// Columns
+		{ "trigger": "columns\tBourbon", "contents": "columns($1)" },
+		{ "trigger": "column-count\tBourbon", "contents": "column-count($1)" },
+		{ "trigger": "column-fill\tBourbon", "contents": "column-fill($1)" },
+		{ "trigger": "column-gap\tBourbon", "contents": "column-gap($1)" },
+		{ "trigger": "column-rule\tBourbon", "contents": "column-rule($1)" },
+		{ "trigger": "column-rule-color\tBourbon", "contents": "column-rule-color($1)" },
+		{ "trigger": "column-rule-style\tBourbon", "contents": "column-rule-style($1)" },
+		{ "trigger": "column-rule-width\tBourbon", "contents": "column-rule-width($1)" },
+		{ "trigger": "column-span\tBourbon", "contents": "column-span($1)" },
+		{ "trigger": "column-width\tBourbon", "contents": "column-width($1)" },
+
+		// Flex-box
+		{ "trigger": "box\tBourbon", "contents": "box($1)" },
+		{ "trigger": "box-align\tBourbon", "contents": "box-align($1)" },
+		{ "trigger": "box-direction\tBourbon", "contents": "box-direction($1)" },
+		{ "trigger": "box-flex\tBourbon", "contents": "box-flex($1)" },
+		{ "trigger": "box-flex-group\tBourbon", "contents": "box-flex-group($1)" },
+		{ "trigger": "box-lines\tBourbon", "contents": "box-lines($1)" },
+		{ "trigger": "box-ordinal-group\tBourbon", "contents": "box-ordinal-group($1)" },
+		{ "trigger": "box-orient\tBourbon", "contents": "box-orient($1)" },
+		{ "trigger": "box-pack\tBourbon", "contents": "box-pack($1)" },
+		{ "trigger": "display-box\tBourbon", "contents": "display-box" },
+
+		// Font-face
+		{ "trigger": "font-face\tBourbon", "contents": "font-face($1)" },
+
+		// HIDPI-media-query
+		{ "trigger": "hidpi\tBourbon", "contents": "hidpi($1) {$2}" },
+
+		// Image-rendering
+		{ "trigger": "image-rendering\tBourbon", "contents": "image-rendering($1)" },
+
+		// Keyframes
+		{ "trigger": "keyframes\tBourbon", "contents": "keyframes($1) {$2}" },
+
+		// Placeholder
+		{ "trigger": "placeholder\tBourbon", "contents": "placeholder {$1}" },
+
+		// Perspective
+		{ "trigger": "perspective\tBourbon", "contents": "perspective($1)" },
+		{ "trigger": "perspective-origin\tBourbon", "contents": "perspective-origin($1)" },
+
+		// Linear-gradient
+		{ "trigger": "linear-gradient\tBourbon", "contents": "linear-gradient($1)" },
+
+		// Radial-gradient
+		{ "trigger": "radial-gradient\tBourbon", "contents": "radial-gradient($1)" },
+
+		// User-select
+		{ "trigger": "user-select\tBourbon", "contents": "user-select(${1:none})" },
+
+		// Transform
+		{ "trigger": "transform\tBourbon", "contents": "transform($1)" },
+		{ "trigger": "transform-origin\tBourbon", "contents": "transform-origin($1)" },
+		{ "trigger": "transform-style\tBourbon", "contents": "transform-style($1)" },
+
+		// Transition
+		{ "trigger": "transition\tBourbon", "contents": "transition($1)" },
+		{ "trigger": "transition-delay\tBourbon", "contents": "transition-delay($1)" },
+		{ "trigger": "transition-duration\tBourbon", "contents": "transition-duration($1)" },
+		{ "trigger": "transition-property\tBourbon", "contents": "transition-property($1)" },
+		{ "trigger": "transition-timing-function\tBourbon", "contents": "transition-timing-function($1)" },
+
+// Addons
+
+		// Button
+		{ "trigger": "button\tBourbon", "contents": "button($1)" },
+
+		// Clearfix
+		{ "trigger": "clearfix\tBourbon", "contents": "clearfix" },
+
+		// Hide-text
+		{ "trigger": "hide-text\tBourbon", "contents": "hide-text" },
+
+		// Inline-block
+		{ "trigger": "inline-block\tBourbon", "contents": "inline-block" },
+
+		// Position
+		{ "trigger": "position\tBourbon", "contents": "position($1)" },
+
+		// Prefixer
+		{ "trigger": "prefixer\tBourbon", "contents": "prefixer($1)" },
+
+		// Retina-image
+		{ "trigger": "retina-image\tBourbon", "contents": "retina-image($1)" },
+
+		// Size
+		{ "trigger": "size\tBourbon", "contents": "size($1)" },
+
+		// Triangle
+		{ "trigger": "triangle\tBourbon", "contents": "triangle($1)" }
+	]
+}

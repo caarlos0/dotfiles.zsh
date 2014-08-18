@@ -1,0 +1,37 @@
+{
+	"scope": "source.sass meta.property-list.css.sass - variable.other, source.scss meta.property-list.css.sass - variable.other",
+
+	"completions":
+	[
+		// Compact
+		{ "trigger": "compact\tBourbon", "contents": "compact($1)" },
+
+		// Flex-grid
+		{ "trigger": "flex-grid\tBourbon", "contents": "flex-grid($1)" },
+		{ "trigger": "flex-gutter\tBourbon", "contents": "flex-gutter($1)" },
+
+		// Golden-ratio
+		{ "trigger": "golden-ratio\tBourbon", "contents": "golden-ratio($1)" },
+
+		// Grid-width
+		{ "trigger": "grid-width\tBourbon", "contents": "grid-width($1)" },
+
+		// Linear-gradient
+		{ "trigger": "linear-gradient\tBourbon", "contents": "linear-gradient($1)" },
+
+		// Modular-scale
+		{ "trigger": "modular-scale\tBourbon", "contents": "modular-scale($1)" },
+
+		// Radial-gradient
+		{ "trigger": "radial-gradient\tBourbon", "contents": "radial-gradient($1)" },
+
+		// Tink
+		{ "trigger": "tint\tBourbon", "contents": "tint($1)" },
+
+		// Shade
+		{ "trigger": "shade\tBourbon", "contents": "shade($1)" },
+
+		// Em
+		{ "trigger": "em\tBourbon", "contents": "em($1)" }
+	]
+}

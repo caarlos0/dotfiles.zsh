@@ -1,0 +1,128 @@
+{
+	"scope": "source.sass support.function.name.sass.library, source.scss support.function.name.sass.library",
+
+	"completions":
+	[
+		// CSS3
+
+		// Appearance
+		{ "trigger": "appearance\tCompass", "contents": "appearance($1)" },
+		// Background Clip
+		{ "trigger": "background-clip\tCompass", "contents": "background-clip($1)" },
+		// Background Origin
+		{ "trigger": "background-origin\tCompass", "contents": "background-origin($1)" },
+		// Background Size
+		{ "trigger": "background-size\tCompass", "contents": "background-size($1)" },
+		// Border Radius
+		{ "trigger": "border-radius\tCompass", "contents": "border-radius($1)" },
+		{ "trigger": "border-corner-radius\tCompass", "contents": "border-corner-radius($1)" },
+		{ "trigger": "border-top-left-radius\tCompass", "contents": "border-top-left-radius($1)" },
+		{ "trigger": "border-top-right-radius\tCompass", "contents": "border-top-right-radius($1)" },
+		{ "trigger": "border-bottom-left-radius\tCompass", "contents": "border-bottom-left-radius($1)" },
+		{ "trigger": "border-bottom-right-radius\tCompass", "contents": "border-bottom-right-radius($1)" },
+		{ "trigger": "border-top-radius\tCompass", "contents": "border-top-radius($1)" },
+		{ "trigger": "border-right-radius\tCompass", "contents": "border-right-radius($1)" },
+		{ "trigger": "border-bottom-radius\tCompass", "contents": "border-bottom-radius($1)" },
+		{ "trigger": "border-left-radius\tCompass", "contents": "border-left-radius($1)" },
+		// Box
+		{ "trigger": "box-orient\tCompass", "contents": "box-orient($1)" },
+		{ "trigger": "box-align\tCompass", "contents": "box-align($1)" },
+		{ "trigger": "box-flex\tCompass", "contents": "box-flex($1)" },
+		{ "trigger": "box-flex-group\tCompass", "contents": "box-flex-group($1)" },
+		{ "trigger": "box-ordinal-group\tCompass", "contents": "box-ordinal-group($1)" },
+		{ "trigger": "box-direction\tCompass", "contents": "box-direction($1)" },
+		{ "trigger": "box-lines\tCompass", "contents": "box-lines($1)" },
+		{ "trigger": "box-pack\tCompass", "contents": "box-pack($1)" },
+		// Box Shadow
+		{ "trigger": "box-shadow\tCompass", "contents": "box-shadow($1)" },
+		{ "trigger": "single-box-shadow\tCompass", "contents": "single-box-shadow($1)" },
+		// Box Sizing
+		{ "trigger": "box-sizing\tCompass", "contents": "box-sizing($1)" },
+		// CSS Regions
+		{ "trigger": "flow-into\tCompass", "contents": "flow-into($1)" },
+		{ "trigger": "flow-from\tCompass", "contents": "flow-from($1)" },
+		// CSS3 Pie
+		{ "trigger": "pie-container\tCompass", "contents": "pie-container($1)" },
+		{ "trigger": "pie-element\tCompass", "contents": "pie-element($1)" },
+		{ "trigger": "pie\tCompass", "contents": "pie($1)" },
+		{ "trigger": "pie-watch-ancestors\tCompass", "contents": "pie-watch-ancestors($1)" },
+		// Columns
+		{ "trigger": "columns\tCompass", "contents": "columns($1)" },
+		{ "trigger": "column-count\tCompass", "contents": "column-count($1)" },
+		{ "trigger": "column-gap\tCompass", "contents": "column-gap($1)" },
+		{ "trigger": "column-width\tCompass", "contents": "column-width($1)" },
+		{ "trigger": "column-rule-width\tCompass", "contents": "column-rule-width($1)" },
+		{ "trigger": "column-rule-style\tCompass", "contents": "column-rule-style($1)" },
+		{ "trigger": "column-rule-color\tCompass", "contents": "column-rule-color($1)" },
+		{ "trigger": "column-rule\tCompass", "contents": "column-rule($1)" },
+		{ "trigger": "column-break-before\tCompass", "contents": "column-break-before($1)" },
+		{ "trigger": "column-break-after\tCompass", "contents": "column-break-after($1)" },
+		{ "trigger": "column-break-inside\tCompass", "contents": "column-break-inside($1)" },
+		{ "trigger": "column-break\tCompass", "contents": "column-break($1)" },
+		// Filter
+		{ "trigger": "filter\tCompass", "contents": "filter($1)" },
+		// Font Face
+		{ "trigger": "font-face\tCompass", "contents": "font-face($1)" },
+		// Hyphenation
+		{ "trigger": "word-break\tCompass", "contents": "word-break($1)" },
+		{ "trigger": "hyphens\tCompass", "contents": "hyphens($1)" },
+		// Images
+		{ "trigger": "background\tCompass", "contents": "background($1)" },
+		{ "trigger": "background-with-css2-fallback\tCompass", "contents": "background-with-css2-fallback($1)" },
+		{ "trigger": "background-image\tCompass", "contents": "background-image($1)" },
+		{ "trigger": "filter-gradient\tCompass", "contents": "filter-gradient($1)" },
+		{ "trigger": "border-image\tCompass", "contents": "border-image($1)" },
+		{ "trigger": "list-style-image\tCompass", "contents": "list-style-image($1)" },
+		{ "trigger": "list-style\tCompass", "contents": "list-style($1)" },
+		{ "trigger": "content\tCompass", "contents": "content($1)" },
+		// Inline Block
+		{ "trigger": "inline-block\tCompass", "contents": "inline-block($1)" },
+		// Opacity
+		{ "trigger": "opacity\tCompass", "contents": "opacity($1)" },
+		// CSS3 Utilities
+		{ "trigger": "experimental\tCompass", "contents": "experimental($1)" },
+		{ "trigger": "experimental-value\tCompass", "contents": "experimental-value($1)" },
+		// Text Shadow
+		{ "trigger": "text-shadow\tCompass", "contents": "text-shadow($1)" },
+		{ "trigger": "single-text-shadow\tCompass", "contents": "single-text-shadow($1)" },
+		// Transform
+		{ "trigger": "apply-origin\tCompass", "contents": "apply-origin($1)" },
+		{ "trigger": "transform-origin\tCompass", "contents": "transform-origin($1)" },
+		{ "trigger": "transform\tCompass", "contents": "transform($1)" },
+		{ "trigger": "transform2d\tCompass", "contents": "transform2d($1)" },
+		{ "trigger": "transform3d\tCompass", "contents": "transform3d($1)" },
+		{ "trigger": "perspective\tCompass", "contents": "perspective($1)" },
+		{ "trigger": "perspective-origin\tCompass", "contents": "perspective-origin($1)" },
+		{ "trigger": "transform-style\tCompass", "contents": "transform-style($1)" },
+		{ "trigger": "backface-visibility\tCompass", "contents": "backface-visibility($1)" },
+		{ "trigger": "scale\tCompass", "contents": "scale($1)" },
+		{ "trigger": "scaleX\tCompass", "contents": "scaleX($1)" },
+		{ "trigger": "scaleY\tCompass", "contents": "scaleY($1)" },
+		{ "trigger": "scaleZ\tCompass", "contents": "scaleZ($1)" },
+		{ "trigger": "scale3d\tCompass", "contents": "scale3d($1)" },
+		{ "trigger": "rotate\tCompass", "contents": "rotate($1)" },
+		{ "trigger": "rotateZ\tCompass", "contents": "rotateZ($1)" },
+		{ "trigger": "rotateX\tCompass", "contents": "rotateX($1)" },
+		{ "trigger": "rotateY\tCompass", "contents": "rotateY($1)" },
+		{ "trigger": "rotate3d\tCompass", "contents": "rotate3d($1)" },
+		{ "trigger": "translate\tCompass", "contents": "translate($1)" },
+		{ "trigger": "translateX\tCompass", "contents": "translateX($1)" },
+		{ "trigger": "translateY\tCompass", "contents": "translateY($1)" },
+		{ "trigger": "translateZ\tCompass", "contents": "translateZ($1)" },
+		{ "trigger": "translate3d\tCompass", "contents": "translate3d($1)" },
+		{ "trigger": "skew\tCompass", "contents": "skew($1)" },
+		{ "trigger": "skewX\tCompass", "contents": "skewX($1)" },
+		{ "trigger": "skewY\tCompass", "contents": "skewY($1)" },
+		{ "trigger": "create-transform\tCompass", "contents": "create-transform($1)" },
+		{ "trigger": "simple-transform\tCompass", "contents": "simple-transform($1)" },
+		// Transition
+		{ "trigger": "transition-property\tCompass", "contents": "transition-property($1)" },
+		{ "trigger": "transition-duration\tCompass", "contents": "transition-duration($1)" },
+		{ "trigger": "transition-timing-function\tCompass", "contents": "transition-timing-function($1)" },
+		{ "trigger": "transition-delay\tCompass", "contents": "transition-delay($1)" },
+		{ "trigger": "single-transition\tCompass", "contents": "single-transition($1)" },
+		{ "trigger": "transition\tCompass", "contents": "transition($1)" },
+		// User Interface
+		{ "trigger": "user-select\tCompass", "contents": "user-select($1)" }
+	]
+}
