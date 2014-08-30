@@ -3,7 +3,6 @@
     // The default is two spaces represented by 'space'
     // anything else will use one tab character
     "tab_or_space": "space",
-    "ruby": "/usr/bin/env ruby",
     "file_patterns": ["\\.html\\.erb", "\\.rb", "\\.rake", "Rakefile", "Gemfile"],
     "html_erb_patterns": ["\\.html\\.erb"],
     "run_on_save": false,

@@ -7,10 +7,12 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"Vintage",
-		"Sass",
 		"SideBarEnhancements",
-		"Jade"
+		"Better CoffeeScript",
+		"Ruby Slim",
+		"Sass",
+		"Jade",
+		"Vintage"
 	],
 	"matchBracketsAngle": true,
 	"matchBracketsBraces": true,

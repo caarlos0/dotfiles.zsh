@@ -132,7 +132,7 @@
     second_arg,
     # Comment in the middle of all this
     third_arg
-    
+
     another_method_call
     end
   output: |
@@ -141,7 +141,7 @@
         second_arg,
         # Comment in the middle of all this
         third_arg
-    
+
       another_method_call
     end
 
@@ -151,7 +151,7 @@
     multiline_method_call.
     foo.
     bar
-    
+
     another_method_call
     end
   output: |
@@ -159,7 +159,7 @@
       multiline_method_call.
         foo.
         bar
-    
+
       another_method_call
     end
 

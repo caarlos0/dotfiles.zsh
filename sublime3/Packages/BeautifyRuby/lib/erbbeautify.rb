@@ -1,4 +1,3 @@
-require 'rubygems'
 require 'htmlbeautifier'
 
 def beautify(input, output)

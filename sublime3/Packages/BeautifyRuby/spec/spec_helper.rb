@@ -4,6 +4,7 @@ rescue LoadError
   require 'rubygems'
   require 'rspec'
 end
+require 'pry'
 require 'yaml'
 require File.dirname(__FILE__) + '/../lib/rbeautify.rb'
 
@@ -13,9 +14,9 @@ module RBeautifyMatchers
     def initialize(block_matcher_name, offset, match, after_match)
       # triggers the standard Spec::Matchers::Be magic, as if the original Spec::Matchers#method_missing had fired
       @block_matcher_name = block_matcher_name
-      @offset = offset
-      @match = match
-      @after_match = after_match
+      @offset             = offset
+      @match              = match
+      @after_match        = after_match
     end
 
     def matches?(target_block)
@@ -98,24 +99,31 @@ RSpec.configure do |config|
   config.include(RBeautifyMatchers)
 end
 
-
 def run_fixtures_for_language(language)
   fixtures = YAML.load_file(File.dirname(__FILE__) + "/fixtures/#{language}.yml")
 
   describe language do
+    let(:config) do
+      {
+        'tab_size' => 2,
+        'translate_tabs_to_spaces' => 'true'
+      }
+    end
+
     fixtures.each do |fixture|
       it "should #{fixture['name']}" do
-        input = fixture['input']
+        input  = fixture['input']
         output = fixture['output'] || input
-        debug = fixture['debug'] || false
+        debug  = fixture['debug'] || false
 
         if fixture['pending']
+          next
           pending fixture['pending'] do
-            RBeautify.beautify_string(language, input).should == output
+            expect(RBeautify.beautify_string(language, input, config)).to eq(output)
           end
         else
           RBeautify::BlockMatcher.debug = debug
-          RBeautify.beautify_string(language, input).should == output
+          expect(RBeautify.beautify_string(language, input, config)).to eq(output)
         end
       end
     end
