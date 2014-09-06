@@ -4,6 +4,10 @@
 #
 # This installs some of the common dependencies needed (or at least desired)
 # using Homebrew.
+if [ "$(uname -s)" != "Darwin" ]
+then
+  exit 0
+fi
 
 # Check for Homebrew
 if test ! $(which brew)
@@ -12,28 +16,51 @@ then
   ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)" > /tmp/homebrew-install.log
 fi
 
-# Install homebrew packages
-brew install grc coreutils spark z ack the_silver_searcher
+# more formualae
 brew tap phinze/homebrew-cask
+brew tap caskroom/versions
 brew install brew-cask
-brew cask install caffeine dropbox iterm2 sequel-pro virtualbox vagrant \
-  the-unarchiver vlc google-chrome skype transmission dash cloudapp \
-  sizeup rdio github disk-inventory-x tvshows subtitle-master eclipse-ide \
-  sourcetree kindle pgadmin3 lastfm alfred google-drive
-# postgres formulae was deleted for now due to some issues.. waiting...
+
+# usefull stuff
+brew install grc coreutils the_silver_searcher htop-osx heroku-toolbelt \
+  imagemagick wget unrar
+brew cask install iterm2 the-unarchiver disk-inventory-x appzapper diffmerge \
+  slate
+
+# coding
+brew install maven node rbenv android-sdk
+brew cask install eclipse-jee atom
+
+# virtualization
+brew cask install virtualbox vagrant
+
+# chat, books, music, notes and documents
+brew cask install spotify kindle google-drive dropbox skype slack \
+  messenger-for-telegram evernote skitch
+
+# database stuff
+brew install redis mariadb
+brew cask install postgres pg-commander sequel-pro
+
+# watch and download stuff
+brew install youtube-dl
+brew cask install tvshows subtitle-master beamer vlc transmission
 
 # quick look plugins - https://github.com/sindresorhus/quick-look-plugins
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json \
   qlprettypatch quicklook-csv betterzipql webp-quicklook suspicious-package
 
-# make alfred look into caskroom folder
-brew cask alfred
-
-# more things
-brew tap caskroom/versions
-
-# chrome canary!
+# chrome canary
 brew cask install google-chrome-canary
 
+# vpn stuff
+brew cask install tunnelblick-beta
+
+# gaming
+brew cask install steam
+
+# clean things up
+brew cleanup
+brew cask cleanup
 
 exit 0

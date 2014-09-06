@@ -1,37 +1,53 @@
 # Sample gitconfig
 #
 
-[hub]
-        protocol = https
+# Sample gitconfig
+#
+# You probably want to change the [user] section here since you are not me.
 [user]
-        name = AUTHORNAME
-        email = AUTHOREMAIL
-        helper = osxkeychain
+    name = AUTHORNAME
+    email = AUTHOREMAIL
+    helper = osxkeychain
 [alias]
-        co = checkout
-        promote = !$ZSH/bin/git-promote
-        wtf     = !$ZSH/bin/git-wtf
-        rank-contributers = !$ZSH/bin/git-rank-contributers
-        count   = !git shortlog -sn
+    co                = checkout
+    promote           = !$ZSH/bin/git-promote
+    wtf               = !$ZSH/bin/git-wtf
+    rank-contributers = !$ZSH/bin/git-rank-contributers
+    count             = !git shortlog -sn
+    lc                = !$ZSH/bin/git-add-rm-line-count
+    g                 = grep --break --heading --line-number
+    changed           = show --pretty=\"format:\" --name-only
+    gi                = grep --break --heading --line-number -i
 [color]
-        diff = auto
-        status = auto
-        branch = auto
-        ui = true
+    diff    = auto
+    status  = auto
+    branch  = auto
+    ui      = true
 [core]
-        excludesfile = ~/.gitignore
-        editor = vim
+    excludesfile      = ~/.gitignore
+    editor            = vim
+    compression       = -1
+    autocrlf          = input
+    whitespace        = trailing-space,space-before-tab
+    precomposeunicode = true
 [apply]
-        whitespace = nowarn
-[mergetool]
-        keepBackup = false
-[difftool]
-        prompt = false
+    whitespace = nowarn
 [help]
-        autocorrect = 1
+    autocorrect = 1
+[merge]
+    tool = diffmerge
+[mergetool "diffmerge"]
+    cmd           = diffmerge --merge --result=$MERGED $LOCAL $BASE $REMOTE
+    trustExitCode = true
+    keepBackup    = false
+[diff]
+    tool = diffmerge
+[difftool "diffmerge"]
+    cmd = diffmerge $LOCAL $REMOTE
+[difftool]
+    prompt = false
+[grep]
+    extendRegexp = true
+    lineNumber   = true
 [push]
-        # See `git help config` (search for push.default)
-        # for more information on different options of the below setting.
-        #
-        # Setting to git 2.0 default to surpress warning message
-        default = simple
+    default = simple

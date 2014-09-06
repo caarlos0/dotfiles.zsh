@@ -15,7 +15,7 @@ class Object
   def local_methods(obj = self)
     (obj.methods - obj.class.superclass.instance_methods).sort
   end
-  
+
   # print documentation
   #
   #   ri 'Array#pop'
@@ -29,12 +29,4 @@ class Object
     end
     puts `ri '#{method}'`
   end
-end
-
-def me
-  User.find_by_login('holman')
-end
-
-def r
-  reload!
 end

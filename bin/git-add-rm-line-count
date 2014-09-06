@@ -2,4 +2,4 @@
 added=`git diff | grep '^+' | wc -l`
 deleted=`git diff | grep '^-' | wc -l`
 
-echo "${added} addition and ${deleted} deletions."
+echo "${added} additions and ${deleted} deletions."

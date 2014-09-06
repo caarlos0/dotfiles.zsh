@@ -6,6 +6,10 @@
 #   https://github.com/mathiasbynens/dotfiles/blob/master/.osx
 #
 # Run ./set-defaults.sh and you'll be good to go.
+if [ "$(uname -s)" != "Darwin" ]
+then
+	exit 0
+fi
 
 # Disable press-and-hold for keys in favor of key repeat.
 defaults write -g ApplePressAndHoldEnabled -bool false
@@ -117,9 +121,6 @@ defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" "@\\U21a9"
 # Kill related apps
 #
 
-for app in "Dashboard" "Dock" "Finder" "Safari" "Transmission" \
-"SizeUp" "Mail"; do
+for app in "Dashboard" "Dock" "Finder" "Safari" "Transmission" "Mail"; do
 	killall "$app" > /dev/null 2>&1
 done
-
-

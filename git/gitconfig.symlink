@@ -1,35 +1,32 @@
 # Sample gitconfig
 #
 # You probably want to change the [user] section here since you are not me.
-
-[hub]
-    protocol = https
 [user]
-    name = Carlos Alexandro Becker
+    name  = Carlos Alexandro Becker
     email = caarlos0@gmail.com
 [credential]
     helper = osxkeychain
 [alias]
-    co = checkout
-    promote = !$ZSH/bin/git-promote
-    wtf     = !$ZSH/bin/git-wtf
+    co                = checkout
+    promote           = !$ZSH/bin/git-promote
+    wtf               = !$ZSH/bin/git-wtf
     rank-contributers = !$ZSH/bin/git-rank-contributers
-    count   = !git shortlog -sn
-    lc      = !$ZSH/bin/git-add-rm-line-count
-	g = grep --break --heading --line-number
-	changed = show --pretty=\"format:\" --name-only
-	gi = grep --break --heading --line-number -i
+    count             = !git shortlog -sn
+    lc                = !$ZSH/bin/git-add-rm-line-count
+  	g                 = grep --break --heading --line-number
+  	changed           = show --pretty=\"format:\" --name-only
+  	gi                = grep --break --heading --line-number -i
 [color]
-    diff = auto
-    status = auto
-    branch = auto
-    ui = true
+    diff    = auto
+    status  = auto
+    branch  = auto
+    ui      = true
 [core]
-    excludesfile = ~/.gitignore
-    editor = vim
-    compression = -1
-    autocrlf = input
-    whitespace = trailing-space,space-before-tab
+    excludesfile      = ~/.gitignore
+    editor            = vim
+    compression       = -1
+    autocrlf          = input
+    whitespace        = trailing-space,space-before-tab
     precomposeunicode = true
 [apply]
     whitespace = nowarn
@@ -38,9 +35,9 @@
 [merge]
     tool = diffmerge
 [mergetool "diffmerge"]
-    cmd = diffmerge --merge --result=$MERGED $LOCAL $BASE $REMOTE
+    cmd           = diffmerge --merge --result=$MERGED $LOCAL $BASE $REMOTE
     trustExitCode = true
-    keepBackup = false
+    keepBackup    = false
 [diff]
     tool = diffmerge
 [difftool "diffmerge"]
@@ -49,4 +46,4 @@
 	prompt = false
 [grep]
 	extendRegexp = true
-	lineNumber = true
+	lineNumber   = true
