@@ -2,6 +2,12 @@ export PATH="./bin:$HOME/.rbenv/shims:/usr/local/bin:/usr/local/sbin:$HOME/.sfs:
 
 export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
 
-export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
+if [ -e /Applications/Postgres.app ]
+then
+  export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
+fi
 
-export JAVA_HOME=$(/usr/libexec/java_home)
+if $(/usr/libexec/java_home &>/dev/null)
+then
+  export JAVA_HOME=$(/usr/libexec/java_home)
+fi
