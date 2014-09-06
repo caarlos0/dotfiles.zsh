@@ -1,7 +1,7 @@
 'editor':
   'showIndentGuide': true
   'fontFamily': 'Menlo'
-  'fontSize': 15
+  'fontSize': 13
 'core':
   'excludeVcsIgnoredPaths': true
   'projectHome': '~/Code'
