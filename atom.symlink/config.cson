@@ -1,7 +1,7 @@
 'editor':
   'showIndentGuide': true
   'fontFamily': 'Menlo'
-  'fontSize': 13
+  'fontSize': 11
 'core':
   'excludeVcsIgnoredPaths': true
   'projectHome': '~/Code'
@@ -39,3 +39,5 @@
 'tabs':
   'tabScrolling': true
 'whitespace': {}
+'atom-beautify':
+  '_analyticsUserId': '49772381-dc99-4a0f-bc9b-ee33c6b3c225'
