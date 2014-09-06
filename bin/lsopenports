@@ -1,0 +1,2 @@
+#!/bin/zsh
+lsof -i -n -P

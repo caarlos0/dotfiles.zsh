@@ -1,0 +1,2 @@
+#!/bin/sh
+ps aux | awk '{if($8 == "Z") { print }}'
