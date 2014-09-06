@@ -2,3 +2,4 @@ atom.symlink/.node-gyp/
 atom.symlink/compile-cache/
 atom.symlink/packages/
 atom.symlink/storage/
+atom.symlink/projects.cson
