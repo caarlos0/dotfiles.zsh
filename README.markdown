@@ -1,4 +1,4 @@
-# holman does dotfiles
+# carlos does dotfiles
 
 ## dotfiles
 
@@ -12,7 +12,7 @@ structured the project accordingly.
 
 If you're interested in the philosophy behind why projects like these are
 awesome, you might want to [read my post on the
-subject](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/).
+subject](http://carlosbecker.com/posts/dotfiles-are-meant-to-be-forked/).
 
 ## install
 
