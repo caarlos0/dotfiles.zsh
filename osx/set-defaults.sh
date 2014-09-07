@@ -146,6 +146,6 @@ sudo pmset -a standbydelay 86400
 #
 set +e
 for app in "Dashboard" "Dock" "Finder" "Safari" "Transmission" "Mail"; do
-	killall "$app" > /dev/null 2>&1
+  killall "$app" > /dev/null 2>&1
 done
 set -e
