@@ -4,6 +4,8 @@
 #
 # The original idea (and a couple settings) were grabbed from:
 #   https://github.com/mathiasbynens/dotfiles/blob/master/.osx
+# More from:
+#		https://gist.github.com/brandonb927/3195465
 #
 # Run ./set-defaults.sh and you'll be good to go.
 if [ "$(uname -s)" != "Darwin" ]
@@ -71,16 +73,25 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 #
 # DOCK
 #
+# Setting the icon size of Dock items to 36 pixels for optimal size/screen-realestate
+defaults write com.apple.dock tilesize -int 36
 
-# Size of the icons in the Dock
-defaults write com.apple.dock tilesize -int 26
+# Speeding up Mission Control animations and grouping windows by application
+defaults write com.apple.dock expose-animation-duration -float 0.1
+defaults write com.apple.dock "expose-group-by-app" -bool true
 
-# Automatically hide and show the Dock = false
-defaults write com.apple.dock autohide -bool false
+# Setting Dock to auto-hide and removing the auto-hiding delay
+defaults write com.apple.dock autohide -bool true
+defaults write com.apple.dock autohide-delay -float 0
+defaults write com.apple.dock autohide-time-modifier -float 0
 
 #
 # Transmission
 #
+
+# Use `~/Downloads/Incomplete` to store incomplete downloads
+defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool true
+defaults write org.m0k.transmission IncompleteDownloadFolder -string "${HOME}/Downloads/Incomplete"
 
 # Don’t prompt for confirmation before downloading
 defaults write org.m0k.transmission DownloadAsk -bool false
@@ -90,6 +101,7 @@ defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
 
 # Hide the donate message
 defaults write org.m0k.transmission WarningDonate -bool false
+
 # Hide the legal disclaimer
 defaults write org.m0k.transmission WarningLegal -bool false
 
@@ -99,6 +111,35 @@ defaults write org.m0k.transmission WarningLegal -bool false
 
 # Add the keyboard shortcut ⌘ + Enter to send an email in Mail.app
 defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" "@\\U21a9"
+
+
+#
+# Others
+#
+
+# hide the dashboard
+defaults write com.apple.dashboard mcx-disabled -boolean true
+
+# Increasing the window resize speed for Cocoa applications
+defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
+
+# Disable smart quotes and smart dashes as they’re annoying when typing code
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+
+# Disabling auto-correct
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+
+# Setting trackpad & mouse speed to a reasonable number
+defaults write -g com.apple.trackpad.scaling 2
+defaults write -g com.apple.mouse.scaling 2.5
+
+# Avoiding the creation of .DS_Store files on network volumes
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
+# Speeding up wake from sleep to 24 hours from an hour
+# http://www.cultofmac.com/221392/quick-hack-speeds-up-retina-macbooks-wake-from-sleep-os-x-tips/
+sudo pmset -a standbydelay 86400
 
 #
 # Kill related apps
