@@ -31,7 +31,7 @@ brew cask install iterm2 the-unarchiver disk-inventory-x appzapper diffmerge
 # virtualization
 brew cask install virtualbox vagrant
 
-# chat, books, music, notes and documents
+# chat, books, notes and documents
 brew cask install kindle google-drive dropbox skype slack \
   messenger-for-telegram evernote skitch
 
