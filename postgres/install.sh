@@ -1,4 +1,4 @@
 #!/bin/sh
-if [ "$(uname -s)" == "Darwin" ]; then
-  brew cask install postgres pg-commander
-fi
+[[ "$(uname -s)" != "Darwin" ]] && exit 0
+
+brew cask install postgres pg-commander

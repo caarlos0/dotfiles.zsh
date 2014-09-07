@@ -1,4 +1,3 @@
 #!/bin/sh
-if [ "$(uname -s)" == "Darwin" ]; then
-  brew install redis
-fi
+[[ "$(uname -s)" != "Darwin" ]] && exit 0
+brew install redis

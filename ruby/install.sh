@@ -1,8 +1,5 @@
 #!/bin/sh
-if [ "$(uname -s)" != "Darwin" ]
-then
-  exit 0
-fi
+[[ "$(uname -s)" != "Darwin" ]] && exit 0
 
 if test ! $(which rbenv)
 then

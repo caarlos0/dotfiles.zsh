@@ -1,4 +1,3 @@
 #!/bin/sh
-if [ "$(uname -s)" == "Darwin" ]; then
-  brew cask install slate
-fi
+[[ "$(uname -s)" != "Darwin" ]] && exit 0
+brew cask install slate
