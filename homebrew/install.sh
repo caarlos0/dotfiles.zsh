@@ -32,19 +32,11 @@ brew cask install iterm2 the-unarchiver disk-inventory-x appzapper diffmerge
 brew cask install virtualbox vagrant
 
 # chat, books, music, notes and documents
-brew cask install spotify kindle google-drive dropbox skype slack \
+brew cask install kindle google-drive dropbox skype slack \
   messenger-for-telegram evernote skitch
 
-# watch and download stuff
-brew install youtube-dl
-brew cask install tvshows subtitle-master beamer vlc transmission
-
-# quick look plugins - https://github.com/sindresorhus/quick-look-plugins
-brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json \
-  qlprettypatch quicklook-csv betterzipql webp-quicklook suspicious-package
-
-# chrome canary
-brew cask install google-chrome-canary
+# chrome
+brew cask install google-chrome-beta
 
 # vpn stuff
 brew cask install tunnelblick-beta
