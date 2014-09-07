@@ -5,7 +5,7 @@
 # The original idea (and a couple settings) were grabbed from:
 #   https://github.com/mathiasbynens/dotfiles/blob/master/.osx
 # More from:
-#		https://gist.github.com/brandonb927/3195465
+#   https://gist.github.com/brandonb927/3195465
 #
 # Run ./set-defaults.sh and you'll be good to go.
 if [ "$(uname -s)" != "Darwin" ]
