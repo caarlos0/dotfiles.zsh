@@ -73,14 +73,10 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 #
 
 # Size of the icons in the Dock
-defaults write com.apple.dock tilesize -int 36
+defaults write com.apple.dock tilesize -int 26
 
-# Automatically hide and show the Dock
-defaults write com.apple.dock autohide -bool true
-
-# Add recent apps to dock
-defaults write com.apple.dock persistent-others -array-add '{ "tile-data" = { "list-type" = 1; }; "tile-type" = "recents-tile"; }'
-
+# Automatically hide and show the Dock = false
+defaults write com.apple.dock autohide -bool false
 
 #
 # Transmission
@@ -97,17 +93,6 @@ defaults write org.m0k.transmission WarningDonate -bool false
 # Hide the legal disclaimer
 defaults write org.m0k.transmission WarningLegal -bool false
 
-
-#
-# SizeUP
-#
-
-# Start SizeUp at login
-defaults write com.irradiatedsoftware.SizeUp StartAtLogin -bool true
-
-# Don’t show the preferences window on next start
-defaults write com.irradiatedsoftware.SizeUp ShowPrefsOnNextStart -bool false
-
 #
 # Mail
 #
@@ -115,12 +100,11 @@ defaults write com.irradiatedsoftware.SizeUp ShowPrefsOnNextStart -bool false
 # Add the keyboard shortcut ⌘ + Enter to send an email in Mail.app
 defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" "@\\U21a9"
 
-
-
 #
 # Kill related apps
 #
-
+set +e
 for app in "Dashboard" "Dock" "Finder" "Safari" "Transmission" "Mail"; do
 	killall "$app" > /dev/null 2>&1
 done
+set -e
