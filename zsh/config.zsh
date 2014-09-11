@@ -4,7 +4,7 @@ else
   export PS1='%3~$(git_info_for_prompt)%# '
 fi
 
-export LSCOLORS="exfxcxdxbxegedabagacad"
+export LSCOLORS='exfxcxdxbxegedabagacad'
 export CLICOLOR=true
 
 fpath=($ZSH/functions $fpath)
@@ -39,10 +39,25 @@ setopt complete_aliases
 
 zle -N newtab
 
-bindkey '^[^[[D' backward-word
-bindkey '^[^[[C' forward-word
-bindkey '^[[5D' beginning-of-line
-bindkey '^[[5C' end-of-line
-bindkey '^[[3~' delete-char
-bindkey '^[^N' newtab
-bindkey '^?' backward-delete-char
+if [[ "$(uname -s)" == "Darwin" ]]; then
+  bindkey '^[[1;5D' backward-word
+  bindkey '^[[1;5C' forward-word
+  bindkey '^[[5D' beginning-of-line
+  bindkey '^[[5C' end-of-line
+  bindkey '^[[3~' delete-char
+  bindkey '^[^N' newtab
+  bindkey '^?' backward-delete-char
+else
+  bindkey '^[[1;5D' backward-word
+  bindkey '^[[1;5C' forward-word
+  bindkey '^[[H' beginning-of-line
+  bindkey '^[[1~' beginning-of-line
+  bindkey '^[OH' beginning-of-line
+  bindkey '^[[F'  end-of-line
+  bindkey '^[[4~' end-of-line
+  bindkey '^[OF' end-of-line
+  bindkey '^[[3~' delete-char
+  bindkey '^[3;5~' delete-char
+  bindkey '\e[3~' delete-char
+  bindkey '^?' backward-delete-char
+fi
