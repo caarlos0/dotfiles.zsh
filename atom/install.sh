@@ -4,4 +4,5 @@ if [ "$(uname -s)" == "Darwin" ]; then
 fi
 
 apm install project-manager git-plus angularjs color-picker file-icons \
-  atom-beautify minimap
+  atom-beautify minimap csslint highlight-line jshint editorconfig  \
+  language-rspec
