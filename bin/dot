@@ -7,5 +7,5 @@
 # Set OS X defaults
 $ZSH/osx/set-defaults.sh 2>&1
 
-# Install homebrew packages
-$ZSH/homebrew/install.sh 2>&1
+# Install everything needed
+$ZSH/script/install.sh 2>&1
