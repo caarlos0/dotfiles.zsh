@@ -2,6 +2,7 @@
   'showIndentGuide': true
   'fontFamily': 'Menlo'
   'fontSize': 12
+  'invisibles': {}
 'core':
   'excludeVcsIgnoredPaths': true
   'projectHome': '~/Code'
@@ -41,3 +42,5 @@
 'whitespace': {}
 'atom-beautify':
   '_analyticsUserId': '49772381-dc99-4a0f-bc9b-ee33c6b3c225'
+'jshint':
+  'validateOnlyOnSave': true
