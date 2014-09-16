@@ -14,3 +14,8 @@ alias gcm='git commit -m'
 alias gcam='git commit -a -m'
 alias gs='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
+
+function gi() {
+  curl -s "https://www.gitignore.io/api/${@}";
+}
+
