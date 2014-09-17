@@ -17,11 +17,11 @@ alias grep='grep --color=auto'
 alias duf='du -sh * | sort -hr'
 alias less='less -r'
 
-if test ! $(which pbcopy 2&>/dev/null); then
-  if test $(which xclip 2&>/dev/null); then
+if [[ -z $(command -v pbcopy) ]]; then
+  if [[ -n $(command -v xclip) ]]; then
     alias pbcopy='xclip -selection clipboard'
     alias pbpaste='xclip -selection clipboard -o'
-  elif test $(which xsel 2&>/dev/null); then
+  elif [[ -n $(command -v xsel) ]]; then
     alias pbcopy='xsel --clipboard --input'
     alias pbpaste='xsel --clipboard --output'
   fi
