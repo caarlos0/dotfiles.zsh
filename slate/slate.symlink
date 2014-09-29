@@ -10,12 +10,12 @@ config keyboardLayout qwertz
 # Positions aliases
 alias full              move screenOriginX;screenOriginY                               screenSizeX;screenSizeY
 alias center            move screenOriginX+screenSizeX*0.2;screenOriginY               screenSizeX*0.6;screenSizeY
-alias left-half         move screenOriginX;screenOriginY                               screenSizeX*0.4;screenSizeY
-alias right-half        move screenOriginX+screenSizeX*0.4;screenOriginY               screenSizeX*0.6;screenSizeY
-alias left-half-top     move screenOriginX;screenOriginY                               screenSizeX*0.4;screenSizeY/2
-alias left-half-bottom  move screenOriginX;screenOriginY+screenSizeY/2                 screenSizeX*0.4;screenSizeY/2
-alias right-half-top    move screenOriginX+screenSizeX*0.4;screenOriginY               screenSizeX*0.6;screenSizeY/2
-alias right-half-bottom move screenOriginX+screenSizeX*0.4;screenOriginY+screenSizeY/2 screenSizeX*0.6;screenSizeY/2
+alias left-half         move screenOriginX;screenOriginY                               screenSizeX*0.5;screenSizeY
+alias right-half        move screenOriginX+screenSizeX*0.5;screenOriginY               screenSizeX*0.5;screenSizeY
+alias left-half-top     move screenOriginX;screenOriginY                               screenSizeX*0.5;screenSizeY/2
+alias left-half-bottom  move screenOriginX;screenOriginY+screenSizeY/2                 screenSizeX*0.5;screenSizeY/2
+alias right-half-top    move screenOriginX+screenSizeX*0.5;screenOriginY               screenSizeX*0.5;screenSizeY/2
+alias right-half-bottom move screenOriginX+screenSizeX*0.5;screenOriginY+screenSizeY/2 screenSizeX*0.5;screenSizeY/2
 
 # Location Bindings
 bind m:ctrl;alt;cmd ${full}
