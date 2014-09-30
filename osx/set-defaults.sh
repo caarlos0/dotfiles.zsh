@@ -139,7 +139,7 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
 # Speeding up wake from sleep to 24 hours from an hour
 # http://www.cultofmac.com/221392/quick-hack-speeds-up-retina-macbooks-wake-from-sleep-os-x-tips/
-sudo pmset -a standbydelay 86400
+# sudo pmset -a standbydelay 86400
 
 #
 # Kill related apps
