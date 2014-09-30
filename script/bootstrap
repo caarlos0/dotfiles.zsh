@@ -134,6 +134,8 @@ install_dotfiles () {
     dst="$HOME/.$(basename "${src%.*}")"
     link_file "$src" "$dst"
   done
+  git submodule init
+  git submodule update
 }
 
 setup_gitconfig

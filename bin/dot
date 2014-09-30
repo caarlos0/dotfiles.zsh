@@ -8,4 +8,7 @@
 $ZSH/osx/set-defaults.sh 2>&1
 
 # Install everything needed
-$ZSH/script/install.sh 2>&1
+$ZSH/script/install 2>&1
+
+# update submodules
+git submodule update
