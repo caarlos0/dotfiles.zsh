@@ -10,9 +10,11 @@ branch=$(git name-rev --name-only HEAD)
 repo=$(get_repo $origin)
 
 if [[ -z $upstream ]]; then
-  open "https://github.com/$repo/pull/new/$branch"
+  url="https://github.com/$repo/pull/new/$branch"
 else
+  target=$( [[ -z "$1" ]] && echo "master" || echo $1 )
   origin_name=$(echo $repo | cut -f1 -d'/')
   upstream_name=$(get_repo $upstream | cut -f1 -d'/')
-  open "https://github.com/$repo/pull/new/$upstream_name:master...$origin_name:$branch"
+  url="https://github.com/$repo/pull/new/$upstream_name:$target...$origin_name:$branch"
 fi
+open "$url" 2> /dev/null || xdg-open "$url" &> /dev/null
