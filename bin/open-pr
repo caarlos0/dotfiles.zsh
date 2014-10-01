@@ -1,0 +1,18 @@
+#!/bin/zsh
+function get_repo {
+  echo $1 | sed -e "s/.*github.com[:/]\(.*\)\.git.*/\1/"
+}
+
+remotes=$(git remote -v | grep "(fetch)")
+upstream=$(echo $remotes | grep -m 1 upstream)
+origin=$(echo $remotes | grep -m 1 origin)
+branch=$(git name-rev --name-only HEAD)
+repo=$(get_repo $origin)
+
+if [[ -z $upstream ]]; then
+  open "https://github.com/$repo/pull/new/$branch"
+else
+  origin_name=$(echo $repo | cut -f1 -d'/')
+  upstream_name=$(get_repo $upstream | cut -f1 -d'/')
+  open "https://github.com/$repo/pull/new/$upstream_name:master...$origin_name:$branch"
+fi
