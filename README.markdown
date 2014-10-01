@@ -70,6 +70,23 @@ There's a few special files in the hierarchy.
 - **topic/install.sh**: Any file with this name and with exec permission, will
 ran at bootstrap phase.
 
+## goodies
+
+- [pure][pure] prompt (which is awesome!);
+- fish-like [syntax highlight][syntax];
+- [more completions][completions];
+- fish-like [substring history search][search].
+
+[pure]: https://github.com/sindresorhus/pure
+[syntax]: https://github.com/zsh-users/zsh-syntax-highlighting
+[completions]: https://github.com/zsh-users/zsh-completions
+[search]: https://github.com/zsh-users/zsh-history-substring-search
+
+## compatibility
+
+I try to maintain it working in both Linux (no specific distro) and OS X, most
+of all, because I use OS X at home and Linux at work.
+
 ## bugs
 
 I want this to work for everyone; that means when you clone it down it should
