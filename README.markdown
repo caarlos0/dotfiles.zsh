@@ -1,5 +1,7 @@
 # carlos does dotfiles
 
+![screenshot](https://raw.githubusercontent.com/caarlos0/dotfiles/master/screenshot.png)
+
 ## dotfiles
 
 Your dotfiles are how you personalize your system. These are mine.
