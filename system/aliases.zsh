@@ -26,3 +26,9 @@ if [[ -z $(command -v pbcopy) ]]; then
     alias pbpaste='xsel --clipboard --output'
   fi
 fi
+
+if [[ "$(uname -s)" != "Darwin" ]]; then
+  function open {
+    xdg-open $@ &> /dev/null
+  }
+fi
