@@ -82,9 +82,11 @@ fi
 
 if [[ "${terminfo[khome]}" != "" ]]; then
   bindkey "${terminfo[khome]}" beginning-of-line      # [Home] - Go to beginning of line
+  bindkey '[D' beginning-of-line                      # OPTION+left
 fi
 if [[ "${terminfo[kend]}" != "" ]]; then
   bindkey "${terminfo[kend]}"  end-of-line            # [End] - Go to end of line
+  bindkey '[C' end-of-line                            # OPTION+left
 fi
 
 bindkey ' ' magic-space                               # [Space] - do history expansion
