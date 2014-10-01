@@ -7,3 +7,6 @@
 [submodule "zsh/completions"]
 	path = zsh/completions
 	url = https://github.com/zsh-users/zsh-completions.git
+[submodule "zsh/history-substring-search"]
+	path = zsh/history-substring-search
+	url = https://github.com/zsh-users/zsh-history-substring-search.git

@@ -74,10 +74,10 @@ if [[ "${terminfo[knp]}" != "" ]]; then
 fi
 
 if [[ "${terminfo[kcuu1]}" != "" ]]; then
-  bindkey "${terminfo[kcuu1]}" up-line-or-search      # start typing + [Up-Arrow] - fuzzy find history forward
+  bindkey "${terminfo[kcuu1]}" history-substring-search-up     # start typing + [Up-Arrow] - fuzzy find history forward
 fi
 if [[ "${terminfo[kcud1]}" != "" ]]; then
-  bindkey "${terminfo[kcud1]}" down-line-or-search    # start typing + [Down-Arrow] - fuzzy find history backward
+  bindkey "${terminfo[kcud1]}" history-substring-search-down    # start typing + [Down-Arrow] - fuzzy find history backward
 fi
 
 if [[ "${terminfo[khome]}" != "" ]]; then
