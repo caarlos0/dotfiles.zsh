@@ -11,6 +11,7 @@
     promote           = !$ZSH/bin/git-promote
     wtf               = !$ZSH/bin/git-wtf
     rank-contributers = !$ZSH/bin/git-rank-contributers
+    unpushed-st       = !$ZSH/git/git-unpushed-stat
     count             = !git shortlog -sn
     lc                = !$ZSH/bin/git-add-rm-line-count
   	g                 = grep --break --heading --line-number
