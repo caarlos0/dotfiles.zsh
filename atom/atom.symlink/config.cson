@@ -4,7 +4,6 @@
   'fontSize': 12
   'invisibles': {}
 'core':
-  'excludeVcsIgnoredPaths': true
   'projectHome': '~/Code'
   'ignoredNames': [
     '.bundle'
@@ -39,7 +38,6 @@
   'userId': '4e9cdd4d889a0eb88c49055f3864bf6ab8e30b5e'
 'tabs':
   'tabScrolling': true
-'whitespace': {}
 'atom-beautify':
   '_analyticsUserId': '49772381-dc99-4a0f-bc9b-ee33c6b3c225'
 'jshint':
