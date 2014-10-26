@@ -75,12 +75,14 @@ ran at bootstrap phase.
 - [pure][pure] prompt (which is awesome!);
 - fish-like [syntax highlight][syntax];
 - [more completions][completions];
-- fish-like [substring history search][search].
+- fish-like [substring history search][search];
+- [z][z] for fast jumping to common dirs.
 
 [pure]: https://github.com/sindresorhus/pure
 [syntax]: https://github.com/zsh-users/zsh-syntax-highlighting
 [completions]: https://github.com/zsh-users/zsh-completions
 [search]: https://github.com/zsh-users/zsh-history-substring-search
+[z]: https://github.com/rupa/z
 
 ## compatibility
 
