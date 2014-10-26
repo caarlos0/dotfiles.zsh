@@ -1,0 +1,3 @@
+#!/bin/zsh
+git pull -u origin master
+git submodule foreach git pull
