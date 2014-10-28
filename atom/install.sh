@@ -1,5 +1,5 @@
-#!/bin/sh
-if [ "$(uname -s)" == "Darwin" ]; then
+#!/bin/zsh
+if [ "$(uname -s)" = "Darwin" ]; then
   brew cask install atom
 fi
 
