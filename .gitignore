@@ -5,3 +5,4 @@ atom/atom.symlink/storage/
 atom/atom.symlink/projects.cson
 atom/atom.symlink/nohup.out
 git/gitconfig.symlink
+*~
