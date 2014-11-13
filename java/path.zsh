@@ -1,4 +1,4 @@
-export MAVEN_OPTS="-Xmx1024m -XX:MaxPermSize=512m"
+export MAVEN_OPTS="-Xmx1024m"
 
 if [ -e /opt/homebrew-cask/Caskroom/eclipse-jee/latest/eclipse/Eclipse.app ]
 then
