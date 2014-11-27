@@ -1,0 +1,2 @@
+#!/bin/sh
+git fetch upstream && git merge upstream/$(git symbolic-ref --short HEAD)

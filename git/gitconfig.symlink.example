@@ -19,6 +19,8 @@
     g                 = grep --break --heading --line-number
     changed           = show --pretty=\"format:\" --name-only
     gi                = grep --break --heading --line-number -i
+    sync              = !$ZSH/git/git-sync
+    nuke              = !$ZSH/git/git-nuke
 [color]
     diff    = auto
     status  = auto
