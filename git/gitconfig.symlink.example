@@ -13,14 +13,14 @@
     promote           = !$ZSH/bin/git-promote
     wtf               = !$ZSH/bin/git-wtf
     rank-contributers = !$ZSH/bin/git-rank-contributers
-    unpushed-st       = !$ZSH/git/git-unpushed-stat
+    unpushed-st       = !$ZSH/bin/git-unpushed-stat
+    sync              = !$ZSH/bin/git-sync
+    nuke              = !$ZSH/bin/git-nuke
     count             = !git shortlog -sn
     lc                = !$ZSH/bin/git-add-rm-line-count
     g                 = grep --break --heading --line-number
     changed           = show --pretty=\"format:\" --name-only
     gi                = grep --break --heading --line-number -i
-    sync              = !$ZSH/git/git-sync
-    nuke              = !$ZSH/git/git-nuke
 [color]
     diff    = auto
     status  = auto
