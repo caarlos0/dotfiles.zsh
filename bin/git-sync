@@ -1,7 +1,22 @@
-#!/bin/sh
+#!/bin/bash
+
+function log {
+  echo -e "\033[1;30m${@}\033[0m"
+}
+
 BRANCH=$(git symbolic-ref --short HEAD)
+log "Pruning upstream..."
 git remote prune upstream
+log "\nMerging upstream/$BRANCH locally..."
 git fetch upstream
 git merge upstream/$BRANCH
+log "\nPushing it to origin/$BRANCH..."
 git push origin $BRANCH
+
+log "\nRemoving merged branches..."
+branches=$(git branch --merged | grep -v '^*' | grep -v 'master')
+for branch in $branches; do
+  $ZSH/bin/git-nuke $branch
+done
+$ZSH/bin/git-wtf
 
