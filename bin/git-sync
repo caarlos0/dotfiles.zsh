@@ -1,2 +1,7 @@
 #!/bin/sh
-git fetch upstream && git merge upstream/$(git symbolic-ref --short HEAD)
+BRANCH=$(git symbolic-ref --short HEAD)
+git remote prune upstream
+git fetch upstream
+git merge upstream/$BRANCH
+git push origin $BRANCH
+
