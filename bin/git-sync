@@ -1,7 +1,8 @@
 #!/bin/bash
 
 function log {
-  echo -e "\033[1;30m${@}\033[0m"
+  echo $@
+  # -e "\033[1;30m${@}\033[0m"
 }
 
 BRANCH=$(git symbolic-ref --short HEAD)
