@@ -1,23 +1,28 @@
 #!/bin/bash
 
 function log {
-  echo $@
-  # -e "\033[1;30m${@}\033[0m"
+  echo -e "-----> $@"
+}
+
+function prefixed {
+  sed -e "s/^/       /"
 }
 
 BRANCH=$(git symbolic-ref --short HEAD)
-log "Pruning upstream..."
-git remote prune upstream
-log "\nMerging upstream/$BRANCH locally..."
-git fetch upstream
-git merge upstream/$BRANCH
-log "\nPushing it to origin/$BRANCH..."
-git push origin $BRANCH
-
-log "\nRemoving merged branches..."
+REMOTE=$($(git remote | grep upstream) || echo "origin")
+log "Pruning $REMOTE..."
+git remote prune $REMOTE | prefixed
+log "Merging $REMOTE/$BRANCH locally..."
+git fetch $REMOTE | prefixed
+git merge $REMOTE/$BRANCH | prefixed
+if ! [ $REMOTE = "origin" ]; then
+  log "Pushing it to origin/$BRANCH..."
+  git push origin $BRANCH | prefixed
+fi
+log "Removing merged branches..."
 branches=$(git branch --merged | grep -v '^*' | grep -v 'master')
 for branch in $branches; do
-  $ZSH/bin/git-nuke $branch
+  $ZSH/bin/git-nuke $branch | prefixed
 done
-$ZSH/bin/git-wtf
+$ZSH/bin/git-wtf | prefixed
 
