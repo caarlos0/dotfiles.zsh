@@ -9,7 +9,7 @@ function prefixed {
 }
 
 BRANCH=$(git symbolic-ref --short HEAD)
-REMOTE=$($(git remote | grep upstream) || echo "origin")
+REMOTE=$(git remote | grep upstream || echo "origin")
 log "Pruning $REMOTE..."
 git remote prune $REMOTE | prefixed
 log "Merging $REMOTE/$BRANCH locally..."
