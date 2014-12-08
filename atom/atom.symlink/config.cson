@@ -1,44 +1,45 @@
-'editor':
-  'showIndentGuide': true
-  'fontFamily': 'Menlo'
-  'fontSize': 12
-  'invisibles': {}
-'core':
-  'projectHome': '~/Code'
-  'ignoredNames': [
-    '.bundle'
-    '.git'
-    'log'
-    'repositories'
-    'tmp'
-    'vendor'
-  ]
-  'themes': [
-    'atom-light-ui'
-    'atom-light-syntax'
-  ]
-  'hideGitIgnoredFiles': true
-'spell-check':
-  'grammars': [
-    'text.plain'
-    'source.gfm'
-    'text.git-commit'
-  ]
-'welcome':
-  'showOnStartup': false
-'release-notes':
-  'viewedVersion': '0.124.0'
-'tree-view':
-  'hideVcsIgnoredFiles': true
-'autosave':
-  'enabled': true
-'exception-reporting':
-  'userId': '6140a965-4d62-af5d-52d0-41b52facd67e'
-'metrics':
-  'userId': '4e9cdd4d889a0eb88c49055f3864bf6ab8e30b5e'
-'tabs':
-  'tabScrolling': true
-'atom-beautify':
-  '_analyticsUserId': '49772381-dc99-4a0f-bc9b-ee33c6b3c225'
-'jshint':
-  'validateOnlyOnSave': true
+'global':
+  'editor':
+    'showIndentGuide': true
+    'fontFamily': 'Menlo'
+    'fontSize': 12
+    'invisibles': {}
+  'core':
+    'projectHome': '~/Code'
+    'ignoredNames': [
+      '.bundle'
+      '.git'
+      'log'
+      'repositories'
+      'tmp'
+      'vendor'
+    ]
+    'themes': [
+      'atom-light-ui'
+      'atom-light-syntax'
+    ]
+    'hideGitIgnoredFiles': true
+  'spell-check':
+    'grammars': [
+      'text.plain'
+      'source.gfm'
+      'text.git-commit'
+    ]
+  'welcome':
+    'showOnStartup': false
+  'release-notes':
+    'viewedVersion': '0.124.0'
+  'tree-view':
+    'hideVcsIgnoredFiles': true
+  'autosave':
+    'enabled': true
+  'exception-reporting':
+    'userId': '6140a965-4d62-af5d-52d0-41b52facd67e'
+  'metrics':
+    'userId': '4e9cdd4d889a0eb88c49055f3864bf6ab8e30b5e'
+  'tabs':
+    'tabScrolling': true
+  'atom-beautify':
+    '_analyticsUserId': '49772381-dc99-4a0f-bc9b-ee33c6b3c225'
+  'jshint':
+    'validateOnlyOnSave': true
