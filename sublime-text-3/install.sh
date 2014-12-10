@@ -20,8 +20,10 @@ ln -sf "$ZSH/sublime-text-3/Preferences.sublime-settings" \
   "$ST3_LOCAL/Packages/User/"
 
 # Link keybindings
-ln -sf "$ZSH/sublime-text-3/Default (OSX).sublime-keymap" \
-  "$ST3_LOCAL/Packages/User/"
+ln -sf "$ZSH/sublime-text-3/Default.sublime-keymap" \
+  "$ST3_LOCAL/Packages/User/Default (OSX).sublime-keymap"
+ln -sf "$ZSH/sublime-text-3/Default.sublime-keymap" \
+  "$ST3_LOCAL/Packages/User/Default (Linux).sublime-keymap"
 
 # Link Installed packages file
 # You might need to relink this to apply updates because package control

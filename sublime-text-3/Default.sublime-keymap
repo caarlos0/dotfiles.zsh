@@ -6,10 +6,10 @@
     "keys": [ "f2" ],
     "command": "side_bar_rename"
   }, {
-    "keys": [ "super+v" ],
+    "keys": [ "super+v", "ctrl+v" ],
     "command": "paste_and_indent"
   }, {
-    "keys": [ "super+shift+v" ],
+    "keys": [ "super+shift+v", "ctrl+shift+v" ],
     "command": "paste"
   }
 ]
