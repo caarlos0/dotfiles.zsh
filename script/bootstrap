@@ -134,10 +134,10 @@ install_dotfiles () {
     dst="$HOME/.$(basename "${src%.*}")"
     link_file "$src" "$dst"
   done
-  git submodule init
-  git submodule update
 }
 
+# make sure it is updated
+$DOTFILES_ROOT/script/bump
 setup_gitconfig
 install_dotfiles
 

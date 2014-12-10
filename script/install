@@ -1,8 +1,12 @@
 #!/usr/bin/env bash
 #
 # Run all dotfiles installers.
-
 set -e
 
+# run homebrew installer first
+$ZSH/homebrew/install.sh
+
 # find the installers and run them iteratively
-find $ZSH -name install.sh | while read installer ; do sh -c "${installer}" ; done
+find $ZSH -name install.sh | grep -v homebrew | while read installer; do
+  #sh -c "${installer}"
+done
