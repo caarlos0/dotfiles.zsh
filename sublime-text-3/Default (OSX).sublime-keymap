@@ -1,0 +1,15 @@
+[
+  {
+    "keys": ["ctrl+super+r"],
+    "command": "reveal_in_side_bar"
+  }, {
+    "keys": ["f2"],
+    "command": "side_bar_rename"
+  }, {
+    "keys": ["super+v"],
+    "command": "paste_and_indent"
+  }, {
+    "keys": ["super+shift+v"],
+    "command": "paste"
+  }
+]

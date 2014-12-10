@@ -1,0 +1,18 @@
+{
+	"installed_packages":
+	[
+		"AutoFileName",
+		"CoffeeScript",
+		"ColorPicker",
+		"EditorConfig",
+		"Git",
+		"GitGutter",
+		"LESS",
+		"Markdown Extended",
+		"Sass",
+		"SideBarEnhancements",
+		"SublimeLinter",
+		"Theme - Spacegray",
+		"WordCount"
+	]
+}
