@@ -8,7 +8,6 @@ else
 fi
 
 # create needed directories
-mkdir -p $ST3_LOCAL
 mkdir -p "$ST3_LOCAL/Installed Packages"
 mkdir -p "$ST3_LOCAL/Packages/User/"
 
@@ -17,15 +16,15 @@ curl -o "$ST3_LOCAL/Installed Packages/Package Control.sublime-package" \
   "https://sublime.wbond.net/Package Control.sublime-package"
 
 # Link config
-ln -s "$ZSH/sublime-text-3/Preferences.sublime-settings" \
+ln -sf "$ZSH/sublime-text-3/Preferences.sublime-settings" \
   "$ST3_LOCAL/Packages/User/"
 
 # Link keybindings
-ln -s "$ZSH/sublime-text-3/Default (OSX).sublime-keymap" \
+ln -sf "$ZSH/sublime-text-3/Default (OSX).sublime-keymap" \
   "$ST3_LOCAL/Packages/User/"
 
 # Link Installed packages file
 # You might need to relink this to apply updates because package control
 # might remove this file after executing it...
-ln -s "$ZSH/sublime-text-3/Package Control.sublime-settings" \
+ln -sf "$ZSH/sublime-text-3/Package Control.sublime-settings" \
   "$ST3_LOCAL/Packages/User/"
