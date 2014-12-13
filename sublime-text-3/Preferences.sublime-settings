@@ -4,6 +4,19 @@
 	"font_size": 12,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
+	"folder_exclude_patterns":
+	[
+		"target",
+		".git",
+		".settings",
+		"bin"
+	],
+	"file_exclude_patterns":
+	[
+		".project",
+		".classpath",
+		"*.iml"
+	],
 	"ignored_packages":
 	[
 		"Markdown",
