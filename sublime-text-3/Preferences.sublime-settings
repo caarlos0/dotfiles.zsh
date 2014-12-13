@@ -14,7 +14,8 @@
 		"target",
 		".git",
 		".settings",
-		"bin"
+		"bin",
+		".idea"
 	],
 	"font_face": "Menlo",
 	"font_size": 12,
