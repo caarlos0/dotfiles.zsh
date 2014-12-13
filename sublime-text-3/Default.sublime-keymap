@@ -1,15 +1,28 @@
 [
-  {
-    "keys": [ "ctrl+super+r" ],
-    "command": "reveal_in_side_bar"
-  }, {
-    "keys": [ "f2" ],
-    "command": "side_bar_rename"
-  }, {
-    "keys": [ "super+v", "ctrl+v" ],
-    "command": "paste_and_indent"
-  }, {
-    "keys": [ "super+shift+v", "ctrl+shift+v" ],
-    "command": "paste"
-  }
+    {
+        "command": "reveal_in_side_bar",
+        "keys": [
+            "ctrl+super+r"
+        ]
+    },
+    {
+        "command": "side_bar_rename",
+        "keys": [
+            "f2"
+        ]
+    },
+    {
+        "command": "paste_and_indent",
+        "keys": [
+            "super+v",
+            "ctrl+v"
+        ]
+    },
+    {
+        "command": "paste",
+        "keys": [
+            "super+shift+v",
+            "ctrl+shift+v"
+        ]
+    }
 ]
