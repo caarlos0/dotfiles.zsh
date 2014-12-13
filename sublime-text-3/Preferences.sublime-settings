@@ -1,38 +1,42 @@
 {
-    "color_scheme": "Packages/User/base16-ocean.dark (SL).tmTheme",
-    "default_line_ending": "unix",
-    "ensure_newline_at_eof_on_save": true,
-    "file_exclude_patterns": [
-        ".project",
-        ".classpath",
-        "*.iml",
-        ".DS_Store"
-    ],
-    "folder_exclude_patterns": [
-        "target",
-        ".git",
-        ".settings",
-        "bin"
-    ],
-    "font_face": "Menlo",
-    "font_size": 12,
-    "highlight_line": true,
-    "highlight_modified_tabs": true,
-    "ignored_packages": [
-        "Markdown",
-        "Vintage"
-    ],
-    "rulers": [
-        80
-    ],
-    "save_on_focus_lost": true,
-    "spacegray_sidebar_font_normal": true,
-    "spacegray_sidebar_tree_normal": true,
-    "spacegray_tabs_auto_width": true,
-    "spacegray_tabs_font_normal": true,
-    "spacegray_tabs_normal": true,
-    "tab_size": 2,
-    "theme": "Spacegray.sublime-theme",
-    "translate_tabs_to_spaces": true,
-    "trim_trailing_white_space_on_save": true
+	"color_scheme": "Packages/User/base16-ocean.dark (SL).tmTheme",
+	"default_line_ending": "unix",
+	"ensure_newline_at_eof_on_save": true,
+	"file_exclude_patterns":
+	[
+		".project",
+		".classpath",
+		"*.iml",
+		".DS_Store"
+	],
+	"folder_exclude_patterns":
+	[
+		"target",
+		".git",
+		".settings",
+		"bin"
+	],
+	"font_face": "Menlo",
+	"font_size": 12,
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+		"Markdown",
+		"Vintage"
+	],
+	"rulers":
+	[
+		80
+	],
+	"save_on_focus_lost": true,
+	"spacegray_sidebar_font_normal": true,
+	"spacegray_sidebar_tree_normal": true,
+	"spacegray_tabs_auto_width": true,
+	"spacegray_tabs_font_normal": true,
+	"spacegray_tabs_normal": true,
+	"tab_size": 2,
+	"theme": "Spacegray.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true
 }

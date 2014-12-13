@@ -2,6 +2,7 @@
 	"installed_packages":
 	[
 		"AutoFileName",
+		"Clickable URLs",
 		"CoffeeScript",
 		"ColorPicker",
 		"EditorConfig",

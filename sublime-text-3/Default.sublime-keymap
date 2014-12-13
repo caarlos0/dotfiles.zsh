@@ -10,19 +10,5 @@
         "keys": [
             "f2"
         ]
-    },
-    {
-        "command": "paste_and_indent",
-        "keys": [
-            "super+v",
-            "ctrl+v"
-        ]
-    },
-    {
-        "command": "paste",
-        "keys": [
-            "super+shift+v",
-            "ctrl+shift+v"
-        ]
     }
 ]
