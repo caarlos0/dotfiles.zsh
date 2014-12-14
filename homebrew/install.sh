@@ -30,7 +30,7 @@ brew cask install virtualbox vagrant
 
 # chat, books, notes and documents
 brew cask install kindle dropbox skype slack messenger-for-telegram evernote \
-  skitch
+  skitch calibre
 
 # chrome
 brew cask install google-chrome-beta
