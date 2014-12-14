@@ -10,7 +10,7 @@ rbenv() {
 
   case "$command" in
   shell)
-    eval `rbenv "sh-$command" "$@"`;;
+    eval "$(rbenv "sh-$command" "$@")";;
   *)
     command rbenv "$command" "$@";;
   esac

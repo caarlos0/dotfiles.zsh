@@ -1,1 +1,1 @@
-source $ZSH/z/z/z.sh
+source "$ZSH/z/z/z.sh"

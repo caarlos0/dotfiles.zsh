@@ -16,5 +16,5 @@ alias gs='git status -sb'
 alias gcb='git-copy-branch-name'
 
 function gi() {
-  curl -s "https://www.gitignore.io/api/${@}";
+  curl -s "https://www.gitignore.io/api/$*";
 }
