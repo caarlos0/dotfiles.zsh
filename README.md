@@ -1,4 +1,4 @@
-# carlos does dotfiles
+# carlos does dotfiles [![Build Status](https://travis-ci.org/caarlos0/dotfiles.svg?branch=master)](https://travis-ci.org/caarlos0/dotfiles)
 
 ![screenshot](https://raw.githubusercontent.com/caarlos0/dotfiles/master/screenshot.png)
 
@@ -97,6 +97,11 @@ something if I forget to make a check for a dependency.
 If you're brand-new to the project and run into any blockers, please
 [open an issue](https://github.com/caarlos0/dotfiles/issues) on this repository
 and I'd love to get it fixed for you!
+
+## contributing
+
+Feel free to contribute. Pull requests will be automatically
+checked with [Shellchek](https://github.com/koalaman/shellcheck).
 
 ## thanks
 
