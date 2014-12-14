@@ -1,15 +1,9 @@
-if [[ -n $SSH_CONNECTION ]]; then
-  export PS1='%m:%3~%# '
-else
-  export PS1='%3~%# '
-fi
-
 export LSCOLORS='exfxcxdxbxegedabagacad'
 export CLICOLOR=true
 
 fpath=($ZSH/functions $fpath)
 
-autoload -U $ZSH/functions/*(:t)
+autoload -U "$ZSH/functions/*(:t)"
 
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
@@ -37,26 +31,7 @@ setopt HIST_IGNORE_SPACE
 setopt HIST_VERIFY
 setopt HIST_EXPIRE_DUPS_FIRST
 
-
 zle -N newtab
-
-# from oh-my-zsh
-# http://zsh.sourceforge.net/Doc/Release/Zsh-Line-Editor.html
-# http://zsh.sourceforge.net/Doc/Release/Zsh-Line-Editor.html#Zle-Builtins
-# http://zsh.sourceforge.net/Doc/Release/Zsh-Line-Editor.html#Standard-Widgets
-
-# Make sure that the terminal is in application mode when zle is active, since
-# only then values from $terminfo are valid
-if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
-  function zle-line-init() {
-    echoti smkx
-  }
-  function zle-line-finish() {
-    echoti rmkx
-  }
-  zle -N zle-line-init
-  zle -N zle-line-finish
-fi
 
 bindkey -e                                            # Use emacs key bindings
 
