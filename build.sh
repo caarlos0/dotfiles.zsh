@@ -15,6 +15,7 @@ check() {
 }
 
 check "./build.sh"
+check "./zsh/zshrc.symlink"
 
 find .  -maxdepth 2 -type f -name "*.*sh" | while read script; do
   check "$script"
