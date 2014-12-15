@@ -1,1 +1,2 @@
-cd ~/$1;
+#!/bin/zsh
+cd "$HOME/$1"

@@ -1,3 +1,4 @@
+#!/bin/zsh
 # aliases
 alias mvncie='mvn clean install eclipse:eclipse'
 alias mvnci='mvn clean install'

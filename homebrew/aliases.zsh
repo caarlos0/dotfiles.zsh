@@ -1,3 +1,4 @@
+#!/bin/zsh
 function brewbump() {
   brew update
   brew upgrade

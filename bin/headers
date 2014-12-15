@@ -2,7 +2,7 @@
 #
 # https://github.com/rtomayko/dotfiles/blob/rtomayko/bin/headers
 
-curl -sv "$@" 2>&1 >/dev/null |
+curl -sv "$@" >/dev/null 2>&1 |
   grep -v "^\*" |
   grep -v "^}" |
   cut -c3-
