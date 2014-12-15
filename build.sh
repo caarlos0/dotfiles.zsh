@@ -10,19 +10,20 @@ fail() {
 
 check() {
   local script="$1"
-  shellcheck "$script" || fail "$script"
+  shellcheck -e SC2001 "$script" || fail "$script"
   success "$script"
 }
 
 check "./build.sh"
 
-find . -type f -name "*.*sh" -depth 2 | while read script; do
+find .  -maxdepth 2 -type f -name "*.*sh" | while read script; do
   check "$script"
 done
 
-find . -type f -depth 2 ! -name "*.*" | grep -v ".git" | while read script; do
+find . -maxdepth 2 -type f ! -name "*.*" | egrep -v ".git" | while read script; do
   head=$(head -n1 "$script")
   [[ "$head" = "#!/usr/bin/env ruby" ]] && continue
   [[ "$head" =~ ^#compdef.* ]] &&  continue
+  [[ "$script" =~ .*.MD ]] && continue
   check "$script"
 done
