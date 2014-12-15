@@ -1,2 +1,2 @@
 #compdef h
-_files -W ~ -/
+_files -W $HOME -/
