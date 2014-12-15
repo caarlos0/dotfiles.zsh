@@ -6,9 +6,9 @@
 #completion=$(brew --prefix)/share/zsh/site-functions/_git
 
 if [ "$(uname -s)" = "Darwin" ]; then
-  completion=/usr/local/etc/bash_completion.d/git-completion.bash
-else
   completion="$(brew --prefix)/share/zsh/functions/_git"
+else
+  completion=/usr/local/etc/bash_completion.d/git-completion.bash
 fi
 
 [[ -f completion ]] && source "$completion"
