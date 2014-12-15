@@ -15,7 +15,7 @@
 #   # => opens the specified directory in your editor
 
 if [ "$1" = "" ] ; then
-  exec $EDITOR . > /tmp/editor-log 2>&1 &
+  exec "$EDITOR" . > /tmp/editor-log 2>&1 &
 else
-  exec $EDITOR "$1" > /tmp/editor-log 2>&1 &
+  exec "$EDITOR" "$1" > /tmp/editor-log 2>&1 &
 fi

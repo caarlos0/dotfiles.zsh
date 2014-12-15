@@ -1,3 +1,4 @@
+#!/bin/zsh
 # Force rehash when command not found
 _force_rehash() {
     (( CURRENT == 1 )) && rehash

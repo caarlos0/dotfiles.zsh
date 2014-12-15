@@ -1,3 +1,4 @@
+#!/bin/zsh
 alias gl='git pull --prune'
 alias glg="git log --all --graph --decorate --oneline --abbrev-commit"
 alias glog=glg

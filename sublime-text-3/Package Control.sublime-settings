@@ -15,6 +15,7 @@
 		"Sass",
 		"SideBarEnhancements",
 		"SublimeLinter",
+		"SublimeLinter-shellcheck",
 		"Theme - Spacegray",
 		"WordCount"
 	]

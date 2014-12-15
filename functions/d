@@ -1,1 +1,2 @@
-cd ~/.dotfiles/$1;
+#!/bin/zsh
+cd "$ZSH/$1"

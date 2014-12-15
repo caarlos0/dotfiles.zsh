@@ -1,3 +1,4 @@
+#!/bin/zsh
 export MAVEN_OPTS="-Xmx1024m"
 
 if [ -e /opt/homebrew-cask/Caskroom/eclipse-jee/latest/eclipse/Eclipse.app ]
