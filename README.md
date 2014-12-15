@@ -101,7 +101,7 @@ and I'd love to get it fixed for you!
 ## contributing
 
 Feel free to contribute. Pull requests will be automatically
-checked with [Shellchek](https://github.com/koalaman/shellcheck).
+checked/linted with [Shellcheck](https://github.com/koalaman/shellcheck).
 
 ## thanks
 
