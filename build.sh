@@ -20,10 +20,9 @@ find .  -maxdepth 2 -type f -name "*.*sh" | while read script; do
   check "$script"
 done
 
-find . -maxdepth 2 -type f ! -name "*.*" | egrep -v ".git" | while read script; do
+find . -maxdepth 2 -type f ! -name "*.*" | egrep -vi ".git|*.md" | while read script; do
   head=$(head -n1 "$script")
   [[ "$head" = "#!/usr/bin/env ruby" ]] && continue
   [[ "$head" =~ ^#compdef.* ]] &&  continue
-  [[ "$script" =~ .*.MD ]] && continue
   check "$script"
 done
