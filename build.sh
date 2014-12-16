@@ -14,15 +14,8 @@ check() {
   success "$script"
 }
 
-check_shs() {
-  find .  -maxdepth 2 -type f -name "*.*sh" | while read script; do
-    check "$script"
-  done
-}
-
-check_no_ext() {
-  find . -maxdepth 2 -type f ! -name "*.*" | grep -v ".git" | \
-    while read script; do
+check_all_executables() {
+  find . -maxdepth 2 -type f -perm +111 | grep -v ".git" | while read script; do
     head=$(head -n1 "$script")
     [[ "$head" = "#!/usr/bin/env ruby" ]] && continue
     [[ "$head" =~ ^#compdef.* ]] && continue
@@ -31,12 +24,10 @@ check_no_ext() {
 }
 
 main() {
-  check "./build.sh"
   check "./zsh/zshrc.symlink"
-  check_shs
-  check_no_ext
+  check_all_executables
 }
 
-[[ "$DEBUG" = "1" ]] && set -x
+[[ "${DEBUG:-}" ]] && set -x
 
 main
