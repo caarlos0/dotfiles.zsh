@@ -1,28 +1,51 @@
 #!/bin/bash
-
-function log {
+log() {
   echo -e "-----> $*"
 }
 
-function prefixed {
+prefixed() {
   sed -e "s/^/       /"
 }
 
-BRANCH=$(git symbolic-ref --short HEAD)
-REMOTE=$(git remote | grep upstream || echo "origin")
-log "Pruning $REMOTE..."
-git remote prune "$REMOTE" | prefixed
-log "Merging $REMOTE/$BRANCH locally..."
-git fetch "$REMOTE" | prefixed
-git merge "$REMOTE/$BRANCH" | prefixed
-if ! [ "$REMOTE" = "origin" ]; then
-  log "Pushing it to origin/$BRANCH..."
-  git push origin "$BRANCH" | prefixed
-fi
-log "Removing merged branches..."
-branches=$(git branch --merged | grep -v "^\*" | grep -v 'master')
-for branch in $branches; do
-  "$ZSH"/bin/git-nuke "$branch" | prefixed
-done
-"$ZSH"/bin/git-wtf | prefixed
+prune() {
+  local remote="$1"
+  log "Pruning $remote..."
+  git remote prune "$remote" | prefixed
+}
 
+merge_locally() {
+  local remote="$1"
+  local branch="$2"
+  log "Merging $remote/$branch locally..."
+  git fetch "$remote" | prefixed
+  git merge "$remote/$branch" | prefixed
+}
+
+push_to_fork() {
+  local remote="$1"
+  local branch="$2"
+  if ! [ "$remote" = "origin" ]; then
+    log "Pushing it to origin/$branch..."
+    git push origin "$branch" | prefixed
+  fi
+}
+
+remove_merged() {
+  log "Removing merged branches..."
+  local merged_branches=$(git branch --merged | grep -v "^\*" | grep -v 'master')
+  for merged_branch in $merged_branches; do
+    "$ZSH"/bin/git-nuke "$merged_branch" | prefixed
+  done
+}
+
+sync() {
+  local branch=$(git symbolic-ref --short HEAD)
+  local remote=$(git remote | grep upstream || echo "origin")
+  prune "$remote"
+  merge_locally "$remote" "$branch"
+  push_to_fork "$remote" "$branch"
+  remove_merged
+  "$ZSH"/bin/git-wtf | prefixed
+}
+
+sync "$@"
