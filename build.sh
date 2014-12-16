@@ -10,7 +10,7 @@ fail() {
 
 check() {
   local script="$1"
-  shellcheck "$script" || fail "$script"
+  shellcheck -e SC2001 "$script" || fail "$script"
   success "$script"
 }
 
