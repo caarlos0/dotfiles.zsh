@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function log {
-  echo -e "-----> $@"
+  echo -e "-----> $*"
 }
 
 function prefixed {
@@ -11,18 +11,18 @@ function prefixed {
 BRANCH=$(git symbolic-ref --short HEAD)
 REMOTE=$(git remote | grep upstream || echo "origin")
 log "Pruning $REMOTE..."
-git remote prune $REMOTE | prefixed
+git remote prune "$REMOTE" | prefixed
 log "Merging $REMOTE/$BRANCH locally..."
-git fetch $REMOTE | prefixed
-git merge $REMOTE/$BRANCH | prefixed
-if ! [ $REMOTE = "origin" ]; then
+git fetch "$REMOTE" | prefixed
+git merge "$REMOTE/$BRANCH" | prefixed
+if ! [ "$REMOTE" = "origin" ]; then
   log "Pushing it to origin/$BRANCH..."
-  git push origin $BRANCH | prefixed
+  git push origin "$BRANCH" | prefixed
 fi
 log "Removing merged branches..."
-branches=$(git branch --merged | grep -v '^*' | grep -v 'master')
+branches=$(git branch --merged | grep -v "^\*" | grep -v 'master')
 for branch in $branches; do
-  $ZSH/bin/git-nuke $branch | prefixed
+  "$ZSH"/bin/git-nuke "$branch" | prefixed
 done
-$ZSH/bin/git-wtf | prefixed
+"$ZSH"/bin/git-wtf | prefixed
 
