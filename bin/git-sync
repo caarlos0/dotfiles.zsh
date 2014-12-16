@@ -1,6 +1,5 @@
 #!/bin/bash
 [[ "${DEBUG:-}" ]] && set -x
-
 log() {
   echo -e "-----> $*"
 }
