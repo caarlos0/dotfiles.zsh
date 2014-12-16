@@ -8,3 +8,5 @@ install:
   - shellcheck -V
 script:
   - ./build.sh
+notifications:
+  email: false
