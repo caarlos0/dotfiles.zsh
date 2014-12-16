@@ -4,7 +4,7 @@
 # our favorite @tekkub:
 #
 #   https://plus.google.com/115587336092124934674/posts/dXsagsvLakJ
-branches=$(git branch --merged | grep -v '^*' | grep -v 'master' | tr -d '\n')
+branches=$(git branch --merged | grep -v "^\*" | grep -v 'master' | tr -d '\n')
 if [ ! -z "$branches" ]; then
-  git branch -d $branches
+  git branch -d "$branches"
 fi

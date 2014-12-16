@@ -1,5 +1,9 @@
-#!/bin/sh
-added=`git diff | grep '^+' | wc -l`
-deleted=`git diff | grep '^-' | wc -l`
-
-echo "${added} additions and ${deleted} deletions."
+#!/bin/bash
+set -eo pipefail
+add_rm_lc() {
+  local diff_result=$(git diff)
+  local added=$(echo "$diff_result" | grep -c '^+')
+  local deleted=$(echo "$diff_result" | grep -c '^-')
+  echo "${added} additions and ${deleted} deletions."
+}
+add_rm_lc "$@"

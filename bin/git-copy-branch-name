@@ -1,3 +1,2 @@
 #!/bin/sh
-
-git branch | grep \* | awk '{print $2}' | tr -d '\n' | pbcopy
+git branch | grep "\*" | awk '{print $2}' | tr -d '\n' | pbcopy
