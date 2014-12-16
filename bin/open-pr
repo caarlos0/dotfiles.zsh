@@ -1,4 +1,6 @@
-#!/bin/zsh
+#!/bin/bash
+[[ "${DEBUG:-}" ]] && set -x
+
 get_repo() {
   echo "$1" | sed -e "s/.*github.com[:/]\(.*\)\.git.*/\1/"
 }
@@ -6,7 +8,7 @@ get_repo() {
 main() {
   local upstream=$(git config --get remote.upstream.url)
   local origin=$(git config --get remote.origin.url)
-  local branch=$(git name-rev --name-only HEAD)
+  local branch=$(git symbolic-ref --short HEAD)
   local repo=$(get_repo "$origin")
   local pr_url="https://github.com/$repo/pull/new"
 
