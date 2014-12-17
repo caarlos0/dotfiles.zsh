@@ -1,7 +1,6 @@
 #!/bin/zsh
 alias gl='git pull --prune'
-alias glg="git log --all --graph --decorate --oneline --abbrev-commit"
-alias glog=glg
+alias glg="git log --graph --decorate --oneline --abbrev-commit"
 alias gp='git push origin HEAD'
 alias gpa='git push origin --all'
 alias gd='git diff'
