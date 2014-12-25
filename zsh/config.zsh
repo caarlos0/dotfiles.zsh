@@ -44,6 +44,7 @@ zle -N newtab
 if [[ ! -z "$+terminfo[smkx]" ]] && [[ ! -z "$+terminfo[rmkx]" ]]; then
   function zle-line-init() {
     echoti smkx
+    zle autosuggest-start
   }
   function zle-line-finish() {
     echoti rmkx

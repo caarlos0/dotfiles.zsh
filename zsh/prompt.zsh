@@ -8,3 +8,6 @@ source "$ZSH/zsh/syntax-highlight/zsh-syntax-highlighting.zsh"
 
 # history substr search
 source "$ZSH/zsh/history-substring-search/zsh-history-substring-search.zsh"
+
+# autosuggestions
+source "$ZSH/zsh/autosuggestions/autosuggestions.zsh"

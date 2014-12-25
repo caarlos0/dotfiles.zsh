@@ -13,3 +13,6 @@
 [submodule "z/z"]
 	path = z/z
 	url = https://github.com/rupa/z.git
+[submodule "zsh/autosuggestions"]
+	path = zsh/autosuggestions
+	url = git@github.com:tarruda/zsh-autosuggestions.git
