@@ -19,6 +19,7 @@ check() {
 
 check_all_executables() {
   find . -maxdepth 2 -type f -perm +111 | grep -v "\.git" | while read script; do
+    [[ "$script" = "./antigen/antigen.zsh" ]] && continue
     head=$(head -n1 "$script")
     [[ "$head" = "#!/usr/bin/env ruby" ]] && continue
     [[ "$head" =~ ^#compdef.* ]] && continue
