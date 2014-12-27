@@ -1,5 +1,5 @@
 #!/bin/zsh
-source "$ZSH/antigen/antigen.zsh"
+source "$ZSH/antigen/antigen/antigen.zsh"
 
 antigen bundle rupa/z
 antigen bundle sindresorhus/pure
