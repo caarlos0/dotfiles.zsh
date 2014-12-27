@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #
 # Run all dotfiles installers.
-set -e
+set -eo pipefail
 
 # run homebrew installer first
 "$ZSH/homebrew/install.sh"

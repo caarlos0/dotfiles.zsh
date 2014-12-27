@@ -1,4 +1,5 @@
 #!/bin/zsh
+echo "Pulling origin/master"
 git pull -u origin master
-git submodule foreach git checkout master
-git submodule foreach git pull
+echo "Running dot"
+dot
