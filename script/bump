@@ -1,5 +1,0 @@
-#!/bin/zsh
-echo "Pulling origin/master"
-git pull -u origin master
-echo "Running dot"
-dot

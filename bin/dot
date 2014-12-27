@@ -4,6 +4,12 @@
 #
 # `dot` handles installation, updates, things like that. Run it periodically
 # to make sure you're on the latest and greatest.
+
+# update submodules
+echo "Updating antigen plugins..."
+git submodule update
+antigen update
+
 # Set OS X defaults
 echo "Setting all defaults..."
 "$ZSH/osx/set-defaults.sh"
@@ -11,8 +17,3 @@ echo "Setting all defaults..."
 # Install everything needed
 echo "Running all install files..."
 "$ZSH/script/install"
-
-# update submodules
-echo "Updating antigen plugins..."
-git submodule update
-antigen update
