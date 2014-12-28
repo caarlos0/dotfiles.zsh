@@ -74,13 +74,21 @@ ran at bootstrap phase.
 - fish-like [syntax highlight][syntax];
 - [more completions][completions];
 - fish-like [substring history search][search];
-- [z][z] for fast jumping to common dirs.
+- [z][z] for fast jumping to common dirs;
+- [bd][bd] to cd ../../../../../(...) to folder;
+- [alias-tips][alias-tips] to remember you that you have an alias for that;
+- [zsh-colors][zsh-colors] to `red anything`;
+- [zsh-dwim][zsh-dwim] ZSH Do What I Mean.
 
 [pure]: https://github.com/sindresorhus/pure
 [syntax]: https://github.com/zsh-users/zsh-syntax-highlighting
 [completions]: https://github.com/zsh-users/zsh-completions
 [search]: https://github.com/zsh-users/zsh-history-substring-search
 [z]: https://github.com/rupa/z
+[bd]: https://github.com/Tarrasch/zsh-bd
+[alias-tips]: https://github.com/djui/alias-tips
+[zsh-colors]: https://github.com/Tarrasch/zsh-colors
+[zsh-dwim]: https://github.com/oknowton/zsh-dwim
 
 ## compatibility
 
