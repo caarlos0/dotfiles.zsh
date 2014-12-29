@@ -9,8 +9,7 @@
 #    https://gist.github.com/brandonb927/3195465
 #
 # Run ./set-defaults.sh and you'll be good to go.
-if [ "$(uname -s)" != "Darwin" ]
-then
+if [ "$(uname -s)" != "Darwin" ]; then
   exit 0
 fi
 
@@ -56,6 +55,12 @@ defaults write com.apple.finder ShowPathbar -bool true
 # Finder: allow text selection in the Quick Look window
 defaults write com.apple.finder QLEnableTextSelection -bool true
 
+# Disable the warning before emptying the Trash
+defaults write com.apple.finder WarnOnEmptyTrash -bool false
+
+# Empty Trash securely by default
+defaults write com.apple.finder EmptyTrashSecurely -bool true
+
 #
 # Safari
 #
@@ -81,10 +86,16 @@ defaults write com.apple.dock tilesize -int 36
 defaults write com.apple.dock expose-animation-duration -float 0.1
 defaults write com.apple.dock "expose-group-by-app" -bool true
 
-# Setting Dock to auto-hide and removing the auto-hiding delay
-defaults write com.apple.dock autohide -bool true
+# Remove the auto-hiding Dock delay
 defaults write com.apple.dock autohide-delay -float 0
+# Remove the animation when hiding/showing the Dock
 defaults write com.apple.dock autohide-time-modifier -float 0
+
+# Automatically hide and show the Dock
+defaults write com.apple.dock autohide -bool true
+
+# Don’t animate opening applications from the Dock
+defaults write com.apple.dock launchanim -bool false
 
 #
 # Transmission
@@ -114,12 +125,19 @@ defaults write org.m0k.transmission WarningLegal -bool false
 defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" "@\\U21a9"
 
 
+# Disable smart quotes as it’s annoying for messages that contain code
+defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticQuoteSubstitutionEnabled" -bool false
+
+
 #
 # Others
 #
 
-# hide the dashboard
-defaults write com.apple.dashboard mcx-disabled -boolean true
+# Disable Dashboard
+defaults write com.apple.dashboard mcx-disabled -bool true
+
+# Don’t automatically rearrange Spaces based on most recent use
+defaults write com.apple.dock mru-spaces -bool false
 
 # Increasing the window resize speed for Cocoa applications
 defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
@@ -138,6 +156,9 @@ defaults write -g com.apple.mouse.scaling 2.5
 # Avoiding the creation of .DS_Store files on network volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
+# Disable the “Are you sure you want to open this application?” dialog
+defaults write com.apple.LaunchServices LSQuarantine -bool false
+
 # Speeding up wake from sleep to 24 hours from an hour
 # http://www.cultofmac.com/221392/quick-hack-speeds-up-retina-macbooks-wake-from-sleep-os-x-tips/
 # sudo pmset -a standbydelay 86400
@@ -150,3 +171,7 @@ for app in "Dashboard" "Dock" "Finder" "Safari" "Transmission" "Mail"; do
   killall "$app" > /dev/null 2>&1
 done
 set -e
+
+# Remove duplicates in the “Open With” menu
+/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister \
+  -kill -r -domain local -domain system -domain user
