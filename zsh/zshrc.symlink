@@ -43,6 +43,7 @@ antigen bundle oknowton/zsh-dwim
 antigen bundle Tarrasch/zsh-colors
 antigen bundle caarlos0/zsh-git-sync
 antigen bundle zsh-users/zsh-completions
+antigen bundle caarlos0/zsh-open-github-pr
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-history-substring-search
 
