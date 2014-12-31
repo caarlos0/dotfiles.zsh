@@ -15,6 +15,10 @@ alias gcam='git commit -a -m'
 alias gs='git status -sb'
 alias gcb='git-copy-branch-name'
 
-function gi() {
+gpr() {
+  gp && open-pr "$*"
+}
+
+gi() {
   curl -s "https://www.gitignore.io/api/$*";
 }
