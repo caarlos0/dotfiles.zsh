@@ -28,7 +28,7 @@ if [[ -z $(command -v pbcopy) ]]; then
 fi
 
 if [[ "$(uname -s)" != "Darwin" ]]; then
-  open() {
+  function open {
     xdg-open "$@" &> /dev/null
   }
 fi
