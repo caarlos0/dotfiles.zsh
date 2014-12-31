@@ -6,7 +6,7 @@ _force_rehash() {
 }
 
 # forces zsh to realize new commands
-zstyle ':completion:*' completer _oldlist _expand _force_rehash _complete
+zstyle ':completion:*' completer _oldlist _expand _force_rehash _complete _match
 
 # matches case insensitive for lowercase
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
