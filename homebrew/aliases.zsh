@@ -1,5 +1,6 @@
 #!/bin/zsh
-function brewbump() {
+set -eo pipefail
+brewbump() {
   brew update
   brew upgrade
   brew cleanup

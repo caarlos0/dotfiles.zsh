@@ -1,2 +1,2 @@
 #!/bin/zsh
-alias reload!='. ~/.zshrc'
+alias reload!='source ~/.zshrc'

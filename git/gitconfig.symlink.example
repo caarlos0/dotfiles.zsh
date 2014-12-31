@@ -18,6 +18,7 @@
     changed           = show --pretty=\"format:\" --name-only
     gi                = grep --break --heading --line-number -i
     sync              = !zsh -ic git-sync
+    cp-branch-name    = !git rev-parse --abbrev-ref HEAD | pbcopy
 [color]
     diff    = auto
     status  = auto
