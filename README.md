@@ -78,12 +78,16 @@ ran at bootstrap phase.
 - [bd][bd] to cd ../../../../../(...) to folder;
 - [alias-tips][alias-tips] to remember you that you have an alias for that;
 - [zsh-colors][zsh-colors] to `red ERROR`, `yellow WARNING` and other colors;
-- [zsh-dwim][zsh-dwim] ZSH Do What I Mean;
+- [zsh-dwim][zsh-dwim] to `sudo` commands with `CTRL+U`;
+- [zsh-git-sync][zsh-git-sync] to keep your repositories synced;
+- [zsh-open-pr][zsh-open-pr] to open pull requests from the command line;
 - [git-it-on][git-it-on] to open your current project/branch whatever on your
 browser.
 
 All those are managed by [antigen][antigen].
 
+[zsh-open-pr]: https://github.com/caarlos0/zsh-open-pr
+[zsh-git-sync]: https://github.com/caarlos0/zsh-git-sync
 [antigen]: https://github.com/zsh-users/antigen
 [git-it-on]: https://github.com/peterhurford/git-it-on.zsh
 [pure]: https://github.com/sindresorhus/pure
