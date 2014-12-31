@@ -24,8 +24,9 @@ for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}; do
 done
 
 # initialize autocomplete here, otherwise functions won't be loaded
-autoload -U compinit
-compinit
+autoload -U compinit && compinit
+# also autoload colors
+autoload -U colors && colors
 
 # load every completion after autocomplete loads
 for file in ${(M)config_files:#*/completion.zsh}; do
