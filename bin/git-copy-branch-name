@@ -1,2 +1,2 @@
 #!/bin/sh
-git branch | grep "\*" | awk '{print $2}' | tr -d '\n' | pbcopy
+git rev-parse --abbrev-ref HEAD | pbcopy
