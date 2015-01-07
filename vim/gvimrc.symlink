@@ -1,6 +1,6 @@
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme base16-ocean
 set anti
 set lines=999 columns=84
 set guioptions=egmrt
