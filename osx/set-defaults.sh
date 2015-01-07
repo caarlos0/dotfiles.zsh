@@ -163,6 +163,18 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 # http://www.cultofmac.com/221392/quick-hack-speeds-up-retina-macbooks-wake-from-sleep-os-x-tips/
 # sudo pmset -a standbydelay 86400
 
+TERM_PROFILE="terminal-ocean-dark"
+CURRENT_PROFILE="$(defaults read com.apple.terminal 'Default Window Settings')"
+curl -L \
+  "https://raw.githubusercontent.com/mdo/ocean-terminal/master/$TERM_PROFILE.terminal" \
+  > "/tmp/$TERM_PROFILE.terminal"
+if [ "${CURRENT_PROFILE}" != "${TERM_PROFILE}" ]; then
+  open "/tmp/${TERM_PROFILE}.terminal"
+  sleep 1
+  defaults write com.apple.terminal 'Default Window Settings' -string "${TERM_PROFILE}"
+  defaults write com.apple.terminal 'Startup Window Settings' -string "${TERM_PROFILE}"
+fi
+
 #
 # Kill related apps
 #
