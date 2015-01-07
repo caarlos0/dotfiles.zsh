@@ -76,7 +76,7 @@ set laststatus=2           " always show the status line
 set ignorecase             " ignore case when searching
 set nohlsearch             " don't highlight searches
 set visualbell             " shut the fuck up
-
+set colorcolumn=80         " highlight the 80 char
 
 " ---------------------------------------------------------------------------
 "  Strip all trailing whitespace in file
