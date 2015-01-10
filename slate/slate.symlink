@@ -5,7 +5,12 @@ config resizePercentOf screenSize
 config secondsBetweenRepeat 0.1
 config checkDefaultsOnLoad true
 config focusCheckWidthMax 3000
-config keyboardLayout qwertz
+config keyboardLayout qwerty
+
+# App Aliases
+alias browser 'Google Chrome'
+alias editor 'Sublime Text'
+alias terminal 'iTerm'
 
 # Positions aliases
 alias full              move screenOriginX;screenOriginY                               screenSizeX;screenSizeY
@@ -17,12 +22,20 @@ alias left-half-bottom  move screenOriginX;screenOriginY+screenSizeY/2          
 alias right-half-top    move screenOriginX+screenSizeX*0.5;screenOriginY               screenSizeX*0.5;screenSizeY/2
 alias right-half-bottom move screenOriginX+screenSizeX*0.5;screenOriginY+screenSizeY/2 screenSizeX*0.5;screenSizeY/2
 
+# Hyper key
+alias hyper ctrl;alt;cmd
+
 # Location Bindings
-bind m:ctrl;alt;cmd ${full}
-bind c:ctrl;alt;cmd ${center}
-bind left:ctrl;alt;cmd ${left-half}
-bind right:ctrl;alt;cmd ${right-half}
+bind m:${hyper} ${full}
+bind c:${hyper} ${center}
+bind left:${hyper} ${left-half}
+bind right:${hyper} ${right-half}
 bind left:ctrl;cmd;shift ${left-half-top}
 bind left:ctrl;cmd ${left-half-bottom}
 bind right:ctrl;cmd;shift ${right-half-top}
 bind right:ctrl;cmd ${right-half-bottom}
+
+# Application Bindings
+bind b:${hyper} focus ${browser}
+bind e:${hyper} focus ${editor}
+bind t:${hyper} focus ${terminal}
