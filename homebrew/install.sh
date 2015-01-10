@@ -28,8 +28,8 @@ brew cask install iterm2 the-unarchiver disk-inventory-x appcleaner diffmerge
 brew cask install virtualbox vagrant
 
 # chat, books, notes, documents, mail, etc
-brew cask install kindle dropbox skype slack messenger-for-telegram evernote \
-  skitch calibre mailbox
+brew cask install kindle calibre dropbox skype slack messenger-for-telegram \
+  mailbox
 
 # chrome
 brew cask install google-chrome-beta
