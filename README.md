@@ -77,6 +77,7 @@ ran at bootstrap phase.
 - [z][z] for fast jumping to common dirs;
 - [bd][bd] to cd ../../../../../(...) to folder;
 - [alias-tips][alias-tips] to remember you that you have an alias for that;
+- [zsh-pg][zsh-pg] a set of utilities to deal with postgresql;
 - [zsh-colors][zsh-colors] to `red ERROR`, `yellow WARNING` and other colors;
 - [zsh-dwim][zsh-dwim] to `sudo` commands with `CTRL+U`;
 - [zsh-git-sync][zsh-git-sync] to keep your repositories synced;
@@ -86,6 +87,7 @@ browser.
 
 All those are managed by [antigen][antigen].
 
+[zsh-pg]: https://github.com/caarlos0/zsh-pg
 [zsh-open-pr]: https://github.com/caarlos0/zsh-open-pr
 [zsh-git-sync]: https://github.com/caarlos0/zsh-git-sync
 [antigen]: https://github.com/zsh-users/antigen
