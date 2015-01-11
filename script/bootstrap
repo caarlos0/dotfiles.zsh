@@ -10,19 +10,23 @@ set -e
 echo ''
 
 info () {
-  printf "  [ \033[00;34m..\033[0m ] %s" "$1"
+  # shellcheck disable=SC2059
+  printf "  [ \033[00;34m..\033[0m ] $1"
 }
 
 user () {
-  printf "\r  [ \033[0;33m?\033[0m ] %s " "$1"
+  # shellcheck disable=SC2059
+  printf "\r  [ \033[0;33m?\033[0m ] $1 "
 }
 
 success () {
-  printf "\r\033[2K  [ \033[00;32mOK\033[0m ] %s\n" "$1"
+  # shellcheck disable=SC2059
+  printf "\r\033[2K  [ \033[00;32mOK\033[0m ] $1\n"
 }
 
 fail () {
-  printf "\r\033[2K  [\033[0;31mFAIL\033[0m] %s\n" "$1"
+  # shellcheck disable=SC2059
+  printf "\r\033[2K  [\033[0;31mFAIL\033[0m] $1\n"
   echo ''
   exit
 }
@@ -52,17 +56,17 @@ setup_gitconfig () {
 
 link_file () {
   local src=$1 dst=$2
-
-  local overwrite='' backup='' skip=''
-  local action=''
+  # shellcheck disable=SC1007
+  local overwrite= backup= skip=
+  local action=
 
   if [ -f "$dst" -o -d "$dst" -o -L "$dst" ]
   then
 
     if [ "$overwrite_all" == "false" ] && [ "$backup_all" == "false" ] && [ "$skip_all" == "false" ]
     then
-
-      local currentSrc="$(readlink "$dst")"
+      # shellcheck disable=SC2086
+      local currentSrc="$(readlink $dst)"
 
       if [ "$currentSrc" == "$src" ]
       then
@@ -71,7 +75,8 @@ link_file () {
 
       else
 
-        user "File already exists: $(basename "$src"), what do you want to do? [s]kip, [S]kip all, [o]verwrite, [O]verwrite all, [b]ackup, [B]ackup all?"
+        user "File already exists: $dst ($(basename "$src")), what do you want to do?\n\
+        [s]kip, [S]kip all, [o]verwrite, [O]verwrite all, [b]ackup, [B]ackup all?"
         read -n 1 action
 
         case "$action" in
@@ -128,20 +133,20 @@ install_dotfiles () {
   info 'installing dotfiles'
 
   local overwrite_all=false backup_all=false skip_all=false
-
-  find "$DOTFILES_ROOT" -maxdepth 2 -name '*.symlink' | while read src; do
+  # shellcheck disable=SC2044
+  for src in $(find "$DOTFILES_ROOT" -maxdepth 3 -name '*.symlink')
+  do
     dst="$HOME/.$(basename "${src%.*}")"
     link_file "$src" "$dst"
   done
 }
 
-# make sure it is updated
-"$DOTFILES_ROOT/script/bump"
 setup_gitconfig
 install_dotfiles
 
 # If we're on a Mac, let's install and setup homebrew.
-if [ "$(uname -s)" == "Darwin" ]; then
+if [ "$(uname -s)" == "Darwin" ]
+then
   info "installing dependencies"
   if source bin/dot > /tmp/dotfiles-dot 2>&1
   then

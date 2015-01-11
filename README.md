@@ -22,7 +22,7 @@ awesome, you might want to [read my post on the subject][post].
 Run this:
 
 ```sh
-git clone https://github.com/caarlos0/dotfiles ~/.dotfiles
+git clone --recursive https://github.com/caarlos0/dotfiles ~/.dotfiles
 cd ~/.dotfiles
 script/bootstrap
 ```
