@@ -5,5 +5,5 @@
   path = build
   url = https://github.com/caarlos0/shell-travis-build.git
 [submodule "vim/vimfiles"]
-	path = vim/vimfiles
-	url = https://github.com/caarlos0/vimfiles.git
+  path = vim/vimfiles
+  url = https://github.com/caarlos0/vimfiles.git
