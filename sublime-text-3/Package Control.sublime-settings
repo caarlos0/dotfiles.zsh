@@ -15,6 +15,7 @@
 		"CoffeeScript",
 		"ColorPicker",
 		"EditorConfig",
+		"FixMyJS",
 		"Git",
 		"GitGutter",
 		"HTML-CSS-JS Prettify",
@@ -26,6 +27,7 @@
 		"Sass",
 		"SideBarEnhancements",
 		"SublimeLinter",
+		"SublimeLinter-jshint",
 		"SublimeLinter-shellcheck",
 		"Theme - Spacegray",
 		"WordCount"
