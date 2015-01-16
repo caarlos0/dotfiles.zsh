@@ -1,4 +1,6 @@
 {
+	"bold_folder_labels": true,
+	"caret_style": "phase",
 	"color_scheme": "Packages/User/base16-ocean.dark (SL).tmTheme",
 	"default_line_ending": "unix",
 	"ensure_newline_at_eof_on_save": true,
