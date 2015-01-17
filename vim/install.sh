@@ -4,6 +4,5 @@ setup_command_t() {
   ruby extconf.rb
   make
 }
-setup_command_t
 vim +PluginInstall +qall
-
+setup_command_t
