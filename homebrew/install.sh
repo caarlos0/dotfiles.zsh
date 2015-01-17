@@ -22,7 +22,8 @@ brew install brew-cask
 # usefull stuff
 brew install grc coreutils the_silver_searcher htop-osx heroku-toolbelt \
   imagemagick wget unrar ffmpeg gifsicle
-brew cask install iterm2 the-unarchiver disk-inventory-x appcleaner diffmerge
+brew cask install iterm2 the-unarchiver disk-inventory-x appcleaner diffmerge \
+  githubpulse
 
 # virtualization
 brew cask install virtualbox vagrant
