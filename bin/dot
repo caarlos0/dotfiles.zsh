@@ -13,6 +13,7 @@ antigen update
 # Set OS X defaults
 echo "Setting all defaults..."
 "$ZSH/osx/set-defaults.sh"
+"$ZSH/gnome/set-defaults.sh"
 
 # Install everything needed
 echo "Running all install files..."
