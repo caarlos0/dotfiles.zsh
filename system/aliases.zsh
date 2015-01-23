@@ -28,7 +28,7 @@ if [[ -z $(command -v pbcopy) ]]; then
 fi
 
 if [[ "$(uname -s)" != "Darwin" ]]; then
-  open() {
-    xdg-open "$@" &> /dev/null
-  }
+  if [ -e /usr/bin/xdg-open ]; then
+    alias open="xdg-open"
+  fi
 fi
