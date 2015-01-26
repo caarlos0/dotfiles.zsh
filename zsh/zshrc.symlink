@@ -18,6 +18,10 @@ for file in ${(M)config_files:#*/path.zsh}; do
   source "$file"
 done
 
+# setup antigen
+antigen bundles < "$ZSH/antigen/bundles.txt"
+antigen apply
+
 # load everything but the path and completion files
 for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}; do
   source "$file"
@@ -32,8 +36,3 @@ for file in ${(M)config_files:#*/completion.zsh}; do
 done
 
 unset config_files
-
-# setup antigen
-antigen bundles < "$ZSH/antigen/bundles.txt"
-antigen apply
-
