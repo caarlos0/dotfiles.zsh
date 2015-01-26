@@ -106,3 +106,10 @@ else
   bindkey "^[3;5~" delete-char
   bindkey "\e[3~" delete-char
 fi
+
+# ignore case
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+# menu if nb items > 2
+zstyle ':completion:*' menu select=2
+# list of completers to use
+zstyle ':completion:*::::' completer _expand _complete _ignored _approximate
