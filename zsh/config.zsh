@@ -18,7 +18,6 @@ setopt NO_LIST_BEEP
 setopt LOCAL_OPTIONS
 # allow functions to have local traps
 setopt LOCAL_TRAPS
-setopt HIST_VERIFY
 # share history between sessions ???
 setopt SHARE_HISTORY
 # add timestamps to history
@@ -57,10 +56,6 @@ fi
 # Use emacs key bindings
 bindkey -e
 
-# [Esc-w] - Kill from the cursor to the mark
-bindkey '\ew' kill-region
-# [Esc-l] - run command: ls
-bindkey -s '\el' 'ls\n'
 # [Ctrl-r] - Search backward incrementally for a specified string.
 # The string may begin with ^ to anchor the search to the beginning of the line.
 bindkey '^r' history-incremental-search-backward
@@ -89,12 +84,9 @@ fi
 if [[ ! -z "$terminfo[kend]" ]]; then
   # [End] - Go to end of line
   bindkey "$terminfo[kend]"  end-of-line
-  # OPTION+left
+  # OPTION+right
   bindkey '[C' end-of-line
 fi
-
-# [Space] - do history expansion
-bindkey ' ' magic-space
 
 # [Ctrl-RightArrow] - move forward one word
 bindkey '^[[1;5C' forward-word
