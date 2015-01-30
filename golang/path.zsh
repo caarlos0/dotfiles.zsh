@@ -1,5 +1,5 @@
 #!/bin/zsh
 
 export GOPATH="$PROJECTS/Go" 
-mkdir "$GOPATH"
+[ ! -d "$GOPATH" ] &&  mkdir -p "$GOPATH"
 
