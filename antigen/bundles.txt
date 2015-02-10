@@ -10,7 +10,6 @@ Tarrasch/zsh-colors
 caarlos0/zsh-git-sync
 zsh-users/zsh-completions
 caarlos0/zsh-add-upstream
-peterhurford/git-it-on.zsh
 caarlos0/zsh-open-github-pr
 zsh-users/zsh-syntax-highlighting
 zsh-users/zsh-history-substring-search
