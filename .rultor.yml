@@ -2,9 +2,13 @@ architect:
   - caarlos0
 merge:
   script:
+    - git submodule init
+    - git submodule update
     - ./build/install.sh
     - ./build.sh
 release:
   script:
+    - git submodule init
+    - git submodule update
     - ./build/install.sh
     - ./build.sh
