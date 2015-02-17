@@ -1,3 +1,5 @@
+architect:
+  - caarlos0
 merge:
   script:
     - ./build/install.sh
