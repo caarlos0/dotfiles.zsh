@@ -1,12 +1,16 @@
 architect:
   - caarlos0
 merge:
+  env:
+    LANG: "en_US.UTF-8"
   script:
     - git submodule init
     - git submodule update
     - ./build/install.sh
     - ./build.sh
 release:
+  env:
+    LANG: "en_US.UTF-8"
   script:
     - git submodule init
     - git submodule update
