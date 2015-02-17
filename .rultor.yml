@@ -1,0 +1,8 @@
+merge:
+  script:
+    - ./build/install.sh
+    - ./build.sh
+release:
+  script:
+    - ./build/install.sh
+    - ./build.sh
