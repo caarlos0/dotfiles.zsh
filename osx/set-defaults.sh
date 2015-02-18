@@ -94,7 +94,7 @@ defaults write com.apple.dock autohide-time-modifier -float 0
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
 
-# Don’t animate opening applications from the Dock
+# Don't animate opening applications from the Dock
 defaults write com.apple.dock launchanim -bool false
 
 #
@@ -105,7 +105,7 @@ defaults write com.apple.dock launchanim -bool false
 defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool true
 defaults write org.m0k.transmission IncompleteDownloadFolder -string "${HOME}/Downloads/Incomplete"
 
-# Don’t prompt for confirmation before downloading
+# Don't prompt for confirmation before downloading
 defaults write org.m0k.transmission DownloadAsk -bool false
 
 # Trash original torrent files
@@ -121,11 +121,11 @@ defaults write org.m0k.transmission WarningLegal -bool false
 # Mail
 #
 
-# Add the keyboard shortcut ⌘ + Enter to send an email in Mail.app
+# Add the keyboard shortcut CMD + Enter to send an email in Mail.app
 defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" "@\\U21a9"
 
 
-# Disable smart quotes as it’s annoying for messages that contain code
+# Disable smart quotes as it's annoying for messages that contain code
 defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticQuoteSubstitutionEnabled" -bool false
 
 
@@ -136,13 +136,13 @@ defaults write com.apple.messageshelper.MessageController SOInputLineSettings -d
 # Disable Dashboard
 defaults write com.apple.dashboard mcx-disabled -bool true
 
-# Don’t automatically rearrange Spaces based on most recent use
+# Don't automatically rearrange Spaces based on most recent use
 defaults write com.apple.dock mru-spaces -bool false
 
 # Increasing the window resize speed for Cocoa applications
 defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 
-# Disable smart quotes and smart dashes as they’re annoying when typing code
+# Disable smart quotes and smart dashes as they're annoying when typing code
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
