@@ -1,17 +1,8 @@
 architect:
   - caarlos0
-merge:
-  script:
-    - git submodule init
-    - git submodule update
-    - export LANG=en_US.UTF-8
-    - ./build/install.sh
-    - ./build.sh
-release:
-  script:
+install:
     - git submodule init
     - git submodule update
     - locale
-    - export LANG=en_US.UTF-8
     - ./build/install.sh
     - ./build.sh
