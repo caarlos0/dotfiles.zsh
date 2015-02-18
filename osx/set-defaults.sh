@@ -156,7 +156,7 @@ defaults write -g com.apple.mouse.scaling 2.5
 # Avoiding the creation of .DS_Store files on network volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
-# Disable the “Are you sure you want to open this application?” dialog
+# Disable the "Are you sure you want to open this application?" dialog
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
 # Speeding up wake from sleep to 24 hours from an hour
@@ -190,6 +190,6 @@ for app in "Dashboard" "Dock" "Finder" "Safari" "Transmission" "Mail"; do
 done
 set -e
 
-# Remove duplicates in the “Open With” menu
+# Remove duplicates in the "Open With" menu
 /System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister \
   -kill -r -domain local -domain system -domain user
