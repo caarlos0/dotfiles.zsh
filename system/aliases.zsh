@@ -32,3 +32,8 @@ if [[ "$(uname -s)" != "Darwin" ]]; then
     alias open="xdg-open"
   fi
 fi
+
+# greps non ascii chars
+nonascii() {
+  LANG=C grep --color=always '[^ -~]\+';
+}
