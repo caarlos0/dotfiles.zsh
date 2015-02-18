@@ -11,6 +11,7 @@ release:
   script:
     - git submodule init
     - git submodule update
+    - locale
     - export LANG=en_US.UTF-8
     - ./build/install.sh
     - ./build.sh
