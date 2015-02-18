@@ -5,6 +5,7 @@ merge:
     - git submodule init
     - git submodule update
     - sudo apt-get install ghc cabal-install -y
+    - cabal update
     - cabal install shellcheck
     - ./build.sh
 release:
@@ -12,5 +13,6 @@ release:
     - git submodule init
     - git submodule update
     - sudo apt-get install ghc cabal-install -y
+    - cabal update
     - cabal install shellcheck
     - ./build.sh
