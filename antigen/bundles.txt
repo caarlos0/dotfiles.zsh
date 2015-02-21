@@ -5,7 +5,6 @@ Tarrasch/zsh-bd
 djui/alias-tips
 caarlos0/zsh-mkc
 sindresorhus/pure
-oknowton/zsh-dwim
 Tarrasch/zsh-colors
 caarlos0/zsh-git-sync
 zsh-users/zsh-completions

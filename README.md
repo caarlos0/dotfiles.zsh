@@ -79,10 +79,10 @@ ran at bootstrap phase.
 - [alias-tips][alias-tips] to remember you that you have an alias for that;
 - [zsh-pg][zsh-pg] a set of utilities to deal with postgresql;
 - [zsh-colors][zsh-colors] to `red ERROR`, `yellow WARNING` and other colors;
-- [zsh-dwim][zsh-dwim] to `sudo` commands with `CTRL+U`;
 - [zsh-git-sync][zsh-git-sync] to keep your repositories synced;
 - [zsh-open-pr][zsh-open-pr] to open pull requests from the command line;
-- [git-it-on][git-it-on] to open your current project/branch whatever on your
+- [git-it-on][git-it-on] to open your current project/branch whatever on your;
+- [jvm][jvm] to manage java versions (a la rvm, but simpler).
 browser.
 
 All those are managed by [antigen][antigen].
@@ -100,7 +100,7 @@ All those are managed by [antigen][antigen].
 [bd]: https://github.com/Tarrasch/zsh-bd
 [alias-tips]: https://github.com/djui/alias-tips
 [zsh-colors]: https://github.com/Tarrasch/zsh-colors
-[zsh-dwim]: https://github.com/oknowton/zsh-dwim
+[jvm]: https://github.com/caarlos0/jvm
 
 ## compatibility
 
