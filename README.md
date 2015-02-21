@@ -1,6 +1,13 @@
-# carlos does dotfiles [![Build Status](https://travis-ci.org/caarlos0/dotfiles.svg?branch=master)](https://travis-ci.org/caarlos0/dotfiles)
+# carlos' dotfiles  [![DevOps By Rultor.com][rb]][rb] [![Build Status][tb]][tp]
+> For Linux and OSX. Configurations for ZSH, SublimeText 3, Java, Ruby and others.
 
-![screenshot](https://raw.githubusercontent.com/caarlos0/dotfiles/master/screenshot.png)
+![screenshot][scrn]
+
+[rb]: http://www.rultor.com/b/caarlos0/dotfiles
+[rp]: http://www.rultor.com/p/caarlos0/dotfiles
+[tb]: https://travis-ci.org/caarlos0/dotfiles.svg?branch=master
+[tp]: https://travis-ci.org/caarlos0/dotfiles
+[scrn]: https://raw.githubusercontent.com/caarlos0/dotfiles/master/screenshot.png
 
 ## dotfiles
 
