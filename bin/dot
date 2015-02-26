@@ -1,20 +1,26 @@
-#!/bin/sh
+#!/bin/zsh
 #
 # dot
 #
 # `dot` handles installation, updates, things like that. Run it periodically
 # to make sure you're on the latest and greatest.
 
-# update submodules
-echo "Updating antigen plugins..."
-git submodule update
-antigen update
+main() {
+  cd "$ZSH"
+  echo "Updating dotfiles..."
+  git pull origin master
 
-# Set OS X defaults
-echo "Setting all defaults..."
-"$ZSH/osx/set-defaults.sh"
-"$ZSH/gnome/set-defaults.sh"
+  echo "Updating antigen plugins..."
+  git submodule update
+  source ./antigen/antigen/antigen.zsh
+  antigen update
 
-# Install everything needed
-echo "Running all install files..."
-"$ZSH/script/install"
+  echo "Setting OSX/Gnome defaults..."
+  ./osx/set-defaults.sh
+  ./gnome/set-defaults.sh
+
+  echo "Running all install files..."
+  ./script/install
+}
+
+main

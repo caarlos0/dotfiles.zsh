@@ -5,4 +5,4 @@ setup_command_t() {
   make
 }
 vim +PluginInstall +qall
-setup_command_t
+setup_command_t &> /tmp/cmd-t.log

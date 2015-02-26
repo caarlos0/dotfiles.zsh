@@ -15,8 +15,8 @@ fi
 brew update
 
 # more formualae
-brew tap phinze/homebrew-cask
-brew tap caskroom/versions
+brew tap phinze/homebrew-cask || true
+brew tap caskroom/versions || true
 brew install brew-cask
 
 # usefull stuff
@@ -31,8 +31,8 @@ brew cask install virtualbox vagrant
 brew cask install kindle calibre dropbox skype slack messenger-for-telegram \
   mailbox
 
-# chrome
-brew cask install google-chrome-beta
+# browser
+brew cask install firefox
 
 # vpn stuff
 brew cask install tunnelblick-beta
