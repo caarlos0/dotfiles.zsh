@@ -9,7 +9,6 @@
     co                = checkout
     promote           = !$ZSH/bin/git-promote
     wtf               = !$ZSH/bin/git-wtf
-    rank-contributers = !$ZSH/bin/git-rank-contributers
     unpushed-st       = !$ZSH/bin/git-unpushed-stat
     nuke              = !$ZSH/bin/git-nuke
     count             = shortlog -sn
