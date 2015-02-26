@@ -7,6 +7,6 @@ set -eo pipefail
 "$ZSH/homebrew/install.sh"
 
 # find the installers and run them iteratively
-find "$ZSH" -name install.sh | grep -v homebrew | while read installer; do
+find "$ZSH" -name install.sh | grep -v homebrew | grep -v build | while read installer; do
   sh -c "$installer"
 done
