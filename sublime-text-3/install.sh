@@ -1,5 +1,4 @@
 #!/bin/bash
-set -eo pipefail
 
 if [ "$(uname -s)" = "Darwin" ]; then
   brew cask install sublime-text3

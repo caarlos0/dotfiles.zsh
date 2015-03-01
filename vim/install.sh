@@ -4,5 +4,6 @@ setup_command_t() {
   ruby extconf.rb
   make
 }
+[ "$(uname -s)" = "Darwin" ] && brew install vim
 vim +PluginInstall +qall
 setup_command_t &> /tmp/cmd-t.log

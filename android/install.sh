@@ -1,5 +1,4 @@
-#!/usr/bin/env bash
-set -eo pipefail
+#!/bin/zsh
 if [ "$(uname -s)" = "Darwin" ]; then
   brew cask install android-file-transfer
   # disable auto-open when connect.
