@@ -36,6 +36,9 @@ defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 defaults write com.apple.dock wvous-bl-corner -int 5
 defaults write com.apple.dock wvous-bl-modifier -int 0
 
+# Disable transparency in the menu bar and elsewhere on Yosemite
+defaults write com.apple.universalaccess reduceTransparency -bool true
+
 #
 # Finder
 #
@@ -57,9 +60,6 @@ defaults write com.apple.finder QLEnableTextSelection -bool true
 
 # Disable the warning before emptying the Trash
 defaults write com.apple.finder WarnOnEmptyTrash -bool false
-
-# Empty Trash securely by default
-defaults write com.apple.finder EmptyTrashSecurely -bool true
 
 #
 # Safari
@@ -185,8 +185,10 @@ sleep 1
 # Kill related apps
 #
 set +e
-for app in "Dashboard" "Dock" "Finder" "Safari" "Transmission" "Mail"; do
-  killall "$app" > /dev/null 2>&1
+for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" \
+  "Dock" "Finder" "Mail" "Messages" "Safari" "SystemUIServer" \
+  "Terminal" "Transmission"; do
+killall "${app}" > /dev/null 2>&1
 done
 set -e
 

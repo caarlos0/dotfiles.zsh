@@ -22,7 +22,8 @@ brew install brew-cask
 # usefull stuff
 brew install grc coreutils the_silver_searcher htop-osx heroku-toolbelt \
   imagemagick wget unrar ffmpeg gifsicle
-brew cask install iterm2 the-unarchiver disk-inventory-x appcleaner diffmerge
+brew cask install iterm2 the-unarchiver disk-inventory-x appcleaner diffmerge \
+  cheatsheet
 
 # virtualization
 brew cask install virtualbox vagrant
@@ -39,6 +40,10 @@ brew cask install tunnelblick-beta
 
 # gaming
 brew cask install steam
+
+# Install fonts.
+brew tap caskroom/fonts
+brew cask install font-source-code-pro
 
 # clean things up
 brew cleanup
