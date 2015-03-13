@@ -82,13 +82,11 @@ ran at bootstrap phase.
 - [more completions][completions];
 - fish-like [substring history search][search];
 - [z][z] for fast jumping to common dirs;
-- [bd][bd] to cd ../../../../../(...) to folder;
 - [alias-tips][alias-tips] to remember you that you have an alias for that;
 - [zsh-pg][zsh-pg] a set of utilities to deal with postgresql;
 - [zsh-colors][zsh-colors] to `red ERROR`, `yellow WARNING` and other colors;
 - [zsh-git-sync][zsh-git-sync] to keep your repositories synced;
 - [zsh-open-pr][zsh-open-pr] to open pull requests from the command line;
-- [git-it-on][git-it-on] to open your current project/branch whatever on your;
 - [jvm][jvm] to manage java versions (a la rvm, but simpler).
 browser.
 
@@ -98,13 +96,11 @@ All those are managed by [antigen][antigen].
 [zsh-open-pr]: https://github.com/caarlos0/zsh-open-pr
 [zsh-git-sync]: https://github.com/caarlos0/zsh-git-sync
 [antigen]: https://github.com/zsh-users/antigen
-[git-it-on]: https://github.com/peterhurford/git-it-on.zsh
 [pure]: https://github.com/sindresorhus/pure
 [syntax]: https://github.com/zsh-users/zsh-syntax-highlighting
 [completions]: https://github.com/zsh-users/zsh-completions
 [search]: https://github.com/zsh-users/zsh-history-substring-search
 [z]: https://github.com/rupa/z
-[bd]: https://github.com/Tarrasch/zsh-bd
 [alias-tips]: https://github.com/djui/alias-tips
 [zsh-colors]: https://github.com/Tarrasch/zsh-colors
 [jvm]: https://github.com/caarlos0/jvm
