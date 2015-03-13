@@ -84,7 +84,6 @@ ran at bootstrap phase.
 - [z][z] for fast jumping to common dirs;
 - [alias-tips][alias-tips] to remember you that you have an alias for that;
 - [zsh-pg][zsh-pg] a set of utilities to deal with postgresql;
-- [zsh-colors][zsh-colors] to `red ERROR`, `yellow WARNING` and other colors;
 - [zsh-git-sync][zsh-git-sync] to keep your repositories synced;
 - [zsh-open-pr][zsh-open-pr] to open pull requests from the command line;
 - [jvm][jvm] to manage java versions (a la rvm, but simpler).
