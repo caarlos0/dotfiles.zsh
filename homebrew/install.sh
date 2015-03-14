@@ -33,7 +33,7 @@ brew cask install kindle calibre dropbox skype slack messenger-for-telegram \
   mailbox
 
 # browser
-brew cask install firefox
+brew cask install google-chrome
 
 # vpn stuff
 brew cask install tunnelblick-beta
