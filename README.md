@@ -75,7 +75,7 @@ There's a few special files in the hierarchy.
 - **topic/install.sh**: Any file with this name and with exec permission, will
 ran at bootstrap phase.
 
-## goodies
+## plugins
 
 - [pure][pure] prompt (which is awesome!);
 - fish-like [syntax highlight][syntax];
@@ -106,8 +106,8 @@ All those are managed by [antigen][antigen].
 
 ## compatibility
 
-I try to maintain it working in both Linux (no specific distro) and OS X, most
-of all, because I use OS X at home and Linux at work.
+I try to keep it working in both Linux (no specific distro) and OS X, 
+mostly because I use OS X at home and Linux at work.
 
 ## bugs
 
