@@ -7,6 +7,13 @@ if [ -d ~/.dotfiles ]; then
   echo "A ~/.dotfiles folder already exists, backup it and run this again!"
   exit 1
 fi
+
+if test ! "$(which git)"; then
+  if test "$(which apt-get)"; then
+    sudo apt-get install git
+  fi
+fi
+
 git clone --recursive https://github.com/caarlos0/dotfiles ~/.dotfiles
 zsh ~/.dotfiles/script/bootstrap
 sudo chsh -s /bin/zsh
