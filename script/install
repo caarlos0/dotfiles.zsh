@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 #
 # Install dotfiles.
-set -eo pipefail
 
 install_pkg() {
   if test "$(which apt-get)"; then
