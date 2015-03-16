@@ -15,6 +15,9 @@ fi
 if test ! "$(which git)"; then
   install git
 fi
+if test ! "$(which zsh)"; then
+  install zsh
+fi
 
 git clone --recursive https://github.com/caarlos0/dotfiles ~/.dotfiles
 zsh ~/.dotfiles/script/bootstrap
