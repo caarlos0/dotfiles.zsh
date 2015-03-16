@@ -25,7 +25,8 @@ main() {
   fi
   check_dependencies
   git clone --recursive https://github.com/caarlos0/dotfiles ~/.dotfiles
-  zsh ~/.dotfiles/script/bootstrap
+  cd ~/.dotfiles
+  script/bootstrap
   sudo chsh -s /bin/zsh
   echo "All done! Please, restart your terminal session!"
 }
