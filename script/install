@@ -9,14 +9,14 @@ if [ -d ~/.dotfiles ]; then
 fi
 
 if test "$(which apt-get)"; then
-  alias install="sudo apt-get install"
+  alias install_pkg="sudo apt-get install"
 fi
 
 if test ! "$(which git)"; then
-  install git
+  install_pkg git
 fi
 if test ! "$(which zsh)"; then
-  install zsh
+  install_pkg zsh
 fi
 
 git clone --recursive https://github.com/caarlos0/dotfiles ~/.dotfiles
