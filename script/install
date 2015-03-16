@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 #
 # Install dotfiles.
+set -eo pipefail
 
 install_pkg() {
   if test "$(which apt-get)"; then
@@ -25,8 +26,8 @@ main() {
   check_dependencies
   git clone --recursive https://github.com/caarlos0/dotfiles ~/.dotfiles
   cd ~/.dotfiles
-  sh -c script/bootstrap
   sudo chsh -s /bin/zsh
+  script/bootstrap
   echo "All done! Please, restart your terminal session!"
 }
 main
