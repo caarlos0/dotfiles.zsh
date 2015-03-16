@@ -3,3 +3,11 @@
 # Install dotfiles.
 set -eo pipefail
 
+if [ -d ~/.dotfiles ]; then
+  echo "A ~/.dotfiles folder already exists, backup it and run this again!"
+  exit 1
+fi
+git clone --recursive https://github.com/caarlos0/dotfiles ~/.dotfiles
+zsh ~/.dotfiles/script/bootstrap
+sudo chsh -s /bin/zsh
+echo "All done! Please, restart your terminal session!"
