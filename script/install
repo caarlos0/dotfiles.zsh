@@ -4,14 +4,12 @@
 set -eo pipefail
 
 if [ -d ~/.dotfiles ]; then
-  echo "A ~/.dotfiles folder already exists, backup it and run this again!"
+  echo "The '~/.dotfiles' folder already exists, please, backup it and run this again!"
   exit 1
 fi
-
 if test "$(which apt-get)"; then
-  alias install_pkg="sudo apt-get install"
+  alias install_pkg="sudo apt-get install -y"
 fi
-
 if test ! "$(which git)"; then
   install_pkg git
 fi
