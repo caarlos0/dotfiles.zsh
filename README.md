@@ -29,9 +29,7 @@ awesome, you might want to [read my post on the subject][post].
 Run this:
 
 ```sh
-git clone --recursive https://github.com/caarlos0/dotfiles ~/.dotfiles
-cd ~/.dotfiles
-script/bootstrap
+bash -c "$(wget -O - https://raw.githubusercontent.com/caarlos0/dotfiles/master/script/install)"
 ```
 
 This will symlink the appropriate files in `.dotfiles` to your home directory.
@@ -106,7 +104,7 @@ All those are managed by [antigen][antigen].
 
 ## compatibility
 
-I try to keep it working in both Linux (no specific distro) and OS X, 
+I try to keep it working in both Linux (no specific distro) and OS X,
 mostly because I use OS X at home and Linux at work.
 
 ## bugs
