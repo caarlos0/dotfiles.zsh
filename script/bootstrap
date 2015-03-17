@@ -145,7 +145,7 @@ setup_gitconfig
 install_dotfiles
 
 info "installing dependencies"
-if source bin/dot > /tmp/dotfiles-dot 2>&1
+if ./bin/dot > /tmp/dotfiles-dot 2>&1
 then
   success "dependencies installed"
 else

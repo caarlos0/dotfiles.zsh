@@ -4,9 +4,8 @@
 #
 # `dot` handles installation, updates, things like that. Run it periodically
 # to make sure you're on the latest and greatest.
-
 main() {
-  cd "$ZSH"
+  cd ~/.dotfiles
   echo "Updating dotfiles..."
   git pull origin master
 
@@ -20,7 +19,13 @@ main() {
   ./gnome/set-defaults.sh
 
   echo "Running all install files..."
-  ./script/install
+  # run homebrew installer first
+  ./homebrew/install.sh
+
+  # find the installers and run them iteratively
+  find . -name install.sh | grep -v homebrew | grep -v build | while read installer; do
+    sh -c "$installer"
+  done
 }
 
 main

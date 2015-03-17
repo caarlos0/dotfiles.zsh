@@ -1,12 +1,33 @@
 #!/usr/bin/env bash
 #
-# Run all dotfiles installers.
+# Install dotfiles.
 set -eo pipefail
 
-# run homebrew installer first
-"$ZSH/homebrew/install.sh"
+install_pkg() {
+  if test "$(which apt-get)"; then
+    sudo apt-get install -y "$@"
+  fi
+}
 
-# find the installers and run them iteratively
-find "$ZSH" -name install.sh | grep -v homebrew | grep -v build | while read installer; do
-  sh -c "$installer"
-done
+check_dependencies() {
+  if test ! "$(which git)"; then
+    install_pkg git
+  fi
+  if test ! "$(which zsh)"; then
+    install_pkg zsh
+  fi
+}
+
+main() {
+  if [ -d ~/.dotfiles ]; then
+    echo "The '~/.dotfiles' folder already exists, please, backup it and run this again!"
+    exit 1
+  fi
+  check_dependencies
+  git clone --recursive https://github.com/caarlos0/dotfiles ~/.dotfiles
+  cd ~/.dotfiles
+  sudo chsh -s /bin/zsh
+  bash script/bootstrap
+  echo "All done! Please, restart your terminal session!"
+}
+main
