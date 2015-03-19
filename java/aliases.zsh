@@ -12,6 +12,10 @@ alias mvnt='mvn test'
 alias mvnag='mvn archetype:generate'
 alias mvnnew='mvn archetype:generate -DarchetypeArtifactId=maven-archetype-quickstart'
 
+killjboss() {
+  pgrep -f jboss-modules | xargs kill -9
+}
+
 function listMavenCompletions {
 	reply=(
 		cli:execute cli:execute-phase archetype:generate generate-sources compile \
