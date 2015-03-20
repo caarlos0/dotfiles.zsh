@@ -9,7 +9,8 @@
 		".project",
 		".classpath",
 		"*.iml",
-		".DS_Store"
+		".DS_Store",
+		"*.orig"
 	],
 	"folder_exclude_patterns":
 	[
@@ -18,7 +19,7 @@
 		".settings",
 		".idea"
 	],
-	"font_face": "Monaco",
+	"font_face": "Menlo",
 	"font_size": 15,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,

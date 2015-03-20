@@ -4,6 +4,7 @@
 	],
 	"installed_packages":
 	[
+		"Alignment",
 		"AutoFileName",
 		"Clickable URLs",
 		"Codeivate",
@@ -24,6 +25,7 @@
 		"Sass",
 		"SideBarEnhancements",
 		"SublimeLinter",
+		"SublimeLinter-contrib-puppet",
 		"SublimeLinter-jshint",
 		"SublimeLinter-shellcheck",
 		"Theme - Spacegray",
