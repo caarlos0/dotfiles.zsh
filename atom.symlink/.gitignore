@@ -3,3 +3,4 @@ compile-cache
 .node-gyp
 package
 packages
+storage
