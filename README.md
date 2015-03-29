@@ -107,6 +107,18 @@ All those are managed by [antigen][antigen].
 I try to keep it working in both Linux (no specific distro) and OS X,
 mostly because I use OS X at home and Linux at work.
 
+## test it within Docker
+
+Yes you can! Pull the repo and run:
+
+```sh
+$ docker build -t caarlos0/dotfiles .
+$ docker run -it caarlos0/dotfiles
+```
+
+It will start a fresh container with my dotfiles inside.
+Run `./script/bootstrap` to setup them.
+
 ## bugs
 
 I want this to work for everyone; that means when you clone it down it should
