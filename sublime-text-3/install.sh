@@ -13,7 +13,7 @@ mkdir -p "$ST3_LOCAL/Packages/User/"
 
 # Install Package Control
 PKG_CTRL_FILE="$ST3_LOCAL/Installed Packages/Package Control.sublime-package"
-[[ ! -f "$PKG_CTRL_FILE" ]] && curl -o "$PKG_CTRL_FILE" \
+[ ! -f "$PKG_CTRL_FILE" ] && curl -o "$PKG_CTRL_FILE" \
   "https://sublime.wbond.net/Package Control.sublime-package"
 
 # Link keymaps

@@ -1,5 +1,5 @@
 #!/bin/zsh
-[[ "$(uname -s)" != "Darwin" ]] && exit 0
+[ "$(uname -s)" != "Darwin" ] && exit 0
 
 if test ! "$(which rbenv)"; then
   echo "  Installing rbenv for you."
