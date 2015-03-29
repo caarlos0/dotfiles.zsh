@@ -1,2 +1,2 @@
 #!/bin/zsh
-mkdir ~/.z
+touch ~/.z
