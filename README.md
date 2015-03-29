@@ -116,9 +116,8 @@ $ docker build -t caarlos0/dotfiles .
 $ docker run -it caarlos0/dotfiles
 ```
 
-It will start a fresh container with my dotfiles inside.
-Run `./script/bootstrap` to setup them.
-When done, `source ~/.zshrc` to load the new configs!
+It will start a fresh container with my dotfiles inside and dumb git
+credentials.
 
 ## bugs
 
