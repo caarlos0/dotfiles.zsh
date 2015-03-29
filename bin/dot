@@ -25,6 +25,7 @@ main() {
 
   # find the installers and run them iteratively
   find . -name install.sh | grep -v homebrew | grep -v build | while read installer; do
+    echo "Executing ${installer}..."
     sh -c "$installer"
   done
 }
