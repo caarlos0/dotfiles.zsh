@@ -1,5 +1,5 @@
 #!/bin/zsh
-[ "$(uname -s)" != "Darwin" ] && exit 0
+[ "$(uname -s)" != "Darwin" ] && return 0
 
 brew install mariadb
 brew cask install sequel-pro
