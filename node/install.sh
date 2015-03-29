@@ -1,2 +1,3 @@
 #!/bin/zsh
-[ "$(uname -s)" = "Darwin" ] && brew install node
+[ "$(uname -s)" != "Darwin" ] && return 0
+brew install node
