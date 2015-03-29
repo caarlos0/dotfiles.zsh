@@ -6,4 +6,4 @@ fi
 
 apm install \
   editorconfig autocomplete-plus language-docker \
-  linter linter-shellcheck linter-javac linter-jshint linter-ruby
+  linter linter-shellcheck linter-javac linter-jshint linter-ruby || true
