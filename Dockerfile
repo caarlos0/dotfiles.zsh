@@ -10,4 +10,6 @@ RUN cd /root/.dotfiles && \
   rm -f ./git/gitconfig.symlink && \
   git remote rm origin
 
-ENTRYPOINT cd ~/.dotfiles && echo "Execute ./script/bootstrap to begin!" && bash
+ENTRYPOINT cd ~/.dotfiles && \
+  echo "Execute ./script/bootstrap to begin! When done, source ~/.zshrc to load the new configs!" && \
+  zsh
