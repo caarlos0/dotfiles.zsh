@@ -7,8 +7,6 @@ RUN apt-get install -y software-properties-common wget zsh git curl
 ADD . /root/.dotfiles
 
 RUN cd /root/.dotfiles && \
-  git clean -df && \
-  git reset --hard HEAD && \
   rm -f ./git/gitconfig.symlink && \
   git remote rm origin
 
