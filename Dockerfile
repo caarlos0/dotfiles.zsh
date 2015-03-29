@@ -10,3 +10,5 @@ RUN apt-get -y install atom
 ADD . /root/.dotfiles
 
 RUN cd /root/.dotfiles && git clean -df && git reset --hard HEAD && git remote rm origin
+
+ENTRYPOINT cd ~/.dotfiles && echo "Execute ./script/bootstrap to begin!" && bash
