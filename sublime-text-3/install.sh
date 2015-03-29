@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 if [ "$(uname -s)" = "Darwin" ]; then
   brew cask install sublime-text3

@@ -1,3 +1,2 @@
-#!/bin/bash
-[[ "$(uname -s)" != "Darwin" ]] && exit 0
-brew cask install slate
+#!/bin/zsh
+[ "$(uname -s)" = "Darwin" ] && brew cask install slate

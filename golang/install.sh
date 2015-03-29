@@ -1,4 +1,2 @@
-#!/bin/bash
-[[ "$(uname -s)" != "Darwin" ]] && exit 0
-
-brew install go
+#!/bin/zsh
+[ "$(uname -s)" = "Darwin" ] && brew install go

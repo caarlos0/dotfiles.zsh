@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 [[ "$(uname -s)" != "Darwin" ]] && exit 0
 
 # watch and download stuff
