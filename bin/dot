@@ -6,6 +6,7 @@
 # to make sure you're on the latest and greatest.
 main() {
   cd ~/.dotfiles
+  export ZSH="$(pwd)"
   echo "Updating dotfiles..."
   git pull origin master
 
@@ -26,7 +27,7 @@ main() {
   # find the installers and run them iteratively
   find . -name install.sh | egrep -v "homebrew|build" | while read installer; do
     echo "Executing ${installer}..."
-    sh -xc "$installer"
+    sh -x "$installer" >> /tmp/dotfiles-dot
   done
 }
 
