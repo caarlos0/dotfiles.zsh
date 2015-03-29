@@ -12,6 +12,7 @@ main() {
   echo "Updating antigen plugins..."
   git submodule update
   source ./antigen/antigen/antigen.zsh
+  antigen apply
   antigen update
 
   echo "Setting OSX/Gnome defaults..."
