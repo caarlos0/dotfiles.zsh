@@ -1,2 +1,3 @@
-#!/bin/bash
-[ "$(uname -s)" = "Darwin" ] && brew install git
+#!/bin/zsh
+[ "$(uname -s)" != "Darwin" ] && return 0
+brew install git

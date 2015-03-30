@@ -1,5 +1,5 @@
-#!/bin/bash
-[[ "$(uname -s)" != "Darwin" ]] && exit 0
+#!/bin/zsh
+[ "$(uname -s)" != "Darwin" ] && return 0
 
 # watch and download stuff
 brew install youtube-dl

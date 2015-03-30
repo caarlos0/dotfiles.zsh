@@ -1,3 +1,3 @@
-#!/bin/bash
-[[ "$(uname -s)" != "Darwin" ]] && exit 0
+#!/bin/zsh
+[ "$(uname -s)" != "Darwin" ] && return 0
 brew install redis
