@@ -1,5 +1,6 @@
 #!/bin/zsh
-if test "$(which docker-machine)"; then
+reload-docker() {
   # shellcheck disable=SC2091
   $(docker-machine env dev)
-fi
+}
+reload-docker >/dev/null 2>&1

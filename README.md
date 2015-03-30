@@ -112,8 +112,8 @@ mostly because I use OS X at home and Linux at work.
 Yes you can! Pull the repo and run:
 
 ```sh
-$ docker build -t caarlos0/dotfiles .
-$ docker run -it caarlos0/dotfiles
+$ docker build -t dotfiles .
+$ docker run -it dotfiles
 ```
 
 It will start a fresh container with my dotfiles inside and dumb git
