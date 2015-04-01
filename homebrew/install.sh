@@ -23,7 +23,7 @@ brew install brew-cask
 brew install grc coreutils the_silver_searcher htop-osx heroku-toolbelt \
   imagemagick wget unrar ffmpeg gifsicle
 brew cask install iterm2 the-unarchiver disk-inventory-x appcleaner diffmerge \
-  cheatsheet
+  cheatsheet android-file-transfer
 
 # virtualization
 brew cask install virtualbox vagrant
@@ -43,6 +43,19 @@ brew cask install steam
 # Install fonts.
 brew tap caskroom/fonts
 brew cask install font-source-code-pro
+
+# databases et al
+brew install mariadb redis
+brew cask install sequel-pro postgres pg-commander
+
+# watch and download stuff
+brew install youtube-dl
+brew cask install tvshows subtitle-master beamer vlc transmission spotify
+
+# quick look plugins - https://github.com/sindresorhus/quick-look-plugins
+brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json \
+  qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook \
+  suspicious-package
 
 # clean things up
 brew cleanup
