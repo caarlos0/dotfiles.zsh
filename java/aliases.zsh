@@ -1,8 +1,7 @@
 #!/bin/zsh
-# aliases
-
 if test "$(which terminal-notifier)"; then
   mvn() {
+    # shellcheck disable=SC2048,SC2086
     command mvn $*
     terminal-notifier -message "'mvn $*' done!"
   }
@@ -23,14 +22,3 @@ alias mvnnew='mvn archetype:generate -DarchetypeArtifactId=maven-archetype-quick
 killjboss() {
   pgrep -f jboss-modules | xargs kill -9
 }
-
-function listMavenCompletions {
-	reply=(
-		cli:execute cli:execute-phase archetype:generate generate-sources compile \
-    clean install test test-compile deploy package cobertura:cobertura \
-    jetty:run gwt:run gwt:debug -DskipTests -Dmaven.test.skip=true \
-    -DarchetypeCatalog=http://tapestry.formos.com/maven-snapshot-repository \
-    -Dtest=$(if [ -d ./src ] ; then find ./src -type f | grep -v svn | sed 's?.*/\([^/]*\)\..*?-Dtest=\1?'; fi));
-}
-
-compctl -K listMavenCompletions mvn
