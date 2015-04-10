@@ -1,5 +1,13 @@
 #!/bin/zsh
 # aliases
+
+if test "$(which terminal-notifier)"; then
+  mvn() {
+    command mvn $*
+    terminal-notifier -message "Maven is done."
+  }
+fi
+
 alias mvncie='mvn clean install eclipse:eclipse'
 alias mvnci='mvn clean install'
 alias mvne='mvn eclipse:eclipse'
