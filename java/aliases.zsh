@@ -4,7 +4,7 @@
 if test "$(which terminal-notifier)"; then
   mvn() {
     command mvn $*
-    terminal-notifier -message "Maven is done."
+    terminal-notifier -message "'mvn $*' done!"
   }
 fi
 
