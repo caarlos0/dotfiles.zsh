@@ -1,11 +1,12 @@
 #!/bin/zsh
-if test "$(which terminal-notifier)"; then
-  mvn() {
-    # shellcheck disable=SC2068
-    command mvn $@
-    terminal-notifier -message "'mvn $*' done!"
-  }
-fi
+
+mvn() {
+  # shellcheck disable=SC2068
+  command mvn $@
+  local message="'mvn $*' done!"
+  which terminal-notifier > /dev/null && terminal-notifier -message "$message"
+  which notify-send > /dev/null && notify-send "$message"
+}
 
 alias mvncie='mvn clean install eclipse:eclipse'
 alias mvnci='mvn clean install'
