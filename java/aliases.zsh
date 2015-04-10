@@ -1,8 +1,8 @@
 #!/bin/zsh
 if test "$(which terminal-notifier)"; then
   mvn() {
-    # shellcheck disable=SC2048,SC2086
-    command mvn $*
+    # shellcheck disable=SC2068
+    command mvn $@
     terminal-notifier -message "'mvn $*' done!"
   }
 fi
