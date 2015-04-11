@@ -5,5 +5,5 @@ setup_command_t() {
   make
 }
 [ "$(uname -s)" = "Darwin" ] && brew install vim
-vim +PluginInstall +qall
-setup_command_t &> /tmp/cmd-t.log
+vim +PluginInstall +qall >/tmp/vim-plugins.log 2>&1 || true
+setup_command_t >/tmp/cmd-t.log 2>&1 || true
