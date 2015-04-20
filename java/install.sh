@@ -13,4 +13,9 @@ if [ ! -z "$BINARY" ]; then
     -noSplash \
     -repository http://update.eclemma.org/ \
     -installIUs com.mountainminds.eclemma.feature.feature.group
+  "$BINARY" \
+    -application org.eclipse.equinox.p2.director \
+    -noSplash \
+    -repository http://download.eclipse.org/technology/m2e/releases/ \
+    -installIUs org.eclipse.m2e.feature.feature.group
 fi
