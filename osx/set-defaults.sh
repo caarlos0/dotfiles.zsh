@@ -185,13 +185,6 @@ sleep 1
 defaults write com.apple.terminal "Default Window Settings" -string "terminal-ocean-dark"
 defaults write com.apple.terminal "Startup Window Settings" -string "terminal-ocean-dark"
 
-defaults write com.googlecode.iterm2 PromptOnQuit -bool false
-curl -L \
-  https://raw.githubusercontent.com/chriskempson/base16-iterm2/master/base16-ocean.dark.itermcolors \
-  > /tmp/base16-ocean.dark.itermcolors
-open /tmp/base16-ocean.dark.itermcolors
-sleep 1
-
 #
 # Kill related apps
 #
