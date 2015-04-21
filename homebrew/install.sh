@@ -23,7 +23,7 @@ brew install brew-cask
 brew install grc coreutils the_silver_searcher htop-osx heroku-toolbelt \
   imagemagick wget unrar ffmpeg gifsicle terminal-notifier
 brew cask install iterm2 the-unarchiver disk-inventory-x appcleaner diffmerge \
-  cheatsheet android-file-transfer
+  cheatsheet android-file-transfer evernote
 
 # virtualization
 brew cask install virtualbox vagrant
