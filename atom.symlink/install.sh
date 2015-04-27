@@ -3,5 +3,5 @@
 apm install \
   editorconfig autocomplete-plus \
   language-docker language-diff \
-  linter linter-shellcheck linter-javac linter-jshint linter-ruby \
+  linter linter-jshint linter-ruby \
   atom-beautify color-picker || true
