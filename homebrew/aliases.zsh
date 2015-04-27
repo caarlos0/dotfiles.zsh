@@ -1,7 +1,7 @@
 #!/bin/zsh
 brewbump() {
   brew update
-  brew upgrade
+  brew upgrade --all
   brew cleanup
   brew cask cleanup
 }
