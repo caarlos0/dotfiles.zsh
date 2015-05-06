@@ -1,7 +1,6 @@
-#!/bin/sh
+#!/bin/zsh
 # Force rehash when command not found
 _force_rehash() {
-  # shellcheck disable=SC2039
   (( CURRENT == 1 )) && rehash
   return 1
 }
