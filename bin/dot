@@ -6,7 +6,6 @@
 # to make sure you're on the latest and greatest.
 main() {
   cd ~/.dotfiles
-  # shellcheck disable=SC2034
   ZSH="$(pwd)"
   echo "Updating dotfiles..."
   git pull origin master
