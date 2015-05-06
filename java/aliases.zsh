@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/sh
 
 mvn() {
   # shellcheck disable=SC2068

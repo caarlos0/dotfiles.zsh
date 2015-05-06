@@ -65,7 +65,7 @@ link_file () {
 
     if [ "$overwrite_all" == "false" ] && [ "$backup_all" == "false" ] && [ "$skip_all" == "false" ]
     then
-      # shellcheck disable=SC2086
+      # shellcheck disable=SC2086,SC2155
       local currentSrc="$(readlink $dst)"
 
       if [ "$currentSrc" == "$src" ]

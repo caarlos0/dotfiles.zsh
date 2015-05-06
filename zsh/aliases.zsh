@@ -1,7 +1,7 @@
-#!/bin/zsh
+#!/bin/sh
 __reload_dotfiles() {
-  export PATH="$(command -p getconf PATH)"
-  source ~/.zshrc
+  PATH="$(command -p getconf PATH)"
+  . ~/.zshrc
   cd .
 }
 alias reload!='__reload_dotfiles'
