@@ -132,7 +132,7 @@ and I'd love to get it fixed for you!
 
 ## known issues
 
-- All SC2039 ignores should be fixed;
+- All SC2039 ignores should be fixed (#65);
 
 ## contributing
 
