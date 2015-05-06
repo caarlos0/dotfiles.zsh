@@ -1,8 +1,9 @@
-#!/bin/zsh
+#!/bin/sh
 # Force rehash when command not found
 _force_rehash() {
-    (( CURRENT == 1 )) && rehash
-    return 1
+  # shellcheck disable=SC2039
+  (( CURRENT == 1 )) && rehash
+  return 1
 }
 
 # forces zsh to realize new commands

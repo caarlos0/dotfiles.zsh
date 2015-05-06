@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/sh
 brewbump() {
   brew update
   brew upgrade --all

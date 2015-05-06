@@ -5,4 +5,4 @@ install:
     - git submodule update
     - locale
     - ./build/install.sh
-    - ./build.sh
+    - ./build/build.sh
