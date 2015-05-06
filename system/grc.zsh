@@ -1,5 +1,6 @@
-#!/bin/zsh
+#!/bin/sh
 # GRC colorizes nifty unix tools all over the place
+# shellcheck disable=2039
 if grc &>/dev/null && ! brew &>/dev/null; then
-  source "$(brew --prefix)/etc/grc.bashrc"
+  . "$(brew --prefix)/etc/grc.bashrc"
 fi

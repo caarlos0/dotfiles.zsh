@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/sh
 [ "$(uname -s)" != "Darwin" ] && return 0
 
 # install some java stuff

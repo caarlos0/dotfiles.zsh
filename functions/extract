@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/sh
 # credit: http://nparikh.org/notes/zshrc.txt
 # Usage: extract <file>
 # Description: extracts archived files / mounts disk images
@@ -25,4 +25,3 @@ extract () {
         echo "'$1' is not a valid file"
     fi
 }
-

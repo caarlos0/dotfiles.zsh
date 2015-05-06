@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/sh
 setup_command_t() {
   cd "$ZSH"/vim/vimfiles/vim.symlink/bundle/command-t/ruby/command-t
   ruby extconf.rb

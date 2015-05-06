@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/sh
 alias gl='git pull --prune'
 alias glg="git log --graph --decorate --oneline --abbrev-commit"
 alias gp='git push origin HEAD'
