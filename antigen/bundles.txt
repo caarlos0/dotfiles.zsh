@@ -1,4 +1,3 @@
-rupa/z
 caarlos0/jvm
 caarlos0/zsh-pg
 djui/alias-tips
