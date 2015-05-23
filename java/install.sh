@@ -1,5 +1,5 @@
 #!/bin/sh
-[ "$(uname -s)" != "Darwin" ] && return 0
+[ "$(uname -s)" != "Darwin" ] && exit 0
 
 # install some java stuff
 brew install maven

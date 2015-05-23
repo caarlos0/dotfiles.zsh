@@ -1,5 +1,5 @@
 #!/bin/sh
-[ "$(uname -s)" != "Darwin" ] && return 0
+[ "$(uname -s)" != "Darwin" ] && exit 0
 
 if test ! "$(which rbenv)"; then
   echo "  Installing rbenv for you."

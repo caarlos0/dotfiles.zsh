@@ -1,3 +1,3 @@
 #!/bin/sh
-[ "$(uname -s)" != "Darwin" ] && return 0
+[ "$(uname -s)" != "Darwin" ] && exit 0
 brew install node
