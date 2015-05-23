@@ -19,7 +19,7 @@ main() {
 
   echo "Setting OSX/Gnome defaults..."
   ./osx/set-defaults.sh
-  ./gnome/set-defaults.sh
+  ./linux/set-defaults.sh
 
   echo "Running all install files..."
   # run homebrew installer first
