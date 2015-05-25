@@ -19,7 +19,7 @@
 		".settings",
 		".idea"
 	],
-	"font_face": "Menlo",
+	"font_face": "Fira Code",
 	"font_size": 15,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
