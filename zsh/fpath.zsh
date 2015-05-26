@@ -3,6 +3,3 @@
 for topic_folder ($ZSH/*) if [ -d "$topic_folder" ]; then
   fpath=($topic_folder $fpath)
 fi
-
-# add https://github.com/zsh-users/zsh-completions
-fpath+=($ZSH/zsh/completions/src)
