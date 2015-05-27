@@ -4,7 +4,7 @@ djui/alias-tips
 caarlos0/zsh-mkc
 sindresorhus/pure
 caarlos0/zsh-git-sync
-zsh-users/zsh-completions
+zsh-users/zsh-completions src
 caarlos0/zsh-add-upstream
 caarlos0/zsh-open-github-pr
 zsh-users/zsh-syntax-highlighting
