@@ -17,10 +17,6 @@ alias full              move screenOriginX;screenOriginY                        
 alias center            move screenOriginX+(screenSizeX/2-(screenSizeX*0.4));screenOriginY+(screenSizeY/2-(screenSizeY*0.4))  screenSizeX*0.8;screenSizeY*0.8
 alias left-half         move screenOriginX;screenOriginY                               screenSizeX*0.5;screenSizeY
 alias right-half        move screenOriginX+screenSizeX*0.5;screenOriginY               screenSizeX*0.5;screenSizeY
-alias left-half-top     move screenOriginX;screenOriginY                               screenSizeX*0.5;screenSizeY/2
-alias left-half-bottom  move screenOriginX;screenOriginY+screenSizeY/2                 screenSizeX*0.5;screenSizeY/2
-alias right-half-top    move screenOriginX+screenSizeX*0.5;screenOriginY               screenSizeX*0.5;screenSizeY/2
-alias right-half-bottom move screenOriginX+screenSizeX*0.5;screenOriginY+screenSizeY/2 screenSizeX*0.5;screenSizeY/2
 
 # Hyper key
 alias hyper ctrl;alt;cmd
@@ -30,10 +26,6 @@ bind m:${hyper} ${full}
 bind c:${hyper} ${center}
 bind left:${hyper} ${left-half}
 bind right:${hyper} ${right-half}
-bind left:ctrl;cmd;shift ${left-half-top}
-bind left:ctrl;cmd ${left-half-bottom}
-bind right:ctrl;cmd;shift ${right-half-top}
-bind right:ctrl;cmd ${right-half-bottom}
 
 # Application Bindings
 bind b:${hyper} focus ${browser}
