@@ -3,7 +3,7 @@ caarlos0/zsh-pg
 djui/alias-tips
 caarlos0/zsh-mkc
 caarlos0/zsh-git-sync
-zsh-users/zsh-completions src
+zsh-users/zsh-completions
 caarlos0/zsh-add-upstream
 caarlos0/zsh-open-github-pr
 zsh-users/zsh-syntax-highlighting
