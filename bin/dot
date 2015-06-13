@@ -11,11 +11,10 @@ main() {
   echo "Updating dotfiles..."
   git pull origin master
 
-  echo "Updating antigen plugins..."
+  echo "Updating antibody plugins..."
   git submodule update
-  . ./antigen/antigen/antigen.zsh
-  antigen apply
-  antigen update
+  . ./antibody/antibody/antibody.zsh
+  antibody update
 
   echo "Setting OSX/Gnome defaults..."
   ./osx/set-defaults.sh
