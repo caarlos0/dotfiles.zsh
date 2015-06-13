@@ -10,12 +10,11 @@ install_pkg() {
 }
 
 check_dependencies() {
-  if test ! "$(which git)"; then
-    install_pkg git
-  fi
-  if test ! "$(which zsh)"; then
-    install_pkg zsh
-  fi
+  for pkg in zsh git curl python; do
+    if test ! "$(which $pkg)"; then
+      install_pkg $pkg
+    fi
+  done
 }
 
 main() {
