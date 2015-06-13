@@ -11,7 +11,7 @@ main() {
   echo "Updating dotfiles..."
   git pull origin master
 
-  echo "Updating antigen plugins..."
+  echo "Updating antibody plugins..."
   git submodule update
   . ./antibody/antibody/antibody.zsh
   antibody update
