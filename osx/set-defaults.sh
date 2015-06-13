@@ -198,7 +198,7 @@ sleep 1
 set +e
 for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" \
   "Dock" "Finder" "Mail" "Messages" "Safari" "SystemUIServer" \
-  "Terminal" "Transmission"; do
+  "Transmission"; do
 killall "${app}" > /dev/null 2>&1
 done
 set -e
