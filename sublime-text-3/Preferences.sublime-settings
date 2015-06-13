@@ -40,7 +40,7 @@
 	"spacegray_tabs_font_normal": true,
 	"spacegray_tabs_normal": true,
 	"tab_size": 2,
-	"theme": "Material-Theme-Darker.sublime-theme",
+	"theme": "Material-Theme.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true
 }
