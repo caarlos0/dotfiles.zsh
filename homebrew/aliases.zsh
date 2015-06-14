@@ -11,7 +11,7 @@ brew() {
       brew cleanup
       ;;
     *)
-      command brew $*
+      command brew "$@"
       ;;
   esac
 }
