@@ -10,9 +10,10 @@ main() {
   export ZSH="$(pwd)"
   echo "Updating dotfiles..."
   git pull origin master
+  git submodule update
 
   echo "Updating antibody plugins..."
-  git submodule update
+  ./antibody/install.sh
   . ./antibody/antibody/antibody.zsh
   antibody update
 
