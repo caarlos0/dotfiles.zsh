@@ -1,7 +1,7 @@
 {
 	"bold_folder_labels": true,
 	"caret_style": "phase",
-	"color_scheme": "Packages/User/SublimeLinter/Material-Theme (SL).tmTheme",
+	"color_scheme": "Packages/User/base16-ocean.dark (SL).tmTheme",
 	"default_line_ending": "unix",
 	"ensure_newline_at_eof_on_save": true,
 	"file_exclude_patterns":
@@ -25,8 +25,8 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"Markdown",
-		"Vintage"
+		"Vintage",
+		"Markdown"
 	],
 	"line_padding_bottom": 1,
 	"line_padding_top": 1,
@@ -40,7 +40,7 @@
 	"spacegray_tabs_font_normal": true,
 	"spacegray_tabs_normal": true,
 	"tab_size": 2,
-	"theme": "Material-Theme.sublime-theme",
+	"theme": "Spacegray.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true
 }
