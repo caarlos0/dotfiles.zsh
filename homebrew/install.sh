@@ -50,7 +50,7 @@ brew cask install sequel-pro postgres pg-commander
 
 # watch and download stuff
 brew install youtube-dl
-brew cask install tvshows subtitle-master beamer vlc transmission spotify
+brew cask install tvshows subtitles beamer vlc transmission spotify
 
 # quick look plugins - https://github.com/sindresorhus/quick-look-plugins
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json \
