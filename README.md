@@ -97,7 +97,7 @@ written in Go.
 [zsh-mkc]: https://github.com/caarlos0/zsh-mkc
 [zsh-git-sync]: https://github.com/caarlos0/zsh-git-sync
 [zsh-completions]: https://github.com/zsh-users/zsh-completions
-[zsh-open-github-pr]: https://github.com/caarlos0/zsh-open-github-pr
+[zsh-open-pr]: https://github.com/caarlos0/zsh-open-pr
 [zsh-syntax-highlighting]: https://github.com/zsh-users/zsh-syntax-highlighting
 [zsh-history-substring-search]: https://github.com/zsh-users/zsh-history-substring-search
 
