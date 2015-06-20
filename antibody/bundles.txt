@@ -1,10 +1,9 @@
 caarlos0/jvm
 caarlos0/zsh-pg
-djui/alias-tips
 caarlos0/zsh-mkc
+mafredri/zsh-async
 caarlos0/zsh-git-sync
 zsh-users/zsh-completions
-caarlos0/zsh-add-upstream
 caarlos0/zsh-open-github-pr
 zsh-users/zsh-syntax-highlighting
 zsh-users/zsh-history-substring-search
