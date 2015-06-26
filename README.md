@@ -90,6 +90,7 @@ browser.
 All those are managed by [Antibody][antibody], a faster version of Antigen
 written in Go.
 
+[pure]: https://github.com/sindresorhus/pure
 [antibody]: https://github.com/caarlos0/antibody
 [jvm]: https://github.com/caarlos0/jvm
 [zsh-pg]: https://github.com/caarlos0/zsh-pg
