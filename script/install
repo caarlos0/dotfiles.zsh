@@ -26,7 +26,7 @@ main() {
   git clone --recursive https://github.com/caarlos0/dotfiles ~/.dotfiles
   cd ~/.dotfiles
   bash script/bootstrap
-  sudo chsh -s /bin/zsh
+  chsh -s "$(which zsh)"
   echo "All done! Please, restart your terminal session!"
 }
 main
