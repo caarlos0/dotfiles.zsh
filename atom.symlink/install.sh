@@ -4,4 +4,4 @@ apm install \
   editorconfig \
   language-docker language-diff language-puppet \
   linter linter-jshint linter-ruby \
-  atom-beautify color-picker || true
+  atom-beautify color-picker go-plus || true
