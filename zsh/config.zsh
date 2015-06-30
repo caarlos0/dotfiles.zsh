@@ -42,7 +42,8 @@ setopt RM_STAR_SILENT
 
 zle -N newtab
 
-if [[ ! -z "$+terminfo[smkx]" ]] && [[ ! -z "$+terminfo[rmkx]" ]]; then
+# shellcheck disable=SC2004
+if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
   function zle-line-init() {
     echoti smkx
   }
