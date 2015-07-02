@@ -1,0 +1,4 @@
+#!/bin/sh
+if [ -s "$GOPATH/src/github.com/$1" ]; then
+  cd "$GOPATH/src/github.com/$1"
+fi
