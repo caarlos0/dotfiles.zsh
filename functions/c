@@ -1,6 +1,4 @@
 #!/bin/sh
-if [ ! -z "$1" ] && [ -s "$GOPATH/src/github.com/$1" ]; then
-  cd "$GOPATH/src/github.com/$1"
-else
+if [ ! -z "$1" ]; then
   cd "$PROJECTS/$1"
 fi
