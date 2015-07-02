@@ -9,8 +9,12 @@
   core:
     hideGitIgnoredFiles: true
     autoHideMenuBar: true
+    projectHome: "~/Code/"
   "exception-reporting":
     userId: "eb68b94c-a76b-64f4-46e7-bd087cf1c98f"
   welcome:
     showOnStartup: false
   linter: {}
+  "go-plus":
+    goPath: "~/Code/Go"
+    getMissingTools: false
