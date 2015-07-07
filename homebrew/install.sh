@@ -46,7 +46,7 @@ brew cask install font-source-code-pro
 
 # databases et al
 brew install mariadb redis
-brew cask install sequel-pro postgres pg-commander
+brew cask install sequel-pro postgres postico
 
 # watch and download stuff
 brew install youtube-dl
