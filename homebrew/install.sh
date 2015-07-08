@@ -45,8 +45,8 @@ brew tap caskroom/fonts
 brew cask install font-source-code-pro
 
 # databases et al
-brew install mariadb redis
-brew cask install sequel-pro postgres postico
+brew install redis
+brew cask install postgres postico
 
 # watch and download stuff
 brew install youtube-dl
