@@ -26,7 +26,7 @@ brew cask install iterm2 the-unarchiver disk-inventory-x appcleaner diffmerge \
   android-file-transfer evernote
 
 # virtualization
-brew cask install virtualbox vagrant
+brew cask install virtualbox
 
 # chat, books, notes, documents, mail, etc
 brew cask install kindle calibre dropbox skype slack telegram
