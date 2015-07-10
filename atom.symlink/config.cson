@@ -6,10 +6,10 @@
     showIndentGuide: true
     showInvisibles: true
     scrollPastEnd: true
-    projectHome: "~/Code/"
   core:
     hideGitIgnoredFiles: true
     autoHideMenuBar: true
+    projectHome: "~/Code/"
   welcome:
     showOnStartup: false
   linter: {}
