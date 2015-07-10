@@ -1,0 +1,12 @@
+'.source.go':
+  'return nil and error':
+    'prefix': 'rne'
+    'body': 'return nil, err'
+
+  'Create test':
+    'prefix': 'test'
+    'body': """
+      func Test${1}(t *testing.T) {
+        ${2}
+      }
+    """
