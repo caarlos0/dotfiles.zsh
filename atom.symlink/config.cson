@@ -6,13 +6,13 @@
     showIndentGuide: true
     showInvisibles: true
     scrollPastEnd: true
+    projectHome: "~/Code/"
   core:
     hideGitIgnoredFiles: true
     autoHideMenuBar: true
-  "exception-reporting":
-    userId: "eb68b94c-a76b-64f4-46e7-bd087cf1c98f"
   welcome:
     showOnStartup: false
   linter: {}
-  "atom-beautify":
-    _analyticsUserId: "3dfda927-6973-4e63-abf4-4da87de58f7a"
+  "go-plus":
+    goPath: "~/Code/Go"
+  "go-rename": {}
