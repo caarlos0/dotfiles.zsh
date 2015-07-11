@@ -16,3 +16,5 @@
   "go-plus":
     goPath: "~/Code/Go"
   "go-rename": {}
+  "exception-reporting":
+    userId: "530fe4e8-e289-0bd7-1eb5-b30825e2445d"
