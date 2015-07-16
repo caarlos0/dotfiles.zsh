@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/zsh
 reload-docker() {
   eval "$(docker-machine env dev)"
 }
