@@ -1,4 +1,2 @@
 #!/bin/sh
-if [ ! -z "$1" ]; then
-  cd "$PROJECTS/$1"
-fi
+cd "$PROJECTS/$1"
