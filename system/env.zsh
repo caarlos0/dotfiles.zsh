@@ -1,2 +1,2 @@
 #!/bin/sh
-export EDITOR='subl'
+export EDITOR='atom'
