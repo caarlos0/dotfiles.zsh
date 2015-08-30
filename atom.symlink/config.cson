@@ -1,11 +1,11 @@
 "*":
   editor:
     invisibles: {}
-    fontFamily: "Fira Code"
     fontSize: 15
     showIndentGuide: true
     showInvisibles: true
     scrollPastEnd: true
+    fontFamily: "Hack"
   core:
     hideGitIgnoredFiles: true
     autoHideMenuBar: true
