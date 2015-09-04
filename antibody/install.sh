@@ -1,4 +1,9 @@
 #!/bin/sh
+if [ "$(uname -s)" = "Darwin" ]; then
+  brew tap caarlos0/homebrew-antibody
+  brew install antibody
+  return 0
+fi
 BASE_URL="https://github.com/caarlos0/antibody/releases/download"
 VERSION="v0.2.3"
 ARCH="386"
