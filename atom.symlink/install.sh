@@ -10,5 +10,5 @@ apm install \
   linter-ruby \
   atom-beautify \
   color-picker \
-  go-plus \
-  go-rename || true
+  go-plus go-rename \
+  file-icons || true

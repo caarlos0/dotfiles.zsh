@@ -19,3 +19,5 @@
   "go-plus":
     goPath: "~/Code/Go"
   "go-rename": {}
+  "tree-view":
+    hideVcsIgnoredFiles: true
