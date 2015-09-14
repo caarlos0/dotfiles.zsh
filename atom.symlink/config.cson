@@ -10,11 +10,11 @@
     hideGitIgnoredFiles: true
     autoHideMenuBar: true
     projectHome: "~/Code/"
+    disabledPackages: [
+      "metrics"
+    ]
   welcome:
     showOnStartup: false
-  disabledPackages: [
-    "metrics"
-  ]
   linter: {}
   "go-plus":
     goPath: "~/Code/Go"
