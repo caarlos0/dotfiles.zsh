@@ -5,6 +5,7 @@ apm install \
   language-docker \
   language-diff \
   language-puppet \
+  language-terraform \
   linter \
   linter-jshint \
   linter-ruby \
