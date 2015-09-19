@@ -4,3 +4,5 @@
 *.swp
 *.orig
 *.rbc
+.idea
+*.iml
