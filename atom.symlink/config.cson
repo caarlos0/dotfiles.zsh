@@ -12,6 +12,7 @@
     projectHome: "~/Code/"
     disabledPackages: [
       "metrics"
+      "exception-reporting"
     ]
   welcome:
     showOnStartup: false
