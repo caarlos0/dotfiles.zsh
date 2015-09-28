@@ -25,7 +25,6 @@ setopt EXTENDED_HISTORY
 setopt PROMPT_SUBST
 setopt CORRECT
 setopt COMPLETE_IN_WORD
-setopt IGNORE_EOF
 # adds history
 setopt APPEND_HISTORY
 # adds history incrementally and share it across sessions
