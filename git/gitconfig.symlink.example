@@ -53,3 +53,5 @@
     lineNumber   = true
 [push]
     default = simple
+[commit]
+  template = ~/.dotfiles/git/template.txt
