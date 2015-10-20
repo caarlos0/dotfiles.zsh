@@ -23,7 +23,7 @@ main() {
     exit 1
   fi
   check_dependencies
-  git clone --recursive https://github.com/caarlos0/dotfiles ~/.dotfiles
+  git clone --recursive --depth=50 https://github.com/caarlos0/dotfiles ~/.dotfiles
   cd ~/.dotfiles
   bash script/bootstrap
   chsh -s "$(which zsh)"
