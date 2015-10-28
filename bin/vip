@@ -1,0 +1,5 @@
+#!/bin/sh
+# open files from xargs in tabs and without messing up yout tty.
+# example usage: git grep -c bash | cut -f1 -d':' | xargs vip
+exec vim < /dev/tty -p "$@"
+
