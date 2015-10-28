@@ -14,6 +14,8 @@ go get -u github.com/mitchellh/gox
 go get -u github.com/alecthomas/gometalinter
 # repl
 go get -u github.com/motemen/gore
+# stringer
+go get golang.org/x/tools/cmd/stringer
 
 "$GOPATH"/bin/gox -build-toolchain
 "$GOPATH"/bin/gometalinter --install --update
