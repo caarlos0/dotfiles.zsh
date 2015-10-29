@@ -1,0 +1,5 @@
+\set COMP_KEYWORD_CASE upper
+\x auto
+\setenv PAGER 'less -SX'
+\timing on
+\pset null --
