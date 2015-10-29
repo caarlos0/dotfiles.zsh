@@ -1,0 +1,6 @@
+\set COMP_KEYWORD_CASE upper
+\x auto
+\setenv PAGER 'less -SX'
+\timing on
+\pset null --
+\set PROMPT1 '%[%033[33;1m%]%x%[%033[0m%]%[%033[1m%]%/%[%033[0m%]%R%# '
