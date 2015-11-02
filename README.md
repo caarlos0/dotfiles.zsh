@@ -1,5 +1,6 @@
 # carlos' dotfiles  [![DevOps By Rultor.com][rb]][rb] [![Build Status][tb]][tp]
-> Runs on Linux and OSX. Configurations for ZSH, SublimeText 3, Java, Ruby, Terminals and others.
+
+Config files for ZSH, SublimeText 3, Java, Ruby, Go, Terminals and more.
 
 ![screenshot][scrn]
 
