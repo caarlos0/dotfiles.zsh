@@ -3,7 +3,7 @@
 # bootstrap installs things.
 
 cd "$(dirname "$0")/.."
-DOTFILES_ROOT=$(pwd)
+DOTFILES_ROOT=$(pwd -P)
 
 set -e
 
@@ -11,7 +11,7 @@ echo ''
 
 info () {
   # shellcheck disable=SC2059
-  printf "  [ \033[00;34m..\033[0m ] $1"
+  printf "\r  [ \033[00;34m..\033[0m ] $1"
 }
 
 user () {
@@ -32,13 +32,11 @@ fail () {
 }
 
 setup_gitconfig () {
-  if ! [ -f git/gitconfig.symlink ]
-  then
+  if ! [ -f git/gitconfig.symlink ]; then
     info 'setup gitconfig'
 
     git_credential='cache'
-    if [ "$(uname -s)" == "Darwin" ]
-    then
+    if [ "$(uname -s)" == "Darwin" ]; then
       git_credential='osxkeychain'
     fi
 
@@ -59,26 +57,16 @@ link_file () {
   # shellcheck disable=SC1007
   local overwrite= backup= skip=
   local action=
-
-  if [ -f "$dst" -o -d "$dst" -o -L "$dst" ]
-  then
-
-    if [ "$overwrite_all" == "false" ] && [ "$backup_all" == "false" ] && [ "$skip_all" == "false" ]
-    then
+  if [ -f "$dst" -o -d "$dst" -o -L "$dst" ]; then
+    if [ "$overwrite_all" == "false" ] && [ "$backup_all" == "false" ] && [ "$skip_all" == "false" ]; then
       # shellcheck disable=SC2086,SC2155
       local currentSrc="$(readlink $dst)"
-
-      if [ "$currentSrc" == "$src" ]
-      then
-
+      if [ "$currentSrc" == "$src" ]; then
         skip=true;
-
       else
-
         user "File already exists: $dst ($(basename "$src")), what do you want to do?\n\
         [s]kip, [S]kip all, [o]verwrite, [O]verwrite all, [b]ackup, [B]ackup all?"
         read -n 1 action
-
         case "$action" in
           o )
             overwrite=true;;
@@ -95,29 +83,22 @@ link_file () {
           * )
             ;;
         esac
-
       fi
-
     fi
-
     overwrite=${overwrite:-$overwrite_all}
     backup=${backup:-$backup_all}
     skip=${skip:-$skip_all}
-
-    if [ "$overwrite" == "true" ]
-    then
+    if [ "$overwrite" == "true" ]; then
       rm -rf "$dst"
       success "removed $dst"
     fi
 
-    if [ "$backup" == "true" ]
-    then
+    if [ "$backup" == "true" ]; then
       mv "$dst" "${dst}.backup"
       success "moved $dst to ${dst}.backup"
     fi
 
-    if [ "$skip" == "true" ]
-    then
+    if [ "$skip" == "true" ]; then
       success "skipped $src"
     fi
   fi
@@ -134,8 +115,7 @@ install_dotfiles () {
 
   local overwrite_all=false backup_all=false skip_all=false
   # shellcheck disable=SC2044
-  for src in $(find "$DOTFILES_ROOT" -maxdepth 3 -name '*.symlink')
-  do
+  for src in $(find "$DOTFILES_ROOT" -maxdepth 3 -name '*.symlink'); do
     dst="$HOME/.$(basename "${src%.*}")"
     link_file "$src" "$dst"
   done
@@ -145,8 +125,7 @@ setup_gitconfig
 install_dotfiles
 
 info "installing dependencies"
-if ./bin/dot > /tmp/dotfiles-dot 2>&1
-then
+if ./bin/dot > /tmp/dotfiles-dot 2>&1 ; then
   success "dependencies installed"
 else
   fail "error installing dependencies"
