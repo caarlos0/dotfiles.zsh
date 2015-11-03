@@ -1,8 +1,8 @@
 #!/bin/zsh
 #
-# dot
+# dot_update
 #
-# `dot` handles installation, updates, things like that. Run it periodically
+# `dot_update` handles installation, updates, things like that. Run it periodically
 # to make sure you're on the latest and greatest.
 main() {
   cd ~/.dotfiles
@@ -26,7 +26,8 @@ main() {
   ./homebrew/install.sh
 
   # find the installers and run them iteratively
-  find . -name install.sh | egrep -v "homebrew|build" | while read installer; do
+  find . -name install.sh | egrep -v "homebrew|build" | while read installer
+  do
     echo "$ ${installer}..."
     sh -c "$installer" >> /tmp/dotfiles-dot
   done
