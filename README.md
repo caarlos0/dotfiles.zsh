@@ -143,7 +143,7 @@ checked/linted with [Shellcheck](https://github.com/koalaman/shellcheck).
 
 ## thanks
 
-I forked [Holmans](http://github.com/holman)' excellent
+I forked [Holman's](http://github.com/holman) excellent
 [dotfiles](http://github.com/holman/dotfiles) and tweaked it to fit my
 taste. I have also copied one thing or another from other people, so,
 thanks everyone!
