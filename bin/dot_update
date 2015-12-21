@@ -12,6 +12,9 @@ $ZSH/{osx,linux}/set-defaults.sh
 # Install homebrew
 $ZSH/homebrew/install.sh 2>&1
 
+echo "› antibody update"
+antibody update
+
 # Upgrade homebrew
 echo "› brew update"
 brew update
