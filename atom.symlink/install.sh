@@ -11,4 +11,5 @@ apm install \
   atom-beautify \
   color-picker \
   go-plus go-rename \
+  sort-lines \
   file-icons || true
