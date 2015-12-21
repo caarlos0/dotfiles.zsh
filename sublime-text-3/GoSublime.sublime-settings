@@ -1,5 +1,0 @@
-{
-  "env": {
-    "GOPATH": "$HOME/Code/Go"
-  }
-}
