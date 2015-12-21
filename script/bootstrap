@@ -84,11 +84,9 @@ link_file () {
         esac
       fi
     fi
-
     overwrite=${overwrite:-$overwrite_all}
     backup=${backup:-$backup_all}
     skip=${skip:-$skip_all}
-
     if [ "$overwrite" == "true" ]; then
       rm -rf "$dst"
       success "removed $dst"
@@ -113,9 +111,7 @@ link_file () {
 
 install_dotfiles () {
   info 'installing dotfiles'
-
   local overwrite_all=false backup_all=false skip_all=false
-
   # shellcheck disable=SC2044
   for src in $(find -H "$DOTFILES_ROOT" -maxdepth 2 -name '*.symlink' -not -path '*.git*')
   do
@@ -128,7 +124,7 @@ setup_gitconfig
 install_dotfiles
 
 info "installing dependencies"
-if source bin/dot_update > /tmp/dotfiles-dot 2>&1; then
+if ./bin/dot_update > /tmp/dotfiles-dot 2>&1; then
   success "dependencies installed"
 else
   fail "error installing dependencies"
