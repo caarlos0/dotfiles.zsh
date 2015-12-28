@@ -53,14 +53,12 @@ setup_gitconfig () {
 
 
 link_file () {
-  local src=$1 dst=$2
-  # shellcheck disable=SC1007
-  local overwrite= backup= skip=
-  local action=
+  local -r src="$1" dst="$2"
+  local overwrite backup skip action
 
   if [ -f "$dst" -o -d "$dst" -o -L "$dst" ]; then
     if [ "$overwrite_all" == "false" ] && [ "$backup_all" == "false" ] && [ "$skip_all" == "false" ]; then
-      local currentSrc="$(readlink $dst)"
+      local -r currentSrc="$(readlink $dst)"
       if [ "$currentSrc" == "$src" ]; then
         skip=true;
       else
