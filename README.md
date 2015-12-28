@@ -1,6 +1,6 @@
 # carlos' dotfiles  [![DevOps By Rultor.com][rb]][rb] [![Build Status][tb]][tp]
 
-Config files for ZSH, SublimeText 3, Java, Ruby, Go, Terminals and more.
+Config files for ZSH, Java, Ruby, Go, Editors, Terminals and more.
 
 ![screenshot][scrn]
 
@@ -113,18 +113,6 @@ this script in `bin/`.
 
 I try to keep it working in both Linux (no specific distro) and OS X,
 mostly because I use OS X at home and Linux at work.
-
-## test it within Docker
-
-Yes you can! Pull the repo and run:
-
-```sh
-$ docker build -t dotfiles .
-$ docker run -it dotfiles
-```
-
-It will start a fresh container with my dotfiles inside and dumb git
-credentials.
 
 ## bugs
 
