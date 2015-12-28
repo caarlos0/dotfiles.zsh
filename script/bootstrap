@@ -54,6 +54,7 @@ setup_gitconfig () {
 
 link_file () {
   local src=$1 dst=$2
+  # shellcheck disable=SC1007
   local overwrite= backup= skip=
   local action=
 
