@@ -1,6 +1,7 @@
 cask_args appdir: '/Applications'
 
 tap 'homebrew/bundle'
+tap 'homebrew/versions'
 
 brew 'coreutils'
 brew 'docker-compose'
