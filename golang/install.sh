@@ -1,7 +1,4 @@
 #!/bin/sh
-if [ "$(uname -s)" = "Darwin" ]; then
-  brew install go hg graphviz
-fi
 # docs
 go get -u golang.org/x/tools/cmd/godoc
 # rename funcs

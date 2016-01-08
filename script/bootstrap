@@ -11,12 +11,12 @@ echo ''
 
 info () {
   # shellcheck disable=SC2059
-  printf "\r  [ \033[00;34m..\033[0m ] $1"
+  printf "\r  [ \033[00;34m..\033[0m ] $1\n"
 }
 
 user () {
   # shellcheck disable=SC2059
-  printf "\r  [ \033[0;33m?\033[0m ] $1 "
+  printf "\r  [ \033[0;33m??\033[0m ] $1\n"
 }
 
 success () {
@@ -53,14 +53,12 @@ setup_gitconfig () {
 
 
 link_file () {
-  local src=$1 dst=$2
-  # shellcheck disable=SC1007
-  local overwrite= backup= skip=
-  local action=
+  local -r src="$1" dst="$2"
+  local overwrite backup skip action
+
   if [ -f "$dst" -o -d "$dst" -o -L "$dst" ]; then
     if [ "$overwrite_all" == "false" ] && [ "$backup_all" == "false" ] && [ "$skip_all" == "false" ]; then
-      # shellcheck disable=SC2086,SC2155
-      local currentSrc="$(readlink $dst)"
+      local -r currentSrc="$(readlink "$dst")"
       if [ "$currentSrc" == "$src" ]; then
         skip=true;
       else
@@ -112,10 +110,10 @@ link_file () {
 
 install_dotfiles () {
   info 'installing dotfiles'
-
   local overwrite_all=false backup_all=false skip_all=false
   # shellcheck disable=SC2044
-  for src in $(find -H "$DOTFILES_ROOT" -maxdepth 3 -name '*.symlink'); do
+  for src in $(find -H "$DOTFILES_ROOT" -maxdepth 2 -name '*.symlink' -not -path '*.git*')
+  do
     dst="$HOME/.$(basename "${src%.*}")"
     link_file "$src" "$dst"
   done
@@ -125,7 +123,7 @@ setup_gitconfig
 install_dotfiles
 
 info "installing dependencies"
-if ./bin/dot_update > /tmp/dotfiles-update 2>&1 ; then
+if ./bin/dot_update > /tmp/dotfiles-dot 2>&1; then
   success "dependencies installed"
 else
   fail "error installing dependencies"

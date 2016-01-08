@@ -1,6 +1,6 @@
 # carlos' dotfiles  [![DevOps By Rultor.com][rb]][rb] [![Build Status][tb]][tp]
 
-Config files for ZSH, SublimeText 3, Java, Ruby, Go, Terminals and more.
+Config files for ZSH, Java, Ruby, Go, Editors, Terminals and more.
 
 ![screenshot][scrn]
 
@@ -25,22 +25,6 @@ awesome, you might want to [read my post on the subject][post].
 
 [post]: http://carlosbecker.com/posts/dotfiles-are-meant-to-be-forked/
 
-## install
-
-Run this:
-
-```sh
-bash -c "$(wget -O - https://raw.githubusercontent.com/caarlos0/dotfiles/master/script/install)"
-```
-
-This will symlink the appropriate files in `.dotfiles` to your home directory.
-Everything is configured and tweaked within `~/.dotfiles`.
-
-`dot_update` is a simple script that installs some dependencies, sets sane OS X
-defaults, and so on. Tweak this script, and occasionally run `dot_update` from
-time to time to keep your environment fresh and up-to-date. You can find
-this script in `bin/`.
-
 ## topical
 
 Everything's built around topic areas. If you're adding a new area to your
@@ -61,6 +45,10 @@ There's a few special files in the hierarchy.
 
 - **bin/**: Anything in `bin/` will get added to your `$PATH` and be made
   available everywhere.
+- **Brewfile**: This is a list of applications for
+  [Homebrew Cask](http://caskroom.io) to install: things like Chrome and
+  Spotify and Atom and stuff. Might want to edit this file before running
+  any initial setup.
 - **topic/\*.zsh**: Any files ending in `.zsh` get loaded into your
   environment.
 - **topic/path.zsh**: Any file named `path.zsh` is loaded first and is
@@ -103,23 +91,28 @@ written in Go.
 [zsh-syntax-highlighting]: https://github.com/zsh-users/zsh-syntax-highlighting
 [zsh-history-substring-search]: https://github.com/zsh-users/zsh-history-substring-search
 
+## install
+
+Run this:
+
+```sh
+git clone https://github.com/caarlos0/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
+script/bootstrap
+```
+
+This will symlink the appropriate files in `.dotfiles` to your home directory.
+Everything is configured and tweaked within `~/.dotfiles`.
+
+`dot_update` is a simple script that installs some dependencies, sets sane OS X
+defaults, and so on. Tweak this script, and occasionally run `dot_update` from
+time to time to keep your environment fresh and up-to-date. You can find
+this script in `bin/`.
 
 ## compatibility
 
 I try to keep it working in both Linux (no specific distro) and OS X,
 mostly because I use OS X at home and Linux at work.
-
-## test it within Docker
-
-Yes you can! Pull the repo and run:
-
-```sh
-$ docker build -t dotfiles .
-$ docker run -it dotfiles
-```
-
-It will start a fresh container with my dotfiles inside and dumb git
-credentials.
 
 ## bugs
 

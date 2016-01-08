@@ -165,6 +165,8 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 
 # disable iTunes fuckin helper
 sudo mv /Applications/iTunes.app/Contents/MacOS/iTunesHelper.app{,-disabled} || true
+# stop play button from launching iTunes
+launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist
 
 # also this spotify web helper
 mv ~/Applications/Spotify.app/Contents/MacOS/SpotifyWebHelper{,-disabled} || true
