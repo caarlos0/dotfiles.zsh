@@ -3,11 +3,12 @@ brew() {
   case "$1" in
     cleanup)
       command brew cleanup
-      brew cask cleanup
+      command brew cask cleanup
+      command brew prune
       ;;
     bump)
-      brew update
-      brew upgrade --all
+      command brew update
+      command brew upgrade --all
       brew cleanup
       ;;
     *)

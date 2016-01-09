@@ -4,7 +4,6 @@ tap 'homebrew/bundle'
 tap 'homebrew/versions'
 
 brew 'coreutils'
-brew 'docker-compose'
 brew 'ffmpeg'
 brew 'gifsicle'
 brew 'git'
@@ -27,7 +26,7 @@ brew 'youtube-dl'
 brew 'zsh'
 
 # antibody
-tap 'caarlos0/homebrew-antibody'
+tap 'getantibody/antibody'
 brew 'antibody'
 
 # casks
@@ -41,6 +40,7 @@ cask 'atom'
 cask 'beamer'
 cask 'diffmerge'
 cask 'disk-inventory-x'
+cask 'dockertoolbox'
 cask 'dropbox'
 cask 'font-hack'
 cask 'google-chrome'
@@ -53,7 +53,7 @@ cask 'spotify'
 cask 'telegram'
 cask 'the-unarchiver'
 cask 'transmission'
-cask 'tunnelblick-beta'
+cask 'tunnelblick'
 cask 'virtualbox'
 cask 'vlc'
 
