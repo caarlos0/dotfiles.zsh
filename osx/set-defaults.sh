@@ -164,12 +164,12 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 # sudo pmset -a standbydelay 86400
 
 # disable iTunes fuckin helper
-sudo mv /Applications/iTunes.app/Contents/MacOS/iTunesHelper.app{,-disabled} || true
+sudo mv /Applications/iTunes.app/Contents/MacOS/iTunesHelper.app{,-disabled} &>/dev/null
 # stop play button from launching iTunes
 launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist
 
 # also this spotify web helper
-mv ~/Applications/Spotify.app/Contents/MacOS/SpotifyWebHelper{,-disabled} || true
+mv ~/Applications/Spotify.app/Contents/MacOS/SpotifyWebHelper{,-disabled} &>/dev/null
 
 # Android File Transfer disable auto-open when connect.
 mv "/opt/homebrew-cask/Caskroom/android-file-transfer/latest/Android File Transfer.app/Contents/Resources/Android File Transfer Agent.app"{,_DISABLED} || true
@@ -179,19 +179,17 @@ mv "$HOME/Library/Application Support/Google/Android File Transfer/Android File 
 #
 # Terminals
 #
-curl -L \
-  "https://raw.githubusercontent.com/mdo/ocean-terminal/master/terminal-ocean-dark.terminal" \
-  > "/tmp/terminal-ocean-dark.terminal"
+curl -o "/tmp/terminal-ocean-dark.terminal" -silent \
+  "https://raw.githubusercontent.com/mdo/ocean-terminal/master/terminal-ocean-dark.terminal"
 open "/tmp/terminal-ocean-dark.terminal"
 sleep 1
 defaults write com.apple.terminal "Default Window Settings" -string "terminal-ocean-dark"
 defaults write com.apple.terminal "Startup Window Settings" -string "terminal-ocean-dark"
 
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
-curl -L \
-  https://raw.githubusercontent.com/chriskempson/base16-iterm2/master/base16-ocean.dark.itermcolors \
-  > /tmp/base16-ocean.dark.itermcolors
-open /tmp/base16-ocean.dark.itermcolors
+curl -o "/tmp/base16-ocean.dark.itermcolors" -silent \
+  "https://raw.githubusercontent.com/chriskempson/base16-iterm2/master/base16-ocean.dark.itermcolors"
+open "/tmp/base16-ocean.dark.itermcolors"
 sleep 1
 
 #
@@ -201,7 +199,7 @@ set +e
 for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" \
   "Dock" "Finder" "Mail" "Messages" "Safari" "SystemUIServer" \
   "Transmission"; do
-killall "${app}" > /dev/null 2>&1
+  killall "${app}" > /dev/null 2>&1
 done
 set -e
 
