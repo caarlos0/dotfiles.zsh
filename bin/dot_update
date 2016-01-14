@@ -13,12 +13,12 @@ export ZSH="$HOME/.dotfiles"
 # Install homebrew
 "$ZSH/homebrew/install.sh" 2>&1
 
-echo "› antibody update"
-antibody update
-
 # Upgrade homebrew
 echo "› brew update"
 brew update
+
+echo "› antibody update"
+antibody update
 
 # Install software
 echo "› $ZSH/script/install"
