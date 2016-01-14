@@ -9,14 +9,10 @@ brew 'gifsicle'
 brew 'git'
 brew 'go'
 brew 'graphviz'
-brew 'grc' if RUBY_PLATFORM =~ /darwin/
-brew 'htop-osx' if RUBY_PLATFORM =~ /darwin/
 brew 'imagemagick'
 brew 'maven32'
 brew 'node'
 brew 'redis'
-brew 'shellcheck' if RUBY_PLATFORM =~ /darwin/
-brew 'terminal-notifier' if RUBY_PLATFORM =~ /darwin/
 brew 'the_silver_searcher'
 brew 'unrar'
 brew 'vim'
@@ -29,11 +25,15 @@ tap 'getantibody/antibody'
 brew 'antibody'
 
 if RUBY_PLATFORM =~ /darwin/
+  brew 'grc'
+  brew 'htop-osx'
+  brew 'shellcheck'
+  brew 'terminal-notifier'
+
   # casks
   tap 'caskroom/cask'
   tap 'caskroom/fonts'
   tap 'caskroom/versions'
-
   cask 'android-file-transfer'
   cask 'appcleaner'
   cask 'atom'
