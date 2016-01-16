@@ -14,7 +14,7 @@ if test ! "$(which brew)"; then
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   else
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)"
-    source "$ZSH/homebrew/path.zsh"
+    . "$ZSH/homebrew/path.zsh"
   fi
 fi
 
