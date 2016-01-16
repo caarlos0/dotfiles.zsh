@@ -1,4 +1,5 @@
 #!/bin/sh
+. "$ZSH/golang/path.zsh"
 # docs
 go get -u golang.org/x/tools/cmd/godoc
 # rename funcs
