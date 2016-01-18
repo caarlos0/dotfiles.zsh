@@ -125,10 +125,6 @@ If you're brand-new to the project and run into any blockers, please
 [open an issue](https://github.com/caarlos0/dotfiles/issues) on this repository
 and I'd love to get it fixed for you!
 
-## known issues
-
-- All SC2039 ignores should be fixed (#65);
-
 ## contributing
 
 Feel free to contribute. Pull requests will be automatically
