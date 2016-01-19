@@ -96,6 +96,7 @@ written in Go.
 Run this:
 
 ```sh
+ruby -v # you will need ruby 1.9+ for homebrew/linuxbrew
 git clone https://github.com/caarlos0/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 script/bootstrap
