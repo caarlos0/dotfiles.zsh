@@ -1,4 +1,4 @@
-# carlos' dotfiles  [![DevOps By Rultor.com][rb]][rb] [![Build Status][tb]][tp] [![Powered by Antibody][ab]][ap]
+# carlos' dotfiles  [![DevOps By Rultor.com][rb]][rb] [![Build Status][tb]][tp] [![Powered by Antibody][ab]][ap] [![Issue Stats](http://issuestats.com/github/caarlos0/dotfiles/badge/pr?style=flat-square)](http://issuestats.com/github/caarlos0/dotfiles) [![Issue Stats](http://issuestats.com/github/caarlos0/dotfiles/badge/issue?style=flat-square)](http://issuestats.com/github/caarlos0/dotfiles)
 
 Config files for ZSH, Java, Ruby, Go, Editors, Terminals and more.
 
