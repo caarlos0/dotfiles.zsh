@@ -1,12 +1,14 @@
-# carlos' dotfiles  [![DevOps By Rultor.com][rb]][rb] [![Build Status][tb]][tp]
+# carlos' dotfiles  [![DevOps By Rultor.com][rb]][rb] [![Build Status][tb]][tp] [![Powered by Antibody][ab]][ap]
 
 Config files for ZSH, Java, Ruby, Go, Editors, Terminals and more.
 
 ![screenshot][scrn]
 
+[ap]: https://github.com/getantibody/antibody
+[ab]: https://img.shields.io/badge/powered%20by-antibody-blue.svg?style=flat-square
 [rb]: http://www.rultor.com/b/caarlos0/dotfiles
 [rp]: http://www.rultor.com/p/caarlos0/dotfiles
-[tb]: https://travis-ci.org/caarlos0/dotfiles.svg?branch=master
+[tb]: https://img.shields.io/travis/caarlos0/dotfiles.svg?style=flat-square
 [tp]: https://travis-ci.org/caarlos0/dotfiles
 [scrn]: https://raw.githubusercontent.com/caarlos0/dotfiles/master/screenshot.png
 
