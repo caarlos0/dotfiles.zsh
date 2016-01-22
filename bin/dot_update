@@ -7,10 +7,12 @@
 export ZSH="$HOME/.dotfiles"
 
 # Set OS defaults
+echo "› set OS defaults"
 "$ZSH/osx/set-defaults.sh"
 "$ZSH/linux/set-defaults.sh"
 
 # Install homebrew
+echo "› homebrew/install.sh"
 "$ZSH/homebrew/install.sh" 2>&1
 . "$ZSH/homebrew/path.zsh"
 
@@ -18,9 +20,9 @@ export ZSH="$HOME/.dotfiles"
 echo "› brew update"
 brew update
 
-echo "› antibody update"
-antibody update
-
 # Install software
 echo "› $ZSH/script/install"
 "$ZSH/script/install"
+
+echo "› antibody update"
+antibody update
