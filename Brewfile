@@ -53,8 +53,8 @@ if RUBY_PLATFORM =~ /darwin/
   cask 'telegram'
   cask 'the-unarchiver'
   cask 'transmission'
-  cask 'tunnelblick'
   cask 'virtualbox'
+  cask 'viscosity'
   cask 'vlc'
 
   # https://github.com/sindresorhus/quick-look-plugins
