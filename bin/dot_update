@@ -25,4 +25,4 @@ echo "› $ZSH/script/install"
 "$ZSH/script/install"
 
 echo "› antibody update"
-antibody update
+antibody update &>/dev/null

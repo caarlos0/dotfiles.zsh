@@ -166,25 +166,14 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 # disable iTunes fuckin helper
 sudo mv /Applications/iTunes.app/Contents/MacOS/iTunesHelper.app{,-disabled} &>/dev/null
 # stop play button from launching iTunes
-launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist
+launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist &>/dev/null
 
 # also this spotify web helper
 mv ~/Applications/Spotify.app/Contents/MacOS/SpotifyWebHelper{,-disabled} &>/dev/null
 
 # Android File Transfer disable auto-open when connect.
-mv "/opt/homebrew-cask/Caskroom/android-file-transfer/latest/Android File Transfer.app/Contents/Resources/Android File Transfer Agent.app"{,_DISABLED} || true
-mv "$HOME/Library/Application Support/Google/Android File Transfer/Android File Transfer Agent.app"{,_DISABLED} || true
-
-
-#
-# Terminals
-#
-curl -o "/tmp/terminal-ocean-dark.terminal" -silent \
-  "https://raw.githubusercontent.com/mdo/ocean-terminal/master/terminal-ocean-dark.terminal"
-open "/tmp/terminal-ocean-dark.terminal"
-sleep 1
-defaults write com.apple.terminal "Default Window Settings" -string "terminal-ocean-dark"
-defaults write com.apple.terminal "Startup Window Settings" -string "terminal-ocean-dark"
+mv "/opt/homebrew-cask/Caskroom/android-file-transfer/latest/Android File Transfer.app/Contents/Resources/Android File Transfer Agent.app"{,_DISABLED} &>/dev/null
+mv "$HOME/Library/Application Support/Google/Android File Transfer/Android File Transfer Agent.app"{,_DISABLED} &>/dev/null
 
 #
 # Kill related apps
