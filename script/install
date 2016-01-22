@@ -15,4 +15,3 @@ do
   echo "› ${installer}..."
   sh -c "$installer"
 done
-
