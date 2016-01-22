@@ -123,7 +123,7 @@ setup_gitconfig
 install_dotfiles
 
 info "installing dependencies"
-if ./bin/dot_update > /tmp/dotfiles-dot 2>&1; then
+if ./bin/dot_update; then
   success "dependencies installed"
 else
   fail "error installing dependencies"
