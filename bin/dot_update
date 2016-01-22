@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/sh
 #
 # dot_update
 #
@@ -13,7 +13,7 @@ echo "› set OS defaults"
 
 # Install homebrew
 echo "› homebrew/install.sh"
-"$ZSH/homebrew/install.sh" 2>&1
+"$ZSH/homebrew/install.sh"
 . "$ZSH/homebrew/path.zsh"
 
 # Upgrade homebrew
@@ -25,4 +25,4 @@ echo "› $ZSH/script/install"
 "$ZSH/script/install"
 
 echo "› antibody update"
-antibody update &>/dev/null
+antibody update > /dev/null
