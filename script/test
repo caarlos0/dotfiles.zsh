@@ -1,23 +1,31 @@
 #!/bin/bash
 set -eo pipefail
+
+# Lint files
 ./build/build.sh
 
+# setup git credentials
 git_credential='cache'
 if [ "$(uname -s)" = "Darwin" ]; then
   git_credential='osxkeychain'
 fi
-
 sed \
   -e "s/AUTHORNAME/dotfiles-demo/g" \
   -e "s/AUTHOREMAIL/dotfiles-demo/g" \
   -e "s/GIT_CREDENTIAL_HELPER/$git_credential/g" \
   ./git/gitconfig.symlink.example > ./git/gitconfig.symlink
 
+# remove uneeded files
+rm -rf ~/.gemrc
+
+# install stuff needed by linux
 if [ "$(uname -s)" != "Darwin" ]; then
   sudo apt-get update
   sudo apt-get install -y git curl build-essential zsh
 fi
 
+# bootstrap the mighty
 ./script/bootstrap
 
+# load zsh
 zsh -c "source ~/.zshrc"
