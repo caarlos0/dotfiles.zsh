@@ -16,7 +16,7 @@ sed \
   ./git/gitconfig.symlink.example > ./git/gitconfig.symlink
 
 # remove uneeded files
-rm -rf ~/.gemrc
+rm -rf ~/.gemrc ~/.gitconfig
 
 # install stuff needed by linux
 if [ "$(uname -s)" != "Darwin" ]; then
