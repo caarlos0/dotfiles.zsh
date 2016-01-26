@@ -4,6 +4,10 @@ set -eo pipefail
 # Lint files
 ./build/build.sh
 
+# link to ~ and cd to it
+ln -s ../dotfiles ~/.dotfiles
+cd ~/.dotfiles
+
 # setup git credentials
 git_credential='cache'
 if [ "$(uname -s)" = "Darwin" ]; then
@@ -16,7 +20,7 @@ sed \
   ./git/gitconfig.symlink.example > ./git/gitconfig.symlink
 
 # remove uneeded files
-rm -rf ~/.gemrc ~/.gitconfig
+rm -rf ~/.*
 
 # install stuff needed by linux
 if [ "$(uname -s)" != "Darwin" ]; then
