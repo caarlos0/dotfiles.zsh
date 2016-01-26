@@ -1,0 +1,23 @@
+#!/bin/bash
+set -eo pipefail
+./build/build.sh
+
+git_credential='cache'
+if [ "$(uname -s)" = "Darwin" ]; then
+  git_credential='osxkeychain'
+fi
+
+sed \
+  -e "s/AUTHORNAME/dotfiles-demo/g" \
+  -e "s/AUTHOREMAIL/dotfiles-demo/g" \
+  -e "s/GIT_CREDENTIAL_HELPER/$git_credential/g" \
+  ./git/gitconfig.symlink.example > ./git/gitconfig.symlink
+
+if [ "$(uname -s)" != "Darwin" ]; then
+  sudo apt-get update
+  sudo apt-get install -y git curl build-essential zsh
+fi
+
+./script/bootstrap
+
+zsh -c "source ~/.zshrc"
