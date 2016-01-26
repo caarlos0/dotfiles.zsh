@@ -1,15 +1,20 @@
-# carlos' dotfiles  [![DevOps By Rultor.com][rb]][rb] [![Build Status][tb]][tp] [![Powered by Antibody][ab]][ap] [![Issue Stats](http://issuestats.com/github/caarlos0/dotfiles/badge/pr?style=flat-square)](http://issuestats.com/github/caarlos0/dotfiles) [![Issue Stats](http://issuestats.com/github/caarlos0/dotfiles/badge/issue?style=flat-square)](http://issuestats.com/github/caarlos0/dotfiles)
+# carlos' dotfiles
 
-Config files for ZSH, Java, Ruby, Go, Editors, Terminals and more.
+> Config files for ZSH, Java, Ruby, Go, Editors, Terminals and more.
+
+[![DevOps By Rultor.com][rb]][rb] [![Build Status][tb]][tp] [![Powered by Antibody][ab]][ap] [![Issue Stats][isspb]][issp] [![Issue Stats][issib]][issp]
 
 ![screenshot][scrn]
 
 [ap]: https://github.com/getantibody/antibody
 [ab]: https://img.shields.io/badge/powered%20by-antibody-blue.svg?style=flat-square
-[rb]: http://www.rultor.com/b/caarlos0/dotfiles
+[rb]: http://www.rultor.com/b/caarlos0/dotfiles?size=s
 [rp]: http://www.rultor.com/p/caarlos0/dotfiles
-[tb]: https://img.shields.io/travis/caarlos0/dotfiles.svg?style=flat-square
+[tb]: https://img.shields.io/travis/caarlos0/dotfiles/master.svg?style=flat-square
 [tp]: https://travis-ci.org/caarlos0/dotfiles
+[isspb]: http://issuestats.com/github/caarlos0/dotfiles/badge/pr?style=flat-square
+[issib]: http://issuestats.com/github/caarlos0/dotfiles/badge/issue?style=flat-square
+[issp]: http://issuestats.com/github/caarlos0/dotfiles
 [scrn]: https://raw.githubusercontent.com/caarlos0/dotfiles/master/screenshot.png
 
 ## dotfiles
