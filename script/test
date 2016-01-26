@@ -4,6 +4,9 @@ set -eo pipefail
 # Lint files
 ./build/build.sh
 
+# remove uneeded files
+rm -rf ~/.*
+
 # link to ~ and cd to it
 cd ..
 cp -rf dotfiles ~/.dotfiles
@@ -19,9 +22,6 @@ sed \
   -e "s/AUTHOREMAIL/dotfiles-demo/g" \
   -e "s/GIT_CREDENTIAL_HELPER/$git_credential/g" \
   ./git/gitconfig.symlink.example > ./git/gitconfig.symlink
-
-# remove uneeded files
-rm -rf ~/.*
 
 # install stuff needed by linux
 if [ "$(uname -s)" != "Darwin" ]; then
