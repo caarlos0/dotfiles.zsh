@@ -4,9 +4,6 @@ set -eo pipefail
 # Lint files
 ./build/build.sh
 
-# remove uneeded files
-rm -rf .[^.] .??*
-
 # link to ~ and cd to it
 cd ..
 cp -rf dotfiles ~/.dotfiles
@@ -30,7 +27,7 @@ if [ "$(uname -s)" != "Darwin" ]; then
 fi
 
 # bootstrap the mighty
-./script/bootstrap
+./script/bootstrap --override-all
 
 # load zsh
 zsh -c "source ~/.zshrc"
