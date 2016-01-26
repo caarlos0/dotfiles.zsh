@@ -5,7 +5,8 @@ set -eo pipefail
 ./build/build.sh
 
 # link to ~ and cd to it
-ln -s ../dotfiles ~/.dotfiles
+cd ..
+cp -rf dotfiles ~/.dotfiles
 cd ~/.dotfiles
 
 # setup git credentials
