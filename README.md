@@ -1,8 +1,8 @@
 # carlos' dotfiles
 
-> Config files for ZSH, Java, Ruby, Go, Editors, Terminals and more.
-
 [![DevOps By Rultor.com][rb]][rb] [![Build Status][tb]][tp] [![Powered by Antibody][ab]][ap] [![Issue Stats][isspb]][issp] [![Issue Stats][issib]][issp]
+
+> Config files for ZSH, Java, Ruby, Go, Editors, Terminals and more.
 
 ![screenshot][scrn]
 
