@@ -1,10 +1,10 @@
 language: bash
-os:
-  - linux
-  - osx
 install:
   - ./build/install.sh
 script:
-  - ./build/build.sh
+  - ./script/test
 notifications:
   email: false
+os:
+  - linux
+  - osx
