@@ -1,4 +1,7 @@
 language: bash
+os:
+  - linux
+  - osx
 install:
   - ./build/install.sh
 script:
