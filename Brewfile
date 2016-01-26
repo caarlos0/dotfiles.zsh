@@ -15,7 +15,7 @@ if RUBY_PLATFORM =~ /darwin/
   brew 'coreutils'
   brew 'ffmpeg'
   brew 'gifsicle'
-  brew 'git
+  brew 'git'
   brew 'graphviz'
   brew 'grc'
   brew 'htop-osx'
