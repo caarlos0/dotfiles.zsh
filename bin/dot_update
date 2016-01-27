@@ -25,7 +25,9 @@ brew update
 echo "› $ZSH/script/install"
 "$ZSH/script/install"
 
-echo "› antibody update"
-. "$(brew --prefix)/share/antibody.zsh"
-which antibody
-antibody update
+if [ -n "$ZSH_VERSION" ]; then
+  echo "› antibody update"
+  # shellcheck disable=SC1090
+  . "$ZSH/shellcheck/path.zsh"
+  antibody update
+fi
