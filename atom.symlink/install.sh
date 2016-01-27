@@ -2,7 +2,6 @@
 if test ! "$(which apm)"; then
   return 0
 fi
-# install shit
 apm install \
   editorconfig \
   language-docker \
