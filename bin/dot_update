@@ -28,4 +28,5 @@ echo "› $ZSH/script/install"
 echo "› antibody update"
 # shellcheck disable=SC1090
 . "$ZSH/antibody/path.zsh"
-antibody update > /dev/null
+which antibody
+antibody update
