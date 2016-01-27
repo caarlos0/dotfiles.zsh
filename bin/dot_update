@@ -14,6 +14,7 @@ echo "› set OS defaults"
 # Install homebrew
 echo "› homebrew/install.sh"
 "$ZSH/homebrew/install.sh"
+# shellcheck source=homebrew/path.zsh
 . "$ZSH/homebrew/path.zsh"
 
 # Upgrade homebrew
@@ -25,5 +26,6 @@ echo "› $ZSH/script/install"
 "$ZSH/script/install"
 
 echo "› antibody update"
+# shellcheck source=antibody/path.zsh
 . "$ZSH/antibody/path.zsh"
 antibody update > /dev/null
