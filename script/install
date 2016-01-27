@@ -10,7 +10,7 @@ echo "› brew bundle"
 brew bundle
 
 # find the installers and run them iteratively
-find . -name install.sh | egrep -v "build" | while read installer
+find . -name install.sh | egrep -v "build" | while read -r installer
 do
   echo "› ${installer}..."
   sh -c "$installer"

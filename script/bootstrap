@@ -42,9 +42,9 @@ setup_gitconfig () {
     fi
 
     user ' - What is your github author name?'
-    read -e git_authorname
+    read -r -e git_authorname
     user ' - What is your github author email?'
-    read -e git_authoremail
+    read -r -e git_authoremail
 
     sed \
       -e "s/AUTHORNAME/$git_authorname/g" \
@@ -62,7 +62,7 @@ link_file () {
   src="$1"
   dst="$2"
 
-  if [ -f "$dst" -o -d "$dst" -o -L "$dst" ]; then
+  if [ -f "$dst" ] || [ -d "$dst" ] || [ -L "$dst" ]; then
     if [ "$overwrite_all" == "false" ] && [ "$backup_all" == "false" ] && [ "$skip_all" == "false" ]; then
       local -r currentSrc="$(readlink "$dst")"
       if [ "$currentSrc" == "$src" ]; then
@@ -70,7 +70,7 @@ link_file () {
       else
         user "File already exists: $dst ($(basename "$src")), what do you want to do?\n\
         [s]kip, [S]kip all, [o]verwrite, [O]verwrite all, [b]ackup, [B]ackup all?"
-        read -n 1 action
+        read -r -n 1 action
         case "$action" in
           o )
             overwrite=true;;
