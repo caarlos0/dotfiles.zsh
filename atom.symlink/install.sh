@@ -2,6 +2,7 @@
 if test ! "$(which apm)"; then
   return 0
 fi
+# install shit
 apm install \
   editorconfig \
   language-docker \
@@ -16,3 +17,4 @@ apm install \
   go-plus go-rename \
   sort-lines \
   file-icons
+apm remove metrics exception-reporting

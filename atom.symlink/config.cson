@@ -1,26 +1,24 @@
 "*":
-  "atom-beautify":
-    _analyticsUserId: "c760a210-c920-4fc3-9be7-832460889ad9"
+  editor:
+    invisibles: {}
+    fontSize: 15
+    showIndentGuide: true
+    showInvisibles: true
+    scrollPastEnd: true
+    fontFamily: "Hack"
   core:
+    hideGitIgnoredFiles: true
     autoHideMenuBar: true
+    projectHome: "~/Code/"
     disabledPackages: [
       "metrics"
       "exception-reporting"
     ]
-    hideGitIgnoredFiles: true
-    projectHome: "~/Code/"
-  editor:
-    fontFamily: "Hack"
-    fontSize: 15
-    invisibles: {}
-    scrollPastEnd: true
-    showIndentGuide: true
-    showInvisibles: true
+  welcome:
+    showOnStartup: false
+  linter: {}
   "go-plus":
     goPath: "~/Code/Go"
   "go-rename": {}
-  linter: {}
   "tree-view":
     hideVcsIgnoredFiles: true
-  welcome:
-    showOnStartup: false
