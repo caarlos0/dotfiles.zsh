@@ -1,10 +1,12 @@
-language: bash
+language: ruby
+rvm:
+  - 2.0.0
+os:
+  - linux
+  - osx
 install:
   - ./build/install.sh
 script:
   - ./script/test
 notifications:
   email: false
-os:
-  - linux
-  - osx
