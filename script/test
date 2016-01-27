@@ -20,12 +20,6 @@ sed \
   -e "s/GIT_CREDENTIAL_HELPER/$git_credential/g" \
   ./git/gitconfig.symlink.example > ./git/gitconfig.symlink
 
-# install stuff needed by linux
-if [ "$(uname -s)" != "Darwin" ]; then
-  sudo apt-get update
-  sudo apt-get install -y git curl build-essential zsh
-fi
-
 # bootstrap the mighty
 ./script/bootstrap --override-all
 
