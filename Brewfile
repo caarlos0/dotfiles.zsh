@@ -4,7 +4,7 @@ tap 'homebrew/bundle'
 tap 'homebrew/versions'
 
 brew 'go'
-brew 'the_silver_searcher'
+brew 'rbenv'
 brew 'youtube-dl'
 
 # antibody
@@ -18,7 +18,7 @@ if RUBY_PLATFORM =~ /darwin/
   brew 'docker-compose'
   brew 'ffmpeg'
   brew 'gifsicle'
-  brew 'git
+  brew 'git'
   brew 'graphviz'
   brew 'grc'
   brew 'htop-osx'
@@ -28,6 +28,7 @@ if RUBY_PLATFORM =~ /darwin/
   brew 'redis'
   brew 'shellcheck'
   brew 'terminal-notifier'
+  brew 'the_silver_searcher'
   brew 'unrar'
   brew 'vim'
   brew 'wget'

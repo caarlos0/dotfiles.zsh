@@ -3,7 +3,7 @@
 mvn() {
   # shellcheck disable=SC2068
   command mvn $@
-  local message="'mvn $*' done!"
+  message="'mvn $*' done!"
   which terminal-notifier > /dev/null && terminal-notifier -message "$message"
   which notify-send > /dev/null && notify-send "$message"
 }
