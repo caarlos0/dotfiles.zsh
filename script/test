@@ -29,5 +29,5 @@ fi
 # bootstrap the mighty
 ./script/bootstrap --override-all
 
-# load zsh
-zsh -c "source ~/.zshrc"
+# load zsh and check if antibody is working
+zsh -c "antibody list"
