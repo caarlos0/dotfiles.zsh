@@ -30,4 +30,5 @@ fi
 ./script/bootstrap --override-all
 
 # load zsh and check if antibody is working
-zsh -x -c 'source ~/.zshrc && antibody list'
+zsh -c 'source ~/.zshrc && antibody list'
+echo $?
