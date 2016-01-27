@@ -56,7 +56,6 @@ if RUBY_PLATFORM =~ /darwin/
   cask 'telegram'
   cask 'the-unarchiver'
   cask 'transmission'
-  cask 'virtualbox'
   cask 'viscosity'
   cask 'vlc'
 
