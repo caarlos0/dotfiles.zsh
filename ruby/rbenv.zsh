@@ -1,18 +1,22 @@
 #!/bin/sh
-# rehash shims
-rbenv rehash 2>/dev/null
+# shellcheck disable=SC2039
+if rbenv &>/dev/null; then
+  # rehash shims
+  rbenv rehash 2>/dev/null
 
-# shell thing
-rbenv() {
-  command="$1"
-  if [ "$#" -gt 0 ]; then
-    shift
-  fi
+  # shell thing
+  rbenv() {
+    command="$1"
+    if [ "$#" -gt 0 ]; then
+      shift
+    fi
 
-  case "$command" in
-  shell)
-    eval "$(rbenv "sh-$command" "$@")";;
-  *)
-    command rbenv "$command" "$@";;
-  esac
-}
+    case "$command" in
+    shell)
+      eval "$(rbenv "sh-$command" "$@")";;
+    *)
+      command rbenv "$command" "$@";;
+    esac
+  }
+
+fi

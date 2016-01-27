@@ -4,6 +4,7 @@ tap 'homebrew/bundle'
 tap 'homebrew/versions'
 
 brew 'go'
+brew 'rbenv'
 brew 'youtube-dl'
 
 # antibody
