@@ -6,6 +6,7 @@ os:
   - osx
 install:
   - ./build/install.sh
+  - if [ "$(uname -s)" != "Darwin" ]; then sudo apt-get install -y zsh; fi
 script:
   - ./script/test
 notifications:

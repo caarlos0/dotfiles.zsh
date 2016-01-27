@@ -1,5 +1,5 @@
 #!/bin/zsh
-set -xeo pipefail
+set -xe
 
 # Lint files
 ./build/build.sh
