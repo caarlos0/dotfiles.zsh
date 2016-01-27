@@ -13,7 +13,7 @@ if test ! "$(which brew)"; then
   if test "$(uname)" = "Darwin"; then
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   else
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)"
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install | sed 's/^wait_for_user.*//g')"
   fi
 fi
 

@@ -1,4 +1,7 @@
 #!/bin/sh
+if test ! "$(which apm)"; then
+  return 0
+fi
 apm install \
   editorconfig \
   language-docker \
@@ -12,4 +15,4 @@ apm install \
   color-picker \
   go-plus go-rename \
   sort-lines \
-  file-icons || true
+  file-icons

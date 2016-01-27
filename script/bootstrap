@@ -4,6 +4,7 @@
 
 cd "$(dirname "$0")/.."
 DOTFILES_ROOT=$(pwd -P)
+[ "$1" = "--override-all" ] && OVERRIDE_ALL="true"
 
 set -e
 
@@ -41,11 +42,15 @@ setup_gitconfig () {
     fi
 
     user ' - What is your github author name?'
-    read -e git_authorname
+    read -r -e git_authorname
     user ' - What is your github author email?'
-    read -e git_authoremail
+    read -r -e git_authoremail
 
-    sed -e "s/AUTHORNAME/$git_authorname/g" -e "s/AUTHOREMAIL/$git_authoremail/g" -e "s/GIT_CREDENTIAL_HELPER/$git_credential/g" git/gitconfig.symlink.example > git/gitconfig.symlink
+    sed \
+      -e "s/AUTHORNAME/$git_authorname/g" \
+      -e "s/AUTHOREMAIL/$git_authoremail/g" \
+      -e "s/GIT_CREDENTIAL_HELPER/$git_credential/g" \
+      git/gitconfig.symlink.example > git/gitconfig.symlink
 
     success 'gitconfig'
   fi
@@ -53,10 +58,11 @@ setup_gitconfig () {
 
 
 link_file () {
-  local -r src="$1" dst="$2"
-  local overwrite backup skip action
+  local src dst overwrite backup skip action
+  src="$1"
+  dst="$2"
 
-  if [ -f "$dst" -o -d "$dst" -o -L "$dst" ]; then
+  if [ -f "$dst" ] || [ -d "$dst" ] || [ -L "$dst" ]; then
     if [ "$overwrite_all" == "false" ] && [ "$backup_all" == "false" ] && [ "$skip_all" == "false" ]; then
       local -r currentSrc="$(readlink "$dst")"
       if [ "$currentSrc" == "$src" ]; then
@@ -64,7 +70,7 @@ link_file () {
       else
         user "File already exists: $dst ($(basename "$src")), what do you want to do?\n\
         [s]kip, [S]kip all, [o]verwrite, [O]verwrite all, [b]ackup, [B]ackup all?"
-        read -n 1 action
+        read -r -n 1 action
         case "$action" in
           o )
             overwrite=true;;
@@ -110,7 +116,7 @@ link_file () {
 
 install_dotfiles () {
   info 'installing dotfiles'
-  local overwrite_all=false backup_all=false skip_all=false
+  local overwrite_all="${OVERRIDE_ALL:-false}" backup_all=false skip_all=false
   # shellcheck disable=SC2044
   for src in $(find -H "$DOTFILES_ROOT" -maxdepth 2 -name '*.symlink' -not -path '*.git*')
   do

@@ -1,0 +1,28 @@
+#!/bin/zsh
+set -e
+
+# Lint files
+./build/build.sh
+
+# link to ~ and cd to it
+cd ..
+cp -rf dotfiles ~/.dotfiles
+cd ~/.dotfiles
+
+# setup git credentials
+git_credential='cache'
+if [ "$(uname -s)" = "Darwin" ]; then
+  git_credential='osxkeychain'
+fi
+sed \
+  -e "s/AUTHORNAME/dotfiles-demo/g" \
+  -e "s/AUTHOREMAIL/dotfiles-demo/g" \
+  -e "s/GIT_CREDENTIAL_HELPER/$git_credential/g" \
+  ./git/gitconfig.symlink.example > ./git/gitconfig.symlink
+
+# bootstrap the mighty
+./script/bootstrap --override-all
+
+# load zshrc and check if antibody is working
+source ~/.zshrc
+antibody list

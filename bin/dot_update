@@ -14,6 +14,7 @@ echo "› set OS defaults"
 # Install homebrew
 echo "› homebrew/install.sh"
 "$ZSH/homebrew/install.sh"
+# shellcheck disable=SC1090
 . "$ZSH/homebrew/path.zsh"
 
 # Upgrade homebrew
@@ -24,6 +25,9 @@ brew update
 echo "› $ZSH/script/install"
 "$ZSH/script/install"
 
-echo "› antibody update"
-. "$ZSH/antibody/path.zsh"
-antibody update > /dev/null
+if [ -n "$ZSH_VERSION" ]; then
+  echo "› antibody update"
+  # shellcheck disable=SC1090
+  . "$ZSH/shellcheck/path.zsh"
+  antibody update
+fi
