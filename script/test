@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 set -xeo pipefail
 
 # Lint files
@@ -29,6 +29,6 @@ fi
 # bootstrap the mighty
 ./script/bootstrap --override-all
 
-# load zsh and check if antibody is working
-zsh -c 'source ~/.zshrc && antibody list'
-echo $?
+# load zshrc and check if antibody is working
+source ~/.zshrc
+antibody list
