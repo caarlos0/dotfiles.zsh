@@ -43,6 +43,7 @@ if RUBY_PLATFORM =~ /darwin/
   cask 'appcleaner'
   cask 'atom'
   cask 'beamer'
+  cask 'caffeine'
   cask 'diffmerge'
   cask 'disk-inventory-x'
   cask 'dropbox'
