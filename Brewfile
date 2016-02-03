@@ -13,6 +13,9 @@ brew 'antibody'
 
 if RUBY_PLATFORM =~ /darwin/
   brew 'coreutils'
+  brew 'dlite'
+  brew 'docker'
+  brew 'docker-compose'
   brew 'ffmpeg'
   brew 'gifsicle'
   brew 'git'
@@ -43,7 +46,6 @@ if RUBY_PLATFORM =~ /darwin/
   cask 'caffeine'
   cask 'diffmerge'
   cask 'disk-inventory-x'
-  cask 'dockertoolbox'
   cask 'dropbox'
   cask 'font-hack'
   cask 'google-chrome'
@@ -55,7 +57,6 @@ if RUBY_PLATFORM =~ /darwin/
   cask 'telegram'
   cask 'the-unarchiver'
   cask 'transmission'
-  cask 'virtualbox'
   cask 'viscosity'
   cask 'vlc'
 
