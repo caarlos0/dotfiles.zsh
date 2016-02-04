@@ -3,6 +3,7 @@ if test ! "$(which apm)"; then
   return 0
 fi
 apm install \
+  atom-wrap-in-tag \
   editorconfig \
   language-docker \
   language-diff \

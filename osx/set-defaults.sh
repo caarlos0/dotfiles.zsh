@@ -39,6 +39,8 @@ defaults write com.apple.dock wvous-bl-modifier -int 0
 # Disable transparency in the menu bar and elsewhere on Yosemite
 defaults write com.apple.universalaccess reduceTransparency -bool true
 
+# Enable text replacement almost everywhere
+defaults write -g WebAutomaticTextReplacementEnabled -bool true
 #
 # Finder
 #
