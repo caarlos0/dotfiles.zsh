@@ -12,7 +12,6 @@ tap 'getantibody/antibody'
 brew 'antibody'
 
 if RUBY_PLATFORM =~ /darwin/
-  brew 'coreutils'
   brew 'dlite'
   brew 'docker'
   brew 'docker-compose'
@@ -33,6 +32,16 @@ if RUBY_PLATFORM =~ /darwin/
   brew 'vim'
   brew 'wget'
   brew 'zsh'
+
+  # gnu stuff
+  brew 'coreutils', args: ['with-default-names']
+  brew 'findutils', args: ['with-default-names']
+  brew 'gnu-tar', args: ['with-default-names']
+  brew 'gnu-sed', args: ['with-default-names']
+  brew 'gawk', args: ['with-default-names']
+  brew 'gnutls', args: ['with-default-names']
+  brew 'gnu-indent', args: ['with-default-names']
+  brew 'gnu-getopt', args: ['with-default-names']
 
   # casks
   tap 'caskroom/cask'
