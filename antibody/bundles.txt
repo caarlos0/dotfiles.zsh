@@ -1,4 +1,5 @@
 caarlos0/jvm
+Tarrasch/zsh-bd
 caarlos0/zsh-mkc
 mafredri/zsh-async
 caarlos0/zsh-git-sync
