@@ -62,6 +62,7 @@ if RUBY_PLATFORM =~ /darwin/
   cask 'iterm2'
   cask 'postgres'
   cask 'slack'
+  cask 'slate'
   cask 'spotify'
   cask 'telegram'
   cask 'the-unarchiver'
