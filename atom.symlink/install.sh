@@ -14,7 +14,8 @@ apm install \
   linter-ruby \
   atom-beautify \
   color-picker \
-  go-plus go-rename \
+  go-plus \
+  go-rename \
   sort-lines \
   file-icons
 apm remove metrics exception-reporting
