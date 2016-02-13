@@ -20,7 +20,7 @@ if RUBY_PLATFORM =~ /darwin/
   brew 'git'
   brew 'graphviz'
   brew 'grc'
-  brew 'htop-osx'
+  brew 'htop'
   brew 'imagemagick'
   brew 'maven32'
   brew 'node'
