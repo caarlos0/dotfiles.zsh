@@ -82,11 +82,12 @@ a faster and simpler Antigen written in Go.
 
 Run this:
 
-```sh
-ruby -v # you will need ruby 2.0+ for homebrew/linuxbrew
-git clone https://github.com/caarlos0/dotfiles.git ~/.dotfiles
-cd ~/.dotfiles
-script/bootstrap
+```console
+$ ruby -v # you will need ruby 2.0+ for homebrew/linuxbrew
+$ git clone https://github.com/caarlos0/dotfiles.git ~/.dotfiles
+$ cd ~/.dotfiles
+$ script/bootstrap
+$ chsh -s $(which zsh)
 ```
 
 This will symlink the appropriate files in `.dotfiles` to your home directory.
