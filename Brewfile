@@ -58,7 +58,7 @@ if RUBY_PLATFORM =~ /darwin/
   cask 'dropbox'
   cask 'font-hack'
   cask 'google-chrome'
-  cask 'iterm2'
+  cask 'iterm2-beta'
   cask 'postgres'
   cask 'slack'
   cask 'slate'
