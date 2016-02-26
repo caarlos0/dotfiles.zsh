@@ -165,6 +165,10 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 # http://www.cultofmac.com/221392/quick-hack-speeds-up-retina-macbooks-wake-from-sleep-os-x-tips/
 # sudo pmset -a standbydelay 86400
 
+# Disable local backups
+# https://classicyuppie.com/what-crap-is-this-os-xs-mobilebackups/
+sudo tmutil disablelocal
+
 # disable iTunes fuckin helper
 sudo mv /Applications/iTunes.app/Contents/MacOS/iTunesHelper.app{,-disabled} &>/dev/null
 # stop play button from launching iTunes
