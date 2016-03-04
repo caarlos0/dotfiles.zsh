@@ -977,10 +977,34 @@
 	<string></string>
 	<key>NSScrollAnimationEnabled</key>
 	<false/>
+	<key>NSScrollViewShouldScrollUnderTitlebar</key>
+	<false/>
+	<key>NSTableView Columns KeyBingingTable</key>
+	<array>
+		<data>
+		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
+		hAErATCG
+		</data>
+		<string>198</string>
+		<data>
+		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
+		hAErATGG
+		</data>
+		<string>322</string>
+	</array>
+	<key>NSTableView Hidden Columns KeyBingingTable</key>
+	<array/>
+	<key>NSTableView Sort Ordering KeyBingingTable</key>
+	<array/>
+	<key>NSToolbar Configuration com.apple.NSColorPanel</key>
+	<dict>
+		<key>TB Is Shown</key>
+		<integer>1</integer>
+	</dict>
 	<key>NSWindow Frame Preferences</key>
-	<string>269 110 924 485 0 0 1280 777 </string>
+	<string>269 314 606 456 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>119 213 650 501 0 0 1280 777 </string>
+	<string>0 4 1274 773 0 0 1280 777 </string>
 	<key>NeverWarnAboutShortLivedSessions_21048CBB-8F4B-4492-A49A-8DCDADDF9248</key>
 	<true/>
 	<key>New Bookmarks</key>
@@ -1718,10 +1742,18 @@
 			<string>/Users/carlos</string>
 		</dict>
 	</array>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
+	<true/>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
+	<integer>0</integer>
+	<key>NoSyncPermissionToShowTip</key>
+	<false/>
+	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
+	<real>477591618.69006801</real>
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>474422395.88489598</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>474422395.89137203</real>
+	<real>477781095.81334603</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -1783,12 +1815,14 @@
 	<integer>3</integer>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
+	<key>SUFeedAlternateAppNameKey</key>
+	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/testing.xml</string>
+	<string>https://iterm2.com/appcasts/testing3.xml</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-01-13T23:59:49Z</date>
+	<date>2016-03-04T00:46:43Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -1801,6 +1835,8 @@
 	<true/>
 	<key>SplitPaneDimmingAmount</key>
 	<real>0.40000000596046448</real>
+	<key>SwitchPaneModifier</key>
+	<integer>6</integer>
 	<key>SwitchTabModifier</key>
 	<integer>4</integer>
 	<key>SwitchWindowModifier</key>
@@ -1836,6 +1872,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>2.1.4</string>
+	<string>2.9.20160206</string>
 </dict>
 </plist>
