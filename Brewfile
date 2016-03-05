@@ -4,6 +4,7 @@ tap 'homebrew/bundle'
 tap 'homebrew/versions'
 
 brew 'go'
+brew 'python'
 brew 'rbenv'
 brew 'youtube-dl'
 
