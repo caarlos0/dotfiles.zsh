@@ -25,6 +25,7 @@ unless ENV['TRAVIS_JOB_ID']
     brew 'imagemagick'
     brew 'maven32'
     brew 'node'
+    brew 'python'
     brew 'redis'
     brew 'shellcheck'
     brew 'terminal-notifier'
