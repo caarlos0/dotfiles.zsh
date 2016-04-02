@@ -5,8 +5,8 @@ set -e
 
 cd "$(dirname "$0")"/..
 
-if test "$(uname)" = "Darwin"; then
-  # Run Homebrew through the Brewfile
+# If this is OSX and is not a travis build, run Homebrew through the Brewfile
+if test "$(uname)" = "Darwin" -a -z "$TRAVIS_JOB_ID"; then
   echo "› brew bundle"
   brew bundle
 fi
