@@ -21,7 +21,7 @@ sed \
   ./git/gitconfig.symlink.example > ./git/gitconfig.symlink
 
 
-wget -qO- https://api.github.com/repos/getantibody/antibody/releases
+curl -v https://api.github.com/repos/getantibody/antibody/releases
 
 # bootstrap the mighty
 ./script/bootstrap --override-all
