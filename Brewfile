@@ -18,6 +18,7 @@ unless ENV['TRAVIS_JOB_ID']
   brew 'maven32'
   brew 'node'
   brew 'python'
+  brew 'pyenv'
   brew 'rbenv'
   brew 'redis'
   brew 'shellcheck'
