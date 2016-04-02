@@ -11,14 +11,12 @@ echo "› set OS defaults"
 "$ZSH/osx/set-defaults.sh"
 "$ZSH/linux/set-defaults.sh"
 
-# Install homebrew
-echo "› homebrew/install.sh"
-"$ZSH/homebrew/install.sh"
-# shellcheck disable=SC1090
-. "$ZSH/homebrew/path.zsh"
-
 # Upgrade homebrew
 if test "$(uname)" = "Darwin"; then
+  # Install homebrew
+  echo "› homebrew/install.sh"
+  "$ZSH/homebrew/install.sh"
+
   echo "› brew update"
   brew update
 fi
@@ -29,7 +27,5 @@ echo "› $ZSH/script/install"
 
 if [ -n "$ZSH_VERSION" ]; then
   echo "› antibody update"
-  # shellcheck disable=SC1090
-  . "$ZSH/shellcheck/path.zsh"
   antibody update
 fi
