@@ -20,9 +20,6 @@ sed \
   -e "s/GIT_CREDENTIAL_HELPER/$git_credential/g" \
   ./git/gitconfig.symlink.example > ./git/gitconfig.symlink
 
-
-curl -v https://api.github.com/repos/getantibody/antibody/releases
-
 # bootstrap the mighty
 ./script/bootstrap --override-all
 
