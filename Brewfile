@@ -1,9 +1,5 @@
 cask_args appdir: '/Applications'
 
-# antibody
-tap 'getantibody/antibody'
-brew 'antibody'
-
 unless ENV['TRAVIS_JOB_ID']
   tap 'homebrew/bundle'
   tap 'homebrew/versions'

@@ -18,8 +18,10 @@ echo "› homebrew/install.sh"
 . "$ZSH/homebrew/path.zsh"
 
 # Upgrade homebrew
-echo "› brew update"
-brew update
+if test "$(uname)" = "Darwin"; then
+  echo "› brew update"
+  brew update
+fi
 
 # Install software
 echo "› $ZSH/script/install"
