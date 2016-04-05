@@ -23,7 +23,7 @@ fi
 
 # Install software
 echo "› $ZSH/script/install"
-"$ZSH/script/install"
+. "$ZSH/script/install"
 
 if [ -n "$ZSH_VERSION" ]; then
   echo "› antibody update"
