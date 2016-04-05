@@ -1747,7 +1747,7 @@
 			<key>Window Type</key>
 			<integer>0</integer>
 			<key>Working Directory</key>
-			<string>/Users/asd</string>
+			<string>/Users/carlos</string>
 		</dict>
 	</array>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
@@ -1810,7 +1810,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/asd/.dotfiles/iterm</string>
+	<string>/Users/carlos/.dotfiles/iterm</string>
 	<key>PromptOnClose</key>
 	<true/>
 	<key>PromptOnQuit</key>
