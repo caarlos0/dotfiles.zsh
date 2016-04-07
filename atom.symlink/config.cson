@@ -8,6 +8,10 @@
     ]
     hideGitIgnoredFiles: true
     projectHome: "~/Code/"
+    themes: [
+      "native-ui"
+      "one-dark-syntax"
+    ]
   editor:
     fontFamily: "Hack"
     fontSize: 15
@@ -15,6 +19,9 @@
     scrollPastEnd: true
     showIndentGuide: true
     showInvisibles: true
+  "file-icons":
+    coloured: false
+    tabPaneIcon: false
   "go-plus":
     goPath: "~/Code/Go"
   "go-rename": {}
@@ -23,5 +30,7 @@
   "one-dark-ui": {}
   "tree-view":
     hideVcsIgnoredFiles: true
+  "unity-ui":
+    showIcons: true
   welcome:
     showOnStartup: false
