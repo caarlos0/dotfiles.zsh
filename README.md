@@ -53,9 +53,9 @@ There's a few special files in the hierarchy.
 - **bin/**: Anything in `bin/` will get added to your `$PATH` and be made
   available everywhere.
 - **Brewfile**: This is a list of applications for
-  [Homebrew Cask](http://caskroom.io) to install: things like Chrome and
-  Spotify and Atom and stuff. Might want to edit this file before running
-  any initial setup.
+  [Homebrew](http://brew.sh/) and [Homebrew Cask](http://caskroom.io) to
+  install: things like Chrome and Spotify and Atom and stuff. Might want to
+  edit this file before running any initial setup (**works only on OSX**).
 - **topic/\*.zsh**: Any files ending in `.zsh` get loaded into your
   environment.
 - **topic/path.zsh**: Any file named `path.zsh` is loaded first and is
@@ -83,7 +83,6 @@ a faster and simpler Antigen written in Go.
 Run this:
 
 ```console
-$ ruby -v # you will need ruby 2.0+ for homebrew/linuxbrew
 $ git clone https://github.com/caarlos0/dotfiles.git ~/.dotfiles
 $ cd ~/.dotfiles
 $ script/bootstrap

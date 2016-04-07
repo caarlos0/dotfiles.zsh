@@ -5,13 +5,14 @@ set -e
 
 cd "$(dirname "$0")"/..
 
-# Run Homebrew through the Brewfile
-echo "› brew bundle"
-brew bundle
+# If this is OSX and is not a travis build, run Homebrew through the Brewfile
+if test "$(uname)" = "Darwin" -a -z "$TRAVIS_JOB_ID"; then
+  echo "› brew bundle"
+  brew bundle
+fi
 
 # find the installers and run them iteratively
-find . -name install.sh | egrep -v "build" | while read -r installer
-do
+find . -name install.sh | grep -v "build" | while read -r installer; do
   echo "› ${installer}..."
   sh -c "$installer"
 done
