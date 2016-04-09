@@ -102,6 +102,11 @@ this script in `bin/`.
 I try to keep it working in both Linux (no specific distro) and OS X,
 mostly because I use OS X at home and Linux at work.
 
+## personalization
+
+The `~/.localrc` file will be sourced if it exist, so, that's the place you
+want to put all your custom aliases and stuff.
+
 ## bugs
 
 I want this to work for everyone; that means when you clone it down it should
