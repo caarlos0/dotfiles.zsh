@@ -4,7 +4,6 @@
     disabledPackages: [
       "metrics"
       "exception-reporting"
-      "linter-pep8"
     ]
     hideGitIgnoredFiles: true
     projectHome: "~/Code/"
@@ -25,9 +24,9 @@
   "go-plus":
     goPath: "~/Code/Go"
   "go-rename": {}
+  gofmt:
+    formatTool: "goreturns"
   linter: {}
-  "linter-pep8": {}
-  "one-dark-ui": {}
   "tree-view":
     hideVcsIgnoredFiles: true
   "unity-ui":

@@ -3,19 +3,21 @@ if test ! "$(which apm)"; then
   return 0
 fi
 apm install \
+  atom-beautify \
   atom-wrap-in-tag \
+  color-picker \
   editorconfig \
-  language-docker \
+  file-icons \
+  go-plus \
+  go-rename \
   language-diff \
+  language-docker \
   language-puppet \
   language-terraform \
   linter \
   linter-jshint \
   linter-ruby \
-  atom-beautify \
-  color-picker \
-  go-plus \
-  go-rename \
-  sort-lines \
-  file-icons
+  native-ui \
+  one-dark-syntax \
+  sort-lines
 apm remove metrics exception-reporting
