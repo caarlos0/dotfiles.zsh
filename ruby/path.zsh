@@ -3,7 +3,10 @@ if [ -d "$HOME/.rbenv" ]; then
   export PATH="$PATH:$HOME/.rbenv/bin"
 fi
 
-rbenv() {
-  eval "$(command rbenv init -)"
-  rbenv "$@"
-}
+# shellcheck disable=SC2039
+if rbenv &>/dev/null; then
+  rbenv() {
+    eval "$(command rbenv init -)"
+    rbenv "$@"
+  }
+fi
