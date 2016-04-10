@@ -4,10 +4,13 @@
     disabledPackages: [
       "metrics"
       "exception-reporting"
-      "linter-pep8"
     ]
     hideGitIgnoredFiles: true
     projectHome: "~/Code/"
+    themes: [
+      "native-ui"
+      "one-dark-syntax"
+    ]
   editor:
     fontFamily: "Hack"
     fontSize: 15
@@ -15,13 +18,18 @@
     scrollPastEnd: true
     showIndentGuide: true
     showInvisibles: true
+  "file-icons":
+    coloured: false
+    tabPaneIcon: false
   "go-plus":
     goPath: "~/Code/Go"
   "go-rename": {}
+  gofmt:
+    formatTool: "goreturns"
   linter: {}
-  "linter-pep8": {}
-  "one-dark-ui": {}
   "tree-view":
     hideVcsIgnoredFiles: true
+  "unity-ui":
+    showIcons: true
   welcome:
     showOnStartup: false
