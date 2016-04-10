@@ -1,8 +1,11 @@
 #!/bin/sh
 if [ -d "$HOME/.rbenv" ]; then
-  export PATH="$HOME/.rbenv/bin:$PATH"
+  export PATH="$PATH:$HOME/.rbenv/bin"
 fi
-# shellcheck disable=SC2039
-if rbenv &>/dev/null; then
-  eval "$(rbenv init -)"
+
+if which rbenv >/dev/null 2>&1; then
+  rbenv() {
+    eval "$(command rbenv init -)"
+    rbenv "$@"
+  }
 fi

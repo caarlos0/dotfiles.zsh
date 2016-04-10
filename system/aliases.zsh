@@ -1,10 +1,11 @@
 #!/bin/sh
+
+alias wtf="imgcat ~/.dotfiles/imgs/wtf.gif"
+
 # grc overides for ls
 #   Made possible through contributions from generous benefactors like
 #   `brew install coreutils`
-alias wtf="imgcat ~/.dotfiles/imgs/wtf.gif"
-# shellcheck disable=SC2039
-if gls &>/dev/null; then
+if which gls >/dev/null 2>&1; then
   alias ls="gls -F --color"
   alias l="gls -lAh --color"
   alias ll="gls -l --color"
@@ -19,17 +20,16 @@ alias grep="grep --color=auto"
 alias duf="du -sh * | sort -hr"
 alias less="less -r"
 
-if [ -z "$(command -v pbcopy)" ]; then
-  if [ -n "$(command -v xclip)" ]; then
-    alias pbcopy="xclip -selection clipboard"
-    alias pbpaste="xclip -selection clipboard -o"
-  elif [ -n "$(command -v xsel)" ]; then
-    alias pbcopy="xsel --clipboard --input"
-    alias pbpaste="xsel --clipboard --output"
-  fi
-fi
-
 if [ "$(uname -s)" != "Darwin" ]; then
+  if [ -z "$(command -v pbcopy)" ]; then
+    if [ -n "$(command -v xclip)" ]; then
+      alias pbcopy="xclip -selection clipboard"
+      alias pbpaste="xclip -selection clipboard -o"
+    elif [ -n "$(command -v xsel)" ]; then
+      alias pbcopy="xsel --clipboard --input"
+      alias pbpaste="xsel --clipboard --output"
+    fi
+  fi
   if [ -e /usr/bin/xdg-open ]; then
     alias open="xdg-open"
   fi
