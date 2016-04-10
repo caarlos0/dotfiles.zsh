@@ -1,7 +1,6 @@
 #!/bin/sh
 # GRC colorizes nifty unix tools all over the place
-# shellcheck disable=2039
-if grc &>/dev/null && ! brew &>/dev/null; then
+if which grc >/dev/null 2>&1 && which brew >/dev/null 2>&1; then
   # shellcheck disable=SC1090
   . "$(brew --prefix)/etc/grc.bashrc"
 fi

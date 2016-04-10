@@ -5,6 +5,9 @@ export ZSH="$HOME/.dotfiles"
 # your project folder that we can `c [tab]` to
 export PROJECTS="$HOME/Code"
 
+# your default editor
+export EDITOR='atom'
+
 # all of our zsh files
 typeset -U config_files
 config_files=($ZSH/*/*.zsh)
