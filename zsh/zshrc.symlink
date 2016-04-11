@@ -26,7 +26,8 @@ for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}; do
 done
 
 autoload -Uz compinit
-if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
+typeset -i updated_at=$(stat -f '%Sm' -t '%j' ~/.zcompdump 2>/dev/null || date +'%j' -r ~/.zcompdump 2>/dev/null)
+if [ $(date +'%j') != $updated_at ]; then
   compinit
 else
   compinit -C
@@ -38,7 +39,7 @@ for file in ${(M)config_files:#*/completion.zsh}; do
   source "$file"
 done
 
-unset config_files
+unset config_files updated_at
 
 # use .localrc for SUPER SECRET CRAP that you don't
 # want in your public, versioned repo.
