@@ -21,6 +21,10 @@ if test "$(uname)" = "Darwin"; then
   brew update
 fi
 
+# Update submodules
+echo "› submodules update"
+git submodule update --init --recursive --remote --merge
+
 # Install software
 echo "› $ZSH/script/install"
 "$ZSH/script/install"
