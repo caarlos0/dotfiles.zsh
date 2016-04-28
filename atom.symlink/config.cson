@@ -25,7 +25,7 @@
     goPath: "~/Code/Go"
   "go-rename": {}
   gofmt:
-    formatTool: "goreturns"
+    formatTool: "gofmt"
   linter: {}
   "tree-view":
     hideVcsIgnoredFiles: true
