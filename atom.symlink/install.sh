@@ -20,4 +20,3 @@ apm install \
   one-dark-syntax \
   sort-lines
 apm remove metrics exception-reporting
-apm update
