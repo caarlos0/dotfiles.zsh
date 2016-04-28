@@ -1,7 +1,6 @@
 #!/bin/sh
-if test ! "$(which apm)"; then
-  return 0
-fi
+test "$(which apm)" || return 0
+apm update --confirm false
 apm install \
   atom-beautify \
   atom-wrap-in-tag \
