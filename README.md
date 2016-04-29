@@ -52,10 +52,6 @@ There's a few special files in the hierarchy.
 
 - **bin/**: Anything in `bin/` will get added to your `$PATH` and be made
   available everywhere.
-- **Brewfile**: This is a list of applications for
-  [Homebrew](http://brew.sh/) and [Homebrew Cask](http://caskroom.io) to
-  install: things like Chrome and Spotify and Atom and stuff. Might want to
-  edit this file before running any initial setup (**works only on OSX**).
 - **topic/\*.zsh**: Any files ending in `.zsh` get loaded into your
   environment.
 - **topic/path.zsh**: Any file named `path.zsh` is loaded first and is
@@ -73,7 +69,7 @@ ran at bootstrap phase.
 
 This project uses the [pure][pure] prompt (which is awesome!) and some other
 [zsh plugins](/antibody/bundles.txt). All of them managed by [Antibody][antibody],
-a faster and simpler Antigen written in Go.
+a faster and simpler Antigen-like program written in Go.
 
 [pure]: https://github.com/sindresorhus/pure
 [antibody]: https://github.com/caarlos0/antibody
@@ -101,6 +97,8 @@ this script in `bin/`.
 
 I try to keep it working in both Linux (no specific distro) and OS X,
 mostly because I use OS X at home and Linux at work.
+
+The CI also is also ran on Linux and OSX.
 
 ## personalization
 
