@@ -1,2 +1,9 @@
 #!/bin/sh
-curl -s https://raw.githubusercontent.com/getantibody/installer/master/install | bash -s
+if [ "$(uname -s)" == "Darwin" ]; then
+  if [ ! "$(which antibody)" ]; then
+    brew tap getantibody/homebrew-antibody
+    brew install antibody
+  fi
+else
+  curl -sL https://git.io/vwMNi | bash -s
+fi
