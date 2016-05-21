@@ -39,3 +39,9 @@ fi
 nonascii() {
   LANG=C grep --color=always '[^ -~]\+';
 }
+
+# pid on port
+pop() {
+  lsof -i :"$1" | awk '{ print $2; }' | tail -n 1
+}
+
