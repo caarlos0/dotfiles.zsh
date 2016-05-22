@@ -1,6 +1,6 @@
 # carlos' dotfiles
 
-[![DevOps By Rultor.com][rb]][rb] [![Build Status][tb]][tp] [![Powered by Antibody][ab]][ap] [![Issue Stats][isspb]][issp] [![Issue Stats][issib]][issp]
+[![Build Status][tb]][tp] [![Powered by Antibody][ab]][ap]
 
 > Config files for ZSH, Java, Ruby, Go, Editors, Terminals and more.
 
@@ -8,13 +8,8 @@
 
 [ap]: https://github.com/getantibody/antibody
 [ab]: https://img.shields.io/badge/powered%20by-antibody-blue.svg?style=flat-square
-[rb]: http://www.rultor.com/b/caarlos0/dotfiles?size=s
-[rp]: http://www.rultor.com/p/caarlos0/dotfiles
 [tb]: https://img.shields.io/travis/caarlos0/dotfiles/master.svg?style=flat-square
 [tp]: https://travis-ci.org/caarlos0/dotfiles
-[isspb]: http://issuestats.com/github/caarlos0/dotfiles/badge/pr?style=flat-square
-[issib]: http://issuestats.com/github/caarlos0/dotfiles/badge/issue?style=flat-square
-[issp]: http://issuestats.com/github/caarlos0/dotfiles
 [scrn]: https://raw.githubusercontent.com/caarlos0/dotfiles/master/screenshot.png
 
 ## dotfiles
@@ -29,6 +24,11 @@ structured the project accordingly.
 
 If you're interested in the philosophy behind why projects like these are
 awesome, you might want to [read my post on the subject][post].
+
+At first, this repo contained the homebrew installation and other stuff like
+that. I realized it would be better to split that into another repo, so
+this contains configuration only, and the other handles only software
+installation. So, [machine](http://github.com/caarlos0/machine) was born.
 
 [post]: http://carlosbecker.com/posts/dotfiles-are-meant-to-be-forked/
 
@@ -52,10 +52,6 @@ There's a few special files in the hierarchy.
 
 - **bin/**: Anything in `bin/` will get added to your `$PATH` and be made
   available everywhere.
-- **Brewfile**: This is a list of applications for
-  [Homebrew](http://brew.sh/) and [Homebrew Cask](http://caskroom.io) to
-  install: things like Chrome and Spotify and Atom and stuff. Might want to
-  edit this file before running any initial setup (**works only on OSX**).
 - **topic/\*.zsh**: Any files ending in `.zsh` get loaded into your
   environment.
 - **topic/path.zsh**: Any file named `path.zsh` is loaded first and is
@@ -73,7 +69,7 @@ ran at bootstrap phase.
 
 This project uses the [pure][pure] prompt (which is awesome!) and some other
 [zsh plugins](/antibody/bundles.txt). All of them managed by [Antibody][antibody],
-a faster and simpler Antigen written in Go.
+a faster and simpler Antigen-like program written in Go.
 
 [pure]: https://github.com/sindresorhus/pure
 [antibody]: https://github.com/caarlos0/antibody
@@ -101,6 +97,8 @@ this script in `bin/`.
 
 I try to keep it working in both Linux (no specific distro) and OS X,
 mostly because I use OS X at home and Linux at work.
+
+The CI also is also ran on Linux and OSX.
 
 ## personalization
 
