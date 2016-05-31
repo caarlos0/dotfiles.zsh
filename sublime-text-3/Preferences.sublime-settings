@@ -4,33 +4,8 @@
 	"color_scheme": "Packages/User/SublimeLinter/base16-ocean.dark (SL).tmTheme",
 	"default_line_ending": "unix",
 	"ensure_newline_at_eof_on_save": true,
-	"file_exclude_patterns":
-	[
-		"/Users/carlos/.dotfiles/vim/vimfiles/vim.symlink/bundle/command-t/.ruby-version",
-		"/Users/carlos/.dotfiles/vim/vimfiles/vim.symlink/bundle/neocomplcache.vim/doc/tags",
-		"/Users/carlos/.dotfiles/vim/vimfiles/vim.symlink/bundle/command-t/ruby/command-t/ext.o",
-		"/Users/carlos/.dotfiles/vim/vimfiles/vim.symlink/bundle/command-t/ruby/command-t/matcher.o",
-		"/Users/carlos/.dotfiles/vim/vimfiles/vim.symlink/bundle/vim-go/doc/tags",
-		"/Users/carlos/.dotfiles/vim/vimfiles/vim.symlink/bundle/command-t/ruby/command-t/Makefile",
-		"/Users/carlos/.dotfiles/vim/vimfiles/vim.symlink/bundle/nerdtree/doc/tags",
-		"/Users/carlos/.dotfiles/iterm/com.googlecode.iterm2.plist",
-		"/Users/carlos/.dotfiles/vim/vimfiles/vim.symlink/bundle/command-t/ruby/command-t/watchman.o",
-		"/Users/carlos/.dotfiles/vim/vimfiles/vim.symlink/bundle/vim-coffee-script/doc/tags",
-		"/Users/carlos/.dotfiles/vim/vimfiles/vim.symlink/bundle/command-t/ruby/command-t/match.o",
-		"/Users/carlos/.dotfiles/vim/vimfiles/vim.symlink/bundle/command-t/ruby/command-t/mkmf.log",
-		"/Users/carlos/.dotfiles/git/gitconfig.symlink",
-		"/Users/carlos/.dotfiles/vim/vimfiles/vim.symlink/bundle/command-t/ruby/command-t/ext.bundle",
-		"/Users/carlos/.dotfiles/vim/vimfiles/vim.symlink/bundle/command-t/doc/tags"
-	],
-	"folder_exclude_patterns":
-	[
-		"/Users/carlos/.dotfiles/atom.symlink/blob-store",
-		"/Users/carlos/.dotfiles/atom.symlink/packages",
-		"/Users/carlos/.dotfiles/atom.symlink/compile-cache",
-		"/Users/carlos/.dotfiles/atom.symlink/.apm",
-		"/Users/carlos/.dotfiles/atom.symlink/.node-gyp",
-		"/Users/carlos/.dotfiles/atom.symlink/storage"
-	],
+	"file_exclude_patterns": [],
+	"folder_exclude_patterns": [],
 	"font_face": "Hack",
 	"font_size": 15,
 	"highlight_line": true,
