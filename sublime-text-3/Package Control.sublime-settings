@@ -13,7 +13,6 @@
 		"Dockerfile Syntax Highlighting",
 		"EditorConfig",
 		"Git",
-		"GitGutter",
 		"GoSublime",
 		"HTML-CSS-JS Prettify",
 		"Indent XML",
@@ -21,6 +20,7 @@
 		"Markdown Extended",
 		"Markdown Preview",
 		"Package Control",
+		"Pretty JSON",
 		"Puppet",
 		"Sass",
 		"SideBarEnhancements",
@@ -28,6 +28,7 @@
 		"SublimeLinter-contrib-puppet",
 		"SublimeLinter-jshint",
 		"SublimeLinter-shellcheck",
+		"Terraform",
 		"Theme - Spacegray"
 	]
 }
