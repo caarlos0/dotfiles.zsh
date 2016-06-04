@@ -29,6 +29,7 @@
 		"SublimeLinter-jshint",
 		"SublimeLinter-shellcheck",
 		"Terraform",
-		"Theme - Spacegray"
+		"Theme - Spacegray",
+		"WakaTime"
 	]
 }
