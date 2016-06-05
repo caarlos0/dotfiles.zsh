@@ -116,6 +116,24 @@ If you're brand-new to the project and run into any blockers, please
 [open an issue](https://github.com/caarlos0/dotfiles/issues) on this repository
 and I'd love to get it fixed for you!
 
+## a note for iTunes users
+
+Most people I know don't use iTunes, I surely don't, so, this script disables
+it every time you run `dot_update`. If you don't want that to happen, run:
+
+```console
+$ echo 'KEEP_ITUNES=1' >> ~/.localrc
+```
+
+If your iTunes is already broken, you will also want to run:
+
+```console
+sudo mv /Applications/iTunes.app/Contents/MacOS/iTunesHelper.app{-disabled,}
+launchctl load -w /System/Library/LaunchAgents/com.apple.rcd.plist
+```
+
+For more info, check [issue #197](https://github.com/caarlos0/dotfiles/issues/197).
+
 ## contributing
 
 Feel free to contribute. Pull requests will be automatically
