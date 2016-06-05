@@ -1,9 +1,11 @@
+# note this is alphabetically sorted
 caarlos0/jvm
-Tarrasch/zsh-bd
-caarlos0/zsh-mkc
-mafredri/zsh-async
-caarlos0/zsh-git-sync
-zsh-users/zsh-completions
 caarlos0/zsh-add-upstream
-caarlos0/zsh-open-github-pr
 caarlos0/zsh-git-fetch-merge
+caarlos0/zsh-git-sync
+caarlos0/zsh-mkc
+caarlos0/zsh-open-github-pr
+mafredri/zsh-async
+Tarrasch/zsh-bd
+wbinglee/zsh-wakatime
+zsh-users/zsh-completions

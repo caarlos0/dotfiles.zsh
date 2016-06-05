@@ -31,5 +31,7 @@
     hideVcsIgnoredFiles: true
   "unity-ui":
     showIcons: true
+  wakatime:
+    apikey: "Saved in your ~/.wakatime.cfg file"
   welcome:
     showOnStartup: false
