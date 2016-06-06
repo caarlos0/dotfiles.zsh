@@ -18,5 +18,6 @@ apm install \
   linter-ruby \
   native-ui \
   one-dark-syntax \
-  sort-lines
+  sort-lines \
+  wakatime
 apm remove metrics exception-reporting || true

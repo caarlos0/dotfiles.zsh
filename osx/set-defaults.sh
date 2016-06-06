@@ -169,10 +169,12 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 # https://classicyuppie.com/what-crap-is-this-os-xs-mobilebackups/
 sudo tmutil disablelocal
 
-# disable iTunes fuckin helper
-sudo mv /Applications/iTunes.app/Contents/MacOS/iTunesHelper.app{,-disabled} &>/dev/null
-# stop play button from launching iTunes
-launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist &>/dev/null
+if [ -z "$KEEP_ITUNES" ]; then
+  # disable iTunes fuckin helper
+  sudo mv /Applications/iTunes.app/Contents/MacOS/iTunesHelper.app{,-disabled} &>/dev/null
+  # stop play button from launching iTunes
+  launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist &>/dev/null
+fi
 
 # also this spotify web helper
 mv ~/Applications/Spotify.app/Contents/MacOS/SpotifyWebHelper{,-disabled} &>/dev/null
