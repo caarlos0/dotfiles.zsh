@@ -25,8 +25,7 @@
     goPath: "~/Code/Go"
   "go-rename": {}
   gofmt:
-    formatTool: "gofmt"
-  linter: {}
+    formatTool: "goreturns"
   "tree-view":
     hideVcsIgnoredFiles: true
   "unity-ui":
