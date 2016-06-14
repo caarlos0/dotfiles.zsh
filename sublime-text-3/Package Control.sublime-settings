@@ -1,0 +1,35 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Alignment",
+		"Ansible",
+		"AutoFileName",
+		"Clickable URLs",
+		"ColorPicker",
+		"Dockerfile Syntax Highlighting",
+		"EditorConfig",
+		"Git",
+		"GoSublime",
+		"HTML-CSS-JS Prettify",
+		"Indent XML",
+		"LESS",
+		"Markdown Extended",
+		"Markdown Preview",
+		"Package Control",
+		"Pretty JSON",
+		"Puppet",
+		"Sass",
+		"SideBarEnhancements",
+		"SublimeLinter",
+		"SublimeLinter-contrib-puppet",
+		"SublimeLinter-jshint",
+		"SublimeLinter-shellcheck",
+		"Terraform",
+		"Theme - Spacegray",
+		"WakaTime"
+	]
+}
