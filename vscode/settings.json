@@ -1,0 +1,6 @@
+{
+    "editor.fontFamily": "Hack",
+    "editor.fontSize": 15,
+    "editor.rulers": [80, 120],
+    "editor.trimAutoWhitespace": true
+}
