@@ -33,14 +33,8 @@ fail () {
 }
 
 setup_gitconfig () {
-  if ! [ -f git/gitconfig.symlink ]; then
+  if [ -z "$(git config --global --get user.email)" ]; then
     info 'setup gitconfig'
-
-    if [ "$(uname -s)" == "Darwin" ]; then
-      git config --global user.helper osxkeychain
-    else
-      git config --global user.helper cache
-    fi
 
     user ' - What is your github author name?'
     read -r -e git_authorname
@@ -51,6 +45,9 @@ setup_gitconfig () {
     git config --global user.email "$git_authoremail"
 
     success 'gitconfig'
+  else
+    cp ~/.gitconfig{,.backup}
+    success "copied ~/.gitconfig to ~/.gitconfig.backup"
   fi
 }
 

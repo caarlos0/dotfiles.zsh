@@ -76,5 +76,12 @@ git config --global submodule.fetchJobs                   "4"
 git config --global --remove-section commit
 git config --global commit.template                       "$ZSH/git/template.txt"
 
+# user helper
+if [ "$(uname -s)" == "Darwin" ]; then
+  git config --global user.helper osxkeychain
+else
+  git config --global user.helper cache
+fi
+
 # custom config
 test -e ~/.gitconfig_custom && . $_

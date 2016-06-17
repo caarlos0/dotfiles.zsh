@@ -10,15 +10,8 @@ cp -rf dotfiles ~/.dotfiles
 cd ~/.dotfiles
 
 # setup git credentials
-git_credential='cache'
-if [ "$(uname -s)" = "Darwin" ]; then
-  git_credential='osxkeychain'
-fi
-sed \
-  -e "s/AUTHORNAME/dotfiles-demo/g" \
-  -e "s/AUTHOREMAIL/dotfiles-demo/g" \
-  -e "s/GIT_CREDENTIAL_HELPER/$git_credential/g" \
-  ./git/gitconfig.symlink.example > ./git/gitconfig.symlink
+git config --global user.name "dotfiles demo"
+git config --global user.email "dotfiles@demo.com"
 
 # bootstrap the mighty
 ./script/bootstrap --override-all
