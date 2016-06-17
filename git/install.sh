@@ -1,6 +1,7 @@
 #!/bin/sh
 
 # aliases
+git config --global --remove-section alias
 git config --global alias.co                              "checkout"
 git config --global alias.promote                         "!$ZSH/bin/git-promote"
 git config --global alias.wtf                             "!$ZSH/bin/git-wtf"
@@ -20,12 +21,14 @@ git config --global alias.pr                              "!zsh -ic \"open-pr \$
 git config --global alias.add-remote                      "!zsh -ic \"add-upstream \$*\""
 
 # colors
+git config --global --remove-section color
 git config --global color.diff                            "auto"
 git config --global color.status                          "auto"
 git config --global color.branch                          "auto"
 git config --global color.ui                              "true"
 
 # core
+git config --global --remove-section core
 git config --global core.excludesfile                     "~/.gitignore"
 git config --global core.editor                           "vim"
 git config --global core.compression                      "-1"
@@ -33,30 +36,45 @@ git config --global core.autocrlf                         "input"
 git config --global core.whitespace                       "trailing-space,space-before-tab"
 git config --global core.precomposeunicode                "true"
 
-
+# apply
+git config --global --remove-section apply
 git config --global apply.whitespace                      "nowarn"
+
+# help
+git config --global --remove-section help
 git config --global help.autocorrect                      "1"
 
 # mergetool
+git config --global --remove-section merge
+git config --global --remove-section mergetool.diffmerge
 git config --global merge.tool                            "diffmerge"
 git config --global mergetool.diffmerge.cmd               "diffmerge --merge --result=\$MERGED \$LOCAL \$BASE \$REMOTE"
 git config --global mergetool.diffmerge.trustExitCode     "true"
 git config --global mergetool.diffmerge.keepBackup        "false"
 
 # difftool
+git config --global --remove-section diff
+git config --global --remove-section difftool
 git config --global diff.tool                             "diffmerge"
 git config --global difftool.prompt                       "false"
 git config --global difftool.diffmerge.cmd                "diffmerge \$LOCAL \$REMOTE"
 
 # grep
+git config --global --remove-section grep
 git config --global grep.extendRegexp                     "true"
 git config --global grep.lineNumber                       "true"
 
 # push
+git config --global --remove-section push
 git config --global push.default                          "simple"
 
 # submodule
+git config --global --remove-section submodule
 git config --global submodule.fetchJobs                   "4"
 
 # commit
+git config --global --remove-section commit
 git config --global commit.template                       "$ZSH/git/template.txt"
+
+# custom config
+test -e ~/.gitconfig_custom && . $_
