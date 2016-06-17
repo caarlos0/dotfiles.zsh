@@ -1,5 +1,5 @@
 #!/bin/zsh
-set -ex
+set -e
 
 # Lint files
 ./build/build.sh
@@ -19,3 +19,4 @@ git config --global user.email "dotfiles@demo.com"
 # load zshrc and check if antibody is working
 source ~/.zshrc
 antibody list
+git config --global --list
