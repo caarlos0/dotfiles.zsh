@@ -29,7 +29,7 @@ git config --global color.ui                              "true"
 
 # core
 git config --global --remove-section core
-git config --global core.excludesfile                     "~/.gitignore"
+git config --global core.excludesfile                     "$HOME/.gitignore"
 git config --global core.editor                           "vim"
 git config --global core.compression                      "-1"
 git config --global core.autocrlf                         "input"
@@ -77,11 +77,12 @@ git config --global --remove-section commit
 git config --global commit.template                       "$ZSH/git/template.txt"
 
 # user helper
-if [ "$(uname -s)" == "Darwin" ]; then
+if [ "$(uname -s)" = "Darwin" ]; then
   git config --global user.helper osxkeychain
 else
   git config --global user.helper cache
 fi
 
 # custom config
-test -e ~/.gitconfig_custom && . $_
+# shellcheck disable=SC1090
+test -e ~/.gitconfig_custom && . ~/.gitconfig_custom
