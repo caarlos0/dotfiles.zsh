@@ -33,9 +33,8 @@ fail () {
 }
 
 setup_gitconfig () {
+  info 'setup gitconfig'
   if [ -z "$(git config --global --get user.email)" ]; then
-    info 'setup gitconfig'
-
     user ' - What is your github author name?'
     read -r -e git_authorname
     user ' - What is your github author email?'
@@ -43,12 +42,21 @@ setup_gitconfig () {
 
     git config --global user.name "$git_authorname"
     git config --global user.email "$git_authoremail"
-
-    success 'gitconfig'
   else
-    cp ~/.gitconfig{,.backup}
-    success "copied ~/.gitconfig to ~/.gitconfig.backup"
+    git_authorname="$(git config --global --get user.name)"
+    git_authoremail="$(git config --global --get user.email)"
+    mv ~/.gitconfig{,.backup}
+    success "moved ~/.gitconfig to ~/.gitconfig.backup"
+    git config --global user.name "$git_authorname"
+    git config --global user.email "$git_authoremail"
   fi
+  if [ "$(uname -s)" = "Darwin" ]; then
+    git config --global user.helper osxkeychain
+  else
+    git config --global user.helper cache
+  fi
+  git config --global include.path ~/.gitconfig.local
+  success 'gitconfig'
 }
 
 
