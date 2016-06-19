@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 #
 # bootstrap installs things.
 
@@ -36,8 +36,10 @@ setup_gitconfig () {
   info 'setup gitconfig'
   if [ -z "$(git config --global --get user.email)" ]; then
     user ' - What is your github author name?'
+    # shellcheck disable=SC2039
     read -r -e git_authorname
     user ' - What is your github author email?'
+    # shellcheck disable=SC2039
     read -r -e git_authoremail
 
     git config --global user.name "$git_authorname"
@@ -45,7 +47,7 @@ setup_gitconfig () {
   else
     git_authorname="$(git config --global --get user.name)"
     git_authoremail="$(git config --global --get user.email)"
-    mv ~/.gitconfig{,.backup}
+    mv ~/.gitconfig ~/.gitconfig.backup
     success "moved ~/.gitconfig to ~/.gitconfig.backup"
     git config --global user.name "$git_authorname"
     git config --global user.email "$git_authoremail"
@@ -61,18 +63,21 @@ setup_gitconfig () {
 
 
 link_file () {
+  # shellcheck disable=SC2039
   local src dst overwrite backup skip action
   src="$1"
   dst="$2"
 
   if [ -f "$dst" ] || [ -d "$dst" ] || [ -L "$dst" ]; then
-    if [ "$overwrite_all" == "false" ] && [ "$backup_all" == "false" ] && [ "$skip_all" == "false" ]; then
+    if [ "$overwrite_all" = "false" ] && [ "$backup_all" = "false" ] && [ "$skip_all" = "false" ]; then
+      # shellcheck disable=SC2039
       local -r currentSrc="$(readlink "$dst")"
-      if [ "$currentSrc" == "$src" ]; then
+      if [ "$currentSrc" = "$src" ]; then
         skip=true;
       else
         user "File already exists: $dst ($(basename "$src")), what do you want to do?\n\
         [s]kip, [S]kip all, [o]verwrite, [O]verwrite all, [b]ackup, [B]ackup all?"
+        # shellcheck disable=SC2039
         read -r -n 1 action
         case "$action" in
           o )
@@ -95,17 +100,17 @@ link_file () {
     overwrite=${overwrite:-$overwrite_all}
     backup=${backup:-$backup_all}
     skip=${skip:-$skip_all}
-    if [ "$overwrite" == "true" ]; then
+    if [ "$overwrite" = "true" ]; then
       rm -rf "$dst"
       success "removed $dst"
     fi
 
-    if [ "$backup" == "true" ]; then
+    if [ "$backup" = "true" ]; then
       mv "$dst" "${dst}.backup"
       success "moved $dst to ${dst}.backup"
     fi
 
-    if [ "$skip" == "true" ]; then
+    if [ "$skip" = "true" ]; then
       success "skipped $src"
     fi
   fi
@@ -119,6 +124,7 @@ link_file () {
 
 install_dotfiles () {
   info 'installing dotfiles'
+  # shellcheck disable=SC2039
   local overwrite_all="${OVERRIDE_ALL:-false}" backup_all=false skip_all=false
   # shellcheck disable=SC2044
   for src in $(find -H "$DOTFILES_ROOT" -maxdepth 2 -name '*.symlink' -not -path '*.git*')
