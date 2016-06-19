@@ -1,25 +1,30 @@
-#!/bin/bash
-if [ ! "$(which go)" ] && [ ! -z "$GOPATH" ]; then
+#!/bin/sh
+if [ "$(which go)" ] && [ ! -z "$GOPATH" ]; then
   mkdir -p "$GOPATH/bin" "$GOPATH/src/github.com/"
 
-  go get -u -v github.com/adjust/go-wrk
-  go get -u -v github.com/alecthomas/gometalinter
-  go get -u -v github.com/golang/lint/golint
-  go get -u -v github.com/lukehoban/go-outline
-  go get -u -v github.com/mitchellh/gox
-  go get -u -v github.com/motemen/gore
-  go get -u -v github.com/newhook/go-symbols
-  go get -u -v github.com/nsf/gocode
-  go get -u -v github.com/rogpeppe/godef
-  go get -u -v github.com/tpng/gopkgs
-  go get -u -v golang.org/x/tools/cmd/cover
-  go get -u -v golang.org/x/tools/cmd/godoc
-  go get -u -v golang.org/x/tools/cmd/goimports
-  go get -u -v golang.org/x/tools/cmd/gorename
-  go get -u -v golang.org/x/tools/cmd/guru
-  go get -u -v golang.org/x/tools/cmd/stringer
-  go get -u -v sourcegraph.com/sqs/goreturns
+  packages="
+    github.com/adjust/go-wrk
+    github.com/alecthomas/gometalinter
+    github.com/golang/lint/golint
+    github.com/lukehoban/go-outline
+    github.com/mitchellh/gox
+    github.com/motemen/gore
+    github.com/newhook/go-symbols
+    github.com/nsf/gocode
+    github.com/rogpeppe/godef
+    github.com/tpng/gopkgs
+    golang.org/x/tools/cmd/cover
+    golang.org/x/tools/cmd/godoc
+    golang.org/x/tools/cmd/goimports
+    golang.org/x/tools/cmd/gorename
+    golang.org/x/tools/cmd/guru
+    golang.org/x/tools/cmd/stringer
+    sourcegraph.com/sqs/goreturns
+  "
 
+  for pkg in $packages; do
+    go get -u -v "$pkg"
+  done
   "$GOPATH"/bin/gox -build-toolchain
   "$GOPATH"/bin/gometalinter --install --update
 fi
