@@ -1,10 +1,12 @@
 #!/bin/bash
-curl -L -s -o /tmp/hack.zip \
-  https://github.com/chrissimpkins/Hack/releases/download/v2.020/Hack-v2_020-ttf.zip
-
-if [ "$(uname -s)" = "Darwin" ] && [ ls ~/Library/Fonts/Hack* >/dev/null 2>/dev/null ]; then
-  unzip -o /tmp/hack.zip -d ~/Library/Fonts
+VERSION="v2.020"
+VERSION_="v2_020"
+URL="https://github.com/chrissimpkins/Hack/releases/download/"
+if [ "$(uname -s)" = "Darwin" ]; then
+  curl -L -s -o /tmp/hack.tgz "$URL/$VERSION/Hack-${VERSION_}-otf.tar.gz"
+  tar xzvf /tmp/hack.tgz -C ~/Library/Fonts
 else
   mkdir -p ~/.fonts
-  unzip -o /tmp/hack.zip -d ~/.fonts
+  curl -L -s -o /tmp/hack.tgz "$URL/$VERSION/Hack-${VERSION_}-ttf.tar.gz"
+  tar xzvf /tmp/hack.tgz -C ~/.fonts
 fi
