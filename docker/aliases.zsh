@@ -14,4 +14,5 @@ if which docker >/dev/null 2>&1; then
       command docker "$@"
     fi
   }
+  alias dkr='docker'
 fi

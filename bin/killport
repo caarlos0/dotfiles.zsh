@@ -1,2 +1,2 @@
 #!/bin/sh
-kill -9 "$(lsof -i tcp:"$1" | head -n 2 | tail -n 1 | awk '{print $2}')"
+lsof -i :"$1" | awk '{ print $2; }' | tail -n 1 | xargs kill -9

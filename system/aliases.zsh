@@ -1,7 +1,4 @@
 #!/bin/sh
-
-alias wtf="imgcat ~/.dotfiles/imgs/wtf.gif"
-
 # grc overides for ls
 #   Made possible through contributions from generous benefactors like
 #   `brew install coreutils`
@@ -39,9 +36,3 @@ fi
 nonascii() {
   LANG=C grep --color=always '[^ -~]\+';
 }
-
-# pid on port
-pop() {
-  lsof -i :"$1" | awk '{ print $2; }' | tail -n 1
-}
-

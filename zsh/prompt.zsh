@@ -4,6 +4,6 @@ antibody bundle sindresorhus/pure
 
 # these two guys **MUST** be loaded last.
 antibody bundle <<EOF
-zsh-users/zsh-syntax-highlighting
-zsh-users/zsh-history-substring-search
+  zsh-users/zsh-syntax-highlighting
+  zsh-users/zsh-history-substring-search
 EOF
