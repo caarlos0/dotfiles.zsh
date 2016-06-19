@@ -13,6 +13,11 @@ if [ "$(uname -s)" != "Darwin" ]; then
   exit 0
 fi
 
+disable_agent() {
+  mv "$1" "$1_DISABLED" >/dev/null 2>&1 ||
+    sudo mv "$1" "$1_DISABLED" >/dev/null 2>&1
+}
+
 # Disable press-and-hold for keys in favor of key repeat.
 defaults write -g ApplePressAndHoldEnabled -bool false
 
@@ -105,7 +110,7 @@ defaults write com.apple.dock launchanim -bool false
 
 # Use `~/Downloads/Incomplete` to store incomplete downloads
 defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool true
-defaults write org.m0k.transmission IncompleteDownloadFolder -string "${HOME}/Downloads/Incomplete"
+defaults write org.m0k.transmission IncompleteDownloadFolder -string "$HOME/Downloads/Incomplete"
 
 # Don't prompt for confirmation before downloading
 defaults write org.m0k.transmission DownloadAsk -bool false
@@ -171,17 +176,18 @@ sudo tmutil disablelocal
 
 if [ -z "$KEEP_ITUNES" ]; then
   # disable iTunes fuckin helper
-  sudo mv /Applications/iTunes.app/Contents/MacOS/iTunesHelper.app{,-disabled} &>/dev/null
+  disable_agent /Applications/iTunes.app/Contents/MacOS/iTunesHelper.app
   # stop play button from launching iTunes
-  launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist &>/dev/null
+  launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist \
+    >/dev/null 2>&1
 fi
 
 # also this spotify web helper
-mv ~/Applications/Spotify.app/Contents/MacOS/SpotifyWebHelper{,-disabled} &>/dev/null
+disable_agent ~/Applications/Spotify.app/Contents/MacOS/SpotifyWebHelper
 
 # Android File Transfer disable auto-open when connect.
-mv "/opt/homebrew-cask/Caskroom/android-file-transfer/latest/Android File Transfer.app/Contents/Resources/Android File Transfer Agent.app"{,_DISABLED} &>/dev/null
-mv "$HOME/Library/Application Support/Google/Android File Transfer/Android File Transfer Agent.app"{,_DISABLED} &>/dev/null
+disable_agent "/Applications/Android File Transfer.app/Contents/Resources/Android File Transfer Agent.app"
+disable_agent "$HOME/Library/Application Support/Google/Android File Transfer/Android File Transfer Agent.app"
 
 #
 # Kill related apps
