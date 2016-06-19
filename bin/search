@@ -1,6 +1,0 @@
-#!/bin/sh -e
-#
-# Quick search in a directory for a string ($1).
-#
-# use -iru to search directories ack usually ignores (like .git)
-ag -iru "$1"

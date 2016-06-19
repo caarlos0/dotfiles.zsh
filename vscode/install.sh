@@ -10,16 +10,16 @@ fi
 ln -sf "$ZSH/vscode/settings.json" "$VSCODE_HOME/User/settings.json"
 
 modules="
-Borke.Puppet
-DotJoshJohnson.xml
-EditorConfig.EditorConfig
-PeterJausovec.vscode-docker
-WakaTime.vscode-wakatime
-donjayamanne.python
-georgewfraser.vscode-javac
-haaaad.ansible
-lukehoban.Go
-rebornix.Ruby
+  Borke.Puppet
+  DotJoshJohnson.xml
+  EditorConfig.EditorConfig
+  PeterJausovec.vscode-docker
+  WakaTime.vscode-wakatime
+  donjayamanne.python
+  georgewfraser.vscode-javac
+  haaaad.ansible
+  lukehoban.Go
+  rebornix.Ruby
 "
 
 for module in $modules; do
