@@ -1,0 +1,52 @@
+[difftool "diffmerge"]
+	cmd = diffmerge $LOCAL $REMOTE
+[alias]
+	co = checkout
+	unpushed-st = unpushed-stat
+	count = shortlog -sn
+	lc = add-rm-line-count
+	g = grep --break --heading --line-number
+	gi = grep --break --heading --line-number -i
+	changed = show --pretty=\"format:\" --name-only
+	cp-branch-name = !git rev-parse --abbrev-ref HEAD | pbcopy
+	delete-local-merged = !zsh -ic git-delete-local-merged
+	add-upstream = !zsh -ic \"add-upstream $*\"
+	sync = !zsh -ic git-sync
+	fm = !zsh -ic \"git-fetch-merge $*\"
+	pr = !zsh -ic \"open-pr $*\"
+	add-remote = !zsh -ic \"add-upstream $*\"
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	ui = true
+[core]
+	excludesfile = $HOME/.gitignore
+	editor = vim
+	compression = -1
+	autocrlf = input
+	whitespace = trailing-space,space-before-tab
+	precomposeunicode = true
+[apply]
+	whitespace = nowarn
+[help]
+	autocorrect = 1
+[merge]
+	tool = diffmerge
+[mergetool "diffmerge"]
+	cmd = diffmerge --merge --result=$MERGED $LOCAL $BASE $REMOTE
+	trustExitCode = true
+	keepBackup = false
+[diff]
+	tool = diffmerge
+[difftool]
+	prompt = false
+[grep]
+	extendRegexp = true
+	lineNumber = true
+[push]
+	default = simple
+[submodule]
+	fetchJobs = 4
+[commit]
+	template = $HOME/.dotfiles/git/template.txt
