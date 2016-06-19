@@ -36,11 +36,9 @@ setup_gitconfig () {
   info 'setup gitconfig'
   if [ -z "$(git config --global --get user.email)" ]; then
     user ' - What is your github author name?'
-    # shellcheck disable=SC2039
-    read -r -e git_authorname
+    read -r git_authorname
     user ' - What is your github author email?'
-    # shellcheck disable=SC2039
-    read -r -e git_authoremail
+    read -r git_authoremail
 
     git config --global user.name "$git_authorname"
     git config --global user.email "$git_authoremail"
@@ -78,7 +76,7 @@ link_file () {
         user "File already exists: $dst ($(basename "$src")), what do you want to do?\n\
         [s]kip, [S]kip all, [o]verwrite, [O]verwrite all, [b]ackup, [B]ackup all?"
         # shellcheck disable=SC2039
-        read -r -n 1 action
+        read -r action
         case "$action" in
           o )
             overwrite=true;;
