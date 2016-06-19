@@ -73,6 +73,8 @@ link_file() {
     else
       backup=true
     fi
+  else
+    backup=true
   fi
 
   if [ "$backup" = "true" ]; then
