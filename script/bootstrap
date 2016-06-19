@@ -33,27 +33,30 @@ fail () {
 }
 
 setup_gitconfig () {
-  if ! [ -f git/gitconfig.symlink ]; then
-    info 'setup gitconfig'
-
-    git_credential='cache'
-    if [ "$(uname -s)" == "Darwin" ]; then
-      git_credential='osxkeychain'
-    fi
-
+  info 'setup gitconfig'
+  if [ -z "$(git config --global --get user.email)" ]; then
     user ' - What is your github author name?'
     read -r -e git_authorname
     user ' - What is your github author email?'
     read -r -e git_authoremail
 
-    sed \
-      -e "s/AUTHORNAME/$git_authorname/g" \
-      -e "s/AUTHOREMAIL/$git_authoremail/g" \
-      -e "s/GIT_CREDENTIAL_HELPER/$git_credential/g" \
-      git/gitconfig.symlink.example > git/gitconfig.symlink
-
-    success 'gitconfig'
+    git config --global user.name "$git_authorname"
+    git config --global user.email "$git_authoremail"
+  else
+    git_authorname="$(git config --global --get user.name)"
+    git_authoremail="$(git config --global --get user.email)"
+    mv ~/.gitconfig{,.backup}
+    success "moved ~/.gitconfig to ~/.gitconfig.backup"
+    git config --global user.name "$git_authorname"
+    git config --global user.email "$git_authoremail"
   fi
+  if [ "$(uname -s)" = "Darwin" ]; then
+    git config --global user.helper osxkeychain
+  else
+    git config --global user.helper cache
+  fi
+  git config --global include.path ~/.gitconfig.local
+  success 'gitconfig'
 }
 
 
