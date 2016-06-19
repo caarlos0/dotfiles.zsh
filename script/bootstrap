@@ -73,19 +73,18 @@ link_file() {
     else
       backup=true
     fi
-  else
-    backup=true
   fi
 
   if [ "$backup" = "true" ]; then
     mv "$dst" "${dst}.backup"
     success "moved $dst to ${dst}.backup"
-    ln -s "$1" "$2"
-    success "linked $1 to $2"
   fi
 
   if [ "$skip" = "true" ]; then
     success "skipped $src"
+  else
+    ln -s "$1" "$2"
+    success "linked $1 to $2"
   fi
 }
 
