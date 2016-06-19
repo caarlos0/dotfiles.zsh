@@ -1,7 +1,4 @@
 #!/bin/sh
-
-alias wtf="imgcat ~/.dotfiles/imgs/wtf.gif"
-
 # grc overides for ls
 #   Made possible through contributions from generous benefactors like
 #   `brew install coreutils`
