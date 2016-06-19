@@ -5,5 +5,5 @@ if [ "$(uname -s)" = "Darwin" ]; then
     brew install antibody
   fi
 else
-  curl -sL https://git.io/vwMNi | bash -s
+  curl -sL https://git.io/vwMNi | sh -s
 fi

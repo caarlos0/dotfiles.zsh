@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 set -eo pipefail
 add_rm_lc() {
   local diff_result added deleted
