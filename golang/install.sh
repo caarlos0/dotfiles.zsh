@@ -1,5 +1,5 @@
 #!/bin/bash
-if [ ! "$(which go)" ] && [ ! -z "$GOPATH" ]; then
+if [ "$(which go)" ] && [ ! -z "$GOPATH" ]; then
   mkdir -p "$GOPATH/bin" "$GOPATH/src/github.com/"
 
   go get -u -v github.com/adjust/go-wrk
