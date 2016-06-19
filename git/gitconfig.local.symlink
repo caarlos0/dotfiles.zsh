@@ -2,12 +2,9 @@
 	cmd = diffmerge $LOCAL $REMOTE
 [alias]
 	co = checkout
-	promote = !$HOME/.dotfiles/bin/git-promote
-	wtf = !$HOME/.dotfiles/bin/git-wtf
-	unpushed-st = !$HOME/.dotfiles/bin/git-unpushed-stat
-	nuke = !$HOME/.dotfiles/bin/git-nuke
+	unpushed-st = unpushed-stat
 	count = shortlog -sn
-	lc = !$HOME/.dotfiles/bin/git-add-rm-line-count
+	lc = add-rm-line-count
 	g = grep --break --heading --line-number
 	gi = grep --break --heading --line-number -i
 	changed = show --pretty=\"format:\" --name-only
