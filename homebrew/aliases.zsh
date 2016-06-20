@@ -6,6 +6,7 @@ if which brew >/dev/null 2>&1; then
         command brew cleanup
         command brew cask cleanup
         command brew prune
+        rm -rf $(brew --cache)
         ;;
       bump)
         command brew update
