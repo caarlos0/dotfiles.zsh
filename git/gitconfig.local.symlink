@@ -19,7 +19,7 @@
 	branch = auto
 	ui = true
 [core]
-	excludesfile = $HOME/.gitignore
+	excludesfile = ~/.gitignore
 	editor = vim
 	compression = -1
 	autocrlf = input
@@ -47,4 +47,4 @@
 [submodule]
 	fetchJobs = 4
 [commit]
-	template = $HOME/.dotfiles/git/template.txt
+	template = ~/.dotfiles/git/template.txt
