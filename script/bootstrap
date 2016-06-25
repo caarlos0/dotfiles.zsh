@@ -61,7 +61,7 @@ setup_gitconfig () {
 
 link_file() {
   # shellcheck disable=SC2039
-  local src dst overwrite backup skip action currentSrc
+  local src dst backup skip currentSrc
   src="$1"
   dst="$2"
 
@@ -90,8 +90,6 @@ link_file() {
 
 install_dotfiles () {
   info 'installing dotfiles'
-  # shellcheck disable=SC2039
-  local overwrite_all="${OVERRIDE_ALL:-false}" backup_all=false skip_all=false
   # shellcheck disable=SC2044
   for src in $(find -H "$DOTFILES_ROOT" -maxdepth 2 -name '*.symlink' -not -path '*.git*')
   do
