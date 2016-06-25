@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 VERSION="v2.020"
 VERSION_="v2_020"
 URL="https://github.com/chrissimpkins/Hack/releases/download/"

@@ -1,10 +1,9 @@
-#!/usr/bin/env bash
+#!/bin/sh
 #
 # bootstrap installs things.
 
 cd "$(dirname "$0")/.."
 DOTFILES_ROOT=$(pwd -P)
-[ "$1" = "--override-all" ] && OVERRIDE_ALL="true"
 
 set -e
 
@@ -34,98 +33,64 @@ fail () {
 
 setup_gitconfig () {
   info 'setup gitconfig'
+  # if there is no user.email, we'll assume it's a new machine/setup and ask it
   if [ -z "$(git config --global --get user.email)" ]; then
     user ' - What is your github author name?'
-    read -r -e git_authorname
+    read -r user_name
     user ' - What is your github author email?'
-    read -r -e git_authoremail
+    read -r user_email
 
-    git config --global user.name "$git_authorname"
-    git config --global user.email "$git_authoremail"
-  else
-    git_authorname="$(git config --global --get user.name)"
-    git_authoremail="$(git config --global --get user.email)"
-    mv ~/.gitconfig{,.backup}
+    git config --global user.name "$user_name"
+    git config --global user.email "$user_email"
+  elif [ "$(git config --global --get dotfiles.managed)" != "true" ]; then
+    # if user.email exists, let's check for dotfiles.managed config. If it is
+    # not true, we'll backup the gitconfig file and set previous user.email and
+    # user.name in the new one
+    user_name="$(git config --global --get user.name)"
+    user_email="$(git config --global --get user.email)"
+    mv ~/.gitconfig ~/.gitconfig.backup
     success "moved ~/.gitconfig to ~/.gitconfig.backup"
-    git config --global user.name "$git_authorname"
-    git config --global user.email "$git_authoremail"
+    git config --global user.name "$user_name"
+    git config --global user.email "$user_email"
+  else
+    info "already managed by dotfiles"
   fi
+  # set up user.helper so git don't ask for password every time
   if [ "$(uname -s)" = "Darwin" ]; then
     git config --global user.helper osxkeychain
   else
     git config --global user.helper cache
   fi
+  # include the gitconfig.local file
   git config --global include.path ~/.gitconfig.local
+  # finally make git knows this is a managed config already, to prevent later
+  # overrides
+  git config --global dotfiles.managed true
   success 'gitconfig'
 }
 
 
-link_file () {
-  local src dst overwrite backup skip action
-  src="$1"
-  dst="$2"
-
-  if [ -f "$dst" ] || [ -d "$dst" ] || [ -L "$dst" ]; then
-    if [ "$overwrite_all" == "false" ] && [ "$backup_all" == "false" ] && [ "$skip_all" == "false" ]; then
-      local -r currentSrc="$(readlink "$dst")"
-      if [ "$currentSrc" == "$src" ]; then
-        skip=true;
-      else
-        user "File already exists: $dst ($(basename "$src")), what do you want to do?\n\
-        [s]kip, [S]kip all, [o]verwrite, [O]verwrite all, [b]ackup, [B]ackup all?"
-        read -r -n 1 action
-        case "$action" in
-          o )
-            overwrite=true;;
-          O )
-            overwrite_all=true;;
-          b )
-            backup=true;;
-          B )
-            backup_all=true;;
-          s )
-            skip=true;;
-          S )
-            skip_all=true;;
-          * )
-            ;;
-        esac
-      fi
-    fi
-    overwrite=${overwrite:-$overwrite_all}
-    backup=${backup:-$backup_all}
-    skip=${skip:-$skip_all}
-    if [ "$overwrite" == "true" ]; then
-      rm -rf "$dst"
-      success "removed $dst"
-    fi
-
-    if [ "$backup" == "true" ]; then
-      mv "$dst" "${dst}.backup"
-      success "moved $dst to ${dst}.backup"
-    fi
-
-    if [ "$skip" == "true" ]; then
-      success "skipped $src"
+link_file() {
+  if [ -e "$2" ]; then
+    if [ "$(readlink "$2")" = "$1" ]; then
+      success "skipped $1"
+      return 0
+    else
+      mv "$2" "$2.backup"
+      success "moved $2 to $2.backup"
     fi
   fi
-
-  if [ "$skip" != "true" ]  # "false" or empty
-  then
-    ln -s "$1" "$2"
-    success "linked $1 to $2"
-  fi
+  ln -s "$1" "$2"
+  success "linked $1 to $2"
 }
 
 install_dotfiles () {
   info 'installing dotfiles'
-  local overwrite_all="${OVERRIDE_ALL:-false}" backup_all=false skip_all=false
-  # shellcheck disable=SC2044
-  for src in $(find -H "$DOTFILES_ROOT" -maxdepth 2 -name '*.symlink' -not -path '*.git*')
-  do
-    dst="$HOME/.$(basename "${src%.*}")"
-    link_file "$src" "$dst"
-  done
+  find -H "$DOTFILES_ROOT" -maxdepth 2 -name '*.symlink' -not -path '*.git*' |
+    while read -r src; do
+      dst="$HOME/.$(basename "${src%.*}")"
+      link_file "$src" "$dst"
+    done
 }
 
 setup_gitconfig

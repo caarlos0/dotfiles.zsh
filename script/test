@@ -14,9 +14,8 @@ git config --global user.name "dotfiles demo"
 git config --global user.email "dotfiles@demo.com"
 
 # bootstrap the mighty
-./script/bootstrap --override-all
+./script/bootstrap
 
 # load zshrc and check if antibody is working
 source ~/.zshrc
 antibody list
-git config --global --list

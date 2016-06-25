@@ -12,11 +12,7 @@ echo "› set OS defaults"
 "$ZSH/linux/set-defaults.sh"
 
 # Upgrade homebrew
-if test "$(uname)" = "Darwin"; then
-  # Install homebrew
-  echo "› homebrew/install.sh"
-  "$ZSH/homebrew/install.sh"
-
+if test "$(which brew)"; then
   echo "› brew update"
   brew update
 fi
