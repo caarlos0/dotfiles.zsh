@@ -71,21 +71,17 @@ setup_gitconfig () {
 
 
 link_file() {
-  # shellcheck disable=SC2039
-  local src dst skip
-  src="$1"
-  dst="$2"
-
-  test -e "$dst" && test "$(readlink "$dst")" = "$src" && skip=true
-
-  if [ "$skip" = "true" ]; then
-    success "skipped $src"
-  else
-    mv "$dst" "${dst}.backup"
-    success "moved $dst to ${dst}.backup"
-    ln -s "$1" "$2"
-    success "linked $1 to $2"
+  if [ -e "$2" ]; then
+    if [ "$(readlink "$2")" = "$1" ]; then
+      success "skipped $1"
+      return 0
+    else
+      mv "$2" "$2.backup"
+      success "moved $2 to $2.backup"
+    fi
   fi
+  ln -s "$1" "$2"
+  success "linked $1 to $2"
 }
 
 install_dotfiles () {
