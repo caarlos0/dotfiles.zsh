@@ -18,6 +18,10 @@ disable_agent() {
     sudo mv "$1" "$1_DISABLED" >/dev/null 2>&1
 }
 
+unload_agent() {
+  launchctl unload -w "$1" >/dev/null 2>&1
+}
+
 # Disable press-and-hold for keys in favor of key repeat.
 defaults write -g ApplePressAndHoldEnabled -bool false
 
@@ -46,10 +50,10 @@ defaults write com.apple.universalaccess reduceTransparency -bool true
 
 # Enable text replacement almost everywhere
 defaults write -g WebAutomaticTextReplacementEnabled -bool true
+
 #
 # Finder
 #
-
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 
@@ -81,7 +85,6 @@ defaults write com.apple.Safari IncludeDevelopMenu -bool true
 defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
 defaults write com.apple.Safari "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" -bool true
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
-
 
 #
 # DOCK
@@ -139,7 +142,6 @@ defaults write com.apple.messageshelper.MessageController SOInputLineSettings -d
 #
 # Others
 #
-
 # Disable Dashboard
 defaults write com.apple.dashboard mcx-disabled -bool true
 
@@ -178,8 +180,7 @@ if [ -z "$KEEP_ITUNES" ]; then
   # disable iTunes fuckin helper
   disable_agent /Applications/iTunes.app/Contents/MacOS/iTunesHelper.app
   # stop play button from launching iTunes
-  launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist \
-    >/dev/null 2>&1
+  unload_agent /System/Library/LaunchAgents/com.apple.rcd.plist
 fi
 
 # also this spotify web helper
@@ -196,7 +197,7 @@ set +e
 for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" \
   "Dock" "Finder" "Mail" "Messages" "Safari" "SystemUIServer" \
   "Transmission"; do
-  killall "${app}" > /dev/null 2>&1
+  killall "$app" > /dev/null 2>&1
 done
 set -e
 
