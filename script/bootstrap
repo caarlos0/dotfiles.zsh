@@ -33,56 +33,56 @@ fail () {
 
 setup_gitconfig () {
   info 'setup gitconfig'
+  # if there is no user.email, we'll assume it's a new machine/setup and ask it
   if [ -z "$(git config --global --get user.email)" ]; then
     user ' - What is your github author name?'
-    read -r git_authorname
+    read -r user_name
     user ' - What is your github author email?'
-    read -r git_authoremail
+    read -r user_email
 
-    git config --global user.name "$git_authorname"
-    git config --global user.email "$git_authoremail"
-  else
-    git_authorname="$(git config --global --get user.name)"
-    git_authoremail="$(git config --global --get user.email)"
+    git config --global user.name "$user_name"
+    git config --global user.email "$user_email"
+  elif [ "$(git config --global --get dotfiles.managed)" != "true" ]; then
+    # if user.email exists, let's check for dotfiles.managed config. If it is
+    # not true, we'll backup the gitconfig file and set previous user.email and
+    # user.name in the new one
+    user_name="$(git config --global --get user.name)"
+    user_email="$(git config --global --get user.email)"
     mv ~/.gitconfig ~/.gitconfig.backup
     success "moved ~/.gitconfig to ~/.gitconfig.backup"
-    git config --global user.name "$git_authorname"
-    git config --global user.email "$git_authoremail"
+    git config --global user.name "$user_name"
+    git config --global user.email "$user_email"
+  else
+    info "already managed by dotfiles"
   fi
+  # set up user.helper so git don't ask for password every time
   if [ "$(uname -s)" = "Darwin" ]; then
     git config --global user.helper osxkeychain
   else
     git config --global user.helper cache
   fi
+  # include the gitconfig.local file
   git config --global include.path ~/.gitconfig.local
+  # finally make git knows this is a managed config already, to prevent later
+  # overrides
+  git config --global dotfiles.managed true
   success 'gitconfig'
 }
 
 
 link_file() {
   # shellcheck disable=SC2039
-  local src dst backup skip currentSrc
+  local src dst skip
   src="$1"
   dst="$2"
 
-  if [ -f "$dst" ] || [ -d "$dst" ] || [ -L "$dst" ]; then
-    # shellcheck disable=SC2039
-    currentSrc="$(readlink "$dst")"
-    if [ "$currentSrc" = "$src" ]; then
-      skip=true
-    else
-      backup=true
-    fi
-  fi
-
-  if [ "$backup" = "true" ]; then
-    mv "$dst" "${dst}.backup"
-    success "moved $dst to ${dst}.backup"
-  fi
+  test -e "$dst" && test "$(readlink "$dst")" = "$src" && skip=true
 
   if [ "$skip" = "true" ]; then
     success "skipped $src"
   else
+    mv "$dst" "${dst}.backup"
+    success "moved $dst to ${dst}.backup"
     ln -s "$1" "$2"
     success "linked $1 to $2"
   fi
