@@ -19,7 +19,7 @@ fi
 
 # Update submodules
 echo "› submodules update"
-git submodule update --init --recursive --remote --merge
+git submodule update --init --recursive --remote --merge --quiet
 
 # Install software
 echo "› $ZSH/script/install"
