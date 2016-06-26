@@ -24,7 +24,7 @@ unload_agent() {
   launchctl unload -w "$1" >/dev/null 2>&1
 }
 
-sudo -v
+test -z "$TRAVIS_JOB_ID" || sudo -v
 
 echo ""
 echo "› System:"
@@ -96,9 +96,14 @@ defaults write NSGlobalDomain AppleAquaColorVariant -int 6
 echo "  › Set graphite highlight color"
 defaults write NSGlobalDomain AppleHighlightColor -string "0.847059 0.847059 0.862745"
 
-echo "  › Speed up wake from sleep to 24 hours from an hour"
-# http://www.cultofmac.com/221392/quick-hack-speeds-up-retina-macbooks-wake-from-sleep-os-x-tips/
-sudo pmset -a standbydelay 86400
+echo "  › Show battery percent"
+defaults write com.apple.menuextra.battery ShowPercent -bool true
+
+if [ ! -z "$TRAVIS_JOB_ID" ]; then
+  echo "  › Speed up wake from sleep to 24 hours from an hour"
+  # http://www.cultofmac.com/221392/quick-hack-speeds-up-retina-macbooks-wake-from-sleep-os-x-tips/
+  sudo pmset -a standbydelay 86400
+fi
 
 echo "  › Removing duplicates in the 'Open With' menu"
 /System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister \
@@ -239,9 +244,11 @@ echo "› Time Machine:"
 echo "  › Prevent Time Machine from prompting to use new hard drives as backup volume"
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
-echo "  › Disable local backups"
-echo "  › https://classicyuppie.com/what-crap-is-this-os-xs-mobilebackups/"
-sudo tmutil disablelocal
+if [ ! -z "$TRAVIS_JOB_ID" ]; then
+  echo "  › Disable local backups"
+  # https://classicyuppie.com/what-crap-is-this-os-xs-mobilebackups/
+  sudo tmutil disablelocal
+fi
 
 #############################
 
