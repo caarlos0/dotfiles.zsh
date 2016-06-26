@@ -24,7 +24,7 @@ unload_agent() {
   launchctl unload -w "$1" >/dev/null 2>&1
 }
 
-test -z "$TRAVIS_JOB_ID" || sudo -v
+test -z "$TRAVIS_JOB_ID" && sudo -v
 
 echo ""
 echo "› System:"
