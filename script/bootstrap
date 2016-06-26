@@ -80,7 +80,7 @@ link_file() {
       success "moved $2 to $2.backup"
     fi
   fi
-  ln -s "$1" "$2"
+  ln -sf "$1" "$2"
   success "linked $1 to $2"
 }
 
