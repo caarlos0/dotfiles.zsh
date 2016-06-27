@@ -103,7 +103,7 @@ else
   fail "error installing dependencies"
 fi
 
-test -t 1 &&
+test -t "$TRAVIS_JOB_ID" &&
   which chsh >/dev/null 2>&1 &&
   which zsh >/dev/null 2>&1 &&
   grep "$(which zsh)" /etc/shells > /dev/null &&
