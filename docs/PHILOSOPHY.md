@@ -84,21 +84,3 @@ I try to keep it working in both Linux (no specific distro) and OS X,
 mostly because I use OS X at home and Linux at work.
 
 The CI also is also ran on Linux and OSX.
-
-### iTunes
-
-Most people I know don't use iTunes, I surely don't, so, this script disables
-it every time you run `dot_update`. If you don't want that to happen, run:
-
-```console
-$ echo 'KEEP_ITUNES=1' >> ~/.localrc
-```
-
-If your iTunes is already broken, you will also want to run:
-
-```console
-sudo mv /Applications/iTunes.app/Contents/MacOS/iTunesHelper.app{-disabled,}
-launchctl load -w /System/Library/LaunchAgents/com.apple.rcd.plist
-```
-
-For more info, check [issue #197](https://github.com/caarlos0/dotfiles/issues/197).

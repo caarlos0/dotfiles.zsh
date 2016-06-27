@@ -10,7 +10,7 @@
 [ab]: https://img.shields.io/badge/powered%20by-antibody-blue.svg?style=flat-square
 [tb]: https://img.shields.io/travis/caarlos0/dotfiles/master.svg?style=flat-square
 [tp]: https://travis-ci.org/caarlos0/dotfiles
-[scrn]: https://raw.githubusercontent.com/caarlos0/dotfiles/master/screenshot.png
+[scrn]: /docs/screenshot.png
 
 ## Installation
 
@@ -33,8 +33,8 @@ $ chsh -s $(which zsh)
 
 ## Further help:
 
-- [Personalize your configs](/PERSONALIZATION.md)
-- [Understand how it works](/PHILOSOPHY.md)
+- [Personalize your configs](/docs/PERSONALIZATION.md)
+- [Understand how it works](/docs/PHILOSOPHY.md)
 - [License](/LICENSE.md)
 
 ## Contributing
