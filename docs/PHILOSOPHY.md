@@ -24,7 +24,7 @@ installation.
 With that in mind, [machine](http://github.com/caarlos0/machine) was born.
 
 It's an Ansible recipe that can install a bunch of stuff, and you can comment
-out what you don't want. Works on both Linux and Windows.
+out what you don't want. Works on both Linux and OSX.
 
 ### Default `EDITOR` and `PROJECTS`
 
