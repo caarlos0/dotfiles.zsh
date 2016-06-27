@@ -31,7 +31,7 @@ $ ./script/bootstrap
 $ chsh -s $(which zsh)
 ```
 
-> All changed files will be backed up with a `.backup` prefix.
+> All changed files will be backed up with a `.backup` suffix.
 
 ## Further help:
 
