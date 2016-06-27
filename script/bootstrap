@@ -103,5 +103,12 @@ else
   fail "error installing dependencies"
 fi
 
+test -t "$TRAVIS_JOB_ID" &&
+  which chsh >/dev/null 2>&1 &&
+  which zsh >/dev/null 2>&1 &&
+  grep "$(which zsh)" /etc/shells > /dev/null &&
+  chsh -s "$(which zsh)" &&
+  success "set $(which zsh) as default shell"
+
 echo ''
 echo '  All installed!'
