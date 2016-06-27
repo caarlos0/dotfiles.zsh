@@ -28,7 +28,7 @@ Then, run these steps:
 $ git clone https://github.com/caarlos0/dotfiles.git ~/.dotfiles
 $ cd ~/.dotfiles
 $ ./script/bootstrap
-$ chsh -s $(which zsh)
+$ zsh # or just close and open your terminal again.
 ```
 
 > All changed files will be backed up with a `.backup` suffix.
