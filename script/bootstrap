@@ -103,7 +103,8 @@ else
   fail "error installing dependencies"
 fi
 
-which chsh >/dev/null 2>&1 &&
+test -t 1 &&
+  which chsh >/dev/null 2>&1 &&
   which zsh >/dev/null 2>&1 &&
   grep "$(which zsh)" /etc/shells > /dev/null &&
   chsh -s "$(which zsh)" &&
