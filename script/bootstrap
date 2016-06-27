@@ -103,5 +103,8 @@ else
   fail "error installing dependencies"
 fi
 
+mkdir -p ~/Code
+success "Created ~/Code folder"
+
 echo ''
 echo '  All installed!'
