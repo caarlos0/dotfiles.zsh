@@ -5,23 +5,22 @@
 # `dot_update` handles installation, updates, things like that. Run it
 # periodically to make sure you're on the latest and greatest.
 export ZSH="$HOME/.dotfiles"
+cd "$ZSH" || exit 1
+
+# Update repo
+echo "› git update"
+git pull --rebase --stat origin master
+
+# Update submodules
+echo "› submodules update"
+git submodule update --init --recursive --remote --merge --quiet
 
 # Set OS defaults
 echo "› set OS defaults"
 "$ZSH/osx/set-defaults.sh"
 "$ZSH/linux/set-defaults.sh"
 
-# Upgrade homebrew
-if test "$(which brew)"; then
-  echo "› brew update"
-  brew update
-fi
-
-# Update submodules
-echo "› submodules update"
-git submodule update --init --recursive --remote --merge --quiet
-
-# Install software
+# Run all installs
 echo "› $ZSH/script/install"
 "$ZSH/script/install"
 
@@ -29,3 +28,6 @@ if [ -n "$ZSH_VERSION" ]; then
   echo "› antibody update"
   antibody update
 fi
+
+echo "› registering last update"
+git config --global dotfiles.lastupdate "$(date +%Y%m%d%H%M)"
