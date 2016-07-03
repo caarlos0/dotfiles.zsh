@@ -94,11 +94,12 @@ install_dotfiles () {
 }
 
 find_zsh() {
-  which zsh >/dev/null 2>&1 && grep "$(which zsh)" /etc/shells >/dev/null && {
-    echo "$(which zsh)"
-  } || {
+  if which zsh >/dev/null 2>&1 && grep "$(which zsh)" /etc/shells >/dev/null
+  then
+    which zsh
+  else
     echo "/bin/zsh"
-  }
+  fi
 }
 
 setup_gitconfig
