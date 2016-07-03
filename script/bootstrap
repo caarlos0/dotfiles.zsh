@@ -69,7 +69,6 @@ setup_gitconfig () {
   success 'gitconfig'
 }
 
-
 link_file() {
   if [ -e "$2" ]; then
     if [ "$(readlink "$2")" = "$1" ]; then
@@ -102,6 +101,12 @@ if ./bin/dot_update; then
 else
   fail "error installing dependencies"
 fi
+
+# Set OS defaults
+info "setting up OS"
+"$DOTFILES_ROOT/osx/set-defaults.sh"
+"$DOTFILES_ROOT/linux/set-defaults.sh"
+success "OS set up"
 
 test -t "$TRAVIS_JOB_ID" &&
   which chsh >/dev/null 2>&1 &&
