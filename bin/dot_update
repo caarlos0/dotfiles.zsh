@@ -15,11 +15,6 @@ git pull --rebase --stat origin master
 echo "› submodules update"
 git submodule update --init --recursive --remote --merge --quiet
 
-# Set OS defaults
-echo "› set OS defaults"
-"$ZSH/osx/set-defaults.sh"
-"$ZSH/linux/set-defaults.sh"
-
 # Run all installs
 echo "› $ZSH/script/install"
 "$ZSH/script/install"
