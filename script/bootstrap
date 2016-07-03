@@ -53,6 +53,7 @@ setup_gitconfig () {
     git config --global user.name "$user_name"
     git config --global user.email "$user_email"
   else
+    # otherwise this gitconfig was already made by the dotfiles
     info "already managed by dotfiles"
   fi
   # set up user.helper so git don't ask for password every time
@@ -63,8 +64,8 @@ setup_gitconfig () {
   fi
   # include the gitconfig.local file
   git config --global include.path ~/.gitconfig.local
-  # finally make git knows this is a managed config already, to prevent later
-  # overrides
+  # finally make git knows this is a managed config already, preventing later
+  # overrides by this script
   git config --global dotfiles.managed true
   success 'gitconfig'
 }
@@ -92,6 +93,15 @@ install_dotfiles () {
     done
 }
 
+find_zsh() {
+  if which zsh >/dev/null 2>&1 && grep "$(which zsh)" /etc/shells >/dev/null
+  then
+    which zsh
+  else
+    echo "/bin/zsh"
+  fi
+}
+
 setup_gitconfig
 install_dotfiles
 
@@ -108,12 +118,12 @@ info "setting up OS"
 "$DOTFILES_ROOT/linux/set-defaults.sh"
 success "OS set up"
 
-test -t "$TRAVIS_JOB_ID" &&
-  which chsh >/dev/null 2>&1 &&
+if test -z "$TRAVIS_JOB_ID"; then
+  zsh="$(find_zsh)"
   which zsh >/dev/null 2>&1 &&
-  grep "$(which zsh)" /etc/shells > /dev/null &&
-  chsh -s "$(which zsh)" &&
-  success "set $(which zsh) as default shell"
+    chsh -s "$zsh" &&
+    success "set $("$zsh" --version) at $zsh as default shell"
+fi
 
 echo ''
 echo '  All installed!'
