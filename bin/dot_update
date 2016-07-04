@@ -4,9 +4,11 @@
 #
 # `dot_update` handles installation, updates, things like that. Run it
 # periodically to make sure you're on the latest and greatest.
-export PATH="$(command -p getconf PATH):/usr/local/bin"
 export ZSH="$HOME/.dotfiles"
 cd "$ZSH" || exit 1
+
+# fixes PATH (we could be running from the crontab)
+PATH="$(command -p getconf PATH):/usr/local/bin"
 
 # Update repo
 echo "› git update"
