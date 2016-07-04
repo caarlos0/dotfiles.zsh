@@ -9,7 +9,7 @@ cd "$ZSH" || exit 1
 
 # Update repo
 echo "› git update"
-git pull --rebase --stat origin master
+git pull --rebase --stat origin "$(git rev-parse --abbrev-ref HEAD)"
 
 # Update submodules
 echo "› submodules update"
