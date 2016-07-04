@@ -118,12 +118,10 @@ info "setting up OS"
 "$DOTFILES_ROOT/linux/set-defaults.sh"
 success "OS set up"
 
-if test -z "$TRAVIS_JOB_ID"; then
-  zsh="$(find_zsh)"
-  which zsh >/dev/null 2>&1 &&
-    chsh -s "$zsh" &&
-    success "set $("$zsh" --version) at $zsh as default shell"
-fi
+zsh="$(find_zsh)"
+test -z "$TRAVIS_JOB_ID" &&
+  chsh -s "$zsh" &&
+  success "set $("$zsh" --version) at $zsh as default shell"
 
 echo ''
 echo '  All installed!'

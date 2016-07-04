@@ -5,12 +5,20 @@
 # `dot_update` handles installation, updates, things like that. Run it
 # periodically to make sure you're on the latest and greatest.
 export ZSH="$HOME/.dotfiles"
+cd "$ZSH" || exit 1
+
+# fixes PATH (we could be running from the crontab)
+PATH="$(command -p getconf PATH):/usr/local/bin"
+
+# Update repo
+echo "› git update"
+git pull --rebase --stat origin "$(git rev-parse --abbrev-ref HEAD)"
 
 # Update submodules
 echo "› submodules update"
 git submodule update --init --recursive --remote --merge --quiet
 
-# Install software
+# Run all installs
 echo "› $ZSH/script/install"
 "$ZSH/script/install"
 
@@ -18,3 +26,9 @@ if [ -n "$ZSH_VERSION" ]; then
   echo "› antibody update"
   antibody update
 fi
+
+echo "› registering last update"
+git config --global dotfiles.lastupdate "$(date +%Y%m%d%H%M)"
+
+echo "› update crontab config"
+"$ZSH/script/setup_autoupdate"
