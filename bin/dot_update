@@ -4,16 +4,18 @@
 #
 # `dot_update` handles installation, updates, things like that. Run it
 # periodically to make sure you're on the latest and greatest.
+export PATH="$(command -p getconf PATH):/usr/local/bin"
 export ZSH="$HOME/.dotfiles"
-cd "$ZSH" || exit 1
 
 # Update repo
 echo "› git update"
-git pull --rebase --stat origin "$(git rev-parse --abbrev-ref HEAD)"
+git --git-dir="$ZSH/.git" --work-tree="$ZSH" \
+  pull --rebase --stat origin "$(git rev-parse --abbrev-ref HEAD)"
 
 # Update submodules
 echo "› submodules update"
-git submodule update --init --recursive --remote --merge --quiet
+git --git-dir="$ZSH/.git" --work-tree="$ZSH" \
+  submodule update --init --recursive --remote --merge --quiet
 
 # Run all installs
 echo "› $ZSH/script/install"
