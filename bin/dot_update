@@ -10,7 +10,8 @@ export ZSH="$HOME/.dotfiles"
 # Update repo
 echo "› git update"
 git --git-dir="$ZSH/.git" --work-tree="$ZSH" \
-  pull --rebase --stat origin "$(git rev-parse --abbrev-ref HEAD)"
+  pull --rebase --stat origin \
+  "$(git --git-dir="$ZSH/.git" --work-tree="$ZSH" rev-parse --abbrev-ref HEAD)"
 
 # Update submodules
 echo "› submodules update"
