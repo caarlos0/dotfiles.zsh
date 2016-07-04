@@ -26,3 +26,6 @@ fi
 
 echo "› registering last update"
 git config --global dotfiles.lastupdate "$(date +%Y%m%d%H%M)"
+
+echo "› update crontab config"
+"$ZSH/script/setup_autoupdate"
