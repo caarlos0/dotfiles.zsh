@@ -1,5 +1,5 @@
 #!/bin/sh
-if [ "$(uname -s)" = "Darwin" ]; then
+if [ "$(uname -s)" = "Darwin" ] && [ "$(which brew >/dev/null 2>&1)" ]; then
   if [ ! "$(which antibody)" ]; then
     brew tap getantibody/homebrew-antibody
     brew install antibody
