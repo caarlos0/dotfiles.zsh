@@ -14,6 +14,8 @@
 
 ## Installation
 
+### Dependencies
+
 First, make sure you have all those things installed:
 
 - `git`: to clone the repo
@@ -21,6 +23,8 @@ First, make sure you have all those things installed:
 - `tar`: to extract downloaded stuff
 - `zsh`: to actually run the dotfiles
 - `sudo`: some configs may need that
+
+### Install
 
 Then, run these steps:
 
@@ -32,6 +36,17 @@ $ zsh # or just close and open your terminal again.
 ```
 
 > All changed files will be backed up with a `.backup` suffix.
+
+### Recommended Software
+
+For OSX, I recommend:
+
+- `grc`: for colorizing stuff (like `ls`);
+- iTerm: a better terminal emulator;
+
+For Linux:
+
+- Terminator: a better terminal emulator;
 
 ## Further help:
 
