@@ -35,7 +35,7 @@ $ ./script/bootstrap
 $ zsh # or just close and open your terminal again.
 ```
 
-> All changed files will bes backed up with a `.backup` suffix.
+> All changed files will be backed up with a `.backup` suffix.
 
 ### Recommended Software
 
