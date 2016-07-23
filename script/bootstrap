@@ -67,6 +67,10 @@ setup_gitconfig () {
   # finally make git knows this is a managed config already, preventing later
   # overrides by this script
   git config --global dotfiles.managed true
+  # diff-so-fancy?
+  if test diff-so-fancy > /dev/null 2>&1; then
+    git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
+  fi
   success 'gitconfig'
 }
 

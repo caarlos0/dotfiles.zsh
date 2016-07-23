@@ -35,7 +35,7 @@ $ ./script/bootstrap
 $ zsh # or just close and open your terminal again.
 ```
 
-> All changed files will be backed up with a `.backup` suffix.
+> All changed files will bes backed up with a `.backup` suffix.
 
 ### Recommended Software
 
@@ -47,6 +47,10 @@ For OSX, I recommend:
 For Linux:
 
 - Terminator: a better terminal emulator;
+
+Both:
+
+- `diff-so-fancy`: better git difs (you'll need to run `./script/bootstrap` again)
 
 ## Further help:
 
