@@ -48,6 +48,10 @@ For Linux:
 
 - Terminator: a better terminal emulator;
 
+Both:
+
+- `diff-so-fancy`: better git difs (you'll need to run `./script/bootstrap` again)
+
 ## Further help:
 
 - [Personalize your configs](/docs/PERSONALIZATION.md)
