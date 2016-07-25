@@ -25,6 +25,5 @@ if [ "$(which go)" ] && [ ! -z "$GOPATH" ]; then
   for pkg in $packages; do
     go get -u "$pkg"
   done
-  "$GOPATH"/bin/gox -build-toolchain
   "$GOPATH"/bin/gometalinter --install --update
 fi
