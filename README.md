@@ -50,7 +50,7 @@ For Linux:
 
 Both:
 
-- `diff-so-fancy`: better git difs (you'll need to run `./script/bootstrap` again)
+- `diff-so-fancy`: better git difs (you'll need to run `dot_update` to apply it)
 
 ## Further help:
 
