@@ -31,18 +31,6 @@ fail () {
   exit
 }
 
-setup_conditional_gitconfig() {
-  if [ "$(uname -s)" = "Darwin" ]; then
-    git config --global user.helper osxkeychain
-  else
-    git config --global user.helper cache
-  fi
-
- if which diff-so-fancy > /dev/null 2>&1; then
-    git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
-  fi
-}
-
 setup_gitconfig () {
   info 'setup gitconfig'
   # if there is no user.email, we'll assume it's a new machine/setup and ask it
@@ -68,8 +56,6 @@ setup_gitconfig () {
     # otherwise this gitconfig was already made by the dotfiles
     info "already managed by dotfiles"
   fi
-  # config based on other stuff (OS, installed software, etc)
-  setup_conditional_gitconfig
   # include the gitconfig.local file
   git config --global include.path ~/.gitconfig.local
   # finally make git knows this is a managed config already, preventing later
