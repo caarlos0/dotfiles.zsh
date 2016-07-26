@@ -997,9 +997,9 @@
 	<key>NSTableView Sort Ordering KeyBingingTable</key>
 	<array/>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>269 83 918 512 0 0 1280 777 </string>
+	<string>240 266 796 473 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>148 106 665 452 0 0 1280 777 </string>
+	<string>0 305 1273 752 0 0 1920 1057 </string>
 	<key>NeverWarnAboutShortLivedSessions_21048CBB-8F4B-4492-A49A-8DCDADDF9248</key>
 	<true/>
 	<key>New Bookmarks</key>
@@ -1739,13 +1739,27 @@
 	</array>
 	<key>NoSyncInstallationId</key>
 	<string>CCF29E07-071B-419B-ADED-EFEBCF53651A</string>
+	<key>NoSyncLastTipTime</key>
+	<real>491245897.99597698</real>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
+	<true/>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
+	<integer>0</integer>
+	<key>NoSyncPermissionToShowTip</key>
+	<true/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>491066528.478818</real>
+	<key>NoSyncTipsToNotShow</key>
+	<array>
+		<string>000</string>
+	</array>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
 	<false/>
 	<key>OpenBookmark</key>
+	<false/>
+	<key>OpenNoWindowsAtStartup</key>
 	<false/>
 	<key>OpenTmuxWindowsIn</key>
 	<integer>0</integer>
@@ -1809,7 +1823,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-07-24T15:22:23Z</date>
+	<date>2016-07-25T19:46:31Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -1830,6 +1844,8 @@
 	<integer>4</integer>
 	<key>SwitchWindowModifier</key>
 	<integer>9</integer>
+	<key>TabStyle</key>
+	<integer>1</integer>
 	<key>TabViewType</key>
 	<integer>0</integer>
 	<key>ThreeFingerEmulates</key>
