@@ -244,10 +244,27 @@ echo "› Time Machine:"
 echo "  › Prevent Time Machine from prompting to use new hard drives as backup volume"
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
-if [ ! -z "$TRAVIS_JOB_ID" ]; then
+###############################################################################
+# SSD-specific tweaks                                                         #
+###############################################################################
+if [ ! -z "$TRAVIS_JOB_ID" ] && diskutil info disk0 | grep SSD > /dev/null 2>&1
+then
   echo "  › Disable local backups"
   # https://classicyuppie.com/what-crap-is-this-os-xs-mobilebackups/
   sudo tmutil disablelocal
+
+  echo "  › Disable hibernation (speeds up entering sleep mode)"
+  sudo pmset -a hibernatemode 0
+
+  echo "  › Remove the sleep image file to save disk space"
+  sudo rm /private/var/vm/sleepimage
+  echo "  › Create a zero-byte file instead..."
+  sudo touch /private/var/vm/sleepimage
+  echo "  › ...and make sure it can’t be rewritten"
+  sudo chflags uchg /private/var/vm/sleepimage
+
+  echo "  ›  Disable the sudden motion sensor as it’s not useful for SSDs"
+  sudo pmset -a sms 0
 fi
 
 #############################
