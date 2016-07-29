@@ -1,5 +1,5 @@
 #!/bin/zsh
-set -e
+set -xe
 
 # Lint files
 ./build/build.sh
