@@ -8,16 +8,10 @@ else
   curl -sL https://git.io/vwMNi | sh -s
 fi
 
-command antibody bundle < "$ZSH/antibody/bundles.txt" |
-  xargs -I {} echo "source {}" > ~/.bundles.txt
-
-# bundles that should be loaded last, in this specific order
-last_bundles="
-  sindresorhus/pure
-  zsh-users/zsh-syntax-highlighting
-  zsh-users/zsh-history-substring-search
-"
-for bundle in $last_bundles; do
-  command antibody bundle "$bundle" |
+# this code could be simpler, but right now it's a hack for an antibody bug:
+#   https://github.com/getantibody/antibody/issues/119
+echo "" > ~/.bundles.txt
+for pack in main prompt last; do
+  command antibody bundle < "$ZSH/antibody/$pack.txt" |
     xargs -I {} echo "source {}" >> ~/.bundles.txt
 done
