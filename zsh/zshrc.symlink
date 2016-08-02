@@ -17,8 +17,8 @@ for file in ${(M)config_files:#*/path.zsh}; do
   source "$file"
 done
 
-# setup antibody
-antibody bundle < "$ZSH/antibody/bundles.txt"
+# load antibody plugins
+source ~/.bundles.txt
 
 # load everything but the path and completion files
 for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}; do
