@@ -31,6 +31,10 @@ if [ -n "$ZSH_VERSION" ]; then
   antibody update
 fi
 
+echo "› updating completion cache"
+rm -f ~/.zcompdump
+compinit
+
 echo "› registering last update"
 git config --global dotfiles.lastupdate "$(date +%Y%m%d%H%M)"
 
