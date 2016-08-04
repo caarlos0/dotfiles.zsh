@@ -1,7 +1,5 @@
 #!/bin/sh
-if [ -d "$HOME/.rbenv" ]; then
-  export PATH="$PATH:$HOME/.rbenv/bin"
-fi
+export PATH="$PATH:$HOME/.rbenv/bin"
 
 rbenv() {
   eval "$(command rbenv init -)"
