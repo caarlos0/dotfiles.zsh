@@ -1,4 +1,5 @@
 #!/bin/sh
+echo "HERE"
 if [ "$(uname -s)" = "Darwin" ] && which brew >/dev/null 2>&1; then
   if [ ! "$(which antibody)" ]; then
     brew tap getantibody/homebrew-antibody
@@ -7,6 +8,7 @@ if [ "$(uname -s)" = "Darwin" ] && which brew >/dev/null 2>&1; then
 else
   curl -sL https://git.io/vwMNi | sh -s
 fi
+echo "AEHO"
 
 # this code could be simpler, but right now it's a hack for an antibody bug:
 #   https://github.com/getantibody/antibody/issues/119
