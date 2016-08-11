@@ -33,7 +33,7 @@ fi
 
 echo "› updating completion cache"
 rm -f ~/.zcompdump
-compinit
+autoload -Uz compinit && compinit
 
 echo "› registering last update"
 git config --global dotfiles.lastupdate "$(date +%Y%m%d%H%M)"
