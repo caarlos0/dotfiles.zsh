@@ -7,6 +7,7 @@ if test "$(which code)"; then
   fi
 
   ln -sf "$ZSH/vscode/settings.json" "$VSCODE_HOME/User/settings.json"
+  ln -sf "$ZSH/vscode/keybindings.json" "$VSCODE_HOME/User/keybindings.json"
 
   modules="
     Borke.Puppet
