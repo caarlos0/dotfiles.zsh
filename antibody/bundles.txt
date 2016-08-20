@@ -1,11 +1,11 @@
 # note this is alphabetically sorted
 caarlos0/jvm
-caarlos0/open-pr kind:path
 caarlos0/ports kind:path
 caarlos0/zsh-add-upstream
 caarlos0/zsh-git-fetch-merge kind:path
 caarlos0/zsh-git-sync kind:path
 caarlos0/zsh-mkc
+caarlos0/zsh-open-pr kind:path
 mafredri/zsh-async
 Tarrasch/zsh-bd
 wbinglee/zsh-wakatime
