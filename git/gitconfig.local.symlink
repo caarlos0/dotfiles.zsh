@@ -8,7 +8,7 @@
 	gi = grep --break --heading --line-number -i
 	changed = show --pretty=\"format:\" --name-only
 	add-upstream = !zsh -ic \"add-upstream $*\"
-	fm = !zsh -ic \"git-fetch-merge $*\"
+	fm = fetch-merge
 	pr = open-pr
 	add-remote = !zsh -ic \"add-remote $*\"
 [color]
