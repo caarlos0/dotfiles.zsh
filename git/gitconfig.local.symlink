@@ -11,7 +11,7 @@
 	add-upstream = !zsh -ic \"add-upstream $*\"
 	sync = !zsh -ic git-sync
 	fm = !zsh -ic \"git-fetch-merge $*\"
-	pr = !git-open-pr
+	pr = open-pr
 	add-remote = !zsh -ic \"add-remote $*\"
 [color]
 	diff = auto
