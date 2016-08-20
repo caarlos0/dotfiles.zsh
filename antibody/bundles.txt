@@ -4,7 +4,7 @@ caarlos0/open-pr kind:path
 caarlos0/ports kind:path
 caarlos0/zsh-add-upstream
 caarlos0/zsh-git-fetch-merge
-caarlos0/zsh-git-sync
+caarlos0/zsh-git-sync kind:path
 caarlos0/zsh-mkc
 mafredri/zsh-async
 Tarrasch/zsh-bd
