@@ -1,7 +1,7 @@
 # note this is alphabetically sorted
+caarlos0/git-add-remote kind:path
 caarlos0/jvm
 caarlos0/ports kind:path
-caarlos0/zsh-add-upstream
 caarlos0/zsh-git-fetch-merge kind:path
 caarlos0/zsh-git-sync kind:path
 caarlos0/zsh-mkc

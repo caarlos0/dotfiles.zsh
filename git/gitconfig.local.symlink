@@ -7,10 +7,8 @@
 	g = grep --break --heading --line-number
 	gi = grep --break --heading --line-number -i
 	changed = show --pretty=\"format:\" --name-only
-	add-upstream = !zsh -ic \"add-upstream $*\"
 	fm = fetch-merge
 	pr = open-pr
-	add-remote = !zsh -ic \"add-remote $*\"
 [color]
 	diff = auto
 	status = auto
