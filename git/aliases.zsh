@@ -16,7 +16,7 @@ alias gcam='git commit -a -m'
 alias gs='git status -sb'
 alias gcl='git clone'
 alias gcb='git-copy-branch-name'
-alias gpr='gp && open-pr'
+alias gpr='gp && git pr'
 
 gi() {
   curl -s "https://www.gitignore.io/api/$*";
