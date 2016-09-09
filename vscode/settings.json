@@ -10,5 +10,7 @@
   "editor.tabCompletion": true,
   "explorer.openEditors.visible": 0,
   "window.reopenFolders": "none",
-  "terminal.external.osxExec": "iTerm.app"
+  "terminal.external.osxExec": "iTerm.app",
+  "files.autoSave": "on",
+  "extensions.autoUpdate": true
 }
