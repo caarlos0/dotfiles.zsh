@@ -1,7 +1,7 @@
 #!/bin/sh
-# Sets reasonable OS X defaults.
+# Sets reasonable macOS defaults.
 #
-# Or, in other words, set shit how I like in OS X.
+# Or, in other words, set shit how I like in macOS.
 #
 # The original idea (and a couple settings) were grabbed from:
 #   https://github.com/mathiasbynens/dotfiles/blob/master/.osx
@@ -37,8 +37,12 @@ defaults write com.apple.NetworkBrowser BrowseAllInterfaces 1
 echo "  › Show the ~/Library folder"
 chflags nohidden ~/Library
 
+echo "  › Show the /Volumes folder"
+sudo chflags nohidden /Volumes
+
 echo "  › Set a really fast key repeat"
-defaults write NSGlobalDomain KeyRepeat -int 0
+defaults write NSGlobalDomain KeyRepeat -int 2
+defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
 echo "  › Run the screensaver if we're in the bottom-left hot corner"
 defaults write com.apple.dock wvous-bl-corner -int 5
@@ -132,23 +136,24 @@ defaults write com.apple.finder ShowStatusBar -bool true
 echo "  › Show path bar"
 defaults write com.apple.finder ShowPathbar -bool true
 
-echo "  › Allow text selection in the Quick Look window"
-defaults write com.apple.finder QLEnableTextSelection -bool true
-
 echo "  › Disable the warning before emptying the Trash"
 defaults write com.apple.finder WarnOnEmptyTrash -bool false
 
 echo "  › Save to disk by default, instead of iCloud"
 defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 
-echo "  › Disable Photos.app from starting everytime a device is plugged in"
-defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
-
 echo "  › Display full POSIX path as Finder window title"
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
 echo "  › Disable the warning when changing a file extension"
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
+#############################
+
+echo ""
+echo "› Photos:"
+echo "  › Disable it from starting everytime a device is plugged in"
+defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
 #############################
 
@@ -229,13 +234,28 @@ defaults write org.m0k.transmission BlocklistURL -string "http://john.bitsurge.n
 echo ""
 echo "› Mail:"
 echo "  › Add the keyboard shortcut CMD + Enter to send an email"
-defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" "@\\U21a9"
+defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" "@\U21a9"
 
 echo "  › Disable smart quotes as it's annoying for messages that contain code"
 defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticQuoteSubstitutionEnabled" -bool false
 
 echo "  › Set email addresses to copy as 'foo@example.com' instead of 'Foo Bar <foo@example.com>'"
 defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
+
+echo "  › Display emails in threaded mode, sorted by date (oldest at the top)"
+defaults write com.apple.mail DraftsViewerAttributes -dict-add "DisplayInThreadedMode" -string "yes"
+defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortedDescending" -string "yes"
+defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortOrder" -string "received-date"
+
+echo "  › Disable inline attachments (just show the icons)"
+defaults write com.apple.mail DisableInlineAttachmentViewing -bool true
+
+echo "  › Disable automatic spell checking"
+defaults write com.apple.mail SpellCheckingBehavior -string "NoSpellCheckingEnabled"
+
+echo "  ›  Disable send and reply animations in Mail.app"
+defaults write com.apple.mail DisableReplyAnimations -bool true
+defaults write com.apple.mail DisableSendAnimations -bool true
 
 #############################
 
@@ -350,7 +370,7 @@ echo ""
 echo "› Kill related apps"
 for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" "cfprefsd" \
   "Dock" "Finder" "Mail" "Messages" "Safari" "SystemUIServer" \
-  "Terminal" "Transmission"; do
+  "Terminal" "Transmission" "Photos"; do
   killall "$app" > /dev/null 2>&1
 done
 set -e
