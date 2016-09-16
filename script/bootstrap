@@ -108,7 +108,7 @@ fi
 
 # Set OS defaults
 info "setting up OS"
-"$DOTFILES_ROOT/osx/set-defaults.sh"
+"$DOTFILES_ROOT/macos/set-defaults.sh"
 "$DOTFILES_ROOT/linux/set-defaults.sh"
 success "OS set up"
 
