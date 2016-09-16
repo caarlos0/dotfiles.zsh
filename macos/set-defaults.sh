@@ -38,7 +38,7 @@ echo "  › Show the ~/Library folder"
 chflags nohidden ~/Library
 
 echo "  › Show the /Volumes folder"
-chflags nohidden /Volumes
+sudo chflags nohidden /Volumes
 
 echo "  › Set a really fast key repeat"
 defaults write NSGlobalDomain KeyRepeat -int 2
