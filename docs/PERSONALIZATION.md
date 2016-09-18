@@ -16,6 +16,16 @@ dotfiles managed one.
 
 You can edit the `~/.psqlrc.local` file.
 
+## Terminator
+
+If you don't like these terminator settings, run:
+
+```console
+$ echo 'KEEP_TERMINATOR=1' >> ~/.localrc
+```
+
+Then `rm -rf ~/.config/terminator` and configure it as you wish.
+
 ## iTunes
 
 Most people I know don't use iTunes, so it is disabled by default.
