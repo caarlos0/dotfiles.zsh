@@ -11,6 +11,6 @@
   "explorer.openEditors.visible": 0,
   "window.reopenFolders": "none",
   "terminal.external.osxExec": "iTerm.app",
-  "files.autoSave": "on",
+  "files.autoSave": "onFocusChange",
   "extensions.autoUpdate": true
 }
