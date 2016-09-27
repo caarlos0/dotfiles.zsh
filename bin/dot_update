@@ -26,13 +26,10 @@ git submodule update --init --recursive --remote --merge --quiet
 echo "› $ZSH/script/install"
 "$ZSH/script/install"
 
-if [ -n "$ZSH_VERSION" ]; then
+if which antibody >/dev/null 2>&1; then
   echo "› antibody update"
   antibody update
 fi
 
 echo "› registering last update"
 git config --global dotfiles.lastupdate "$(date +%Y%m%d%H%M)"
-
-echo "› update crontab config"
-"$ZSH/script/setup_autoupdate"
