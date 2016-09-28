@@ -7,6 +7,6 @@ else
   curl -sL https://git.io/vwMNi | sh -s
 fi
 
-antibody bundle < "$ZSH/antibody/bundles.txt" > ~/.bundles.txt
+antibody bundle < "$DOTFILES/antibody/bundles.txt" > ~/.bundles.txt
 antibody bundle sindresorhus/pure >> ~/.bundles.txt
-antibody bundle < "$ZSH/antibody/last_bundles.txt" >> ~/.bundles.txt
+antibody bundle < "$DOTFILES/antibody/last_bundles.txt" >> ~/.bundles.txt
