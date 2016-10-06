@@ -6,7 +6,7 @@ caarlos0/zsh-git-fetch-merge kind:path
 caarlos0/zsh-git-sync kind:path
 caarlos0/zsh-mkc
 caarlos0/zsh-open-pr kind:path
-mafredri/zsh-async
+sindresorhus/pure
 Tarrasch/zsh-bd
 wbinglee/zsh-wakatime
 zsh-users/zsh-completions
