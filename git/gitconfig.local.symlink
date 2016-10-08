@@ -9,6 +9,8 @@
 	changed = show --pretty=\"format:\" --name-only
 	fm = fetch-merge
 	pr = open-pr
+	please = push --force-with-lease
+	commend = commit --amend --no-edit
 [color]
 	diff = auto
 	status = auto
@@ -44,3 +46,5 @@
 	fetchJobs = 4
 [commit]
 	template = ~/.dotfiles/git/template.txt
+[log]
+	showSignature = false
