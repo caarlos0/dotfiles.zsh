@@ -10,6 +10,10 @@ cd "$DOTFILES" || exit 1
 # fixes PATH (we could be running from the crontab)
 PATH="$(command -p getconf PATH):/usr/local/bin"
 
+# load custom config if any
+# shellcheck disable=SC1090
+[ -f ~/.localrc ] && . ~/.localrc
+
 # ssh would not work under cron, add a https one
 echo "› setting up update channel"
 git remote add updates https://github.com/caarlos0/dotfiles.git 2> /dev/null
