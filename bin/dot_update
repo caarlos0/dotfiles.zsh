@@ -4,8 +4,8 @@
 #
 # `dot_update` handles installation, updates, things like that. Run it
 # periodically to make sure you're on the latest and greatest.
-export ZSH="$HOME/.dotfiles"
-cd "$ZSH" || exit 1
+export DOTFILES="$HOME/.dotfiles"
+cd "$DOTFILES" || exit 1
 
 # fixes PATH (we could be running from the crontab)
 PATH="$(command -p getconf PATH):/usr/local/bin"
@@ -27,8 +27,8 @@ echo "› submodules update"
 git submodule update --init --recursive --remote --merge --quiet
 
 # Run all installs
-echo "› $ZSH/script/install"
-"$ZSH/script/install"
+echo "› $DOTFILES/script/install"
+"$DOTFILES/script/install"
 
 if which antibody >/dev/null 2>&1; then
   echo "› antibody update"
