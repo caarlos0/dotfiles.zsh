@@ -12,3 +12,4 @@
 .settings
 .ruby-version
 .vscode/
+dump.rdb
