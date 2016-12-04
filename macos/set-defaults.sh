@@ -333,40 +333,6 @@ defaults write com.twitter.twitter-mac HideInBackground -bool true
 #############################
 
 echo ""
-echo "› Text replacements:"
-echo "  ›  rsrs"
-defaults write -g NSUserDictionaryReplacementItems -array-add \
-  '{
-    on = 1;
-    replace = rsrs;
-    with = "( \\U0361\\U00b0 \\U035c\\U0296 \\U0361\\U00b0)";
-  }'
-
-echo "  ›  fuckthat"
-defaults write -g NSUserDictionaryReplacementItems -array-add \
-  '{
-      on = 1;
-      replace = fuckthat;
-      with = "\\U2768\\U256f\\U00b0\\U25a1\\U00b0\\U2769\\U256f\\Ufe35\\U253b\\U2501\\U253b";
-  }'
-
-echo "  ›  dontcare"
-defaults write -g NSUserDictionaryReplacementItems -array-add \
-  '{
-      on = 1;
-      replace = dontcare;
-      with = "\\U00af\\\\_(\\U30c4)_/\\U00af";
-  }'
-
-echo "  ›  dafuq"
-defaults write -g NSUserDictionaryReplacementItems -array-add \
-  '{
-      on = 1;
-      replace = dafuq;
-      with = "\\U0ca0_\\U0ca0";
-  }'
-
-echo ""
 echo "› Kill related apps"
 for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" "cfprefsd" \
   "Dock" "Finder" "Mail" "Messages" "Safari" "SystemUIServer" \
