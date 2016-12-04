@@ -4,11 +4,15 @@
 #
 # `dot_update` handles installation, updates, things like that. Run it
 # periodically to make sure you're on the latest and greatest.
-export ZSH="$HOME/.dotfiles"
-cd "$ZSH" || exit 1
+export DOTFILES="$HOME/.dotfiles"
+cd "$DOTFILES" || exit 1
 
 # fixes PATH (we could be running from the crontab)
 PATH="$(command -p getconf PATH):/usr/local/bin"
+
+# load custom config if any
+# shellcheck disable=SC1090
+[ -f ~/.localrc ] && . ~/.localrc
 
 # ssh would not work under cron, add a https one
 echo "› setting up update channel"
@@ -23,16 +27,13 @@ echo "› submodules update"
 git submodule update --init --recursive --remote --merge --quiet
 
 # Run all installs
-echo "› $ZSH/script/install"
-"$ZSH/script/install"
+echo "› $DOTFILES/script/install"
+"$DOTFILES/script/install"
 
-if [ -n "$ZSH_VERSION" ]; then
+if which antibody >/dev/null 2>&1; then
   echo "› antibody update"
   antibody update
 fi
 
 echo "› registering last update"
 git config --global dotfiles.lastupdate "$(date +%Y%m%d%H%M)"
-
-echo "› update crontab config"
-"$ZSH/script/setup_autoupdate"
