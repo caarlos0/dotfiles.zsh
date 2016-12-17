@@ -40,8 +40,6 @@ setopt HIST_EXPIRE_DUPS_FIRST
 # dont ask for confirmation in rm globs*
 setopt RM_STAR_SILENT
 
-zle -N newtab
-
 # shellcheck disable=SC2004
 if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
   function zle-line-init() {
