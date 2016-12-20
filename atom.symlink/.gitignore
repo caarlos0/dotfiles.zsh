@@ -1,12 +1,9 @@
 .apm
-.atom
+compile-cache
 .node-gyp
-.storage
-blob-store
-compile-cache/
-nohup.out
 package
 packages
-recovery
 storage
-themes
+nohup.out
+blob-store
+.atom
