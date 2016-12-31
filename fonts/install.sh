@@ -1,12 +1,18 @@
 #!/bin/sh
-VERSION="v2.020"
-VERSION_="v2_020"
 URL="https://github.com/chrissimpkins/Hack/releases/download/"
+
+install() {
+  curl -L -s -o /tmp/hack.tgz "$URL/v2.020/Hack-v2_020-${0}.tar.gz"
+  tar xzvf /tmp/hack.tgz -C "$1"
+}
+
 if [ "$(uname -s)" = "Darwin" ]; then
-  curl -L -s -o /tmp/hack.tgz "$URL/$VERSION/Hack-${VERSION_}-otf.tar.gz"
-  tar xzvf /tmp/hack.tgz -C ~/Library/Fonts
+  if which brew >/dev/null 2>&1; then
+     brew cask install font-hack
+  else
+    install "otf" ~/Library/Fonts
+  fi
 else
   mkdir -p ~/.fonts
-  curl -L -s -o /tmp/hack.tgz "$URL/$VERSION/Hack-${VERSION_}-ttf.tar.gz"
-  tar xzvf /tmp/hack.tgz -C ~/.fonts
+  install "ttf" ~/.fonts
 fi
