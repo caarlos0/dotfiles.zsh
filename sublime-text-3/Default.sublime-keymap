@@ -1,0 +1,14 @@
+[
+    {
+        "command": "reveal_in_side_bar",
+        "keys": [
+            "ctrl+super+r"
+        ]
+    },
+    {
+        "command": "side_bar_rename",
+        "keys": [
+            "f2"
+        ]
+    }
+]
