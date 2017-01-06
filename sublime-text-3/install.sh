@@ -1,4 +1,5 @@
 #!/bin/sh
+test -z "$KEEP_SUBLIME" || exit 0
 
 for d in \
   "$HOME/Library/Application Support/Sublime Text 3" \
