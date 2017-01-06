@@ -18,7 +18,6 @@
 		"HTML-CSS-JS Prettify",
 		"Indent XML",
 		"LESS",
-		"Makefile Improved",
 		"Markdown Extended",
 		"Package Control",
 		"Puppet",
@@ -28,6 +27,6 @@
 		"SublimeLinter-contrib-puppet",
 		"SublimeLinter-jshint",
 		"SublimeLinter-shellcheck",
-		"Theme - Spacegray",
+		"Theme - Spacegray"
 	]
 }
