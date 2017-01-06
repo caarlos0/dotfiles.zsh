@@ -1,46 +1,44 @@
 {
-	"bold_folder_labels": true,
-	"caret_style": "phase",
-	"color_scheme": "Packages/User/base16-ocean.dark (SL).tmTheme",
-	"default_line_ending": "unix",
-	"ensure_newline_at_eof_on_save": true,
-	"file_exclude_patterns":
-	[
-		".project",
-		".classpath",
-		"*.iml",
-		".DS_Store",
-		"*.orig"
-	],
-	"folder_exclude_patterns":
-	[
-		"target",
-		".git",
-		".settings",
-		".idea"
-	],
-	"font_face": "Hack",
-	"font_size": 15,
-	"highlight_line": true,
-	"highlight_modified_tabs": true,
-	"ignored_packages":
-	[
-		"Markdown",
-		"Vintage"
-	],
-	"line_padding_bottom": 1,
-	"line_padding_top": 1,
-	"rulers":
-	[
-		80
-	],
-	"spacegray_sidebar_font_xlarge": true,
-	"spacegray_sidebar_tree_xlarge": true,
-	"spacegray_tabs_auto_width": true,
-	"spacegray_tabs_font_normal": true,
-	"spacegray_tabs_normal": true,
-	"tab_size": 2,
-	"theme": "Spacegray.sublime-theme",
-	"translate_tabs_to_spaces": true,
-	"trim_trailing_white_space_on_save": true
+    "enable_tab_scrolling": false, 
+    "theme": "Spacegray.sublime-theme", 
+    "ensure_newline_at_eof_on_save": true, 
+    "line_padding_bottom": 1, 
+    "file_exclude_patterns": [
+        ".project", 
+        ".classpath", 
+        "*.iml", 
+        ".DS_Store", 
+        "*.orig"
+    ], 
+    "default_line_ending": "unix", 
+    "line_padding_top": 1, 
+    "font_face": "Hack", 
+    "ignored_packages": [
+        "Vintage", 
+        "Makefile"
+    ], 
+    "spacegray_tabs_normal": true, 
+    "translate_tabs_to_spaces": true, 
+    "folder_exclude_patterns": [
+        "target", 
+        ".git", 
+        ".settings", 
+        ".idea"
+    ], 
+    "trim_trailing_white_space_on_save": true, 
+    "highlight_modified_tabs": true, 
+    "caret_style": "phase", 
+    "bold_folder_labels": true, 
+    "spacegray_fileicons": true, 
+    "spacegray_sidebar_tree_normal": true, 
+    "spacegray_tabs_auto_width": true, 
+    "tab_size": 2, 
+    "font_size": 15, 
+    "color_scheme": "Packages/User/SublimeLinter/base16-ocean.dark (SL).tmTheme", 
+    "rulers": [
+        80
+    ], 
+    "spacegray_tabs_font_normal": true, 
+    "spacegray_sidebar_font_normal": true, 
+    "highlight_line": true
 }
