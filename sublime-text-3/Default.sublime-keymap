@@ -10,5 +10,22 @@
         "keys": [
             "f2"
         ]
+    },
+    {
+        "args": {
+            "output": false
+        },
+        "command": "go_guru_goto_definition",
+        "context": [
+            {
+                "key": "selector",
+                "operand": "source.go",
+                "operator": "equal"
+            }
+        ],
+        "keys": [
+            "super+.",
+            "super+g"
+        ]
     }
 ]
