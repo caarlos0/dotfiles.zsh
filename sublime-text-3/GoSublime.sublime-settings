@@ -1,5 +1,40 @@
 {
-	"env": {
-		"GOPATH": "$HOME/Code/Go"
-	}
+    "autocomplete_suggest_imports": true,
+    "comp_lint_commands": [
+        {
+            "cmd": [
+                "goimports -w $_fn"
+            ],
+            "shell": true
+        },
+        {
+            "cmd": [
+                "golint $_fn"
+            ],
+            "shell": true
+        },
+        {
+            "cmd": [
+                "go",
+                "vet"
+            ]
+        }
+    ],
+    "comp_lint_enabled": true,
+    "env": {
+        "GOPATH": "$HOME/Code/Go:/usr/bin/go",
+        "PATH": "$HOME/Code/Go/bin:$PATH:/usr/bin"
+    },
+    "fmt_cmd": [
+        "gofmt",
+        "-s"
+    ],
+    "on_save": [
+        {
+            "cmd": "gs_comp_lint"
+        },
+        {
+            "cmd": "go install"
+        }
+    ]
 }
