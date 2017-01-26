@@ -2,8 +2,8 @@
 URL="https://github.com/chrissimpkins/Hack/releases/download/"
 
 install() {
-  curl -L -s -o /tmp/hack.tgz "$URL/v2.020/Hack-v2_020-${0}.tar.gz"
-  tar xzvf /tmp/hack.tgz -C "$1"
+  curl -L -s -o /tmp/hack.tgz "$URL/v2.020/Hack-v2_020-${1}.tar.gz"
+  tar xzvf /tmp/hack.tgz -C "$2"
 }
 
 if [ "$(uname -s)" = "Darwin" ]; then
