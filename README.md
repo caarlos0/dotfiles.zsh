@@ -1,6 +1,8 @@
 # carlos' dotfiles
 
-[![Build Status][tb]][tp] [![Powered by Antibody][ab]][ap]
+[![Build Status][tb]][tp] 
+[![Powered by Antibody][ab]][ap]
+[![SayThanks.io](https://img.shields.io/badge/SayThanks.io-%E2%98%BC-1EAEDB.svg?style=flat-square)](https://saythanks.io/to/caarlos0)
 
 > Config files for ZSH, Java, Ruby, Go, Editors, Terminals and more.
 
