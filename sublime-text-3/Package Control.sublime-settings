@@ -30,6 +30,7 @@
 		"SublimeLinter-contrib-puppet",
 		"SublimeLinter-jshint",
 		"SublimeLinter-shellcheck",
-		"Theme - Spacegray"
+		"Theme - Spacegray",
+		"WakaTime"
 	]
 }
