@@ -1,4 +1,4 @@
-# note this is alphabetically sorted
+# this block is in alphabetic order
 caarlos0/git-add-remote kind:path
 caarlos0/jvm
 caarlos0/ports kind:path
@@ -10,3 +10,8 @@ mafredri/zsh-async
 Tarrasch/zsh-bd
 wbinglee/zsh-wakatime
 zsh-users/zsh-completions
+
+# these should be at last!
+sindresorhus/pure
+zsh-users/zsh-syntax-highlighting
+zsh-users/zsh-history-substring-search
