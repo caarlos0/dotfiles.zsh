@@ -40,5 +40,6 @@
 	"spacegray_tabs_auto_width": true,
 	"tab_size": 2,
 	"theme": "Spacegray.sublime-theme",
-	"trim_trailing_white_space_on_save": true
+	"trim_trailing_white_space_on_save": true,
+	"word_wrap": false
 }
