@@ -9,16 +9,22 @@ if test "$(which code)"; then
   ln -sf "$DOTFILES/vscode/settings.json" "$VSCODE_HOME/User/settings.json"
   ln -sf "$DOTFILES/vscode/keybindings.json" "$VSCODE_HOME/User/keybindings.json"
 
+  # from `code --list-extensions`
   modules="
-    Borke.Puppet
+    Borke.puppet
     DotJoshJohnson.xml
     EditorConfig.EditorConfig
+    Kasik96.swift
     PeterJausovec.vscode-docker
     WakaTime.vscode-wakatime
+    be5invis.toml
     donjayamanne.python
-    georgewfraser.vscode-javac
     haaaad.ansible
+    ipedrazas.kubernetes-snippets
     lukehoban.Go
+    mattn.Runner
+    mauve.terraform
+    ms-vscode.cpptools
     rebornix.Ruby
   "
   for module in $modules; do
