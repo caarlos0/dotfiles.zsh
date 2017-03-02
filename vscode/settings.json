@@ -12,5 +12,10 @@
   "window.reopenFolders": "none",
   "terminal.external.osxExec": "iTerm.app",
   "files.autoSave": "onFocusChange",
-  "extensions.autoUpdate": true
+  "extensions.autoUpdate": true,
+  "workbench.iconTheme": "vs-seti",
+  "editor.cursorStyle": "block",
+  "editor.cursorBlinking": "phase",
+  "window.title": "${activeEditorMedium}${separator}${rootName}",
+  "files.trimTrailingWhitespace": true
 }
