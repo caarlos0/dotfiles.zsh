@@ -17,5 +17,6 @@
   "editor.cursorStyle": "block",
   "editor.cursorBlinking": "phase",
   "window.title": "${activeEditorMedium}${separator}${rootName}",
-  "files.trimTrailingWhitespace": true
+  "files.trimTrailingWhitespace": true,
+  "editor.minimap.enabled": true
 }
