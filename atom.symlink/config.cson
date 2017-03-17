@@ -12,7 +12,7 @@
       "one-dark-syntax"
     ]
   editor:
-    fontFamily: "Hack"
+    fontFamily: "Anonymous Pro"
     fontSize: 15
     invisibles: {}
     scrollPastEnd: true
