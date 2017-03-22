@@ -80,7 +80,7 @@ link_file() {
 
 install_dotfiles () {
   info 'installing dotfiles'
-  find -H "$DOTFILES_ROOT" -maxdepth 2 -name '*.symlink' -not -path '*.git*' |
+  find -H "$DOTFILES_ROOT" -maxdepth 3 -name '*.symlink' -not -path '*.git*' |
     while read -r src; do
       dst="$HOME/.$(basename "${src%.*}")"
       link_file "$src" "$dst"
