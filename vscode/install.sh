@@ -14,7 +14,6 @@ if test "$(which code)"; then
     Borke.puppet
     DotJoshJohnson.xml
     EditorConfig.EditorConfig
-    Kasik96.swift
     PeterJausovec.vscode-docker
     WakaTime.vscode-wakatime
     be5invis.toml
@@ -24,7 +23,6 @@ if test "$(which code)"; then
     lukehoban.Go
     mattn.Runner
     mauve.terraform
-    ms-vscode.cpptools
     rebornix.Ruby
   "
   for module in $modules; do
