@@ -316,7 +316,7 @@
 	<key>HideScrollbar</key>
 	<true/>
 	<key>HideTab</key>
-	<true/>
+	<false/>
 	<key>HighlightTabLabels</key>
 	<true/>
 	<key>HotKeyBookmark</key>
@@ -377,11 +377,9 @@
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>388 265 1018 447 0 0 1280 778 </string>
+	<string>269 166 796 473 0 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>252 113 665 377 0 0 1280 777 </string>
-	<key>NSWindow Frame iTerm Window 1</key>
-	<string>152 325 570 452 0 0 1280 777 </string>
+	<string>0 666 650 377 0 0 1920 1058 </string>
 	<key>NeverWarnAboutShortLivedSessions_21048CBB-8F4B-4492-A49A-8DCDADDF9248</key>
 	<true/>
 	<key>New Bookmarks</key>
@@ -1207,13 +1205,9 @@
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
-	<string>332629FF-1C34-4FD1-9E90-7EAA2C4AA563</string>
-	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
-	<true/>
-	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
-	<integer>0</integer>
+	<string>0C298F9B-BF61-4D5B-974E-AD75467DBB6C</string>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>512350625.24354303</real>
+	<real>512398000.62105602</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -1264,7 +1258,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/carlosabecker/.dotfiles/iterm</string>
+	<string>/Users/carlos/.dotfiles/iterm</string>
 	<key>PromptOnClose</key>
 	<true/>
 	<key>PromptOnQuit</key>
@@ -1280,11 +1274,11 @@
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/testing.xml?shard=10</string>
+	<string>https://iterm2.com/appcasts/testing.xml?shard=16</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-03-27T23:41:32Z</date>
+	<date>2017-03-28T12:47:29Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -1337,6 +1331,8 @@
 	<string>/-+\~_.</string>
 	<key>findIgnoreCase_iTerm</key>
 	<true/>
+	<key>findMode_iTerm</key>
+	<integer>0</integer>
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
