@@ -1,12 +1,14 @@
 #!/bin/bash
-set -x
-if test -f ~/.gnupg/.gpg-agent-info -a -n "$(pgrep gpg-agent)"; then
-  source ~/.gnupg/.gpg-agent-info
+if test -f "$HOME/.gnupg/.gpg-agent-info" -a -n "$(pgrep gpg-agent)"; then
+  # shellcheck disable=SC1090
+  source "$HOME/.gnupg/.gpg-agent-info"
   export GPG_AGENT_INFO
   GPG_TTY=$(tty)
   export GPG_TTY
 else
-  eval $(gpg-agent --daemon --write-env-file ~/.gnupg/.gpg-agent-info)
+  # shellcheck disable=SC1090
+  source <( gpg-agent --daemon --write-env-file ~/.gnupg/.gpg-agent-info )
 fi
 
-/usr/local/bin/gpg $*
+# shellcheck disable=SC2048,SC2086
+gpg $*
