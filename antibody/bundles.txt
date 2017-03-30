@@ -10,6 +10,7 @@ mafredri/zsh-async
 Tarrasch/zsh-bd
 wbinglee/zsh-wakatime
 zsh-users/zsh-completions
+zsh-users/zsh-autosuggestions
 
 # these should be at last!
 sindresorhus/pure
