@@ -1,6 +1,6 @@
 # carlos' dotfiles
 
-[![Build Status][tb]][tp] 
+[![Build Status][tb]][tp]
 [![Powered by Antibody][ab]][ap]
 [![SayThanks.io](https://img.shields.io/badge/SayThanks.io-%E2%98%BC-1EAEDB.svg?style=flat-square)](https://saythanks.io/to/caarlos0)
 
@@ -41,7 +41,7 @@ $ zsh # or just close and open your terminal again.
 
 ### Recommended Software
 
-For OSX, I recommend:
+For macOS, I recommend:
 
 - `grc`: for colorizing stuff (like `ls`);
 - iTerm: a better terminal emulator;
@@ -50,10 +50,20 @@ For Linux:
 
 - Terminator: a better terminal emulator;
 
-Both:
+For both Linux and macOS:
 
 - `diff-so-fancy`: better git difs (you'll need to run `dot_update` to apply it);
 - `fzf`: fuzzy finder, used in `,t` on vim, for example.
+
+### macOS defaults
+
+You use it by running:
+
+```console
+$DOTFILES/macos/set-defaults.sh
+```
+
+And logging out and in again.
 
 ## Further help:
 
