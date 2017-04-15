@@ -17,8 +17,8 @@ if test "$(which apm)"; then
     linter
     linter-jshint
     linter-ruby
-    native-ui
-    one-dark-syntax
+    nord-atom-syntax
+    nord-atom-ui
     sort-lines
     wakatime
   "

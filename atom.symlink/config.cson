@@ -7,10 +7,12 @@
     ]
     hideGitIgnoredFiles: true
     projectHome: "~/Code/"
+    telemetryConsent: "no"
     themes: [
-      "native-ui"
-      "one-dark-syntax"
+      "nord-atom-ui"
+      "nord-atom-syntax"
     ]
+    titleBar: "custom"
   editor:
     fontFamily: "Anonymous Pro"
     fontSize: 15
@@ -26,6 +28,8 @@
   "go-rename": {}
   gofmt:
     formatTool: "goreturns"
+  "linter-ui-default":
+    showPanel: true
   "tree-view":
     hideVcsIgnoredFiles: true
   "unity-ui":
