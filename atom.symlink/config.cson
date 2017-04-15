@@ -8,10 +8,6 @@
     hideGitIgnoredFiles: true
     projectHome: "~/Code/"
     telemetryConsent: "no"
-    themes: [
-      "nord-atom-ui"
-      "nord-atom-syntax"
-    ]
     titleBar: "custom"
   editor:
     fontFamily: "Anonymous Pro"
@@ -24,6 +20,7 @@
     coloured: false
     tabPaneIcon: false
   "go-plus":
+    currentPanelHeight: "26.679586563307495vh"
     goPath: "~/Code/Go"
   "go-rename": {}
   gofmt:
@@ -36,5 +33,7 @@
     showIcons: true
   wakatime:
     apikey: "Saved in your ~/.wakatime.cfg file"
+  "wakatime-hidden":
+    lastInit: 1492268782
   welcome:
     showOnStartup: false
