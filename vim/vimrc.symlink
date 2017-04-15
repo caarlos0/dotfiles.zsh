@@ -1,0 +1,40 @@
+set nocompatible
+set background=dark
+colorscheme base16-ocean
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'tpope/vim-sensible'
+Plugin 'rstacruz/vim-opinion'
+Plugin 'vim-scripts/closetag.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'fatih/vim-go'
+Plugin 'honza/dockerfile.vim'
+Plugin 'junegunn/fzf'
+Plugin 'wakatime/vim-wakatime'
+
+set rtp+=~/.fzf
+
+call vundle#end()
+filetype plugin indent on
+
+"
+" my custom settings
+"
+"
+" highlight 80c
+set colorcolumn=80
+
+" lead with ,
+let mapleader = ","
+
+" toggle nerdtree with ,e
+:nmap ,e :NERDTreeToggle<CR>
+:nmap ,t :FZF<CR>
+
+" ,s will strip whitespaces
+function! StripWhitespace ()
+  exec ':%s/ \+$//gc'
+endfunction
+map ,s :call StripWhitespace ()<CR>
