@@ -12,6 +12,7 @@
     'prefix': 'test'
     'body': """
       func Test${1}(t *testing.T) {
+        var assert = assert.New(t)
         ${2}
       }
     """

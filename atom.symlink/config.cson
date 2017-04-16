@@ -26,7 +26,7 @@
   gofmt:
     formatTool: "goreturns"
   "linter-ui-default":
-    showPanel: true
+    panelHeight: 116
   "tree-view":
     hideVcsIgnoredFiles: true
   "unity-ui":
@@ -34,6 +34,6 @@
   wakatime:
     apikey: "Saved in your ~/.wakatime.cfg file"
   "wakatime-hidden":
-    lastInit: 1492268782
+    lastInit: 1492356222
   welcome:
     showOnStartup: false
