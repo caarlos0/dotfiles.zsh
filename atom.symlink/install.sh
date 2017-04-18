@@ -21,7 +21,7 @@ if test "$(which apm)"; then
     wakatime
   "
   for module in $modules; do
-    apm install "$module" || true
+    apm list | grep -q "$module" || apm install "$module"
   done
 
   modules="
@@ -29,6 +29,6 @@ if test "$(which apm)"; then
     exception-reporting
   "
   for module in $modules; do
-    apm remove "$module" || true
+    apm list | grep -q "$module" || apm remove "$module"
   done
 fi
