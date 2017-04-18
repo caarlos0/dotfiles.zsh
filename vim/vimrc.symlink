@@ -13,6 +13,7 @@ Plugin 'fatih/vim-go'
 Plugin 'honza/dockerfile.vim'
 Plugin 'junegunn/fzf'
 Plugin 'wakatime/vim-wakatime'
+Plugin 'avakhov/vim-yaml'
 
 set rtp+=~/.fzf
 
