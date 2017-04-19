@@ -18,4 +18,4 @@ zstyle ':completion:*' insert-tab pending
 zstyle ':completion:*' menu select=2
 
 # complete aliases as well
-setopt complete_aliases
+setopt COMPLETE_ALIASES
