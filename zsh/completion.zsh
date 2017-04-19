@@ -16,6 +16,3 @@ zstyle ':completion:*' insert-tab pending
 
 # menu if nb items > 2
 zstyle ':completion:*' menu select=2
-
-# complete aliases as well
-setopt COMPLETE_ALIASES
