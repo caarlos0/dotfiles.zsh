@@ -4,6 +4,7 @@ export DOTFILES="$HOME/.dotfiles"
 
 # your project folder that we can `c [tab]` to
 export PROJECTS="$HOME/Code"
+mkdir -p "$PROJECTS" > /dev/null 2>&1
 
 # your default editor
 export EDITOR='atom'
