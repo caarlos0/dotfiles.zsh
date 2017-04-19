@@ -1,13 +1,10 @@
 #!/bin/sh
-# grc overides for ls
 #   Made possible through contributions from generous benefactors like
 #   `brew install coreutils`
-if which gls >/dev/null 2>&1; then
-  alias ls="gls -F --color"
-elif [ "$(uname -s)" != "Darwin" ]; then
-  alias ls="ls -F --color"
+if [ "$(uname -s)" = "Darwin" ]; then
+  alias ls="ls -FG"
 else
-  alias ls="ls -F"
+  alias ls="ls -F --color"
 fi
 alias l="ls -lAh"
 alias ll="ls -l"

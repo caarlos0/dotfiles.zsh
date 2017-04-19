@@ -43,7 +43,6 @@ $ zsh # or just close and open your terminal again.
 
 For macOS, I recommend:
 
-- `grc`: for colorizing stuff (like `ls`);
 - iTerm: a better terminal emulator;
 
 For Linux:
