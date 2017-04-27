@@ -4,5 +4,5 @@ if which brew >/dev/null 2>&1; then
 else
   curl -sL https://git.io/antibody | sh -s
 fi
-antibody bundle < "$DOTFILES/antibody/bundles.txt" > ~/.bundles.txt
+antibody bundle < "$DOTFILES/antibody/bundles.txt" > ~/.zsh_plugins.sh
 antibody update
