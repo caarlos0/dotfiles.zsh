@@ -4,9 +4,10 @@
     disabledPackages: [
       "metrics"
       "exception-reporting"
+      "linter-jshint"
+      "go-rename"
     ]
     hideGitIgnoredFiles: true
-    projectHome: "~/Code/"
     telemetryConsent: "no"
     titleBar: "custom"
   editor:
@@ -20,13 +21,32 @@
     coloured: false
     tabPaneIcon: false
   "go-plus":
-    currentPanelHeight: "26.679586563307495vh"
-    goPath: "~/Code/Go"
+    currentPanelHeight: "22.545219638242894vh"
+    disabledBundledPackages: [
+      "go-rename"
+      "go-debug"
+    ]
+    get:
+      timeout: 0
+    lint:
+      args: [
+        "--disable-all"
+        "--json"
+        "--vendor"
+        "."
+      ]
+    navigator:
+      mode: "guru"
+    panelDisplayMode: "closed"
+    test:
+      runTestsOnSave: false
+      runTestsWithVerboseFlag: true
   "go-rename": {}
   gofmt:
     formatTool: "goreturns"
   "linter-ui-default":
     panelHeight: 116
+    showPanel: true
   "tree-view":
     hideVcsIgnoredFiles: true
   "unity-ui":
