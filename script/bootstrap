@@ -63,7 +63,6 @@ find_zsh() {
   fi
 }
 
-setup_gitconfig
 install_dotfiles
 
 info "installing dependencies"
