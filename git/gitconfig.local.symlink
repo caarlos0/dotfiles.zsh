@@ -11,6 +11,7 @@
 	pr = open-pr
 	please = push --force-with-lease
 	commend = commit --amend --no-edit
+	fpr = fetch-pr
 [color]
 	diff = auto
 	status = auto
