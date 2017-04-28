@@ -21,7 +21,7 @@ if test "$(which apm)"; then
     wakatime
   "
   for module in $modules; do
-    if [[ ! -d "$HOME/.atom/packages/$module" ]]; then
+    if test ! -d "$HOME/.atom/packages/$module"; then
       apm install "$module"
     fi
   done
@@ -31,7 +31,7 @@ if test "$(which apm)"; then
     exception-reporting
   "
   for module in $modules; do
-    if [[ -d "$HOME/.atom/packages/$module" ]]; then
+    if test -d "$HOME/.atom/packages/$module"; then
       apm remove "$module"
     fi
   done
