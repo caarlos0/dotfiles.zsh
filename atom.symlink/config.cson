@@ -6,9 +6,15 @@
       "exception-reporting"
       "linter-jshint"
       "go-rename"
+      "welcome"
+      "whitespace"
     ]
     hideGitIgnoredFiles: true
     telemetryConsent: "no"
+    themes: [
+      "nord-atom-ui"
+      "nord-atom-syntax"
+    ]
     titleBar: "custom"
   editor:
     fontFamily: "Anonymous Pro"
