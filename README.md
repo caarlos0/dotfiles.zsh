@@ -2,6 +2,7 @@
 
 [![Build Status][tb]][tp]
 [![Powered by Antibody][ab]][ap]
+[![Beerpay](https://beerpay.io/caarlos0/dotfiles/badge.svg?style=flat-square)](https://beerpay.io/caarlos0/dotfiles)
 [![SayThanks.io](https://img.shields.io/badge/SayThanks.io-%E2%98%BC-1EAEDB.svg?style=flat-square)](https://saythanks.io/to/caarlos0)
 
 > Config files for ZSH, Java, Ruby, Go, Editors, Terminals and more.
