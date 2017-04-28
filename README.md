@@ -74,3 +74,8 @@ And logging out and in again.
 
 Feel free to contribute. Pull requests will be automatically
 checked/linted with [Shellcheck](https://github.com/koalaman/shellcheck).
+
+## Support on Beerpay
+Hey dude! Help me out for a couple of :beers:!
+
+[![Beerpay](https://beerpay.io/caarlos0/dotfiles/badge.svg?style=beer-square)](https://beerpay.io/caarlos0/dotfiles)  [![Beerpay](https://beerpay.io/caarlos0/dotfiles/make-wish.svg?style=flat-square)](https://beerpay.io/caarlos0/dotfiles?focus=wish)
