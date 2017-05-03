@@ -6,7 +6,7 @@ export DOTFILES="$HOME/.dotfiles"
 export PROJECTS="$HOME/Code"
 
 # your default editor
-export EDITOR='atom'
+export EDITOR='code'
 
 # all of our zsh files
 typeset -U config_files
