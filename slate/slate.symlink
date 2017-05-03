@@ -9,8 +9,8 @@ config keyboardLayout qwerty
 
 # App Aliases
 alias browser 'Google Chrome'
-alias editor 'Atom'
-alias terminal 'iTerm'
+alias editor 'Code'
+alias terminal 'iTerm2'
 
 # Positions aliases
 alias full              move screenOriginX;screenOriginY                               screenSizeX;screenSizeY
