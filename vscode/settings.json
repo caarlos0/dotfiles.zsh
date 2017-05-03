@@ -5,7 +5,7 @@
     80,
     120
   ],
-  "editor.tabSize": 2,
+  "editor.tabSize": 4,
   "editor.trimAutoWhitespace": true,
   "editor.tabCompletion": true,
   "explorer.openEditors.visible": 0,
@@ -18,5 +18,6 @@
   "editor.cursorBlinking": "phase",
   "window.title": "${activeEditorMedium}${separator}${rootName}",
   "files.trimTrailingWhitespace": true,
-  "editor.minimap.enabled": true
+  "editor.minimap.enabled": true,
+  "editor.renderWhitespace": "boundary"
 }
