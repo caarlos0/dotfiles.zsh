@@ -13,6 +13,10 @@ alias grep="grep --color=auto"
 alias duf="du -sh * | sort -hr"
 alias less="less -r"
 
+# quick hack to make watch work with aliases
+alias watch='watch '
+
+
 if [ "$(uname -s)" != "Darwin" ]; then
   if [ -z "$(command -v pbcopy)" ]; then
     if [ -n "$(command -v xclip)" ]; then
