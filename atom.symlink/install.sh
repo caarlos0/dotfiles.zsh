@@ -21,7 +21,9 @@ if test "$(which apm)"; then
     wakatime
   "
   for module in $modules; do
-    apm list | grep -q "$module" || apm install "$module"
+    if test ! -d "$HOME/.atom/packages/$module"; then
+      apm install "$module"
+    fi
   done
 
   modules="
@@ -29,6 +31,8 @@ if test "$(which apm)"; then
     exception-reporting
   "
   for module in $modules; do
-    apm list | grep -q "$module" || apm remove "$module"
+    if test -d "$HOME/.atom/packages/$module"; then
+      apm remove "$module"
+    fi
   done
 fi

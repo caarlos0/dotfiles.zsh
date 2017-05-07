@@ -1,0 +1,3 @@
+#!/bin/sh
+set -eo pipefail
+git fetch origin "pull/$1/head:pull-$1"
