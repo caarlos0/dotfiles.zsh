@@ -8,3 +8,4 @@ kubectl() {
 
 alias k='kubectl'
 alias sk='kubectl -n kube-system'
+alias kx='kubectl config use-context'
