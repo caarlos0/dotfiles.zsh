@@ -44,10 +44,6 @@ echo "  › Set a really fast key repeat"
 defaults write NSGlobalDomain KeyRepeat -int 2
 defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
-echo "  › Run the screensaver if we're in the bottom-left hot corner"
-defaults write com.apple.dock wvous-bl-corner -int 5
-defaults write com.apple.dock wvous-bl-modifier -int 0
-
 echo "  › Disable transparency"
 defaults write com.apple.universalaccess reduceTransparency -bool true
 
