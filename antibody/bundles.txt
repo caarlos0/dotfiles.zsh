@@ -12,6 +12,7 @@ Tarrasch/zsh-bd
 wbinglee/zsh-wakatime
 zsh-users/zsh-completions
 zsh-users/zsh-autosuggestions
+lukechilds/zsh-nvm
 
 # these should be at last!
 sindresorhus/pure
