@@ -1,3 +1,6 @@
 [submodule "build"]
   path = build
   url = https://github.com/caarlos0/shell-travis-build.git
+[submodule "vim/vim.symlink/bundle/Vundle.vim"]
+	path = vim/vim.symlink/bundle/Vundle.vim
+	url = https://github.com/VundleVim/Vundle.vim
