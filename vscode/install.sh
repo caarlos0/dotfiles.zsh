@@ -21,10 +21,11 @@ if test "$(which code)"; then
     haaaad.ansible
     ipedrazas.kubernetes-snippets
     lukehoban.Go
-    mattn.Runner
     mauve.terraform
     rebornix.Ruby
-  "
+    shanoor.vscode-nginx
+    timonwong.shellcheck
+"
   for module in $modules; do
     code --install-extension "$module" || true
   done
