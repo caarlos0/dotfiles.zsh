@@ -20,5 +20,8 @@
   "files.trimTrailingWhitespace": true,
   "editor.minimap.enabled": true,
   "editor.renderWhitespace": "boundary",
-  "workbench.colorTheme": "Nord"
+  "workbench.welcome.enabled": false,
+  "npm.runInTerminal": false,
+  "flow.useNPMPackagedFlow": true,
+  "javascript.validate.enable": false
 }
