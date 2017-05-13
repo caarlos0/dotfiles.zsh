@@ -2,6 +2,7 @@
 	cmd = diffmerge $LOCAL $REMOTE
 [alias]
 	co = checkout
+	graph = log --graph --color --pretty=format:"%C(yellow)%H%C(green)%d%C(reset)%n%x20%cd%n%x20%cn%x20(%ce)%n%x20%s%n"
 	count = shortlog -sn
 	lc = add-rm-line-count
 	g = grep --break --heading --line-number
