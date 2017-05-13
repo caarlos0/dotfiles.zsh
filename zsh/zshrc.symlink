@@ -44,3 +44,5 @@ unset config_files updated_at
 # want in your public, versioned repo.
 # shellcheck disable=SC1090
 [ -f ~/.localrc ] && . ~/.localrc
+
+export PATH="$HOME/.yarn/bin:$PATH"
