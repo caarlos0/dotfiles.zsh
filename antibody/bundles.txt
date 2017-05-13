@@ -14,6 +14,7 @@ zsh-users/zsh-completions
 zsh-users/zsh-autosuggestions
 cswl/zsh-rbenv
 lukechilds/zsh-nvm
+cswl/zsh-rbenv
 
 # these should be at last!
 sindresorhus/pure
