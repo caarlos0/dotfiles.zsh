@@ -19,5 +19,9 @@
   "window.title": "${activeEditorMedium}${separator}${rootName}",
   "files.trimTrailingWhitespace": true,
   "editor.minimap.enabled": true,
-  "editor.renderWhitespace": "boundary"
+  "editor.renderWhitespace": "boundary",
+  "workbench.welcome.enabled": false,
+  "npm.runInTerminal": false,
+  "flow.useNPMPackagedFlow": true,
+  "javascript.validate.enable": false
 }
