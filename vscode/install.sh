@@ -16,6 +16,7 @@ if test "$(which code)"; then
     EditorConfig.EditorConfig
     PeterJausovec.vscode-docker
     WakaTime.vscode-wakatime
+    arcticicestudio.nord-visual-studio-code
     be5invis.toml
     donjayamanne.python
     haaaad.ansible
