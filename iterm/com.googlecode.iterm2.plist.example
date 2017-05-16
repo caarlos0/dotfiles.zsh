@@ -21,7 +21,7 @@
 	<key>ClosingHotkeySwitchesSpaces</key>
 	<false/>
 	<key>CommandSelection</key>
-	<false/>
+	<true/>
 	<key>Control</key>
 	<integer>1</integer>
 	<key>CopyLastNewline</key>
@@ -297,6 +297,8 @@
 	<false/>
 	<key>DisableFullscreenTransparency</key>
 	<false/>
+	<key>DoubleClickPerformsSmartSelection</key>
+	<true/>
 	<key>EnableProxyIcon</key>
 	<true/>
 	<key>EnableRendezvous</key>
@@ -377,9 +379,7 @@
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>0 305 796 473 0 0 1280 778 </string>
-	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 4 1280 774 0 0 1280 778 </string>
+	<string>269 143 796 473 0 0 1280 778 </string>
 	<key>NeverWarnAboutShortLivedSessions_21048CBB-8F4B-4492-A49A-8DCDADDF9248</key>
 	<true/>
 	<key>New Bookmarks</key>
@@ -1205,11 +1205,9 @@
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
-	<string>0C298F9B-BF61-4D5B-974E-AD75467DBB6C</string>
-	<key>NoSyncPermissionToShowTip</key>
-	<false/>
+	<string>C9BC1F4E-19C9-44CF-B55F-77D2F28D58B0</string>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>512398000.62105602</real>
+	<real>516321019.79030699</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -1261,6 +1259,8 @@
 	</dict>
 	<key>PrefsCustomFolder</key>
 	<string>/Users/carlos/.dotfiles/iterm</string>
+	<key>Print In Black And White</key>
+	<true/>
 	<key>PromptOnClose</key>
 	<true/>
 	<key>PromptOnQuit</key>
@@ -1276,11 +1276,11 @@
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/testing.xml?shard=16</string>
+	<string>https://iterm2.com/appcasts/testing.xml?shard=70</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-05-03T13:39:39Z</date>
+	<date>2017-05-14T18:05:11Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -1338,6 +1338,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.1.beta.2</string>
+	<string>3.1.beta.3</string>
 </dict>
 </plist>
