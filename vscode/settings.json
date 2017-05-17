@@ -1,5 +1,5 @@
 {
-  "editor.fontFamily": "Anonymous Pro",
+  "editor.fontFamily": "Hack",
   "editor.fontSize": 15,
   "editor.rulers": [
     80,
@@ -24,5 +24,6 @@
   "workbench.welcome.enabled": false,
   "npm.runInTerminal": false,
   "flow.useNPMPackagedFlow": true,
-  "javascript.validate.enable": false
+  "javascript.validate.enable": true,
+  "terminal.external.linuxExec": "termite"
 }
