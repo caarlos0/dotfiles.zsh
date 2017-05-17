@@ -25,6 +25,5 @@
   "flow.useNPMPackagedFlow": true,
   "javascript.validate.enable": true,
   "terminal.external.linuxExec": "termite",
-  "git.enabled": false,
-  "workbench.colorTheme": "Nord"
+  "git.enabled": false
 }

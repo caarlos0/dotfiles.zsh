@@ -12,7 +12,6 @@ Tarrasch/zsh-bd
 wbinglee/zsh-wakatime
 zsh-users/zsh-completions
 zsh-users/zsh-autosuggestions
-cswl/zsh-rbenv
 lukechilds/zsh-nvm
 cswl/zsh-rbenv
 
