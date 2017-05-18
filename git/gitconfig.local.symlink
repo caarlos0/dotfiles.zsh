@@ -12,6 +12,7 @@
 	please = push --force-with-lease
 	commend = commit --amend --no-edit
 	fpr = fetch-pr
+	lt = log --tags --decorate --simplify-by-decoration --oneline
 [color]
 	diff = auto
 	status = auto
