@@ -23,6 +23,5 @@
   "workbench.welcome.enabled": false,
   "npm.runInTerminal": false,
   "flow.useNPMPackagedFlow": true,
-  "javascript.validate.enable": true,
-  "terminal.external.linuxExec": "termite"
+  "javascript.validate.enable": true
 }
