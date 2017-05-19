@@ -24,5 +24,6 @@
   "npm.runInTerminal": false,
   "flow.useNPMPackagedFlow": true,
   "javascript.validate.enable": true,
-  "terminal.external.linuxExec": "termite"
+  "terminal.external.linuxExec": "termite",
+  "git.enabled": false
 }
