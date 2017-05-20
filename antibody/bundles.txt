@@ -13,6 +13,7 @@ wbinglee/zsh-wakatime
 zsh-users/zsh-completions
 zsh-users/zsh-autosuggestions
 cswl/zsh-rbenv
+lukechilds/zsh-nvm
 
 # these should be at last!
 sindresorhus/pure
