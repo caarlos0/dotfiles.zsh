@@ -1,4 +1,12 @@
 "*":
+  "atom-material-ui":
+    colors:
+      abaseColor: "#ffd54f"
+      accentColor: "#a28832"
+      predefinedColor: "Amber"
+    ui:
+      panelContrast: true
+      panelShadows: true
   core:
     autoHideMenuBar: true
     disabledPackages: [
@@ -12,12 +20,12 @@
     hideGitIgnoredFiles: true
     telemetryConsent: "no"
     themes: [
-      "nord-atom-ui"
-      "nord-atom-syntax"
+      "atom-material-ui"
+      "atom-material-syntax"
     ]
     titleBar: "custom"
   editor:
-    fontFamily: "Anonymous Pro"
+    fontFamily: "Hack"
     fontSize: 15
     invisibles: {}
     scrollPastEnd: true
@@ -53,6 +61,18 @@
   "linter-ui-default":
     panelHeight: 116
     showPanel: true
+  "platformio-ide-terminal":
+    ansiColors:
+      normal:
+        blue: "#ffffff"
+      zBright:
+        brightBlue: "#ffffff"
+    iconColors:
+      blue: "#ffffff"
+    style:
+      theme: "solarized-dark"
+    toggles:
+      autoClose: true
   "tree-view":
     hideVcsIgnoredFiles: true
   "unity-ui":
