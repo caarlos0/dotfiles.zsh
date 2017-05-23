@@ -58,6 +58,8 @@
   "go-rename": {}
   gofmt:
     formatTool: "goreturns"
+  "linter-shellcheck":
+    enableNotice: true
   "linter-ui-default":
     panelHeight: 116
     showPanel: true
