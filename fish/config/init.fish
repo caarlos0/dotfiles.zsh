@@ -77,8 +77,8 @@ alias npi='npm install'
 #
 # postgres
 #
-test -e "/Applications/Postgres.app" and
-  export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/9.5/bin/"
+# test -e "/Applications/Postgres.app" and \
+#   set -gx PATH $PATH /Applications/Postgres.app/Contents/Versions/9.5/bin/
 
 #
 # kubernetes
@@ -138,6 +138,6 @@ alias less="less -r"
 # fi
 
 # greps non ascii chars
-function nonascii -p "show non ASCII chars"
+function nonascii -d "show non ASCII chars"
   LANG=C grep --color=always '[^ -~]\+';
 end
