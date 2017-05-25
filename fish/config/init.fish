@@ -2,6 +2,7 @@
 # common env
 #
 set -gx DOTFILES ~/.dotfiles
+set -gx PATH $PATH $DOTFILES/bin
 set -gx PROJECTS ~/Code
 set -gx EDITOR vim
 set -gx VEDITOR code
@@ -42,12 +43,32 @@ end
 #
 set -gx GOPATH "$PROJECTS/Go"
 set -gx PATH $PATH $GOPATH/bin
-# alias gotest='go test -covermode=count -coverprofile=coverage.out'
-# alias gocover='gotest && go tool cover -html=coverage.out'
 
 #
 # homebrew
 #
+ if which brew >/dev/null 2>&1
+  function brew
+    switch $argv[1]
+    case cleanup
+      fish -c '
+        cd (brew --repo)
+        git prune
+        git gc
+      '
+      command brew cleanup --force
+      command brew cask cleanup --force
+      command brew prune
+      rm -rf (brew --cache)
+    case bump
+      command brew update
+      command brew upgrade
+      brew cleanup
+    case *
+      command brew $argv
+    end
+  end
+end
 
 #
 # java
@@ -101,37 +122,28 @@ alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pa
 #
 # system
 #
-set -gx PATH $PATH $DOTFILES/bin
-switch (uname -s)
-case Darwin
+if test (uname -s) = "Darwin"
   alias ls="ls -FG"
-case *
+else
   alias ls="ls -F --color"
+  if which xclip > /dev/null 2>&1
+    alias pbcopy="xclip -selection clipboard"
+    alias pbpaste="xclip -selection clipboard -o"
+  else if which sel > /dev/null 2>&1
+    alias pbcopy="xsel --clipboard --input"
+    alias pbpaste="xsel --clipboard --output"
+  end
+  if which xdg-open > /dev/null 2>&1
+     alias open="xdg-open"
+  end
 end
+
 alias l="ls -lAh"
 alias ll="ls -l"
 alias la="ls -A"
 alias grep="grep --color=auto"
 alias duf="du -sh * | sort -hr"
 alias less="less -r"
-
-# quick hack to make watch work with aliases
-# alias watch='watch '
-
-# if [ "$(uname -s)" != "Darwin" ]; then
-#   if [ -z "$(command -v pbcopy)" ]; then
-#     if [ -n "$(command -v xclip)" ]; then
-#       alias pbcopy="xclip -selection clipboard"
-#       alias pbpaste="xclip -selection clipboard -o"
-#     elif [ -n "$(command -v xsel)" ]; then
-#       alias pbcopy="xsel --clipboard --input"
-#       alias pbpaste="xsel --clipboard --output"
-#     fi
-#   fi
-#   if [ -e /usr/bin/xdg-open ]; then
-#     alias open="xdg-open"
-#   fi
-# fi
 
 # greps non ascii chars
 function nonascii -d "show non ASCII chars"
