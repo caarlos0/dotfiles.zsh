@@ -7,3 +7,6 @@ mkdir -p ~/.config/fish/completions
 
 # docker completions
 curl https://raw.githubusercontent.com/moby/moby/master/contrib/completion/fish/docker.fish > ~/.config/fish/completions/docker.fish
+
+# kubectl completions
+curl https://raw.githubusercontent.com/evanlucas/fish-kubectl-completions/master/kubectl.fish > ~/.config/fish/completions/kubectl.fish
