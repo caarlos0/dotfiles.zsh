@@ -1,6 +1,4 @@
-package aws
 package brew
-package pbcopy
 package rbenv
 package wifi-password
 package z
