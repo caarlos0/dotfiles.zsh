@@ -17,9 +17,7 @@ alias d='docker'
 #
 alias gl='git pull --prune'
 alias glg="git log --graph --decorate --oneline --abbrev-commit"
-alias glga="glg --all"
 alias gp='git push origin HEAD'
-alias gpa='git push origin --all'
 alias gd='git diff'
 alias gc='git commit'
 alias gca='git commit -a'
@@ -30,8 +28,6 @@ alias gaa='git add -A'
 alias gcm='git commit -m'
 alias gcam='git commit -a -m'
 alias gs='git status -sb'
-alias gcl='git clone'
-alias gcb='git-copy-branch-name'
 alias gpr='gp; git pr'
 
 function gi -d "gitignore for given languages"
@@ -48,25 +44,16 @@ set -gx PATH $PATH $GOPATH/bin
 # homebrew
 #
  if which brew >/dev/null 2>&1
-  function brew
-    switch $argv[1]
-    case cleanup
-      fish -c '
-        cd (brew --repo)
-        git prune
-        git gc
-      '
-      command brew cleanup --force
-      command brew cask cleanup --force
-      command brew prune
-      rm -rf (brew --cache)
-    case bump
-      command brew update
-      command brew upgrade
-      brew cleanup
-    case *
-      command brew $argv
-    end
+  function brew-cleanup -d "cleans brew up"
+    brew cleanup --force
+    brew cask cleanup --force
+    brew prune
+    rm -rf (brew --cache)
+  end
+  function brew-bump -d "bumps all brew installed software and cleans up"
+    brew update
+    brew upgrade
+    brew-cleanup
   end
 end
 
@@ -145,7 +132,6 @@ alias grep="grep --color=auto"
 alias duf="du -sh * | sort -hr"
 alias less="less -r"
 
-# greps non ascii chars
 function nonascii -d "show non ASCII chars"
   LANG=C grep --color=always '[^ -~]\+';
 end
