@@ -3,7 +3,6 @@
 #
 set -gx DOTFILES ~/.dotfiles
 set -gx PROJECTS ~/Code
-set -gx PATH $PATH $DOTFILES/bin
 set -gx EDITOR vim
 set -gx VEDITOR code
 
@@ -50,7 +49,6 @@ set -gx PATH $PATH $GOPATH/bin
 # homebrew
 #
 
-
 #
 # java
 #
@@ -73,12 +71,6 @@ alias npisd='npm install --save-dev'
 alias npig='npm install -g'
 alias npit='npm init'
 alias npi='npm install'
-
-#
-# postgres
-#
-# test -e "/Applications/Postgres.app" and \
-#   set -gx PATH $PATH /Applications/Postgres.app/Contents/Versions/9.5/bin/
 
 #
 # kubernetes
@@ -109,6 +101,7 @@ alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pa
 #
 # system
 #
+set -gx PATH $PATH $DOTFILES/bin
 switch (uname -s)
 case Darwin
   alias ls="ls -FG"
