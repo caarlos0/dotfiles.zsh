@@ -83,10 +83,13 @@ alias npi='npm install'
 #
 # kubernetes
 #
-# function kx -d "kubernetes context"
-#   test -n "$argv" && kubectl config use-context "$argv"
-#   test -z "$argv" && kubectl config get-contexts
-# end
+function kx -d "kubernetes context"
+  if test -n "$argv"
+    kubectl config use-context "$argv"
+  else
+    kubectl config get-contexts
+  end
+end
 
 alias k='kubectl'
 alias sk='kubectl -n kube-system'
