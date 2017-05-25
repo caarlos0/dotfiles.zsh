@@ -3,7 +3,7 @@
 #
 set -gx DOTFILES ~/.dotfiles
 set -gx PROJECTS ~/Code
-set -gx PATH $DOTFILES/bin $PATH
+set -gx PATH $PATH $DOTFILES/bin
 set -gx EDITOR vim
 set -gx VEDITOR code
 
@@ -42,7 +42,7 @@ end
 # golang
 #
 set -gx GOPATH "$PROJECTS/Go"
-set -gx PATH "$PATH $GOPATH/bin"
+set -gx PATH $PATH $GOPATH/bin
 # alias gotest='go test -covermode=count -coverprofile=coverage.out'
 # alias gocover='gotest && go tool cover -html=coverage.out'
 
