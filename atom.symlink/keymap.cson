@@ -1,0 +1,18 @@
+
+# Default Keymaps for Markdown Writer
+# https://atom.io/packages/markdown-writer
+#
+# Wiki: https://github.com/zhuochun/md-writer/wiki/Settings-for-Keymaps
+#
+".platform-linux atom-text-editor:not([mini])":
+  "shift-ctrl-K": "markdown-writer:insert-link"
+  "shift-ctrl-I": "markdown-writer:insert-image"
+  "ctrl-i":       "markdown-writer:toggle-italic-text"
+  "ctrl-b":       "markdown-writer:toggle-bold-text"
+  "ctrl-'":       "markdown-writer:toggle-code-text"
+  "ctrl-h":       "markdown-writer:toggle-strikethrough-text"
+  "ctrl-1":       "markdown-writer:toggle-h1"
+  "ctrl-2":       "markdown-writer:toggle-h2"
+  "ctrl-3":       "markdown-writer:toggle-h3"
+  "ctrl-4":       "markdown-writer:toggle-h4"
+  "ctrl-5":       "markdown-writer:toggle-h5"

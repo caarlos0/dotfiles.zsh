@@ -1,4 +1,10 @@
 "*":
+  "atom-beautify":
+    css:
+      default_beautifier: "Pretty Diff"
+    markdown:
+      commonmark: true
+    scss: {}
   "atom-material-ui":
     colors:
       abaseColor: "#ffd54f"
@@ -18,6 +24,7 @@
       "whitespace"
     ]
     hideGitIgnoredFiles: true
+    packagesWithKeymapsDisabled: []
     telemetryConsent: "no"
     themes: [
       "atom-material-ui"
@@ -31,9 +38,7 @@
     scrollPastEnd: true
     showIndentGuide: true
     showInvisibles: true
-  "file-icons":
-    coloured: false
-    tabPaneIcon: false
+  "file-icons": {}
   "go-plus":
     currentPanelHeight: "22.545219638242894vh"
     disabledBundledPackages: [
@@ -58,11 +63,19 @@
   "go-rename": {}
   gofmt:
     formatTool: "goreturns"
+  "linter-scss-lint":
+    executablePath: "/home/sean/.rbenv/shims/scss-lint"
   "linter-shellcheck":
     enableNotice: true
   "linter-ui-default":
-    panelHeight: 116
+    panelHeight: 175
     showPanel: true
+  "markdown-writer":
+    fileExtension: ".md"
+    newPostFileName: "{slug}{extension}"
+    siteImagesDir: "static/img"
+    sitePostsDir: "content/post/"
+    tableExtraPipes: true
   "platformio-ide-terminal":
     ansiColors:
       normal:
