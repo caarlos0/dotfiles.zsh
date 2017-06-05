@@ -4,6 +4,12 @@ set -e
 # Lint files
 ./build/build.sh
 
+# shfmt files
+git ls-tree -r HEAD |
+	grep -E '^1007|.*\..*sh$' |
+	awk '{print $4}' |
+	xargs shfmt -l -p
+
 # link to ~ and cd to it
 cd ..
 cp -rf dotfiles ~/.dotfiles

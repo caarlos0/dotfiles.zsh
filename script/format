@@ -1,0 +1,5 @@
+#!/bin/sh
+git ls-tree -r HEAD |
+	grep -E '^1007|.*\..*sh$' |
+		awk '{print $4}' |
+		xargs shfmt -s -w -p
