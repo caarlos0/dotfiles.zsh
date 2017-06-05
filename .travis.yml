@@ -4,9 +4,18 @@ rvm:
 os:
   - linux
   - osx
-install:
-  - ./build/install.sh
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get update && sudo apt-get install -y zsh; fi
+install: |
+  set -e
+  ./build/install.sh
+  if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
+    sudo apt-get update
+    sudo apt-get install -y zsh
+  fi
+  wget -O /usr/bin/shfmt https://github.com/mvdan/sh/releases/download/v1.3.1/shfmt_v1.3.1_$(uname -s | tr '[:upper:]' '[:lower:]')_amd64
+  chmod +x /usr/bin/shfmt
+  zsh --version
+  shfmt --version
+  shellcheck --version
 script:
   - ./script/test
 notifications:
