@@ -10,18 +10,18 @@
 #
 # Run ./set-defaults.sh and you'll be good to go.
 if [ "$(uname -s)" != "Darwin" ]; then
-  exit 0
+	exit 0
 fi
 
 set +e
 
 disable_agent() {
-  mv "$1" "$1_DISABLED" >/dev/null 2>&1 ||
-    sudo mv "$1" "$1_DISABLED" >/dev/null 2>&1
+	mv "$1" "$1_DISABLED" >/dev/null 2>&1 ||
+		sudo mv "$1" "$1_DISABLED" >/dev/null 2>&1
 }
 
 unload_agent() {
-  launchctl unload -w "$1" >/dev/null 2>&1
+	launchctl unload -w "$1" >/dev/null 2>&1
 }
 
 test -z "$TRAVIS_JOB_ID" && sudo -v
@@ -100,14 +100,14 @@ echo "  › Show battery percent"
 defaults write com.apple.menuextra.battery ShowPercent -bool true
 
 if [ ! -z "$TRAVIS_JOB_ID" ]; then
-  echo "  › Speed up wake from sleep to 24 hours from an hour"
-  # http://www.cultofmac.com/221392/quick-hack-speeds-up-retina-macbooks-wake-from-sleep-os-x-tips/
-  sudo pmset -a standbydelay 86400
+	echo "  › Speed up wake from sleep to 24 hours from an hour"
+	# http://www.cultofmac.com/221392/quick-hack-speeds-up-retina-macbooks-wake-from-sleep-os-x-tips/
+	sudo pmset -a standbydelay 86400
 fi
 
 echo "  › Removing duplicates in the 'Open With' menu"
 /System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister \
-  -kill -r -domain local -domain system -domain user
+	-kill -r -domain local -domain system -domain user
 
 #############################
 
@@ -265,24 +265,23 @@ defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 ###############################################################################
 # SSD-specific tweaks                                                         #
 ###############################################################################
-if [ ! -z "$TRAVIS_JOB_ID" ] && diskutil info disk0 | grep SSD > /dev/null 2>&1
-then
-  echo "  › Disable local backups"
-  # https://classicyuppie.com/what-crap-is-this-os-xs-mobilebackups/
-  sudo tmutil disablelocal
+if [ ! -z "$TRAVIS_JOB_ID" ] && diskutil info disk0 | grep SSD >/dev/null 2>&1; then
+	echo "  › Disable local backups"
+	# https://classicyuppie.com/what-crap-is-this-os-xs-mobilebackups/
+	sudo tmutil disablelocal
 
-  echo "  › Disable hibernation (speeds up entering sleep mode)"
-  sudo pmset -a hibernatemode 0
+	echo "  › Disable hibernation (speeds up entering sleep mode)"
+	sudo pmset -a hibernatemode 0
 
-  echo "  › Remove the sleep image file to save disk space"
-  sudo rm /private/var/vm/sleepimage
-  echo "  › Create a zero-byte file instead..."
-  sudo touch /private/var/vm/sleepimage
-  echo "  › ...and make sure it can’t be rewritten"
-  sudo chflags uchg /private/var/vm/sleepimage
+	echo "  › Remove the sleep image file to save disk space"
+	sudo rm /private/var/vm/sleepimage
+	echo "  › Create a zero-byte file instead..."
+	sudo touch /private/var/vm/sleepimage
+	echo "  › ...and make sure it can’t be rewritten"
+	sudo chflags uchg /private/var/vm/sleepimage
 
-  echo "  ›  Disable the sudden motion sensor as it’s not useful for SSDs"
-  sudo pmset -a sms 0
+	echo "  ›  Disable the sudden motion sensor as it’s not useful for SSDs"
+	sudo pmset -a sms 0
 fi
 
 #############################
@@ -290,10 +289,10 @@ fi
 echo ""
 echo "› Media:"
 if [ -z "$KEEP_ITUNES" ]; then
-  echo "  › Disable iTunes helper"
-  disable_agent /Applications/iTunes.app/Contents/MacOS/iTunesHelper.app
-  echo "  › Prevent play button from launching iTunes"
-  unload_agent /System/Library/LaunchAgents/com.apple.rcd.plist
+	echo "  › Disable iTunes helper"
+	disable_agent /Applications/iTunes.app/Contents/MacOS/iTunesHelper.app
+	echo "  › Prevent play button from launching iTunes"
+	unload_agent /System/Library/LaunchAgents/com.apple.rcd.plist
 fi
 
 echo "  › Disable Spotify web helper"
@@ -333,8 +332,8 @@ defaults write com.twitter.twitter-mac HideInBackground -bool true
 echo ""
 echo "› Kill related apps"
 for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" "cfprefsd" \
-  "Dock" "Finder" "Mail" "Messages" "Safari" "SystemUIServer" \
-  "Terminal" "Transmission" "Photos"; do
-  killall "$app" > /dev/null 2>&1
+	"Dock" "Finder" "Mail" "Messages" "Safari" "SystemUIServer" \
+	"Terminal" "Transmission" "Photos"; do
+	killall "$app" >/dev/null 2>&1
 done
 set -e

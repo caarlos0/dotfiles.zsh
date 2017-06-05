@@ -1,8 +1,8 @@
 #!/bin/sh
 if test "$(which apm)"; then
-  apm upgrade --confirm false
+	apm upgrade --confirm false
 
-  modules="
+	modules="
     atom-beautify
     atom-wrap-in-tag
     color-picker
@@ -20,19 +20,19 @@ if test "$(which apm)"; then
     sort-lines
     wakatime
   "
-  for module in $modules; do
-    if test ! -d "$HOME/.atom/packages/$module"; then
-      apm install "$module"
-    fi
-  done
+	for module in $modules; do
+		if test ! -d "$HOME/.atom/packages/$module"; then
+			apm install "$module"
+		fi
+	done
 
-  modules="
+	modules="
     metrics
     exception-reporting
   "
-  for module in $modules; do
-    if test -d "$HOME/.atom/packages/$module"; then
-      apm remove "$module"
-    fi
-  done
+	for module in $modules; do
+		if test -d "$HOME/.atom/packages/$module"; then
+			apm remove "$module"
+		fi
+	done
 fi

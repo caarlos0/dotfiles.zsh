@@ -1,8 +1,8 @@
 #!/bin/sh
 if [ "$(which go)" ] && [ -n "$GOPATH" ]; then
-  mkdir -p "$GOPATH/bin" "$GOPATH/src/github.com/"
+	mkdir -p "$GOPATH/bin" "$GOPATH/src/github.com/"
 
-  packages="
+	packages="
     github.com/alecthomas/gometalinter
     golang.org/x/tools/cmd/cover
     golang.org/x/tools/cmd/godoc
@@ -13,8 +13,8 @@ if [ "$(which go)" ] && [ -n "$GOPATH" ]; then
     github.com/golang/lint/golint
   "
 
-  for pkg in $packages; do
-    go get -u "$pkg"
-  done
-  "$GOPATH"/bin/gometalinter --install --update
+	for pkg in $packages; do
+		go get -u "$pkg"
+	done
+	"$GOPATH"/bin/gometalinter --install --update
 fi
