@@ -8,7 +8,7 @@ set -e
 git ls-tree -r HEAD |
 	grep -E '^1007|.*\..*sh$' |
 	awk '{print $4}' |
-	xargs shfmt -l -p
+	xargs shfmt -l
 
 # link to ~ and cd to it
 cd ..
