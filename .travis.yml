@@ -11,8 +11,8 @@ install: |
     sudo apt-get update
     sudo apt-get install -y zsh
   fi
-  wget -O /usr/local/bin/shfmt https://github.com/mvdan/sh/releases/download/v1.3.1/shfmt_v1.3.1_$(uname -s | tr '[:upper:]' '[:lower:]')_amd64
-  chmod +x /usr/local/bin/shfmt
+  sudo wget -O /usr/local/bin/shfmt https://github.com/mvdan/sh/releases/download/v1.3.1/shfmt_v1.3.1_$(uname -s | tr '[:upper:]' '[:lower:]')_amd64
+  sudo chmod +x /usr/local/bin/shfmt
   zsh --version
   shfmt --version
   shellcheck --version
