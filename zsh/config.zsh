@@ -40,18 +40,17 @@ setopt HIST_EXPIRE_DUPS_FIRST
 # dont ask for confirmation in rm globs*
 setopt RM_STAR_SILENT
 
-# do I really need this?
 # shellcheck disable=SC2004
-# if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
-#   function zle-line-init() {
-#     echoti smkx
-#   }
-#   function zle-line-finish() {
-#     echoti rmkx
-#   }
-#   zle -N zle-line-init
-#   zle -N zle-line-finish
-# fi
+if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
+  function zle-line-init() {
+    echoti smkx
+  }
+  function zle-line-finish() {
+    echoti rmkx
+  }
+  zle -N zle-line-init
+  zle -N zle-line-finish
+fi
 
 # Use emacs key bindings
 bindkey -e
