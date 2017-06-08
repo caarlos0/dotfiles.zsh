@@ -1,7 +1,7 @@
 #!/bin/sh
-find . -name '*.sh' -depth 2 -not -wholename './build/*' | while read -r src; do
+find . -maxdepth 3 -name '*.sh' -not -path './build/*' | while read -r src; do
 	shfmt -s -w -p "$src"
 done
-find . -name '*.zsh' -depth 2 -not -wholename './build/*' | while read -r src; do
+find . -maxdepth 3 -name '*.zsh' -not -path './build/*' | while read -r src; do
 	shfmt -s -w "$src"
 done
