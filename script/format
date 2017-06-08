@@ -1,7 +1,7 @@
 #!/bin/sh
 find . -maxdepth 3 -name '*.sh' -not -path './build/*' | while read -r src; do
-	shfmt -s -w -p "$src"
+	shfmt -w -p "$src"
 done
 find . -maxdepth 3 -name '*.zsh' -not -path './build/*' | while read -r src; do
-	shfmt -s -w "$src"
+	shfmt -w "$src"
 done
