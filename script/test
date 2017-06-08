@@ -5,7 +5,7 @@ set -e
 ./build/build.sh
 
 # shfmt files
-test "$(./script/format | wc -l)" -eq 0 || {
+test "$(./script/format | wc -l)" -ne 0 || {
 	echo "Invalid format, run ./script/format for more detail." >&2
 	./script/format >&2
 	exit 1
