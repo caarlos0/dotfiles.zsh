@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/sh
 set -e
 
 # Lint files
@@ -20,9 +20,10 @@ git config --global user.email "dotfiles@demo.com"
 ./script/bootstrap
 
 # load zshrc and check if antibody is working
-source ~/.zshrc
+# shellcheck disable=SC1090
+. ~/.zshrc
 
-test $(antibody list | wc -l) -gt 10 || {
+test "$(antibody list | wc -l)" -gt 10 || {
 	echo "expecting 10+ bundles loaded" >&2
 	exit 1
 }
