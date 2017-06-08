@@ -1,5 +1,7 @@
 #!/bin/sh
-git ls-tree -r HEAD |
-	grep -E '^1007|.*\..*sh$' |
-	awk '{print $4}' |
-	xargs shfmt -s -w -p
+find . -name '*.sh' -depth 2 -not -wholename './build/*' | while read -r src; do
+	shfmt -s -w -p "$src"
+done
+find . -name '*.zsh' -depth 2 -not -wholename './build/*' | while read -r src; do
+	shfmt -s -w "$src"
+done

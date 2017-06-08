@@ -5,10 +5,7 @@ set -e
 ./build/build.sh
 
 # shfmt files
-git ls-tree -r HEAD |
-	grep -E '^1007|.*\..*sh$' |
-	awk '{print $4}' |
-	xargs shfmt -l
+./script/format
 
 # link to ~ and cd to it
 cd ..
