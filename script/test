@@ -8,6 +8,7 @@ set -e
 test "$(./script/format | wc -l)" -ne 0 || {
 	echo "Invalid format, run ./script/format for more detail." >&2
 	./script/format >&2
+  git diff
 	exit 1
 }
 
