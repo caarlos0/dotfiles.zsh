@@ -6,6 +6,12 @@ os:
   - osx
 install: |
   set -e
+  if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
+    sudo apt-get update
+    sudo apt-get install -y zsh
+  else
+    brew install shellcheck shfmt
+  fi
   curl -sL https://git.io/shcheck | bash
   zsh --version
 script:
