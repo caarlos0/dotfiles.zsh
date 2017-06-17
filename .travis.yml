@@ -12,7 +12,7 @@ install: |
   else
     brew install shellcheck shfmt zsh curl || true
   fi
-  curl -sL https://git.io/shcheck | bash
+  curl -sL https://git.io/shcheck | bash -x
   zsh --version
 script:
   - ./script/test
