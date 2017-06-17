@@ -1,15 +1,14 @@
 #!/bin/sh
 set -e
 
-# Lint files
-./build/build.sh
-
-# shfmt files
-test "$(./script/format | wc -l)" -ne 0 || {
-	echo "Invalid format, run ./script/format for more detail." >&2
-	./script/format >&2
-	git diff
-}
+# lint files
+/tmp/shcheck \
+	--ignore "vim/vim.symlink/**/*" \
+	--ignore "zsh/config.zsh" \
+	--ignore "zsh/completion.zsh" \
+	--ignore "zsh/prompt.zsh" \
+	--ignore "zsh/fpath.zsh" \
+	--ignore "docker/completion.zsh"
 
 # link to ~ and cd to it
 cd ..
