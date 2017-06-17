@@ -7,7 +7,6 @@ os:
 install: |
   set -e
   curl -sL https://git.io/shcheck | bash
-  /tmp/shcheck install
   zsh --version
 script:
   - ./script/test
