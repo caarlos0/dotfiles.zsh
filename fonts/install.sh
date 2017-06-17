@@ -2,8 +2,8 @@
 URL="http://www.marksimonson.com/assets/content/fonts/AnonymousPro-1.002.zip"
 
 install() {
-	curl -L -s -o /tmp/anon.tgz "$URL"
-	tar xzvf /tmp/anon.tgz -C /tmp
+	curl -L -s -o /tmp/anon.zip "$URL"
+	unzip /tmp/anon.zip -d /tmp
 	cp /tmp/AnonymousPro-1.002.001/*.ttf "$2"
 }
 
