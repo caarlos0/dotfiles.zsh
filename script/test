@@ -25,7 +25,7 @@ git config --global user.email "dotfiles@demo.com"
 
 # load zshrc and check if antibody is working
 # shellcheck disable=SC1090
-. ~/.zshrc
+source ~/.zshrc
 
 test "$(antibody list | wc -l)" -gt 10 || {
 	echo "expecting 10+ bundles loaded" >&2
