@@ -16,7 +16,7 @@ PATH="$(command -p getconf PATH):/usr/local/bin"
 
 # ssh would not work under cron, add a https one
 echo "› setting up update channel"
-git remote add updates https://github.com/caarlos0/dotfiles.git 2> /dev/null
+git remote add updates https://github.com/caarlos0/dotfiles.git 2>/dev/null
 
 # Update repo
 echo "› git update"
@@ -31,8 +31,8 @@ echo "› $DOTFILES/script/install"
 "$DOTFILES/script/install"
 
 if which antibody >/dev/null 2>&1; then
-  echo "› antibody update"
-  antibody update
+	echo "› antibody update"
+	antibody update
 fi
 
 echo "› registering last update"

@@ -13,18 +13,7 @@ insert_final_newline = true
 max_line_length = 80
 trim_trailing_whitespace = true
 
-[*.xml]
-indent_style = tab
-indent_size = 4
-
-[*.py]
-indent_size = 4
-
-[*.java]
-indent_style = tab
-indent_size = 4
-
-[*.go]
+[*.{xml,py,java,go,sh}]
 indent_style = tab
 indent_size = 4
 

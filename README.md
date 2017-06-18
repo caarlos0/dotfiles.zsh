@@ -74,7 +74,8 @@ And logging out and in again.
 ## Contributing
 
 Feel free to contribute. Pull requests will be automatically
-checked/linted with [Shellcheck](https://github.com/koalaman/shellcheck).
+checked/linted with [Shellcheck](https://github.com/koalaman/shellcheck)
+and [shfmt](https://github.com/mvdan/sh).
 
 ## Support on Beerpay
 Hey dude! Help me out for a couple of :beers:!

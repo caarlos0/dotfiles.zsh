@@ -19,5 +19,5 @@ alias gcb='git-copy-branch-name'
 alias gpr='gp && git pr'
 
 gi() {
-  curl -s "https://www.gitignore.io/api/$*";
+	curl -s "https://www.gitignore.io/api/$*"
 }

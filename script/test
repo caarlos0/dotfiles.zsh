@@ -1,9 +1,6 @@
 #!/bin/zsh
 set -e
 
-# Lint files
-./build/build.sh
-
 # link to ~ and cd to it
 cd ..
 cp -rf dotfiles ~/.dotfiles
@@ -17,16 +14,17 @@ git config --global user.email "dotfiles@demo.com"
 ./script/bootstrap
 
 # load zshrc and check if antibody is working
+# shellcheck disable=SC1090
 source ~/.zshrc
 
-test $(antibody list | wc -l) -gt 10 || {
-  echo "expecting 10+ bundles loaded" >&2
-  exit 1
+test "$(antibody list | wc -l)" -gt 10 || {
+	echo "expecting 10+ bundles loaded" >&2
+	exit 1
 }
 
 test -s ~/.zcompdump || {
-  echo "zcompdump file is empty" >&2
-  exit 1
+	echo "zcompdump file is empty" >&2
+	exit 1
 }
 
 # check if a random plugin is working (meaning that the bundles were loaded)

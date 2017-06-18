@@ -20,5 +20,6 @@
   "files.trimTrailingWhitespace": true,
   "editor.minimap.enabled": true,
   "editor.renderWhitespace": "boundary",
-  "workbench.colorTheme": "Nord"
+  "workbench.colorTheme": "Nord",
+  "terraform.formatOnSave": true
 }
