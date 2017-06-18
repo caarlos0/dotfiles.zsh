@@ -10,7 +10,7 @@ install: |
     sudo apt-get install -y zsh
   else
     brew update >/dev/null
-    brew install shellcheck shfmt zsh curl
+    brew install shellcheck shfmt zsh
   fi
 script:
   - ./script/test
