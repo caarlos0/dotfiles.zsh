@@ -2,7 +2,7 @@
 set -e
 
 # lint files
-/tmp/shcheck \
+curl -sL https://git.io/shcheck | bash -x -s -- \
 	--ignore "script/test" \
 	--ignore "vim/vim.symlink/**/*" \
 	--ignore "zsh/config.zsh" \

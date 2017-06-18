@@ -10,9 +10,8 @@ install: |
     sudo apt-get update
     sudo apt-get install -y zsh
   else
-    brew install shellcheck shfmt zsh curl || true
+    brew install shellcheck shfmt zsh curl
   fi
-  curl -sL https://git.io/shcheck | bash -x
   zsh --version
 script:
   - ./script/test
