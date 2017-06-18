@@ -5,14 +5,13 @@ os:
   - linux
   - osx
 install: |
-  set -e
-  if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
-    sudo apt-get update
+  if [ "$TRAVIS_OS_NAME" == "linux" ]; then
+    sudo apt-get update >/dev/null
     sudo apt-get install -y zsh
   else
+    brew update >/dev/null
     brew install shellcheck shfmt zsh curl
   fi
-  zsh --version
 script:
   - ./script/test
 notifications:
