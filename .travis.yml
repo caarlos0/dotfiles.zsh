@@ -12,7 +12,6 @@ install: |
     brew update >/dev/null
     brew install shellcheck shfmt zsh curl
   fi
-  curl -s -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/repos/caarlos0/shcheck/releases/latest
 script:
   - ./script/test
 notifications:
