@@ -4,8 +4,8 @@ if which brew >/dev/null 2>&1; then
 		case "$1" in
 			cleanup)
 				(cd "$(brew --repo)" && git prune && git gc)
-				command brew cleanup --force
-				command brew cask cleanup --force
+				command brew cleanup
+				command brew cask cleanup
 				command brew prune
 				rm -rf "$(brew --cache)"
 				;;
