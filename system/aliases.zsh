@@ -3,6 +3,7 @@
 #   `brew install coreutils`
 if [ "$(uname -s)" = "Darwin" ]; then
 	alias ls="ls -FG"
+	alias afk="open -a /System/Library/Frameworks/ScreenSaver.framework/Versions/A/Resources/ScreenSaverEngine.app"
 else
 	alias ls="ls -F --color"
 fi
