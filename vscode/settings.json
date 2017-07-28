@@ -23,5 +23,6 @@
   "workbench.colorTheme": "Nord",
   "terraform.formatOnSave": true,
   "window.zoomLevel": 0,
-  "extensions.ignoreRecommendations": false
+  "extensions.ignoreRecommendations": false,
+  "go.coverageDecorator": "gutter"
 }
