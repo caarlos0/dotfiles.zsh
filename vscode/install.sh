@@ -11,21 +11,23 @@ if test "$(which code)"; then
 
 	# from `code --list-extensions`
 	modules="
-    Borke.puppet
-    DotJoshJohnson.xml
-    EditorConfig.EditorConfig
-    PeterJausovec.vscode-docker
-    WakaTime.vscode-wakatime
-    arcticicestudio.nord-visual-studio-code
-    be5invis.toml
-    donjayamanne.python
-    haaaad.ansible
-    ipedrazas.kubernetes-snippets
-    lukehoban.Go
-    mauve.terraform
-    rebornix.Ruby
-    shanoor.vscode-nginx
-    timonwong.shellcheck
+Borke.puppet
+DotJoshJohnson.xml
+EditorConfig.EditorConfig
+PeterJausovec.vscode-docker
+WakaTime.vscode-wakatime
+arcticicestudio.nord-visual-studio-code
+be5invis.toml
+donjayamanne.python
+foxundermoon.shell-format
+haaaad.ansible
+ipedrazas.kubernetes-snippets
+lukehoban.Go
+mauve.terraform
+patbenatar.advanced-new-file
+rebornix.Ruby
+shanoor.vscode-nginx
+timonwong.shellcheck
 "
 	for module in $modules; do
 		code --install-extension "$module" || true
