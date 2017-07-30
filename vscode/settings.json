@@ -24,5 +24,10 @@
   "terraform.formatOnSave": true,
   "window.zoomLevel": 0,
   "extensions.ignoreRecommendations": false,
-  "go.coverageDecorator": "gutter"
+  "go.coverageDecorator": "gutter",
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "/vendor": true
+  }
 }
