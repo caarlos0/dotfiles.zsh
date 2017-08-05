@@ -1,15 +1,21 @@
 #!/bin/sh
-#   Made possible through contributions from generous benefactors like
-#   `brew install coreutils`
-if [ "$(uname -s)" = "Darwin" ]; then
-	alias ls="ls -FG"
-	alias afk="open -a /System/Library/Frameworks/ScreenSaver.framework/Versions/A/Resources/ScreenSaverEngine.app"
+
+if which exa >/dev/null 2>&1; then
+	alias ls='exa'
+	alias l='exa -la --git'
+	alias la='exa -laa --git'
+	alias ll='exa -l --git'
 else
-	alias ls="ls -F --color"
+	if [ "$(uname -s)" = "Darwin" ]; then
+		alias ls="ls -FG"
+	else
+		alias ls="ls -F --color"
+	fi
+	alias l="ls -lAh"
+	alias la="ls -A"
+	alias ll="ls -l"
 fi
-alias l="ls -lAh"
-alias ll="ls -l"
-alias la="ls -A"
+
 alias grep="grep --color=auto"
 alias duf="du -sh * | sort -hr"
 alias less="less -r"
@@ -17,6 +23,7 @@ alias less="less -r"
 # quick hack to make watch work with aliases
 alias watch='watch '
 
+# open, pbcopy and pbpaste on linux
 if [ "$(uname -s)" != "Darwin" ]; then
 	if [ -z "$(command -v pbcopy)" ]; then
 		if [ -n "$(command -v xclip)" ]; then
@@ -32,7 +39,3 @@ if [ "$(uname -s)" != "Darwin" ]; then
 	fi
 fi
 
-# greps non ascii chars
-nonascii() {
-	LANG=C grep --color=always '[^ -~]\+'
-}
