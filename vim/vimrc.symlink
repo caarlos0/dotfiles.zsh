@@ -1,6 +1,6 @@
 set nocompatible
 set background=dark
-colorscheme base16-ocean
+colorscheme turtles
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
