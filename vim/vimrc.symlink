@@ -40,3 +40,15 @@ function! StripWhitespace ()
   exec ':%s/ \+$//gc'
 endfunction
 map ,s :call StripWhitespace ()<CR>
+
+" Close vim if the only window left open is a NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" Open a NERDTree automatically when vim starts up if no files were specified
+" Nota bene: start vim with plain vim, not vim .
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+nmap ,a :bprev<CR>
+nmap ,s :bnext<CR>
+nmap ,d :bd<CR>
+nmap ,f :b
