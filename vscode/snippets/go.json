@@ -1,0 +1,73 @@
+{
+  "Create new test": {
+    "prefix": "test",
+    "body": [
+      "func Test$1(t *testing.T) {",
+      "\tvar assert = assert.New(t)",
+      "\t$2",
+      "}"
+    ],
+    "description": "Create a new test"
+  },
+  "For range": {
+    "prefix": "fr",
+    "body": [
+      "for _, $1 := range $2 {",
+      "\t$0",
+      "}"
+    ],
+    "description": "new for-range loop"
+  },
+  "Tag": {
+    "prefix": "tag",
+    "body": [
+      "`$1:\"$2\"`"
+    ],
+    "description": "add a tag"
+  },
+  "Go Inline": {
+    "prefix": "goi",
+    "body": "go func() { $0 }()",
+    "description": "inline go routine"
+  },
+  "Assert Err": {
+    "prefix": "ae",
+    "body": "assert.Error(${1:err}, \"$0\")"
+  },
+  "Assert Noerr": {
+    "prefix": "ane",
+    "body": "assert.NoError(${1:err}, \"$0\")"
+  },
+  "Benchmark": {
+    "prefix": "bench",
+    "body": [
+      "func Benchmark$1(b *testing.B) {",
+      "\tfor i := 0; i < b.N; i++ {",
+      "\t\t$0",
+      "\t}",
+      "}"
+    ]
+  },
+  "Log with error": {
+    "prefix": "le",
+    "body": "log.WithError(err).Error(\"$0\")",
+    "description": "Log with error"
+  },
+  "If ok": {
+    "prefix": "io",
+    "body": [
+      "if $1, ok := $2.($3); ok {",
+      "\t$0",
+      "}"
+    ]
+  },
+  "If err": {
+    "prefix": "ie",
+    "description": "if err != nil",
+    "body": [
+      "if $1, err := $2; err != nil {",
+      "\t$0",
+      "}"
+    ]
+  }
+}

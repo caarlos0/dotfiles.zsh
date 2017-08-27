@@ -8,6 +8,7 @@ if test "$(which code)"; then
 
 	ln -sf "$DOTFILES/vscode/settings.json" "$VSCODE_HOME/User/settings.json"
 	ln -sf "$DOTFILES/vscode/keybindings.json" "$VSCODE_HOME/User/keybindings.json"
+	ln -sf "$DOTFILES/vscode/snippets" "$VSCODE_HOME/User/snippets"
 
 	# from `code --list-extensions`
 	modules="
