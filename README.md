@@ -2,7 +2,6 @@
 
 [![Build Status][tb]][tp]
 [![Powered by Antibody][ab]][ap]
-[![Beerpay](https://beerpay.io/caarlos0/dotfiles/badge.svg?style=flat-square)](https://beerpay.io/caarlos0/dotfiles)
 [![SayThanks.io](https://img.shields.io/badge/SayThanks.io-%E2%98%BC-1EAEDB.svg?style=flat-square)](https://saythanks.io/to/caarlos0)
 
 > Config files for ZSH, Java, Ruby, Go, Editors, Terminals and more.
@@ -78,7 +77,3 @@ Feel free to contribute. Pull requests will be automatically
 checked/linted with [Shellcheck](https://github.com/koalaman/shellcheck)
 and [shfmt](https://github.com/mvdan/sh).
 
-## Support on Beerpay
-Hey dude! Help me out for a couple of :beers:!
-
-[![Beerpay](https://beerpay.io/caarlos0/dotfiles/badge.svg?style=beer-square)](https://beerpay.io/caarlos0/dotfiles)  [![Beerpay](https://beerpay.io/caarlos0/dotfiles/make-wish.svg?style=flat-square)](https://beerpay.io/caarlos0/dotfiles?focus=wish)
