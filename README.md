@@ -51,9 +51,12 @@ For Linux:
 
 For both Linux and macOS:
 
-- `diff-so-fancy`: better git difs (you'll need to run `dot_update` to apply it);
-- `fzf`: fuzzy finder, used in `,t` on vim, for example;
-- `exa`: for better `ls`.
+- [`diff-so-fancy`](https://github.com/so-fancy/diff-so-fancy):
+better git difs (you'll need to run `dot_update` to apply it);
+- [`fzf`](https://github.com/junegunn/fzf):
+fuzzy finder, used in `,t` on vim, for example;
+- [`exa`](https://the.exa.website/): for better `ls`;
+- [`mmake`](https://github.com/tj/mmake): a modern `make`.
 
 ### macOS defaults
 

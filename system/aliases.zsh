@@ -1,5 +1,10 @@
 #!/bin/sh
+# modern make
+if which mmake >/dev/null 2>&2; then
+	alias make='mmake'
+fi
 
+# exa is a better ls tool
 if which exa >/dev/null 2>&1; then
 	alias ls='exa'
 	alias l='exa -la --git'
