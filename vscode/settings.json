@@ -1,5 +1,4 @@
 {
-  "editor.fontFamily": "Anonymous Pro",
   "editor.fontSize": 15,
   "editor.rulers": [
     80,
@@ -29,5 +28,6 @@
     "**/node_modules": true,
     "**/bower_components": true,
     "/vendor": true
-  }
+  },
+  "workbench.startupEditor": "newUntitledFile"
 }
