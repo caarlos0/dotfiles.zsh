@@ -20,7 +20,8 @@ script:
       --ignore 'zsh/completion.zsh' \
       --ignore 'zsh/prompt.zsh' \
       --ignore 'zsh/fpath.zsh' \
-      --ignore 'docker/completion.zsh'
+      --ignore 'docker/completion.zsh' \
+      --ignore 'atom.symlink/packages/**/*'
   - ./script/test
 notifications:
   email: false
