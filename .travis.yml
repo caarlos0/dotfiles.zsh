@@ -14,14 +14,14 @@ install: |
   fi
 script:
   - curl -sL https://git.io/shcheck | bash -x -s -- \
-      --ignore 'script/test' \
-      --ignore 'vim/vim.symlink/**/*' \
-      --ignore 'zsh/config.zsh' \
-      --ignore 'zsh/completion.zsh' \
-      --ignore 'zsh/prompt.zsh' \
-      --ignore 'zsh/fpath.zsh' \
-      --ignore 'docker/completion.zsh' \
-      --ignore 'atom.symlink/packages/**/*'
+      --ignore "script/test" \
+      --ignore "vim/vim.symlink/**/*" \
+      --ignore "zsh/config.zsh" \
+      --ignore "zsh/completion.zsh" \
+      --ignore "zsh/prompt.zsh" \
+      --ignore "zsh/fpath.zsh" \
+      --ignore "docker/completion.zsh" \
+      --ignore "atom.symlink/packages/**/*"
   - ./script/test
 notifications:
   email: false
