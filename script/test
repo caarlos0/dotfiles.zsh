@@ -1,15 +1,5 @@
-#!/bin/zsh
+#!/bin/bash
 set -e
-
-# shcheck files
-curl -sL https://git.io/shcheck | bash -x -s -- \
-	--ignore "script/test" \
-	--ignore "vim/vim.symlink/**/*" \
-	--ignore "zsh/config.zsh" \
-	--ignore "zsh/completion.zsh" \
-	--ignore "zsh/prompt.zsh" \
-	--ignore "zsh/fpath.zsh" \
-	--ignore "docker/completion.zsh"
 
 # link to ~ and cd to it
 cd ..
