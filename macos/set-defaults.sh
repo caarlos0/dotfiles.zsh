@@ -44,9 +44,6 @@ echo "  › Set a really fast key repeat"
 defaults write NSGlobalDomain KeyRepeat -int 2
 defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
-echo "  › Disable transparency"
-defaults write com.apple.universalaccess reduceTransparency -bool true
-
 echo "  › Enable text replacement almost everywhere"
 defaults write -g WebAutomaticTextReplacementEnabled -bool true
 
