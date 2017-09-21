@@ -16,8 +16,8 @@ fi
 set +e
 
 disable_agent() {
-	mv "$1" "$1_DISABLED" >/dev/null 2>&1 \
-		|| sudo mv "$1" "$1_DISABLED" >/dev/null 2>&1
+	mv "$1" "$1_DISABLED" >/dev/null 2>&1 ||
+		sudo mv "$1" "$1_DISABLED" >/dev/null 2>&1
 }
 
 unload_agent() {
