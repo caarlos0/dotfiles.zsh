@@ -10,7 +10,7 @@ install: |
     sudo apt-get install -y zsh
   else
     brew update >/dev/null
-    brew install shellcheck shfmt zsh
+    brew install zsh
   fi
 script:
   - ./script/format_check
