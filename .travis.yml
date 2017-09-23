@@ -12,8 +12,6 @@ install: |
     brew update >/dev/null
     brew install zsh
   fi
-script:
-  - ./script/format_check
-  - ./script/test
+script: make ci
 notifications:
   email: false
