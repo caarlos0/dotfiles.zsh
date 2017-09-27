@@ -19,6 +19,7 @@ PeterJausovec.vscode-docker
 WakaTime.vscode-wakatime
 arcticicestudio.nord-visual-studio-code
 be5invis.toml
+caarlos0.language-prometheus
 donjayamanne.python
 foxundermoon.shell-format
 haaaad.ansible
