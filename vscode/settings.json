@@ -29,5 +29,7 @@
     "**/bower_components": true,
     "/vendor": true
   },
-  "workbench.startupEditor": "newUntitledFile"
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.fontAliasing": "antialiased",
+  "editor.fontWeight": "300"
 }
