@@ -15,12 +15,15 @@ if test "$(which code)"; then
 Borke.puppet
 DotJoshJohnson.xml
 EditorConfig.EditorConfig
+HookyQR.beautify
 PeterJausovec.vscode-docker
 WakaTime.vscode-wakatime
 arcticicestudio.nord-visual-studio-code
 be5invis.toml
 caarlos0.language-prometheus
 donjayamanne.python
+formulahendry.auto-close-tag
+formulahendry.auto-rename-tag
 foxundermoon.shell-format
 haaaad.ansible
 ipedrazas.kubernetes-snippets
@@ -29,6 +32,7 @@ mauve.terraform
 patbenatar.advanced-new-file
 rebornix.Ruby
 shanoor.vscode-nginx
+technosophos.vscode-helm
 timonwong.shellcheck
 "
 	for module in $modules; do
