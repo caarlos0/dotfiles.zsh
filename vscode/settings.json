@@ -31,5 +31,6 @@
   },
   "workbench.startupEditor": "newUntitledFile",
   "workbench.fontAliasing": "antialiased",
-  "editor.fontWeight": "300"
+  "editor.fontWeight": "300",
+  "docker.showExplorer": false
 }
