@@ -10,6 +10,6 @@ if which docker-machine >/dev/null 2>&1; then
 		-o "$HOME/.docker/completions/_docker-machine"
 fi
 if which docker >/dev/null 2>&1; then
-	curl -sL https://raw.githubusercontent.com/docker/docker/master/contrib/completion/zsh/_docker \
+	curl -sL https://raw.githubusercontent.com/docker/cli/master/contrib/completion/zsh/_docker \
 		-o "$HOME/.docker/completions/_docker"
 fi
