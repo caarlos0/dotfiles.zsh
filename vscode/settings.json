@@ -23,7 +23,7 @@
   "terraform.formatOnSave": true,
   "window.zoomLevel": 0,
   "extensions.ignoreRecommendations": false,
-  "go.coverageDecorator": "gutter",
+  "go.coverageDecorator": "highlight",
   "search.exclude": {
     "**/node_modules": true,
     "**/bower_components": true,
@@ -32,5 +32,6 @@
   "workbench.startupEditor": "newUntitledFile",
   "workbench.fontAliasing": "antialiased",
   "editor.fontWeight": "300",
-  "docker.showExplorer": false
+  "docker.showExplorer": false,
+  "workbench.editor.showIcons": true
 }
