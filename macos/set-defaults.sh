@@ -292,6 +292,11 @@ if [ -z "$KEEP_ITUNES" ]; then
 	unload_agent /System/Library/LaunchAgents/com.apple.rcd.plist
 fi
 
+echo "  › Disable Warsaw agent"
+disable_agent /Library/LaunchAgents/com.diebold.warsaw.user.plist
+sudo launchctl unload -F /Library/LaunchDaemons/com.diebold.warsaw.plist
+
+
 echo "  › Disable Spotify web helper"
 disable_agent ~/Applications/Spotify.app/Contents/MacOS/SpotifyWebHelper
 
