@@ -14,3 +14,5 @@ kx() {
 alias k='kubectl'
 alias sk='kubectl -n kube-system'
 alias ke='EDITOR=vim kubectl edit'
+
+alias kimg="kubectl get deployment --output=jsonpath='{.spec.template.spec.containers[*].image}'"
