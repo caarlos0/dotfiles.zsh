@@ -3,7 +3,6 @@
     "prefix": "test",
     "body": [
       "func Test$1(t *testing.T) {",
-      "\tvar assert = assert.New(t)",
       "\t$2",
       "}"
     ],

@@ -36,5 +36,6 @@
   "workbench.editor.showIcons": true,
   "go.testOnSave": false,
   "go.coverOnSave": false,
-  "workbench.panel.location": "bottom"
+  "workbench.panel.location": "bottom",
+  "explorer.confirmDragAndDrop": false
 }
