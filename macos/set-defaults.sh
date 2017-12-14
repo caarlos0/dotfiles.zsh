@@ -228,6 +228,7 @@ echo ""
 echo "› Mail:"
 echo "  › Add the keyboard shortcut CMD + Enter to send an email"
 defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" "@\U21a9"
+echo "  › Add the keyboard shortcut CMD + Shift + E to archive an email"
 # shellcheck disable=SC2016
 defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Archive" '@$e'
 
