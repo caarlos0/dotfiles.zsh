@@ -1,7 +1,7 @@
 " load plugins
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
-Plug 'fatih/vim-go', {'tag': '*'}
+Plug 'fatih/vim-go', {'tag': '*', 'do': ':GoInstallBinaries' }
 Plug 'nsf/gocode', {'rtp': 'vim'}
 
 " auto-complete for golang et al
@@ -25,6 +25,8 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'tpope/vim-endwise'
 Plug 'elzr/vim-json'
 Plug 'junegunn/vim-easy-align'
+Plug 'ekalinin/Dockerfile.vim'
+
 
 " git integration
 Plug 'tpope/vim-fugitive'
@@ -41,7 +43,7 @@ Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' }
 " messing up your layout
 Plug 'moll/vim-bbye'
 
-
+" Colors
 Plug 'altercation/vim-colors-solarized'
 
 call plug#end()
