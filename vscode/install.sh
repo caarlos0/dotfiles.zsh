@@ -13,7 +13,7 @@ if test "$(which code)"; then
 	# from `code --list-extensions`
 	modules="
 Borke.puppet
-DotJoshJohnson.xml
+CoenraadS.bracket-pair-colorizer
 EditorConfig.EditorConfig
 HookyQR.beautify
 PeterJausovec.vscode-docker
@@ -21,7 +21,7 @@ WakaTime.vscode-wakatime
 arcticicestudio.nord-visual-studio-code
 be5invis.toml
 caarlos0.language-prometheus
-donjayamanne.python
+esbenp.prettier-vscode
 formulahendry.auto-close-tag
 formulahendry.auto-rename-tag
 foxundermoon.shell-format
@@ -29,10 +29,12 @@ haaaad.ansible
 ipedrazas.kubernetes-snippets
 lukehoban.Go
 mauve.terraform
+ms-python.python
 patbenatar.advanced-new-file
 rebornix.Ruby
+rust-lang.rust
+sbrink.elm
 shanoor.vscode-nginx
-technosophos.vscode-helm
 timonwong.shellcheck
 "
 	for module in $modules; do

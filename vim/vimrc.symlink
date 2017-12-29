@@ -26,7 +26,7 @@ Plug 'tpope/vim-endwise'
 Plug 'elzr/vim-json'
 Plug 'junegunn/vim-easy-align'
 Plug 'ekalinin/Dockerfile.vim'
-
+Plug 'luochen1990/rainbow'
 
 " git integration
 Plug 'tpope/vim-fugitive'
@@ -570,5 +570,8 @@ if !g:remoteSession
 endif
 
 let g:airline#extensions#tabline#enabled = 0
+
+" =================== rainbow ============================
+let g:rainbow_active = 1
 
 " vim:ts=2:sw=2:et
