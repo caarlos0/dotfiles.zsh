@@ -46,6 +46,8 @@ Plug 'moll/vim-bbye'
 " Colors
 Plug 'altercation/vim-colors-solarized'
 
+Plug 'wakatime/vim-wakatime'
+
 call plug#end()
 
 set nocompatible              " be iMproved, required
