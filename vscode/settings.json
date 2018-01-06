@@ -20,7 +20,6 @@
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "boundary",
   "workbench.colorTheme": "Nord",
-  "terraform.formatOnSave": true,
   "window.zoomLevel": 0,
   "extensions.ignoreRecommendations": false,
   "go.coverageDecorator": "gutter",
