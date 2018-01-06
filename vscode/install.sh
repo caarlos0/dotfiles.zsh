@@ -17,7 +17,6 @@ CoenraadS.bracket-pair-colorizer
 EditorConfig.EditorConfig
 HookyQR.beautify
 PeterJausovec.vscode-docker
-WakaTime.vscode-wakatime
 arcticicestudio.nord-visual-studio-code
 be5invis.toml
 caarlos0.language-prometheus
