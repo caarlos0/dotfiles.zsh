@@ -26,6 +26,7 @@ Plug 'tpope/vim-endwise'
 Plug 'elzr/vim-json'
 Plug 'junegunn/vim-easy-align'
 Plug 'ekalinin/Dockerfile.vim'
+Plug 'puppetlabs/puppet-syntax-vim'
 Plug 'luochen1990/rainbow'
 
 " git integration
@@ -44,7 +45,7 @@ Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' }
 Plug 'moll/vim-bbye'
 
 " Colors
-Plug 'altercation/vim-colors-solarized'
+Plug 'ayu-theme/ayu-vim'
 
 call plug#end()
 
@@ -218,12 +219,12 @@ if has('gui_running')
   set regexpengine=1
   syntax enable
 endif
-set background=dark
-let g:solarized_termcolors=256
-let g:solarized_termtrans=1
+set termguicolors
+let ayucolor="mirage"
+colorscheme ayu
+"set background=dark
 " let g:hybrid_use_Xresources = 1
 " let g:rehash256 = 1
-colorscheme solarized
 set guifont=Inconsolata:h15
 set guioptions-=L
 
@@ -561,7 +562,7 @@ autocmd BufWritePre * StripWhitespace
 
 " =================== vim-airline ========================
 
-let g:airline_theme='solarized'
+let g:airline_theme='ayu'
 
 " set to use powerline fonts when not in a ssh session
 let g:remoteSession = ($STY == "")
