@@ -12,14 +12,14 @@
   "terminal.external.osxExec": "iTerm.app",
   "files.autoSave": "onFocusChange",
   "extensions.autoUpdate": true,
-  "workbench.iconTheme": "vs-seti",
+  "workbench.iconTheme": "ayu",
   "editor.cursorStyle": "line",
   "editor.cursorBlinking": "solid",
   "window.title": "${activeEditorMedium}${separator}${rootName}",
   "files.trimTrailingWhitespace": true,
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "boundary",
-  "workbench.colorTheme": "Nord",
+  "workbench.colorTheme": "Ayu Mirage",
   "window.zoomLevel": 0,
   "extensions.ignoreRecommendations": false,
   "go.coverageDecorator": "gutter",
@@ -35,6 +35,5 @@
   "workbench.editor.showIcons": true,
   "go.testOnSave": false,
   "go.coverOnSave": false,
-  "workbench.panel.location": "bottom",
   "explorer.confirmDragAndDrop": false
 }

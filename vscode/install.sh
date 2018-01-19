@@ -17,7 +17,6 @@ CoenraadS.bracket-pair-colorizer
 EditorConfig.EditorConfig
 HookyQR.beautify
 PeterJausovec.vscode-docker
-arcticicestudio.nord-visual-studio-code
 be5invis.toml
 caarlos0.language-prometheus
 esbenp.prettier-vscode
@@ -34,6 +33,7 @@ rebornix.Ruby
 rust-lang.rust
 sbrink.elm
 shanoor.vscode-nginx
+teabyii.ayu
 timonwong.shellcheck
 "
 	for module in $modules; do
