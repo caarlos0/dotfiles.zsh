@@ -5,6 +5,8 @@ export CLICOLOR=true
 fpath=($DOTFILES/functions $fpath)
 
 autoload -U "$DOTFILES"/functions/*(:t)
+autoload -U up-line-or-beginning-search
+autoload -U down-line-or-beginning-search
 
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
@@ -40,10 +42,13 @@ setopt HIST_EXPIRE_DUPS_FIRST
 # dont ask for confirmation in rm globs*
 setopt RM_STAR_SILENT
 
-bindkey "$terminfo[kcuu1]" history-substring-search-up
-bindkey "$terminfo[kcud1]" history-substring-search-down
-bindkey "$terminfo[cuu1]" history-substring-search-up
-bindkey "$terminfo[cud1]" history-substring-search-down
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+
+bindkey "$terminfo[kcuu1]" up-line-or-beginning-search
+bindkey "$terminfo[kcud1]" down-line-or-beginning-search
+bindkey "$terminfo[cuu1]" up-line-or-beginning-search
+bindkey "$terminfo[cud1]" down-line-or-beginning-search
 bindkey '^[^[[D' backward-word
 bindkey '^[^[[C' forward-word
 bindkey '^[[5D' beginning-of-line
