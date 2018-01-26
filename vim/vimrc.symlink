@@ -225,7 +225,7 @@ colorscheme ayu
 "set background=dark
 " let g:hybrid_use_Xresources = 1
 " let g:rehash256 = 1
-set guifont=Inconsolata:h15
+set guifont=Menlo:h15
 set guioptions-=L
 
 " This comes first, because we have mappings that depend on leader
