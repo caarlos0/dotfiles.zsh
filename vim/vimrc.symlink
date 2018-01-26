@@ -28,6 +28,7 @@ Plug 'junegunn/vim-easy-align'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'puppetlabs/puppet-syntax-vim'
 Plug 'luochen1990/rainbow'
+Plug 'hashivim/vim-terraform'
 
 " git integration
 Plug 'tpope/vim-fugitive'
@@ -436,6 +437,10 @@ set wildignore+=*.orig                           " Merge resolution files
 " ----------------------------------------- "
 " Plugin configs 			    			"
 " ----------------------------------------- "
+
+
+" ==================== terraform====================
+let g:terraform_align=1
 
 " ==================== FZF =========================
 
