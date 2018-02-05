@@ -57,6 +57,8 @@ better git difs (you'll need to run `dot_update` to apply it);
 fuzzy finder, used in `,t` on vim, for example;
 - [`exa`](https://the.exa.website/): for better `ls`;
 - [`mmake`](https://github.com/tj/mmake): a modern `make`.
+- [`hub`](https://hub.github.com/): a command-line wrapper for git that makes
+  you better at GitHub;
 
 ### macOS defaults
 
