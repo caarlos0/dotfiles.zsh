@@ -35,5 +35,7 @@
   "workbench.editor.showIcons": true,
   "go.testOnSave": false,
   "go.coverOnSave": false,
-  "explorer.confirmDragAndDrop": false
+  "explorer.confirmDragAndDrop": false,
+  "search.smartCase": true,
+  "alex.enable": true
 }
