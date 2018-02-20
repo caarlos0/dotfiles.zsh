@@ -15,4 +15,5 @@ alias k='kubectl'
 alias sk='kubectl -n kube-system'
 alias ke='EDITOR=vim kubectl edit'
 
+alias kfails='kubectl get po -owide | grep "0/" | tee /dev/tty | wc -l'
 alias kimg="kubectl get deployment --output=jsonpath='{.spec.template.spec.containers[*].image}'"
