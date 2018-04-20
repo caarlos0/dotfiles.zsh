@@ -37,7 +37,6 @@
   "go.coverOnSave": false,
   "explorer.confirmDragAndDrop": false,
   "search.smartCase": true,
-  "alex.enable": true,
   "editor.fontFamily": "FuraCode Nerd Font, Menlo, Monaco, 'Courier New', monospace",
   "editor.fontLigatures": true
 }
