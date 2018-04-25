@@ -21,6 +21,7 @@ alias gs='git status -sb'
 alias gcl='git clone'
 alias gcb='git-copy-branch-name'
 alias gpr='gp && git pr'
+alias gnext='git log --oneline $(git describe --tags --abbrev=0 @^)..@'
 
 gi() {
 	curl -s "https://www.gitignore.io/api/$*"
