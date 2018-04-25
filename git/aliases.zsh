@@ -23,6 +23,12 @@ alias gcb='git-copy-branch-name'
 alias gpr='gp && git pr'
 alias gnext='git log --oneline $(git describe --tags --abbrev=0 @^)..@'
 
+
+if which svu > /dev/null 2>&1; then
+	alias gtpatch='echo `svu p`; git tag `svu p`'
+	alias gtminor='echo `svu m`; git tag `svu m`'
+fi
+
 gi() {
 	curl -s "https://www.gitignore.io/api/$*"
 }
