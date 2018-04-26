@@ -394,117 +394,41 @@
 	<false/>
 	<key>FsTabDelay</key>
 	<real>1.0900000333786011</real>
-	<key>GlobalKeyMap</key>
+	<key>GlobalTouchBarMap</key>
 	<dict>
-		<key>0x19-0x60000</key>
+		<key>touchbar:21E47ED7-6606-4CAD-AEB0-674A927FC418</key>
 		<dict>
 			<key>Action</key>
-			<integer>39</integer>
+			<integer>53</integer>
+			<key>Label</key>
+			<string>⬅️</string>
 			<key>Text</key>
 			<string></string>
 		</dict>
-		<key>0x9-0x40000</key>
-		<dict>
-			<key>Action</key>
-			<integer>32</integer>
-			<key>Text</key>
-			<string></string>
-		</dict>
-		<key>0xf700-0x300000</key>
-		<dict>
-			<key>Action</key>
-			<integer>7</integer>
-			<key>Text</key>
-			<string></string>
-		</dict>
-		<key>0xf700-0x320000</key>
-		<dict>
-			<key>Action</key>
-			<integer>20</integer>
-			<key>Text</key>
-			<string></string>
-		</dict>
-		<key>0xf701-0x300000</key>
-		<dict>
-			<key>Action</key>
-			<integer>6</integer>
-			<key>Text</key>
-			<string></string>
-		</dict>
-		<key>0xf701-0x320000</key>
-		<dict>
-			<key>Action</key>
-			<integer>21</integer>
-			<key>Text</key>
-			<string></string>
-		</dict>
-		<key>0xf702-0x300000</key>
-		<dict>
-			<key>Action</key>
-			<integer>2</integer>
-			<key>Text</key>
-			<string></string>
-		</dict>
-		<key>0xf702-0x320000</key>
-		<dict>
-			<key>Action</key>
-			<integer>18</integer>
-			<key>Text</key>
-			<string></string>
-		</dict>
-		<key>0xf703-0x300000</key>
-		<dict>
-			<key>Action</key>
-			<integer>0</integer>
-			<key>Text</key>
-			<string></string>
-		</dict>
-		<key>0xf703-0x320000</key>
+		<key>touchbar:51D10899-4A52-4B12-9C79-45E2025E05A9</key>
 		<dict>
 			<key>Action</key>
 			<integer>19</integer>
+			<key>Label</key>
+			<string>➡️</string>
 			<key>Text</key>
 			<string></string>
 		</dict>
-		<key>0xf729-0x100000</key>
+		<key>touchbar:9F3E4114-7A2A-404A-99D7-B15B76387406</key>
 		<dict>
 			<key>Action</key>
-			<integer>5</integer>
+			<integer>20</integer>
+			<key>Label</key>
+			<string>⬆️</string>
 			<key>Text</key>
 			<string></string>
 		</dict>
-		<key>0xf72b-0x100000</key>
+		<key>touchbar:C5A6866B-E780-4034-9A95-9774C1465241</key>
 		<dict>
 			<key>Action</key>
-			<integer>4</integer>
-			<key>Text</key>
-			<string></string>
-		</dict>
-		<key>0xf72c-0x100000</key>
-		<dict>
-			<key>Action</key>
-			<integer>9</integer>
-			<key>Text</key>
-			<string></string>
-		</dict>
-		<key>0xf72c-0x20000</key>
-		<dict>
-			<key>Action</key>
-			<integer>9</integer>
-			<key>Text</key>
-			<string></string>
-		</dict>
-		<key>0xf72d-0x100000</key>
-		<dict>
-			<key>Action</key>
-			<integer>8</integer>
-			<key>Text</key>
-			<string></string>
-		</dict>
-		<key>0xf72d-0x20000</key>
-		<dict>
-			<key>Action</key>
-			<integer>8</integer>
+			<integer>21</integer>
+			<key>Label</key>
+			<string>⬇️</string>
 			<key>Text</key>
 			<string></string>
 		</dict>
@@ -549,12 +473,6 @@
 	<true/>
 	<key>MaxVertically</key>
 	<false/>
-	<key>NSFontPanelAttributes</key>
-	<string>1, 0</string>
-	<key>NSNavLastRootDirectory</key>
-	<string>~/Desktop</string>
-	<key>NSNavPanelExpandedSizeForOpenMode</key>
-	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -586,20 +504,38 @@
 	</data>
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
-	<key>NSWindow Frame NSFontPanel</key>
-	<string>576 147 704 309 0 0 1280 778 </string>
-	<key>NSWindow Frame SUStatusFrame</key>
-	<string>0 929 400 129 0 0 1920 1058 </string>
-	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>330 289 620 392 0 0 1280 778 </string>
-	<key>NSWindow Frame SessionsPreferences</key>
-	<string>269 126 606 469 0 0 1280 778 </string>
+	<key>NSToolbar Configuration com.apple.NSColorPanel</key>
+	<dict>
+		<key>TB Is Shown</key>
+		<integer>1</integer>
+	</dict>
+	<key>NSTouchBarConfig: regular</key>
+	<dict>
+		<key>CurrentItems</key>
+		<array>
+			<string>touchbar:21E47ED7-6606-4CAD-AEB0-674A927FC418</string>
+			<string>touchbar:51D10899-4A52-4B12-9C79-45E2025E05A9</string>
+			<string>touchbar:9F3E4114-7A2A-404A-99D7-B15B76387406</string>
+			<string>touchbar:C5A6866B-E780-4034-9A95-9774C1465241</string>
+			<string>NSTouchBarItemIdentifierFlexibleSpace</string>
+			<string>NSTouchBarItemIdentifierOtherItemsProxy</string>
+		</array>
+		<key>DefaultItems</key>
+		<array>
+			<string>iTermTouchBarIdentifierManPage</string>
+			<string>iTermTouchBarIdentifierColorPreset</string>
+			<string>iTermTouchBarIdentifierFunctionKeys</string>
+			<string>NSTouchBarItemIdentifierFlexibleSpace</string>
+			<string>NSTouchBarItemIdentifierOtherItemsProxy</string>
+			<string>iTermTouchBarIdentifierAddMark</string>
+			<string>iTermTouchBarIdentifierPreviousMark</string>
+			<string>iTermTouchBarIdentifierNextMark</string>
+		</array>
+	</dict>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>766 560 796 473 0 0 1920 1058 </string>
-	<key>NSWindow Frame UKCrashReporter</key>
-	<string>154 474 592 584 0 0 1920 1058 </string>
+	<string>361 339 796 473 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 1280 778 0 0 1280 778 </string>
+	<string>0 0 1680 1028 0 0 1680 1028 </string>
 	<key>NeverWarnAboutShortLivedSessions_21048CBB-8F4B-4492-A49A-8DCDADDF9248</key>
 	<true/>
 	<key>New Bookmarks</key>
@@ -1468,20 +1404,14 @@
 			<string>/Users/carlosabecker</string>
 		</dict>
 	</array>
-	<key>NoSyncHaveUsedCopyMode</key>
-	<true/>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
-	<string>C9BC1F4E-19C9-44CF-B55F-77D2F28D58B0</string>
-	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
-	<true/>
-	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
-	<integer>0</integer>
+	<string>8D9EF306-D584-474D-94D4-060A9EC792D2</string>
 	<key>NoSyncPermissionToShowTip</key>
 	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>516321019.79030699</real>
+	<real>546126422.28583503</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -1552,11 +1482,11 @@
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/testing.xml?shard=70</string>
+	<string>https://iterm2.com/appcasts/testing.xml?shard=71</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-04-05T13:24:17Z</date>
+	<date>2018-04-25T03:47:32Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -1589,8 +1519,6 @@
 	<integer>10</integer>
 	<key>TripleClickSelectsFullWrappedLines</key>
 	<false/>
-	<key>UKCrashReporterLastCrashReportDate</key>
-	<real>1508862336</real>
 	<key>URLHandlersByGuid</key>
 	<dict/>
 	<key>UseBorder</key>
