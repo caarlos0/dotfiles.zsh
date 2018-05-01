@@ -1,2 +1,2 @@
 #!/bin/sh
-export PATH="$PATH:$HOME/.npm/bin"
+export PATH="$PATH:$HOME/.npm/bin:$HOME/.bin"
