@@ -6,10 +6,8 @@ kubectl() {
 	command kubectl "$@"
 }
 
-kx() {
-	test -n "$1" && kubectl config use-context "$1"
-	test -z "$1" && kubectl config get-contexts
-}
+alias kx='kubectx'
+alias kn='kubens'
 
 alias k='kubectl'
 alias sk='kubectl -n kube-system'
