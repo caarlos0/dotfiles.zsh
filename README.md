@@ -59,6 +59,8 @@ fuzzy finder, used in `,t` on vim, for example;
 - [`mmake`](https://github.com/tj/mmake): a modern `make`.
 - [`hub`](https://hub.github.com/): a command-line wrapper for git that makes
   you better at GitHub;
+- [`kubectx`](https://github.com/ahmetb/kubectx) for better kubernetes context
+  and namespace switch;
 
 ### macOS defaults
 
