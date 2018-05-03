@@ -1,4 +1,4 @@
-set-option -g default-command "tmux-shell-wrapper"
+#set-option -g default-command "reattach-to-user-namespace -l zsh"
 
 # Make shift+arrows, ctrl+arrows etc work in Vim.
 set -g xterm-keys on
@@ -16,9 +16,6 @@ set -g status-bg black
 set -g status-fg white
 set -g status-left '#S '
 
-# Show keyboard layout in prompt, assuming some script writes it to that path;
-# it's "/User/…" instead of "~" so VMs can read from their symlinked OS X host home directory.
-#set -g status-right '#(cat /Users/$USER/.keyboard_layout 2> /dev/null) | #22T | %H:%M %d-%b-%y'
 set -g status-right-length 60
 set -g status-interval 2
 
@@ -52,7 +49,7 @@ bind r source-file ~/.tmux.conf\; display "Reloaded conf."
 # http://robots.thoughtbot.com/tmux-copy-paste-on-os-x-a-better-future
 
 # Use vim keybindings in copy mode
-setw -g mode-keys vi
+# setw -g mode-keys vi
 
 # Unbork my iTerm ctrl+1 etc mappings in tmux 2.1
 # https://github.com/tmux/tmux/issues/159
