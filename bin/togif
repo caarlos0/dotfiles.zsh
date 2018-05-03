@@ -1,8 +1,0 @@
-#!/bin/sh
-# Converts videos (screencasts, mostly) to gifs scaling to 800:-1.
-# Depends on ffmpeg and gifsicle.
-set -eo pipefail
-movie="$1"
-rm -rf "$movie.gif"
-ffmpeg -i "$movie" -vf "scale=800:-1" -pix_fmt rgb24 -r 10 -f gif - |
-	gifsicle --optimize=3 --delay=3 >"$movie.gif"
