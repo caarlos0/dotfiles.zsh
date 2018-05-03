@@ -18,10 +18,8 @@ alias gaa='git add -A'
 alias gcm='git commit -m'
 alias gcam='git commit -a -m'
 alias gs='git status -sb'
-alias gcl='git clone'
-alias gcb='git-copy-branch-name'
 alias gpr='gp && git pr'
-alias gnext='git log --oneline $(git describe --tags --abbrev=0 @^)..@'
+alias glnext='git log --oneline $(git describe --tags --abbrev=0 @^)..@'
 
 if which svu >/dev/null 2>&1; then
 	alias gtpatch='echo `svu p`; git tag `svu p`'
