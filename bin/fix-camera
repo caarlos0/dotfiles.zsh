@@ -1,5 +1,0 @@
-#!/bin/sh
-# Fixes "Camera not found" on OSX.
-# This if fucking annoying and I always forget the name of the process I need 
-# to kill
-sudo pkill -9 VDCAssistant
