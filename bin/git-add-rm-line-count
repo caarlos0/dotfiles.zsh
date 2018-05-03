@@ -1,6 +1,0 @@
-#!/bin/sh
-set -eo pipefail
-diff_result=$(git diff)
-added=$(echo "$diff_result" | grep -c '^+')
-deleted=$(echo "$diff_result" | grep -c '^-')
-echo "${added} additions and ${deleted} deletions."
