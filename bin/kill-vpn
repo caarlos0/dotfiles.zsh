@@ -1,5 +1,0 @@
-#!/bin/bash
-# Kills viscosity and openvpn, as they constantly freeze on OSX for no reason
-for p in openvpn viscosity; do
-	sudo pkill -9 -i -f "$p"
-done
