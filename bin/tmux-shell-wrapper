@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Integrate with OS X pasteboard. Do:
+#   brew install reattach-to-user-namespace
+# https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard
+#
+# If not installed (perhaps in an Ubuntu VM), just use bash.
+
+if command -v reattach-to-user-namespace >/dev/null; then
+  reattach-to-user-namespace -l $SHELL
+else
+  $SHELL -l
+fi
