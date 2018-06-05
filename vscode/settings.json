@@ -22,7 +22,9 @@
   "workbench.colorTheme": "Ayu Mirage",
   "window.zoomLevel": 0,
   "extensions.ignoreRecommendations": false,
-  "go.coverageDecorator": "gutter",
+  "go.coverageDecorator": {
+    "type": "gutter"
+  },
   "search.exclude": {
     "**/node_modules": true,
     "**/bower_components": true,
@@ -40,5 +42,14 @@
   "editor.fontFamily": "FuraCode Nerd Font, Menlo, Monaco, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "bracketPairColorizer.showVerticalScopeLine": false,
-  "bracketPairColorizer.showHorizontalScopeLine": false
+  "bracketPairColorizer.showHorizontalScopeLine": false,
+  "files.associations": {
+    "*.tmpl": "gotemplate"
+  },
+  "go.lintTool": "golangci-lint",
+  "go.useLanguageServer": true,
+  "go.languageServerExperimentalFeatures": {
+    "format": false,
+    "autoComplete": true
+  }
 }
