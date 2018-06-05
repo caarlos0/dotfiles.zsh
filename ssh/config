@@ -1,5 +1,6 @@
 Host *
   ServerAliveInterval 60
   StrictHostKeyChecking no
+  UseKeychain yes
 
 Include ~/.ssh/config.local
