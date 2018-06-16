@@ -51,7 +51,9 @@ bindkey "$terminfo[cuu1]" up-line-or-beginning-search
 bindkey "$terminfo[cud1]" down-line-or-beginning-search
 bindkey '^[^[[D' backward-word
 bindkey '^[^[[C' forward-word
+bindkey "${terminfo[khome]}" beginning-of-line
 bindkey '^[[H' beginning-of-line
+bindkey "${terminfo[kend]}"  end-of-line
 bindkey '^[[F' end-of-line
 bindkey '^[[3~' delete-char
 bindkey '^?' backward-delete-char
