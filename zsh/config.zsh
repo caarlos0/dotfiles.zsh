@@ -50,7 +50,9 @@ bindkey "$terminfo[kcud1]" down-line-or-beginning-search
 bindkey "$terminfo[cuu1]" up-line-or-beginning-search
 bindkey "$terminfo[cud1]" down-line-or-beginning-search
 bindkey '^[^[[D' backward-word
+bindkey '^[b' backward-word
 bindkey '^[^[[C' forward-word
+bindkey '^[f' forward-word
 bindkey "${terminfo[khome]}" beginning-of-line
 bindkey '^[[H' beginning-of-line
 bindkey "${terminfo[kend]}"  end-of-line
