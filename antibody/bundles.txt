@@ -1,5 +1,4 @@
 # this block is in alphabetic order
-caarlos0/git-add-remote kind:path
 caarlos0/ports kind:path
 caarlos0/zsh-git-fetch-merge kind:path
 caarlos0/zsh-git-sync kind:path
@@ -7,7 +6,6 @@ caarlos0/zsh-mkc
 caarlos0/zsh-open-pr kind:path
 mafredri/zsh-async
 rupa/z
-Tarrasch/zsh-bd
 zsh-users/zsh-completions
 zsh-users/zsh-autosuggestions
 
