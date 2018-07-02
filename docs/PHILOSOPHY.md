@@ -1,6 +1,6 @@
 # PHILOSOPHY
 
-> Philosophycal stuff about this dotfiles structure, decisions, etc..
+> Philosophical stuff about this dotfiles structure, decisions, etc..
 
 ## Why?
 
@@ -10,7 +10,7 @@ project being much more topic-centric. I realized I could split a lot of things
 up into the main areas I used (Ruby, git, system libraries, and so on), so I
 structured the project accordingly.
 
-You can also [read my post on the subject][http://carlosbecker.com/posts/dotfiles-are-meant-to-be-forked/].
+You can also [read my post on the subject](http://carlosbecker.com/posts/dotfiles-are-meant-to-be-forked).
 
 ## Decisions
 
@@ -35,13 +35,13 @@ override to that variable in `~/.localrc`.
 `PROJECTS` is default to `~/Code`. The shortcut to that folder in the shell
 is `c`. You can override this default in `~/.localrc`.
 
-### Lot's of editors
+### Lots of editors
 
 I use `vim` a lot, but I also use `code`, and used to use `atom` and
 `sublime-text`. So, the configs for all these editors are provided, you can
 use the one you like the most.
 
-### topical
+### Topical
 
 Everything's built around topic areas. If you're adding a new area to your
 forked dotfiles — say, "Erlang" — you can simply add a `erlang` directory and
@@ -51,7 +51,7 @@ symlinked without extension into `$HOME` when you run `script/bootstrap`.
 
 ### Naming conventions
 
-There's a few special files in the hierarchy:
+There are a few special files in the hierarchy:
 
 - **bin/**: Anything in `bin/` will get added to your `$PATH` and be made
   available everywhere.
