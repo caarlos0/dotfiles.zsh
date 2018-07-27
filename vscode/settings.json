@@ -51,5 +51,6 @@
   "go.languageServerExperimentalFeatures": {
     "format": false,
     "autoComplete": true
-  }
+  },
+  "go.testTimeout": "3m"
 }
