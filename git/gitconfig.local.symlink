@@ -3,7 +3,6 @@
 [alias]
 	co = checkout
 	count = shortlog -sn
-	lc = add-rm-line-count
 	g = grep --break --heading --line-number
 	gi = grep --break --heading --line-number -i
 	changed = show --pretty=\"format:\" --name-only
