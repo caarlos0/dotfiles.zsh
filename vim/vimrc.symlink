@@ -220,7 +220,9 @@ if has('gui_running')
   set regexpengine=1
   syntax enable
 endif
-set termguicolors
+if exists('+termguicolors')
+  set termguicolors
+endif
 let ayucolor="mirage"
 colorscheme ayu
 "set background=dark
