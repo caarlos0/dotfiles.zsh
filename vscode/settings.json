@@ -46,11 +46,8 @@
   "files.associations": {
     "*.tmpl": "gotemplate"
   },
-  "go.lintTool": "golangci-lint",
-  "go.useLanguageServer": true,
-  "go.languageServerExperimentalFeatures": {
-    "format": false,
-    "autoComplete": true
-  },
-  "go.testTimeout": "3m"
+  "go.lintTool": "golint",
+  "go.testTimeout": "3m",
+  "breadcrumbs.enabled": true,
+  "go.useLanguageServer": true
 }
