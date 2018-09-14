@@ -55,8 +55,6 @@ For both Linux and macOS:
 better git difs (you'll need to run `dot_update` to apply it);
 - [`fzf`](https://github.com/junegunn/fzf):
 fuzzy finder, used in `,t` on vim, for example;
-- [`exa`](https://the.exa.website/): for better `ls`;
-- [`mmake`](https://github.com/tj/mmake): a modern `make`.
 - [`hub`](https://hub.github.com/): a command-line wrapper for git that makes
   you better at GitHub;
 - [`kubectx`](https://github.com/ahmetb/kubectx) for better kubernetes context

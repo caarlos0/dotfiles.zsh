@@ -1,25 +1,12 @@
 #!/bin/sh
-# modern make
-if which mmake >/dev/null 2>&2; then
-	alias make='mmake'
-fi
-
-# exa is a better ls tool
-if which exa >/dev/null 2>&1; then
-	alias ls='exa'
-	alias l='exa -la --git'
-	alias la='exa -laa --git'
-	alias ll='exa -l --git'
+if [ "$(uname -s)" = "Darwin" ]; then
+	alias ls="ls -FG"
 else
-	if [ "$(uname -s)" = "Darwin" ]; then
-		alias ls="ls -FG"
-	else
-		alias ls="ls -F --color"
-	fi
-	alias l="ls -lAh"
-	alias la="ls -A"
-	alias ll="ls -l"
+	alias ls="ls -F --color"
 fi
+alias l="ls -lAh"
+alias la="ls -A"
+alias ll="ls -l"
 
 alias grep="grep --color=auto"
 alias duf="du -sh * | sort -hr"
