@@ -224,7 +224,7 @@ if exists('+termguicolors')
   set termguicolors
 endif
 let ayucolor="mirage"
-colorscheme ayu
+:silent! colorscheme ayu
 "set background=dark
 " let g:hybrid_use_Xresources = 1
 " let g:rehash256 = 1
