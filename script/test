@@ -17,10 +17,8 @@ echo "boostraping..."
 
 # load zshrc and check if antibody is working
 echo "sourcing ~/.zshrc"
-set -x
 # shellcheck disable=SC1090
-source ~/.zshrc
-set +x
+source ~/.zshrc || true
 
 test "$(antibody list | wc -l)" -gt 10 || {
 	echo "expecting 10+ bundles loaded" >&2
