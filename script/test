@@ -7,13 +7,16 @@ cp -rf dotfiles ~/.dotfiles
 cd ~/.dotfiles
 
 # setup git credentials
+echo "setup git fake user/email"
 git config --global user.name "dotfiles demo"
 git config --global user.email "dotfiles@demo.com"
 
 # bootstrap the mighty
+echo "boostraping..."
 ./script/bootstrap
 
 # load zshrc and check if antibody is working
+echo "sourcing ~/.zshrc"
 # shellcheck disable=SC1090
 source ~/.zshrc
 
