@@ -1,8 +1,0 @@
-architect:
-  - caarlos0
-install:
-    - git submodule init
-    - git submodule update
-    - locale
-    - ./build/install.sh
-    - ./build/build.sh
