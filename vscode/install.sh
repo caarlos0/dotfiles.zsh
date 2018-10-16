@@ -5,6 +5,7 @@ if test "$(which code)"; then
 	else
 		VSCODE_HOME="$HOME/.config/Code"
 	fi
+	mkdir -p "$VSCODE_HOME/User"
 
 	ln -sf "$DOTFILES/vscode/settings.json" "$VSCODE_HOME/User/settings.json"
 	ln -sf "$DOTFILES/vscode/keybindings.json" "$VSCODE_HOME/User/keybindings.json"
@@ -12,35 +13,23 @@ if test "$(which code)"; then
 
 	# from `code --list-extensions`
 	modules="
-766b.go-outliner
-CoenraadS.bracket-pair-colorizer
-EditorConfig.EditorConfig
-PeterJausovec.vscode-docker
 be5invis.toml
 caarlos0.language-prometheus
-carolynvs.dep
-casualjim.gotemplate
+CoenraadS.bracket-pair-colorizer
 coolbear.systemd-unit-file
-esbenp.prettier-vscode
-formulahendry.auto-close-tag
-formulahendry.auto-rename-tag
-foxundermoon.shell-format
-haaaad.ansible
+EditorConfig.EditorConfig
 HookyQR.beautify
-ipedrazas.kubernetes-snippets
 mauve.terraform
+monokai.theme-monokai-pro-vscode
 ms-python.python
 ms-vscode.Go
-octref.vetur
 patbenatar.advanced-new-file
-peterj.proto
+PeterJausovec.vscode-docker
 pnp.polacode
-rebornix.Ruby
+rebornix.ruby
 rust-lang.rust
-sbrink.elm
 shanoor.vscode-nginx
-shinnn.alex
-teabyii.ayu
+sourcegraph.sourcegraph
 timonwong.shellcheck
 "
 	for module in $modules; do

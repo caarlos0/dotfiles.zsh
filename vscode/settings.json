@@ -6,20 +6,20 @@
   ],
   "editor.tabSize": 4,
   "editor.trimAutoWhitespace": true,
-  "editor.tabCompletion": true,
+  "editor.tabCompletion": "on",
   "explorer.openEditors.visible": 0,
   "window.restoreWindows": "none",
   "terminal.external.osxExec": "iTerm.app",
   "files.autoSave": "onFocusChange",
   "extensions.autoUpdate": true,
-  "workbench.iconTheme": "ayu",
+  "workbench.iconTheme": "Monokai Pro (Filter Spectrum) Icons",
   "editor.cursorStyle": "line",
   "editor.cursorBlinking": "solid",
   "window.title": "${activeEditorMedium}${separator}${rootName}",
   "files.trimTrailingWhitespace": true,
   "editor.minimap.enabled": false,
-  "editor.renderWhitespace": "boundary",
-  "workbench.colorTheme": "Ayu Mirage",
+  "editor.renderWhitespace": "none",
+  "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
   "window.zoomLevel": 0,
   "extensions.ignoreRecommendations": false,
   "go.coverageDecorator": {
@@ -49,5 +49,12 @@
   "go.lintTool": "golint",
   "go.testTimeout": "3m",
   "breadcrumbs.enabled": true,
-  "go.useLanguageServer": true
+  "go.useLanguageServer": false,
+  "go.enableCodeLens": {
+    "references": true,
+    "runtest": true
+  },
+  "telemetry.enableTelemetry": false,
+  "terraform.telemetry.enabled": false,
+  "telemetry.enableCrashReporter": false
 }
