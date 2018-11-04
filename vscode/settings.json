@@ -12,14 +12,14 @@
   "terminal.external.osxExec": "iTerm.app",
   "files.autoSave": "onFocusChange",
   "extensions.autoUpdate": true,
-  "workbench.iconTheme": "Monokai Pro (Filter Spectrum) Icons",
+  "workbench.iconTheme": "Monokai Pro Monochrome Icons",
   "editor.cursorStyle": "line",
   "editor.cursorBlinking": "solid",
   "window.title": "${activeEditorMedium}${separator}${rootName}",
   "files.trimTrailingWhitespace": true,
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "none",
-  "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
+  "workbench.colorTheme": "Monokai Pro",
   "window.zoomLevel": 0,
   "extensions.ignoreRecommendations": false,
   "go.coverageDecorator": {
@@ -39,7 +39,7 @@
   "go.coverOnSave": false,
   "explorer.confirmDragAndDrop": false,
   "search.smartCase": true,
-  "editor.fontFamily": "FuraCode Nerd Font, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontFamily": "FuraCode Nerd Font Mono Retina, Menlo, Monaco, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "bracketPairColorizer.showVerticalScopeLine": false,
   "bracketPairColorizer.showHorizontalScopeLine": false,
@@ -51,10 +51,11 @@
   "breadcrumbs.enabled": true,
   "go.useLanguageServer": false,
   "go.enableCodeLens": {
-    "references": true,
     "runtest": true
   },
   "telemetry.enableTelemetry": false,
   "terraform.telemetry.enabled": false,
-  "telemetry.enableCrashReporter": false
+  "telemetry.enableCrashReporter": false,
+  "monokaiPro.fileIconsMonochrome": true,
+  "go.useCodeSnippetsOnFunctionSuggest": true
 }
