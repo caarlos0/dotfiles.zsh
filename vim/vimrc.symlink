@@ -5,7 +5,13 @@ Plug 'fatih/vim-go', {'tag': '*', 'do': ':GoInstallBinaries' }
 Plug 'nsf/gocode', {'rtp': 'vim'}
 
 " auto-complete for golang et al
-Plug 'Shougo/deoplete.nvim'
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
 Plug 'zchee/deoplete-go', { 'do': 'make'}
 
 " provides insert mode auto-completion for quotes, parens, brackets, etc.
@@ -46,7 +52,7 @@ Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' }
 Plug 'moll/vim-bbye'
 
 " Colors
-Plug 'ayu-theme/ayu-vim'
+Plug 'Erichain/vim-monokai-pro'
 
 call plug#end()
 
@@ -223,8 +229,7 @@ endif
 if exists('+termguicolors')
   set termguicolors
 endif
-let ayucolor="mirage"
-:silent! colorscheme ayu
+:silent! colorscheme monokai_pro
 "set background=dark
 " let g:hybrid_use_Xresources = 1
 " let g:rehash256 = 1
@@ -570,7 +575,7 @@ autocmd BufWritePre * StripWhitespace
 
 " =================== vim-airline ========================
 
-let g:airline_theme='ayu'
+let g:airline_theme='base16_monokai'
 
 " set to use powerline fonts when not in a ssh session
 let g:remoteSession = ($STY == "")
