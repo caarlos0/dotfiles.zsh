@@ -52,7 +52,7 @@ Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' }
 Plug 'moll/vim-bbye'
 
 " Colors
-Plug 'Erichain/vim-monokai-pro'
+Plug 'nikitavoloboev/vim-monokai-night'
 
 call plug#end()
 
@@ -229,11 +229,11 @@ endif
 if exists('+termguicolors')
   set termguicolors
 endif
-:silent! colorscheme monokai_pro
+:silent! colorscheme monokai-night
 "set background=dark
 " let g:hybrid_use_Xresources = 1
 " let g:rehash256 = 1
-set guifont=Menlo:h15
+set guifont=Fura\ Code\ Retina\ Mono:h15
 set guioptions-=L
 
 " This comes first, because we have mappings that depend on leader
