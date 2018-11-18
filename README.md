@@ -6,13 +6,16 @@
 
 > Config files for ZSH, Java, Ruby, Go, Editors, Terminals and more.
 
-![screenshot][scrn]
+![screenshot 1][scrn1]
+
+![screenshot 2][scrn2]
 
 [ap]: https://github.com/getantibody/antibody
 [ab]: https://img.shields.io/badge/powered%20by-antibody-blue.svg?style=flat-square
 [tb]: https://img.shields.io/travis/caarlos0/dotfiles/master.svg?style=flat-square
 [tp]: https://travis-ci.org/caarlos0/dotfiles
-[scrn]: /docs/screenshot.png
+[scrn1]: /docs/screenshot1.png
+[scrn2]: /docs/screenshot2.png
 
 ## Installation
 
