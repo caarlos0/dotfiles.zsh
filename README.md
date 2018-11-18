@@ -73,6 +73,10 @@ $DOTFILES/macos/set-defaults.sh
 
 And logging out and in again.
 
+### Themes and fonts being used
+
+Theme is **Monokai Night** and the font is **Fura Code Mono**.
+
 ## Further help:
 
 - [Personalize your configs](/docs/PERSONALIZATION.md)
