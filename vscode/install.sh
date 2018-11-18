@@ -14,10 +14,13 @@ if test "$(which code)"; then
 	# from `code --list-extensions`
 	modules="
 be5invis.toml
+budparr.language-hugo-vscode
 caarlos0.language-prometheus
-CoenraadS.bracket-pair-colorizer
 coolbear.systemd-unit-file
+eamodio.gitlens
 EditorConfig.EditorConfig
+fabiospampinato.vscode-monokai-night
+heptio.jsonnet
 HookyQR.beautify
 mauve.terraform
 monokai.theme-monokai-pro-vscode
@@ -29,8 +32,9 @@ pnp.polacode
 rebornix.ruby
 rust-lang.rust
 shanoor.vscode-nginx
-sourcegraph.sourcegraph
+streetsidesoftware.code-spell-checker
 timonwong.shellcheck
+wmaurer.change-case
 "
 	for module in $modules; do
 		code --install-extension "$module" || true
