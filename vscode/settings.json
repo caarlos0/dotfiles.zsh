@@ -1,5 +1,5 @@
 {
-  "editor.fontSize": 15,
+  "editor.fontSize": 14,
   "editor.rulers": [
     80,
     120
@@ -10,6 +10,7 @@
   "explorer.openEditors.visible": 0,
   "window.restoreWindows": "none",
   "terminal.external.osxExec": "iTerm.app",
+  "terminal.integrated.fontSize": 14,
   "files.autoSave": "onFocusChange",
   "extensions.autoUpdate": true,
   "editor.cursorStyle": "line",
@@ -47,7 +48,7 @@
   "breadcrumbs.enabled": true,
   "go.useLanguageServer": true,
   "go.enableCodeLens": {
-    "references": true,
+    "references": false,
     "runtest": true
   },
   "telemetry.enableTelemetry": false,
