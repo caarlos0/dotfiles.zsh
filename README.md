@@ -2,7 +2,6 @@
 
 [![Build Status][tb]][tp]
 [![Powered by Antibody][ab]][ap]
-[![SayThanks.io](https://img.shields.io/badge/SayThanks.io-%E2%98%BC-1EAEDB.svg?style=flat-square)](https://saythanks.io/to/caarlos0)
 
 > Config files for ZSH, Java, Ruby, Go, Editors, Terminals and more.
 
@@ -58,8 +57,6 @@ For both Linux and macOS:
 better git difs (you'll need to run `dot_update` to apply it);
 - [`fzf`](https://github.com/junegunn/fzf):
 fuzzy finder, used in `,t` on vim, for example;
-- [`hub`](https://hub.github.com/): a command-line wrapper for git that makes
-  you better at GitHub;
 - [`kubectx`](https://github.com/ahmetb/kubectx) for better kubernetes context
   and namespace switch;
 
@@ -71,11 +68,11 @@ You use it by running:
 $DOTFILES/macos/set-defaults.sh
 ```
 
-And logging out and in again.
+And logging out and in again/restart.
 
 ### Themes and fonts being used
 
-Theme is **Monokai Night** and the font is **Fura Code Mono**.
+Theme is **Monokai Night** and the font is **Fura Code Mono Retina**.
 
 ## Further help:
 
