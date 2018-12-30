@@ -64,7 +64,7 @@ bindkey '^[f' forward-word
 # to to the beggining/end of line with fn+left/right or home/end
 bindkey "${terminfo[khome]}" beginning-of-line
 bindkey '^[[H' beginning-of-line
-bindkey "${terminfo[kend]}"  end-of-line
+bindkey "${terminfo[kend]}" end-of-line
 bindkey '^[[F' end-of-line
 
 # delete char with backspaces and delete

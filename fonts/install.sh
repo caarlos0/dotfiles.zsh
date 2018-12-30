@@ -8,7 +8,7 @@ install() {
 }
 
 if [ "$(uname -s)" = "Darwin" ]; then
-	if which brew >/dev/null 2>&1; then
+	if command -v brew >/dev/null 2>&1; then
 		brew tap homebrew/cask-fonts
 		brew cask install font-firacode-nerd-font
 		brew cask install font-firacode-nerd-font-mono

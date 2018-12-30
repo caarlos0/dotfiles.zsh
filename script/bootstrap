@@ -88,8 +88,8 @@ install_dotfiles() {
 }
 
 find_zsh() {
-	if which zsh >/dev/null 2>&1 && grep "$(which zsh)" /etc/shells >/dev/null; then
-		which zsh
+	if command -v zsh >/dev/null 2>&1 && grep "$(command -v zsh)" /etc/shells >/dev/null; then
+		command -v zsh
 	else
 		echo "/bin/zsh"
 	fi
@@ -108,7 +108,7 @@ fi
 zsh="$(find_zsh)"
 test -z "$TRAVIS_JOB_ID" &&
 	test "$(expr "$SHELL" : '.*/\(.*\)')" != "zsh" &&
-	which chsh >/dev/null 2>&1 &&
+	command -v chsh >/dev/null 2>&1 &&
 	chsh -s "$zsh" &&
 	success "set $("$zsh" --version) at $zsh as default shell"
 
