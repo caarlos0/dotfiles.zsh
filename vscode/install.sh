@@ -1,5 +1,5 @@
 #!/bin/sh
-if test "$(which code)"; then
+if command -v code >/dev/null; then
 	if [ "$(uname -s)" = "Darwin" ]; then
 		VSCODE_HOME="$HOME/Library/Application Support/Code"
 	else
@@ -32,7 +32,6 @@ pnp.polacode
 rebornix.ruby
 rust-lang.rust
 shanoor.vscode-nginx
-streetsidesoftware.code-spell-checker
 timonwong.shellcheck
 wmaurer.change-case
 "

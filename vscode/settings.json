@@ -1,5 +1,5 @@
 {
-  "editor.fontSize": 14,
+  "editor.fontSize": 15,
   "editor.rulers": [
     80,
     120
@@ -13,8 +13,7 @@
   "terminal.integrated.fontSize": 14,
   "files.autoSave": "onFocusChange",
   "extensions.autoUpdate": true,
-  "editor.cursorStyle": "line",
-  "editor.cursorBlinking": "solid",
+  "editor.cursorBlinking": "phase",
   "window.title": "${activeEditorMedium}${separator}${rootName}",
   "files.trimTrailingWhitespace": true,
   "editor.minimap.enabled": false,
@@ -31,11 +30,9 @@
     "/vendor": true
   },
   "workbench.startupEditor": "newUntitledFile",
-  "workbench.fontAliasing": "antialiased",
+  "workbench.fontAliasing": "auto",
   "docker.showExplorer": false,
   "workbench.editor.showIcons": true,
-  "go.testOnSave": false,
-  "go.coverOnSave": false,
   "explorer.confirmDragAndDrop": false,
   "search.smartCase": true,
   "editor.fontFamily": "FuraCode Nerd Font Mono Retina, Menlo, Monaco, 'Courier New', monospace",
@@ -43,31 +40,25 @@
   "files.associations": {
     "*.tmpl": "gotemplate"
   },
-  "go.lintTool": "golangci-lint",
   "go.testTimeout": "3m",
   "breadcrumbs.enabled": true,
-  "go.useLanguageServer": true,
-  "go.enableCodeLens": {
-    "references": false,
-    "runtest": true
-  },
   "telemetry.enableTelemetry": false,
   "terraform.telemetry.enabled": false,
   "telemetry.enableCrashReporter": false,
   "monokaiPro.fileIconsMonochrome": true,
   "go.useCodeSnippetsOnFunctionSuggest": true,
-  "workbench.iconTheme": "vs-seti",
-  "go.formatTool": "goformat",
+  "go.formatTool": "goimports",
   "search.useGlobalIgnoreFiles": true,
   "workbench.editor.highlightModifiedTabs": true,
   "search.showLineNumbers": true,
-  "[go]": {
-    "editor.insertSpaces": true,
-    "editor.formatOnSave": true
-  },
-  "go.coverOnSingleTest": true,
   "ruby.intellisense": "rubyLocate",
   "ruby.format": "rubocop",
   "ruby.codeCompletion": "rcodetools",
-  "ruby.useLanguageServer": true
+  "ruby.useLanguageServer": true,
+  "go.autocompleteUnimportedPackages": true,
+  "editor.fontWeight": "600",
+  "workbench.iconTheme": "Monokai Classic Monochrome Icons",
+  "terminal.integrated.cursorBlinking": true,
+  "go.coverOnSingleTest": true,
+  "terminal.integrated.cursorStyle": "line"
 }
