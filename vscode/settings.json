@@ -57,7 +57,6 @@
   "ruby.useLanguageServer": true,
   "go.autocompleteUnimportedPackages": true,
   "editor.fontWeight": "600",
-  "workbench.iconTheme": "Monokai Classic Monochrome Icons",
   "terminal.integrated.cursorBlinking": true,
   "go.coverOnSingleTest": true,
   "terminal.integrated.cursorStyle": "line"
