@@ -11,5 +11,5 @@ zsh-users/zsh-autosuggestions
 
 # these should be at last!
 sindresorhus/pure
-zsh-users/zsh-syntax-highlighting
+zdharma/fast-syntax-highlighting
 zsh-users/zsh-history-substring-search
