@@ -45,7 +45,6 @@
   "telemetry.enableTelemetry": false,
   "terraform.telemetry.enabled": false,
   "telemetry.enableCrashReporter": false,
-  "monokaiPro.fileIconsMonochrome": true,
   "go.useCodeSnippetsOnFunctionSuggest": true,
   "go.formatTool": "goimports",
   "search.useGlobalIgnoreFiles": true,
