@@ -5,7 +5,6 @@ if command -v brew >/dev/null 2>&1; then
 		cleanup)
 			(cd "$(brew --repo)" && git prune && git gc)
 			command brew cleanup
-			command brew prune
 			rm -rf "$(brew --cache)"
 			;;
 		bump)
