@@ -58,5 +58,6 @@
   "editor.fontWeight": "600",
   "terminal.integrated.cursorBlinking": true,
   "go.coverOnSingleTest": true,
-  "terminal.integrated.cursorStyle": "line"
+  "terminal.integrated.cursorStyle": "line",
+  "javascript.updateImportsOnFileMove.enabled": "always"
 }
