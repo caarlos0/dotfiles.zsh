@@ -59,5 +59,6 @@
   "terminal.integrated.cursorBlinking": true,
   "go.coverOnSingleTest": true,
   "terminal.integrated.cursorStyle": "line",
-  "javascript.updateImportsOnFileMove.enabled": "always"
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "go.installDependenciesWhenBuilding": false
 }
