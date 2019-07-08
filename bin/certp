@@ -1,0 +1,15 @@
+#!/bin/sh
+#
+# Prints cert certificate for a given domain using openssl
+#
+# Usage:
+#
+# $0 domain
+#
+set -e
+domain="$1"
+test -n "$domain" || {
+	echo "domain missing" >&2
+	exit 1
+}
+echo | openssl s_client -showcerts -servername $domain -connect $domain:443 2>/dev/null | openssl x509 -inform pem -noout -text
