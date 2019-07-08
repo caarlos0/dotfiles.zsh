@@ -1,5 +1,6 @@
 {
   "editor.fontSize": 15,
+  "editor.formatOnSave": true,
   "editor.rulers": [
     80,
     120
@@ -35,8 +36,7 @@
   "workbench.editor.showIcons": true,
   "explorer.confirmDragAndDrop": false,
   "search.smartCase": true,
-  "editor.fontFamily": "FuraCode Nerd Font Mono Retina, Menlo, Monaco, 'Courier New', monospace",
-  "editor.fontLigatures": true,
+  "editor.fontFamily": "Source Code Pro, Menlo, Monaco, 'Courier New', monospace",
   "files.associations": {
     "*.tmpl": "gotemplate"
   },
@@ -60,5 +60,16 @@
   "go.coverOnSingleTest": true,
   "terminal.integrated.cursorStyle": "line",
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "go.installDependenciesWhenBuilding": false
+  "go.useLanguageServer": false,
+  "go.alternateTools": {
+    "go-langserver": "gopls"
+  },
+  "go.languageServerExperimentalFeatures": {
+    "format": true,
+    "autoComplete": true
+  },
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+  "window.newWindowDimensions": "maximized"
 }
