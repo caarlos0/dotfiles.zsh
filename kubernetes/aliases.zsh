@@ -12,3 +12,12 @@ alias kdebug='kubectl run -i -t debug --rm --image=caarlos0/debug --restart=Neve
 alias knrunning='kubectl get pods --field-selector=status.phase!=Running'
 alias kfails='kubectl get po -owide --all-namespaces | grep "0/" | tee /dev/tty | wc -l'
 alias kimg="kubectl get deployment --output=jsonpath='{.spec.template.spec.containers[*].image}'"
+alias kvs="kubectl view-secret"
+
+kenc() {
+    echo -n $* | base64
+}
+
+kdec() {
+    echo $* | base64 -D
+}
