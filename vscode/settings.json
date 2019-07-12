@@ -32,7 +32,6 @@
   },
   "workbench.startupEditor": "newUntitledFile",
   "workbench.fontAliasing": "auto",
-  "docker.showExplorer": false,
   "workbench.editor.showIcons": true,
   "explorer.confirmDragAndDrop": false,
   "search.smartCase": true,
