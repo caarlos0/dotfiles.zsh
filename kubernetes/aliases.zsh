@@ -22,3 +22,12 @@ kenc() {
 kdec() {
 	echo "$@" | base64 -D
 }
+
+# create new k3d test cluster
+ktc() {
+	k3d create --name test --wait 0
+	export KUBECONFIG="$(k3d get-kubeconfig --name='test')"
+	kubectl create serviceaccount --namespace kube-system tiller
+	kubectl create clusterrolebinding tiller-cluster-admin --clusterrole=cluster-admin --serviceaccount=kube-system:tiller
+	helm init --service-account tiller --upgrade --wait
+}
