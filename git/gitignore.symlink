@@ -13,3 +13,4 @@
 .ruby-version
 .vscode/
 dump.rdb
+main.tfvars
