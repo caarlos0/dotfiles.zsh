@@ -9,7 +9,7 @@ if command -v brew >/dev/null 2>&1; then
 			;;
 		bump)
 			command brew update
-			command brew fetch "$(command brew outdated)"
+			command brew outdated | xargs command brew fetch
 			command brew upgrade
 			brew cleanup
 			;;
