@@ -26,7 +26,8 @@ kdec() {
 # create new k3d test cluster
 ktc() {
 	k3d create --name test --wait 0
-	export KUBECONFIG="$(k3d get-kubeconfig --name='test')"
+	export KUBECONFIG
+	KUBECONFIG="$(k3d get-kubeconfig --name='test')"
 }
 
 # create new k3d test cluster and set up helm on it
