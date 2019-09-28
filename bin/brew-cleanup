@@ -1,0 +1,4 @@
+#!/bin/sh
+(cd "$(brew --repo)" && git prune && git gc)
+brew cleanup
+rm -rf "$(brew --cache)"
