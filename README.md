@@ -72,7 +72,7 @@ And logging out and in again/restart.
 
 ### Themes and fonts being used
 
-Theme is **Monokai Night** and the font is **Fura Code Mono Retina**.
+Theme is **Monokai Night** and the font is **Source Code Pro Light**.
 
 ## Further help:
 
