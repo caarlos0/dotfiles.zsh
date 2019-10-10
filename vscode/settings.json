@@ -19,7 +19,7 @@
   "files.trimTrailingWhitespace": true,
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "none",
-  "workbench.colorTheme": "Monokai Night",
+  "workbench.colorTheme": "Dracula",
   "window.zoomLevel": 0,
   "extensions.ignoreRecommendations": false,
   "go.coverageDecorator": {
@@ -35,7 +35,6 @@
   "workbench.editor.showIcons": true,
   "explorer.confirmDragAndDrop": false,
   "search.smartCase": true,
-  "editor.fontFamily": "Source Code Pro, Menlo, Monaco, 'Courier New', monospace",
   "files.associations": {
     "*.tmpl": "gotemplate"
   },
@@ -72,5 +71,10 @@
   "editor.codeActionsOnSave": {
     "source.organizeImports": true
   },
-  "window.newWindowDimensions": "maximized"
+  "window.newWindowDimensions": "maximized",
+  "go.buildFlags": [
+    "-v"
+  ],
+  "editor.fontFamily": "Source Code Pro, Menlo, Monaco, 'Courier New', monospace",
+  "editor.smoothScrolling": true
 }
