@@ -1,72 +1,543 @@
 {
-  "Create new test": {
-    "prefix": "test",
+  "Context Done": {
+    "prefix": "cd",
     "body": [
-      "func Test$1(t *testing.T) {",
-      "\t$2",
-      "}"
-    ],
-    "description": "Create a new test"
+      "<-ctx.Done()"
+    ]
   },
-  "For range": {
-    "prefix": "fr",
+  "Goroutine": {
+    "prefix": "go",
     "body": [
-      "for _, $1 := range $2 {",
-      "\t$0",
+      "go func(){",
+      "  $0",
+      "}()",
+    ]
+  },
+  "Empty Struct": {
+    "prefix": "es",
+    "body": [
+      "struct{}{}"
+    ]
+  },
+  "Case": {
+    "prefix": "ca",
+    "body": [
+      "case $1:"
+    ]
+  },
+  "Slice Remove": {
+    "prefix": "sr",
+    "body": [
+      "${1:slice} = append(${1:slice}[:${2:index}], ${1:slice}[${2:index}+1:]...)"
+    ]
+  },
+  "sort": {
+    "prefix": "sort",
+    "body": [
+      "sort.Slice(${1:s}, func(i, j int) bool {",
+      "  a := $1[i]",
+      "  b := $1[j]",
+      "  return $0",
+      "})"
+    ]
+  },
+  "int enum": {
+    "prefix": "enum-int",
+    "body": [
+      "// $1 $2.",
+      "type $1 int",
+      "",
+      "// $1s available.",
+      "const (",
+      "  $1$3 $1 = iota",
+      "  $0",
+      ")",
+    ]
+  },
+  "string enum": {
+    "prefix": "enum-string",
+    "body": [
+      "// $1 $2.",
+      "type $1 string",
+      "",
+      "// $1s available.",
+      "const (",
+      "  $0",
+      ")",
+    ]
+  },
+  "defer": {
+    "prefix": "def",
+    "body": [
+      "defer func() { $0 }()"
+    ]
+  },
+  "db": {
+    "prefix": "db",
+    "body": [
+      "db *sqlx.DB"
+    ]
+  },
+  "if": {
+    "prefix": "if",
+    "body": [
+      "if ${1:v}, ok := $2; ok {",
+      "  $0",
       "}"
-    ],
-    "description": "new for-range loop"
+    ]
+  },
+  "options": {
+    "prefix": "options",
+    "body": [
+      "// Option function.",
+      "type Option func(*$1)",
+      "",
+      "// New $2 with the given options.",
+      "func New(options ...Option) *$1 {",
+      "  var v $1",
+      "  for _, o := range options {",
+      "     o(&v)",
+      "  }",
+      "  return &v",
+      "}"
+    ]
+  },
+  "option": {
+    "prefix": "o",
+    "body": [
+      "// With$1 $0.",
+      "func With$1($2) Option {",
+      "  return func($3) {",
+      "    $4",
+      "  }",
+      "}"
+    ]
+  },
+  "log error": {
+    "prefix": "le",
+    "body": [
+      "logs.WithError(err).Error(\"$1\")"
+    ]
+  },
+  "log with fields": {
+    "prefix": "lw",
+    "body": [
+      "logs.WithFields(log.Fields{",
+      "  $0",
+      "})"
+    ]
+  },
+  "delete": {
+    "prefix": "d",
+    "body": [
+      "delete($1, \"$2\")"
+    ]
+  },
+  "Pretty Print": {
+    "prefix": "pp",
+    "body": [
+      "pretty.Print($0)",
+    ]
+  },
+  "fmt.Printf": {
+    "prefix": "p",
+    "body": [
+      "fmt.Printf(\"${1:%#v}\\n\", $0)"
+    ]
+  },
+  "fmt.Fprintf": {
+    "prefix": "pf",
+    "body": [
+      "fmt.Fprintf(w, \"${1:%s}\", $0)"
+    ]
+  },
+  "log.Printf": {
+    "prefix": "l",
+    "body": [
+      "log.Printf(\"${1:%v}\\n\", $0)"
+    ]
+  },
+  "log.Fatalf": {
+    "prefix": "fa",
+    "body": [
+      "log.Fatalf(\"error$1: %s\\n\", ${0:err})"
+    ]
+  },
+  "Append": {
+    "prefix": "a",
+    "body": [
+      "$1 = append($1, $0)"
+    ]
+  },
+  "Build Tag": {
+    "prefix": "build",
+    "body": [
+      "// +build ${0:js}"
+    ]
+  },
+  "To-do": {
+    "prefix": "todo",
+    "body": [
+      "// TODO: $0"
+    ]
+  },
+  "Float64": {
+    "prefix": "fl",
+    "body": [
+      "float64($0)"
+    ]
+  },
+  "Method": {
+    "prefix": "m",
+    "body": [
+      "// $3 ${4:implementation}.",
+      "func ($1 *$2) $3($5) $6 {",
+      "  $0",
+      "}"
+    ]
+  },
+  "Method Copy": {
+    "prefix": "mm",
+    "body": [
+      "// $3 ${4:implementation}.",
+      "func ($1 $2) $3($5) $6 {",
+      "  $0",
+      "}"
+    ]
+  },
+  "Method Chained": {
+    "prefix": "mc",
+    "body": [
+      "// $3 ${4:implementation}.",
+      "func ($1 *$2) $3($5) $6 {",
+      "  $0",
+      "  return $1",
+      "}"
+    ]
+  },
+  "Sprintf": {
+    "prefix": "ss",
+    "body": [
+      "fmt.Sprintf(\"$1\", $0)"
+    ]
+  },
+  "If Error": {
+    "prefix": "e",
+    "body": [
+      "if err != nil {",
+      "  $0",
+      "}"
+    ]
+  },
+  "If Error Oneliner": {
+    "prefix": "ie",
+    "body": [
+      "if err := $1; err != nil {",
+      "  $0",
+      "}"
+    ]
+  },
+  "Error Wrap": {
+    "prefix": "ew",
+    "body": [
+      "errors.Wrap(err, \"$0\")"
+    ]
+  },
+  "Error Wrapf": {
+    "prefix": "ewf",
+    "body": [
+      "errors.Wrapf(err, \"$1\", $0)"
+    ]
+  },
+  "Return": {
+    "prefix": "r",
+    "body": [
+      "return "
+    ]
+  },
+  "Return Error": {
+    "prefix": "re",
+    "body": [
+      "return err"
+    ]
+  },
+  "Return Nil": {
+    "prefix": "n",
+    "body": [
+      "return nil"
+    ]
+  },
+  "Time Duration": {
+    "prefix": "td",
+    "body": [
+      "time.Duration($0)"
+    ]
+  },
+  "Testing TB": {
+    "prefix": "tb",
+    "body": [
+      "t testing.TB"
+    ]
+  },
+  "Time Now": {
+    "prefix": "now",
+    "body": [
+      "time.Now()"
+    ]
+  },
+  "Time Start": {
+    "prefix": "st",
+    "body": [
+      "start := time.Now()"
+    ]
+  },
+  "Time Since": {
+    "prefix": "ts",
+    "body": [
+      "time.Since(${0:start})"
+    ]
+  },
+  "Assert Equal": {
+    "prefix": "ae",
+    "body": [
+      "assert.Equal(t, ${1:expected}, ${2:actual})"
+    ]
+  },
+  "Assert Error Equal": {
+    "prefix": "aee",
+    "body": [
+      "assert.EqualError(t, ${1:err}, `${0:msg}`)"
+    ]
+  },
+  "Assert No Error": {
+    "prefix": "no",
+    "body": [
+      "assert.NoError(t, err${1:, \"$0\"})"
+    ]
+  },
+  "Map": {
+    "prefix": "ma",
+    "body": [
+      "map[${1:string}]${0:value}"
+    ]
+  },
+  "HTTP Error": {
+    "prefix": "he",
+    "body": [
+      "http.Error(w, \"$1\", http.Status$2)"
+    ]
+  },
+  "HTTP Handler": {
+    "prefix": "ha",
+    "body": [
+      "w http.ResponseWriter, r *http.Request"
+    ]
+  },
+  "Hex Dump": {
+    "prefix": "hd",
+    "body": [
+      "fmt.Printf(\"%s\\\\n\", hex.Dump($1))"
+    ]
   },
   "Tag": {
     "prefix": "tag",
     "body": [
       "`$1:\"$2\"`"
+    ]
+  },
+  "Bytes": {
+    "prefix": "b",
+    "body": [
+      "[]byte($1)"
+    ]
+  },
+  "Buffer": {
+    "prefix": "buf",
+    "body": [
+      "var buf bytes.Buffer"
+    ]
+  },
+  "Main": {
+    "prefix": "main",
+    "body": [
+      "func main(){",
+      "  $0",
+      "}"
+    ]
+  },
+  "Init": {
+    "prefix": "init",
+    "body": [
+      "func init(){",
+      "  $0",
+      "}"
+    ]
+  },
+  "Function": {
+    "prefix": "f",
+    "body": [
+      "// $1 $2.",
+      "func $1($3) $4 {",
+      "  $0",
+      "}"
+    ]
+  },
+  "Function Anonymous": {
+    "prefix": "ff",
+    "body": [
+      "func($1) $2 {",
+      "  $0",
+      "}"
+    ]
+  },
+  "Struct": {
+    "prefix": "s",
+    "body": [
+      "// $1 $2.",
+      "type $1 struct {",
+      "  $0",
+      "}"
+    ]
+  },
+  "Struct Field": {
+    "prefix": "sf",
+    "body": [
+      "// $1 $3.",
+      "${1:Name} ${2:string}"
+    ]
+  },
+  "Context Argument": {
+    "prefix": "con",
+    "body": [
+      "ctx context.Context"
+    ]
+  },
+  "Context Background": {
+    "prefix": "cb",
+    "body": [
+      "context.Background()"
+    ]
+  },
+  "Context WithTimeout": {
+    "prefix": "ct",
+    "body": [
+      "ctx, cancel := context.WithTimeout(context.Background(), $0)",
+      "defer cancel()"
+    ]
+  },
+  "Hex Dump Reader": {
+    "prefix": "hdr",
+    "body": [
+      "{",
+      "  b, err := ioutil.ReadAll($0)",
+      "  if err != nil {",
+      "    panic(err)",
+      "  }",
+      "",
+      "  fmt.Printf(\"%s\\\\n\", hex.Dump(b))",
+      "}"
+    ]
+  },
+  "Interface": {
+    "prefix": "i",
+    "body": [
+      "// $1 $2.",
+      "type $1 interface {",
+      "  $0",
+      "}"
+    ]
+  },
+  "Lock & Unlock": {
+    "prefix": "lo",
+    "body": [
+      "$1.Lock()",
+      "defer $1.Unlock()"
+    ]
+  },
+  "New Constructor": {
+    "prefix": "ne",
+    "body": [
+      "// New $2.",
+      "func New($3) *$1 {",
+      "  return &$1{",
+      "    $0",
+      "  }",
+      "}"
+    ]
+  },
+  "Inspect As JSON": {
+    "prefix": "ij",
+    "body": [
+      "{",
+      "  enc := json.NewEncoder(os.Stderr)",
+      "  enc.SetIndent(\"\", \"  \")",
+      "  enc.Encode($0)",
+      "}"
     ],
-    "description": "add a tag"
   },
-  "Go Inline": {
-    "prefix": "goi",
-    "body": "go func() { $0 }()",
-    "description": "inline go routine"
+  "For Range": {
+    "prefix": "fr",
+    "body": [
+      "for _, ${1:v} := range ${2:value} {",
+      "  $0",
+      "}"
+    ]
   },
-  "Assert Err": {
-    "prefix": "ae",
-    "body": "assert.Error(${1:err}, \"$0\")"
+  "For Range Chan": {
+    "prefix": "frr",
+    "body": [
+      "for ${1:v} := range ${2:value} {",
+      "  $0",
+      "}"
+    ]
   },
-  "Assert Noerr": {
-    "prefix": "ane",
-    "body": "assert.NoError(${1:err}, \"$0\")"
+  "Config": {
+    "prefix": "config",
+    "body": [
+      "// Config options.",
+      "type Config struct {",
+      "  $0",
+      "}",
+      "",
+      "// $1 $2",
+      "type $1 struct {",
+      "  Config",
+      "}",
+      "",
+      "// New $3 with the given config.",
+      "func New(c Config) *$1 {",
+      "  return &$1{",
+      "    Config: c,",
+      "  }",
+      "}"
+    ]
   },
-  "Benchmark": {
+  "Benchmark Function": {
     "prefix": "bench",
     "body": [
+      "// Benchmark $2.",
       "func Benchmark$1(b *testing.B) {",
-      "\tfor i := 0; i < b.N; i++ {",
-      "\t\t$0",
-      "\t}",
+      "  for i := 0; i < b.N; i++ {",
+      "    $0",
+      "  }",
       "}"
     ]
   },
-  "Log with error": {
-    "prefix": "le",
-    "body": "log.WithError(err).Error(\"$0\")",
-    "description": "Log with error"
-  },
-  "If ok": {
-    "prefix": "io",
+  "Test Function": {
+    "prefix": "t",
     "body": [
-      "if $1, ok := $2.($3); ok {",
-      "\t$0",
+      "// Test $2.",
+      "func Test$1(t *testing.T) {",
+      "  $0",
       "}"
-    ]
+    ],
   },
-  "If err": {
-    "prefix": "ie",
-    "description": "if err != nil",
+  "Test Case": {
+    "prefix": "tr",
     "body": [
-      "if $1, err := $2; err != nil {",
-      "\t$0",
-      "}"
+      "t.Run(\"$1\", func(t *testing.T){",
+      "  $0",
+      "})"
     ]
   }
 }
