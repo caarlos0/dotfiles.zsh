@@ -1,2 +1,2 @@
 #!/bin/sh
-test -e ~/.psqlrc.local || touch "$_"
+test -e ~/.psqlrc.local || touch ~/.psqlrc.local
