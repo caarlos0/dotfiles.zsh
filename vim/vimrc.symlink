@@ -40,10 +40,6 @@ Plug 'hashivim/vim-terraform'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
-" airline stuff
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-
 " safe buffer deletion
 Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' }
 
@@ -52,7 +48,7 @@ Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' }
 Plug 'moll/vim-bbye'
 
 " Colors
-Plug 'nikitavoloboev/vim-monokai-night'
+Plug 'dracula/vim', {'as': 'dracula'}
 
 call plug#end()
 
@@ -229,11 +225,11 @@ endif
 if exists('+termguicolors')
   set termguicolors
 endif
-:silent! colorscheme monokai-night
+:silent! colorscheme dracula
 "set background=dark
 " let g:hybrid_use_Xresources = 1
 " let g:rehash256 = 1
-set guifont=Fura\ Code\ Retina\ Mono:h15
+set guifont=Source\ Code\ Pro:h15
 set guioptions-=L
 
 " This comes first, because we have mappings that depend on leader
@@ -572,18 +568,6 @@ endfunction
 " auto strip whitespace except for file with extention blacklisted
 let blacklist = []
 autocmd BufWritePre * StripWhitespace
-
-" =================== vim-airline ========================
-
-let g:airline_theme='base16_monokai'
-
-" set to use powerline fonts when not in a ssh session
-let g:remoteSession = ($STY == "")
-if !g:remoteSession
-  let g:airline_powerline_fonts=1
-endif
-
-let g:airline#extensions#tabline#enabled = 0
 
 " =================== rainbow ============================
 let g:rainbow_active = 1
