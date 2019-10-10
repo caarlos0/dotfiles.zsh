@@ -1,3 +1,3 @@
 #!/bin/sh
 set -e
-code --list-extensions > "$DOTFILES/vscode/extensions.txt"
+code --list-extensions >"$DOTFILES/vscode/extensions.txt"

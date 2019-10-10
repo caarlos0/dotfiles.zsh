@@ -96,7 +96,7 @@ defaults write NSGlobalDomain AppleHighlightColor -string "0.847059 0.847059 0.8
 echo "  › Show battery percent"
 defaults write com.apple.menuextra.battery ShowPercent -bool true
 
-if [ ! -z "$TRAVIS_JOB_ID" ]; then
+if [ -n "$TRAVIS_JOB_ID" ]; then
 	echo "  › Speed up wake from sleep to 24 hours from an hour"
 	# http://www.cultofmac.com/221392/quick-hack-speeds-up-retina-macbooks-wake-from-sleep-os-x-tips/
 	sudo pmset -a standbydelay 86400
@@ -263,7 +263,7 @@ defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 ###############################################################################
 # SSD-specific tweaks                                                         #
 ###############################################################################
-if [ ! -z "$TRAVIS_JOB_ID" ] && diskutil info disk0 | grep SSD >/dev/null 2>&1; then
+if [ -n "$TRAVIS_JOB_ID" ] && diskutil info disk0 | grep SSD >/dev/null 2>&1; then
 	echo "  › Disable local backups"
 	# https://classicyuppie.com/what-crap-is-this-os-xs-mobilebackups/
 	sudo tmutil disablelocal
