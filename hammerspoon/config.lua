@@ -1,3 +1,5 @@
+local hotkey = require "hs.hotkey"
+
 -- hyper key
 hyper = { 'alt', 'ctrl', 'cmd' }
 
@@ -5,7 +7,7 @@ hyper = { 'alt', 'ctrl', 'cmd' }
 hs.window.animationDuration = 0
 
 -- middle left
-hs.hotkey.bind(hyper, "Left", function()
+hotkey.bind(hyper, "Left", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
   local screen = win:screen()
@@ -19,7 +21,7 @@ hs.hotkey.bind(hyper, "Left", function()
 end)
 
 -- middle right
-hs.hotkey.bind(hyper, "Right", function()
+hotkey.bind(hyper, "Right", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
   local screen = win:screen()
@@ -33,7 +35,7 @@ hs.hotkey.bind(hyper, "Right", function()
 end)
 
 -- centralize at 80% screen size
-hs.hotkey.bind(hyper, 'C', function()
+hotkey.bind(hyper, 'C', function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
   local max = win:screen():frame()
@@ -48,7 +50,7 @@ hs.hotkey.bind(hyper, 'C', function()
 end)
 
 -- maximize
-hs.hotkey.bind(hyper, 'M', function()
+hotkey.bind(hyper, 'M', function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
   local max = win:screen():frame()
