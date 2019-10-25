@@ -21,25 +21,18 @@ that. I realized it would be better to split that into another repo, so
 this one would contain only the configs, and the other handles only software
 installation.
 
-With that in mind, [machine](http://github.com/caarlos0/machine) was born.
+If you want to see what I install on my mac, check
+[this repo](https://github.com/caarlos0/macos).
 
-It's an Ansible recipe that can install a bunch of stuff, and you can comment
-out what you don't want. Works on both Linux and OSX.
+### Default `EDITOR`, `VEDITOR` and `PROJECTS`
 
-### Default `EDITOR` and `PROJECTS`
-
-The default `EDITOR` right now is `code`, which is Microsoft's OpenSource
-Visual Studio Code editor. You can change that by adding your custom
-override to that variable in `~/.localrc`.
+`VEDITOR` stands for "visual editor", and is set to `code` be default. `EDITOR`
+is set to `vim`.
 
 `PROJECTS` is default to `~/Code`. The shortcut to that folder in the shell
-is `c`. You can override this default in `~/.localrc`.
+is `c`.
 
-### Lots of editors
-
-I use `vim` a lot, but I also use `code`, and used to use `atom` and
-`sublime-text`. So, the configs for all these editors are provided, you can
-use the one you like the most.
+You can change that by adding your custom overrides in `~/.localrc`.
 
 ### Topical
 

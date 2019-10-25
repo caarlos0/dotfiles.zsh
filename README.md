@@ -47,10 +47,6 @@ For macOS, I recommend:
 
 - iTerm: a better terminal emulator;
 
-For Linux:
-
-- Terminator: a better terminal emulator;
-
 For both Linux and macOS:
 
 - [`diff-so-fancy`](https://github.com/so-fancy/diff-so-fancy):
