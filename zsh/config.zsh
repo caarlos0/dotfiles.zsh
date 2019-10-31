@@ -7,6 +7,7 @@ fpath=($DOTFILES/functions $fpath)
 autoload -U "$DOTFILES"/functions/*(:t)
 autoload -U up-line-or-beginning-search
 autoload -U down-line-or-beginning-search
+autoload -U edit-command-line
 
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
@@ -44,10 +45,7 @@ setopt RM_STAR_SILENT
 
 zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
-
-# emacs mode
-# I always enter vi mode by mistake
-bindkey -e
+zle -N edit-command-line
 
 # fuzzy find: start to type
 bindkey "$terminfo[kcuu1]" up-line-or-beginning-search
@@ -74,6 +72,9 @@ bindkey '^?' backward-delete-char
 # delete word with ctrl+backspace
 bindkey '^[[3;5~' backward-delete-word
 # bindkey '^[[3~' backward-delete-word
+
+# edit command line in $EDITOR
+bindkey '^e' edit-command-line
 
 # search history with fzf if installed, default otherwise
 if test -d /usr/local/opt/fzf/shell; then
