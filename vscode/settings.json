@@ -75,6 +75,6 @@
   "go.buildFlags": [
     "-v"
   ],
-  "editor.fontFamily": "Source Code Pro, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontFamily": "Hack, 'Source Code Pro', Menlo, Monaco, 'Courier New', monospace",
   "editor.smoothScrolling": true
 }
