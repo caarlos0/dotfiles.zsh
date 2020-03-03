@@ -4,4 +4,4 @@
 #
 # This fixes the "no sound" issue that happens occasionally.
 #
-sudo killall coreaudiod
+sudo pkill -f coreaudiod
