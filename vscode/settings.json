@@ -1,80 +1,85 @@
 {
-  "editor.fontSize": 15,
-  "editor.formatOnSave": true,
-  "editor.rulers": [
-    80,
-    120
-  ],
-  "editor.tabSize": 4,
-  "editor.trimAutoWhitespace": true,
-  "editor.tabCompletion": "on",
-  "explorer.openEditors.visible": 0,
-  "window.restoreWindows": "none",
-  "terminal.external.osxExec": "iTerm.app",
-  "terminal.integrated.fontSize": 14,
-  "files.autoSave": "onFocusChange",
-  "extensions.autoUpdate": true,
-  "editor.cursorBlinking": "phase",
-  "window.title": "${activeEditorMedium}${separator}${rootName}",
-  "files.trimTrailingWhitespace": true,
-  "editor.minimap.enabled": false,
-  "editor.renderWhitespace": "none",
-  "workbench.colorTheme": "Dracula",
-  "window.zoomLevel": 0,
-  "extensions.ignoreRecommendations": false,
-  "go.coverageDecorator": {
-    "type": "gutter"
-  },
-  "search.exclude": {
-    "**/node_modules": true,
-    "**/bower_components": true,
-    "/vendor": true
-  },
-  "workbench.startupEditor": "newUntitledFile",
-  "workbench.fontAliasing": "auto",
-  "workbench.editor.showIcons": true,
-  "explorer.confirmDragAndDrop": false,
-  "search.smartCase": true,
-  "files.associations": {
-    "*.tmpl": "gotemplate"
-  },
-  "go.testTimeout": "3m",
-  "breadcrumbs.enabled": true,
-  "telemetry.enableTelemetry": false,
-  "terraform.telemetry.enabled": false,
-  "terraform.indexing.enabled": false,
-  "terraform.languageServer.enabled": true,
-  "telemetry.enableCrashReporter": false,
-  "go.useCodeSnippetsOnFunctionSuggest": true,
-  "go.formatTool": "goimports",
-  "search.useGlobalIgnoreFiles": true,
-  "workbench.editor.highlightModifiedTabs": true,
-  "search.showLineNumbers": true,
-  "ruby.intellisense": "rubyLocate",
-  "ruby.format": "rubocop",
-  "ruby.codeCompletion": "rcodetools",
-  "ruby.useLanguageServer": true,
-  "go.autocompleteUnimportedPackages": true,
-  "editor.fontWeight": "600",
-  "terminal.integrated.cursorBlinking": true,
-  "go.coverOnSingleTest": true,
-  "terminal.integrated.cursorStyle": "line",
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "go.useLanguageServer": false,
-  "go.alternateTools": {
-    "go-langserver": "gopls"
-  },
-  "go.languageServerExperimentalFeatures": {
-    "format": true,
-    "autoComplete": true
-  },
-  "editor.codeActionsOnSave": {
-    "source.organizeImports": true
-  },
-  "window.newWindowDimensions": "maximized",
-  "go.buildFlags": [
-    "-v"
-  ],
-  "editor.fontFamily": "Hack, 'Source Code Pro', Menlo, Monaco, 'Courier New', monospace",
-  "editor.smoothScrolling": true
+	"editor.fontSize": 15,
+	"editor.formatOnSave": true,
+	"editor.rulers": [
+		80,
+		120
+	],
+	"editor.fontLigatures": true,
+	"editor.tabSize": 4,
+	"editor.trimAutoWhitespace": true,
+	"editor.tabCompletion": "on",
+	"explorer.openEditors.visible": 0,
+	"window.restoreWindows": "none",
+	"terminal.external.osxExec": "iTerm.app",
+	"terminal.integrated.fontSize": 14,
+	"files.autoSave": "onFocusChange",
+	"extensions.autoUpdate": true,
+	"editor.cursorBlinking": "phase",
+	"window.title": "${activeEditorMedium}${separator}${rootName}",
+	"files.trimTrailingWhitespace": true,
+	"editor.minimap.enabled": false,
+	"editor.renderWhitespace": "boundary",
+	"workbench.colorTheme": "Dracula",
+	"window.zoomLevel": 0,
+	"extensions.ignoreRecommendations": false,
+	"go.coverageDecorator": {
+		"type": "gutter"
+	},
+	"search.exclude": {
+		"**/node_modules": true,
+		"**/bower_components": true,
+		"/vendor": true
+	},
+	"workbench.startupEditor": "newUntitledFile",
+	"workbench.fontAliasing": "auto",
+	"workbench.editor.showIcons": true,
+	"explorer.confirmDragAndDrop": false,
+	"search.smartCase": true,
+	"files.associations": {
+		"*.tmpl": "gotemplate"
+	},
+	"go.testTimeout": "3m",
+	"breadcrumbs.enabled": true,
+	"telemetry.enableTelemetry": false,
+	"terraform.telemetry.enabled": false,
+	"terraform.indexing": {
+		"enabled": false
+	},
+	"terraform.languageServer": {
+		"enabled": true,
+		"args": []
+	},
+	"telemetry.enableCrashReporter": false,
+	"go.useCodeSnippetsOnFunctionSuggest": true,
+	"go.formatTool": "goimports",
+	"search.useGlobalIgnoreFiles": true,
+	"workbench.editor.highlightModifiedTabs": true,
+	"search.showLineNumbers": true,
+	"ruby.intellisense": "rubyLocate",
+	"ruby.format": "rubocop",
+	"ruby.codeCompletion": "rcodetools",
+	"ruby.useLanguageServer": true,
+	"go.autocompleteUnimportedPackages": true,
+	"terminal.integrated.cursorBlinking": true,
+	"go.coverOnSingleTest": true,
+	"terminal.integrated.cursorStyle": "line",
+	"javascript.updateImportsOnFileMove.enabled": "always",
+	"go.useLanguageServer": false,
+	"go.alternateTools": {
+		"go-langserver": "gopls"
+	},
+	"go.languageServerExperimentalFeatures": {
+		"format": true,
+		"autoComplete": true
+	},
+	"window.newWindowDimensions": "maximized",
+	"go.buildFlags": [
+		"-v"
+	],
+	"editor.fontFamily": "'JetBrains Mono', Hack, 'Source Code Pro', Menlo, Monaco, 'Courier New', monospace",
+	"editor.smoothScrolling": true,
+	"files.exclude": {
+		"yarn.lock": true
+	}
 }
