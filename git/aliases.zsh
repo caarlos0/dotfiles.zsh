@@ -22,8 +22,9 @@ alias gpr='gp && git pr'
 alias glnext='git log --oneline $(git describe --tags --abbrev=0 @^)..@'
 
 if command -v svu >/dev/null 2>&1; then
-	alias gtpatch='echo `svu p`; git tag `svu p`'
-	alias gtminor='echo `svu m`; git tag `svu m`'
+	alias gtpatch="svu p; git tag `svu p`"
+	alias gtminor="svu m; git tag `svu m`"
+    alias gtn="svu n; git tag `svu n`"
 fi
 
 gi() {
