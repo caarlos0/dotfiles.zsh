@@ -24,7 +24,7 @@ alias glnext='git log --oneline $(git describe --tags --abbrev=0 @^)..@'
 if command -v svu >/dev/null 2>&1; then
 	alias gtpatch='git tag `svu p`; svu c'
 	alias gtminor='git tag `svu m`; svu c'
-    alias gtn='git tag `svu n`; svu c'
+	alias gtn='git tag `svu n`; svu c'
 fi
 
 gi() {
