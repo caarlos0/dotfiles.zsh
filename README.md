@@ -68,8 +68,8 @@ And logging out and in again/restart.
 
 ### Themes and fonts being used
 
-Theme is **[Dracula](https://draculatheme.com)** and the font is
-**Source Code Pro Light**.
+Theme is **[Dracula](https://draculatheme.com)**, font is **JetBrains Mono** on
+editors and **Hack** on terminals.
 
 ## Further help:
 

@@ -77,7 +77,7 @@
 	"go.buildFlags": [
 		"-v"
 	],
-	"editor.fontFamily": "'JetBrains Mono', Hack, 'Source Code Pro', Menlo, Monaco, 'Courier New', monospace",
+	"editor.fontFamily": "'JetBrains Mono', Hack, Menlo, Monaco, 'Courier New', monospace",
 	"editor.smoothScrolling": true,
 	"files.exclude": {
 		"yarn.lock": true
