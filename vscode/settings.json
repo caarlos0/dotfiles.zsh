@@ -42,13 +42,11 @@
 	"go.testTimeout": "3m",
 	"breadcrumbs.enabled": true,
 	"telemetry.enableTelemetry": false,
-	"terraform.telemetry.enabled": false,
-	"terraform.indexing": {
-		"enabled": false
-	},
 	"terraform.languageServer": {
-		"enabled": true,
-		"args": []
+		"external": true,
+		"args": [
+			"serve"
+		]
 	},
 	"telemetry.enableCrashReporter": false,
 	"go.useCodeSnippetsOnFunctionSuggest": true,
@@ -65,7 +63,7 @@
 	"go.coverOnSingleTest": true,
 	"terminal.integrated.cursorStyle": "line",
 	"javascript.updateImportsOnFileMove.enabled": "always",
-	"go.useLanguageServer": false,
+	"go.useLanguageServer": true,
 	"go.alternateTools": {
 		"go-langserver": "gopls"
 	},
