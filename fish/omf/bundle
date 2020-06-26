@@ -1,6 +1,8 @@
 package fzf
 package gi
 package grc
+package https://github.com/caarlos0/fish-git-fetch-merge
+package https://github.com/caarlos0/fish-git-sync
 package https://github.com/dracula/fish
 package z
 theme default
