@@ -2,6 +2,8 @@
 #
 # bootstrap installs things.
 
+set DOTFILES_ROOT (pwd -P)
+
 function info
 	echo [(set_color --bold normal) ' .. ' (set_color normal)] $argv
 end
@@ -16,6 +18,22 @@ end
 
 function user
 	echo [(set_color --bold normal) ' ?? ' (set_color normal)] $argv
+end
+
+function link_file
+	echo $argv | read -l old new
+	if test -e $new
+		set newf (readlink $new)
+		if test $newf = $old
+			success skipped $old
+			return
+		else
+			mv $new $new.backup
+			success moved $new to $new.backup
+		end
+	end
+	ln -sf $old $new
+	success linked $old to $new
 end
 
 function setup_gitconfig
@@ -50,27 +68,12 @@ function setup_gitconfig
 	success 'gitconfig'
 end
 
-function link_file
-	echo $argv | read -l old new
-	if test -e $new
-		set newf (readlink $new)
-		if test $newf = $old
-			success skipped $old
-			return
-		else
-			mv $new $new.backup
-			success moved $new to $new.backup
-		end
-	end
-	ln -sf $old $new
-	success linked $old to $new
-end
-
 function install_dotfiles
 	info 'installing dotfiles'
-	link_file ~/.dotfiles/fish/functions ~/.config/fish/functions
+	for f in $DOTFILES_ROOT/fish/conf.d/*.fish
+		link_file $f ~/.config/fish/conf.d/(basename $f)
+	end
 	link_file ~/.dotfiles/fish/omf $OMF_CONFIG
-
 end
 
 setup_gitconfig
@@ -78,6 +81,8 @@ setup_gitconfig
 info installing dependencies
 curl -L https://get.oh-my.fish | fish
 success oh-my-fish installed
+
+install_dotfiles
 
 omf install
 switch (uname)
