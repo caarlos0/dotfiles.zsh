@@ -1,2 +1,0 @@
-#compdef g
-_files -W $GOPATH/src/github.com -/

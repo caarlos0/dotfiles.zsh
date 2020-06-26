@@ -50,6 +50,29 @@ function setup_gitconfig
 	success 'gitconfig'
 end
 
+function link_file
+	echo $argv | read -l old new
+	if test -e $new
+		set newf (readlink $new)
+		if test $newf = $old
+			success skipped $old
+			return
+		else
+			mv $new $new.backup
+			success moved $new to $new.backup
+		end
+	end
+	ln -sf $old $new
+	success linked $old to $new
+end
+
+function install_dotfiles
+	info 'installing dotfiles'
+	link_file ~/.dotfiles/fish/functions ~/.config/fish/functions
+	link_file ~/.dotfiles/fish/omf $OMF_CONFIG
+
+end
+
 setup_gitconfig
 
 info installing dependencies
@@ -57,6 +80,14 @@ curl -L https://get.oh-my.fish | fish
 success oh-my-fish installed
 
 omf install
+switch (uname)
+case Darwin
+	# noop
+case '*'
+	omf install pbcopy
+end
+# https://github.com/oh-my-fish/oh-my-fish/blob/master/docs/Themes.md#pure-----
+ln -sf $OMF_PATH/themes/pure/conf.d/pure.fish ~/.config/fish/conf.d/pure.fish
 success oh-my-fish plugins installed
 
 ./bin/dot_update
