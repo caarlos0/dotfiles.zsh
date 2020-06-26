@@ -13,12 +13,18 @@ abbr --add gaa 'git add -A'
 abbr --add gcm 'git commit -s -m'
 abbr --add gcam 'git commit -s -a -m'
 abbr --add gs 'git status -sb'
-abbr --add gpr 'gp && git pr'
 abbr --add glnext 'git log --oneline $(git describe --tags --abbrev=0 @^)..@'
 
 if command -q svu
 	function gtn
 		git tag (svu n)
 		svu c
+	end
+end
+
+if command -q gh
+	function gpr
+		git push origin HEAD
+		gh pr create -w
 	end
 end
