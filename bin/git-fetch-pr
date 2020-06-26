@@ -1,3 +1,2 @@
-#!/bin/sh
-set -eo pipefail
-git fetch origin "pull/$1/head:pull-$1"
+#!/usr/bin/env fish
+gh pr checkout $argv

@@ -1,18 +1,20 @@
-#!/bin/sh
+#!/usr/bin/env fish
 #
 # dot_update
 #
 # `dot_update` handles installation, updates, things like that. Run it
 # periodically to make sure you're on the latest and greatest.
-export DOTFILES="$HOME/.dotfiles"
-cd "$DOTFILES" || exit 1
+set DOTFILES "$HOME/.dotfiles"
+cd "$DOTFILES"
+	or exit 1
 
 # fixes PATH (we could be running from the crontab)
-PATH="$(command -p getconf PATH):/usr/local/bin"
+set PATH (command -p getconf PATH) /usr/local/bin
 
 # load custom config if any
-# shellcheck disable=SC1090
-[ -f ~/.localrc ] && . ~/.localrc
+if test -f ~/.localrc.fish
+	source ~/.localrc.fish
+end
 
 # ssh would not work under cron, add a https one
 echo "› setting up update channel"
@@ -28,7 +30,7 @@ git submodule update --init --recursive --remote --merge --quiet
 
 # Run all installs
 echo "› $DOTFILES/script/install"
-"$DOTFILES/script/install"
+.$DOTFILES/script/install
 
 echo "› registering last update"
 git config --global dotfiles.lastupdate "$(date +%Y%m%d%H%M)"

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env fish
 #
 # Quick shortcut to an editor.
 #
@@ -13,4 +13,8 @@
 #   $ e .
 #   $ e /usr/local
 #   # => opens the specified directory in your editor
-exec "$VEDITOR" "${1:-.}" >/tmp/editor-log 2>&1 &
+set f $argv[1]
+if test -z $f
+	set f .
+end
+exec $VEDITOR $f >/tmp/editor-log 2>&1 &

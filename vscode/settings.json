@@ -79,5 +79,6 @@
 	"editor.smoothScrolling": true,
 	"files.exclude": {
 		"yarn.lock": true
-	}
+	},
+	"terminal.integrated.shell.osx": "/usr/local/bin/fish"
 }
