@@ -59,8 +59,7 @@ function setup_gitconfig
 	# finally make git knows this is a managed config already, preventing later
 	# overrides by this script
 	git config --global include.path ~/.gitconfig.local
-		and git config --global dotfiles.managed true
-		and success 'gitconfig'
+		and git config --global dotfiles.managed
 end
 
 function link_file
@@ -80,27 +79,28 @@ function link_file
 end
 
 function install_dotfiles
-	info 'installing '
 	link_file ~/.dotfiles/fish/omf $OMF_CONFIG
-		or abort 'failed to link file'
+		or abort 'failed link omf config'
 
 	for src in $DOTFILES_ROOT/fish/conf.d/*.fish
 		link_file $src ~/.config/fish/conf.d/(basename $src)
-			or abort 'failed to link file'
+			or abort 'failed to link fish config file'
 	end
 
 	for src in $DOTFILES_ROOT/*/*.symlink
 		link_file $src $HOME/.(basename $src .symlink)
-			or abort 'failed to link file'
+			or abort 'failed to link config file'
 	end
-
-	success 'dotfiles'
 end
 
 setup_gitconfig
-	and info installing dependencies
-	and curl -L https://get.oh-my.fish | fish
-	and success oh-my-fish installed
+	and success 'gitconfig'
+
+curl -sfL https://get.oh-my.fish | fish
+	and success 'oh-my-fish installed'
+
+install_dotfiles
+	and success 'dotfiles'
 
 switch (uname)
 case Darwin
@@ -121,13 +121,11 @@ ln -sf $OMF_PATH/themes/pure/conf.d/pure.fish ~/.config/fish/conf.d/pure.fish
 	and success 'dot_update'
 
 if ! grep (command -v fish) /etc/shells
-	info adding (command -v fish) to /etc/shells
 	command -v fish | sudo tee -a /etc/shells
-		or abort 'failed to setup shell'
+		and success 'added fish to /etc/shells'
 	echo
 end
 
-info setting fish as default shell
 chsh -s (which fish)
 	and success set (fish --version) as the default shell
 
