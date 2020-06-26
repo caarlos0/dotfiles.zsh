@@ -22,7 +22,7 @@ First, make sure you have all those things installed:
 - `git`: to clone the repo
 - `curl`: to download some stuff
 - `tar`: to extract downloaded stuff
-- `zsh`: to actually run the dotfiles
+- `fish`: to actually run the dotfiles
 - `sudo`: some configs may need that
 
 ### Install
@@ -32,8 +32,8 @@ Then, run these steps:
 ```console
 $ git clone https://github.com/caarlos0/dotfiles.git ~/.dotfiles
 $ cd ~/.dotfiles
-$ ./script/bootstrap
-$ zsh # or just close and open your terminal again.
+$ fish ./script/bootstrap.fish
+$ fish # or just close and open your terminal again.
 ```
 
 > All changed files will be backed up with a `.backup` suffix.
@@ -53,6 +53,7 @@ fuzzy finder, used in `,t` on vim, for example;
 - [`kubectx`](https://github.com/ahmetb/kubectx) for better kubernetes context
   and namespace switch;
 - [`grc`]() to colorize more commands;
+- [gh]() for github integration in the terminal;
 
 ### macOS defaults
 
