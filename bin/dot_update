@@ -29,8 +29,8 @@ echo "› submodules update"
 git submodule update --init --recursive --remote --merge --quiet
 
 # Run all installs
-echo "› $DOTFILES/script/install"
-.$DOTFILES/script/install
+echo "› $DOTFILES/script/install.fish"
+$DOTFILES/script/install.fish
 
 echo "› registering last update"
 git config --global dotfiles.lastupdate "$(date +%Y%m%d%H%M)"
