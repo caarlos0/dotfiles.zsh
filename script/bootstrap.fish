@@ -41,7 +41,7 @@ function setup_gitconfig
 
 		git config --global user.name $user_name
 			and git config --global user.email $user_email
-	else test (git config --global --get dotfiles.managed) = "true"
+	else if test (git config --global --get dotfiles.managed) = "true"
 		# if user.email exists, let's check for dotfiles.managed config. If it is
 		# not true, we'll backup the gitconfig file and set previous user.email and
 		# user.name in the new one
@@ -127,6 +127,7 @@ if ! grep (command -v fish) /etc/shells
 	echo
 end
 
+info setting fish as default shell
 chsh -s (which fish)
 	and success set (fish --version) as the default shell
 
