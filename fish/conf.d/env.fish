@@ -1,11 +1,12 @@
 set PURE_PROMPT_SYMBOL λ
 
+set DOTFILES ~/.dotfiles
 set PROJECTS ~/Code
-set GOPATH "$PROJECTS/Go"
-set PATH "$PATH:$GOPATH/bin"
+set GOPATH $PROJECTS/Go
+set PATH $PATH $GOPATH/bin
 
 set MAVEN_OPTS -Xmx1024m
 
-set PATH "$HOME/.krew/bin:$PATH"
+set PATH $HOME/.krew/bin $PATH
 
-set PATH "$PATH:$DOTFILES/bin:$HOME/.bin"
+set PATH $PATH $DOTFILES/bin $HOME/.bin
