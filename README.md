@@ -55,6 +55,7 @@ better git difs (you'll need to run `dot_update` to apply it);
 fuzzy finder, used in `,t` on vim, for example;
 - [`kubectx`](https://github.com/ahmetb/kubectx) for better kubernetes context
   and namespace switch;
+- [`grc`]() to colorize more commands;
 
 ### macOS defaults
 
