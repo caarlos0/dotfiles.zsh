@@ -8,16 +8,59 @@ function info
 	echo [(set_color --bold normal) ' .. ' (set_color normal)] $argv
 end
 
+function user
+	echo [(set_color --bold normal) ' ?? ' (set_color normal)] $argv
+end
+
 function success
 	echo [(set_color --bold green) ' OK ' (set_color normal)] $argv
 end
 
-function fail
-	echo [(set_color --bold red) FAIL (set_color normal)] $argv
+function abort
+	echo [(set_color --bold yellow) ABRT (set_color normal)] $argv
 end
 
-function user
-	echo [(set_color --bold normal) ' ?? ' (set_color normal)] $argv
+function on_exit -p %self
+	if not contains $argv[3] 0
+		echo [(set_color --bold red) FAIL (set_color normal)] "Couldn't setup dotfiles, please open an issue at https://github.com/caarlos0/dotfiles"
+	end
+end
+
+function setup_gitconfig
+	# if there is no user.email, we'll assume it's a new machine/setup and ask it
+	if test -z (git config --global --get user.email)
+		user 'What is your github author name?'
+		read user_name
+		user 'What is your github author email?'
+		read user_email
+
+		test -n $user_name
+			or echo "please inform the git author name"
+		test -n $user_email
+			or abort "please inform the git author email"
+
+		git config --global user.name $user_name
+			and git config --global user.email $user_email
+	else test (git config --global --get dotfiles.managed) = "true"
+		# if user.email exists, let's check for dotfiles.managed config. If it is
+		# not true, we'll backup the gitconfig file and set previous user.email and
+		# user.name in the new one
+		set user_name (git config --global --get user.name)
+			and set user_email (git config --global --get user.email)
+			and mv ~/.gitconfig ~/.gitconfig.backup
+			and git config --global user.name $user_name
+			and git config --global user.email $user_email
+			and success "moved ~/.gitconfig to ~/.gitconfig.backup"
+	else
+		# otherwise this gitconfig was already made by the dotfiles
+		info "already managed by dotfiles"
+	end
+	# include the gitconfig.local file
+	# finally make git knows this is a managed config already, preventing later
+	# overrides by this script
+	git config --global include.path ~/.gitconfig.local
+		and git config --global dotfiles.managed true
+		and success 'gitconfig'
 end
 
 function link_file
@@ -29,81 +72,63 @@ function link_file
 			return
 		else
 			mv $new $new.backup
-			success moved $new to $new.backup
+				and success moved $new to $new.backup
 		end
 	end
 	ln -sf $old $new
-	success linked $old to $new
-end
-
-function setup_gitconfig
-	# if there is no user.email, we'll assume it's a new machine/setup and ask it
-	if test -z (git config --global --get user.email)
-		user 'What is your github author name?'
-		read user_name
-		user 'What is your github author email?'
-		read user_email
-
-		git config --global user.name $user_name
-		git config --global user.email $user_email
-	else test (git config --global --get dotfiles.managed) = "true"
-		# if user.email exists, let's check for dotfiles.managed config. If it is
-		# not true, we'll backup the gitconfig file and set previous user.email and
-		# user.name in the new one
-		set user_name (git config --global --get user.name)
-		set user_email (git config --global --get user.email)
-		mv ~/.gitconfig ~/.gitconfig.backup
-		success "moved ~/.gitconfig to ~/.gitconfig.backup"
-		git config --global user.name $user_name
-		git config --global user.email $user_email
-	else
-		# otherwise this gitconfig was already made by the dotfiles
-		info "already managed by dotfiles"
-	end
-	# include the gitconfig.local file
-	git config --global include.path ~/.gitconfig.local
-	# finally make git knows this is a managed config already, preventing later
-	# overrides by this script
-	git config --global dotfiles.managed true
-	success 'gitconfig'
+		and success linked $old to $new
 end
 
 function install_dotfiles
-	info 'installing dotfiles'
-	for f in $DOTFILES_ROOT/fish/conf.d/*.fish
-		link_file $f ~/.config/fish/conf.d/(basename $f)
-	end
+	info 'installing '
 	link_file ~/.dotfiles/fish/omf $OMF_CONFIG
+		or abort 'failed to link file'
+
+	for src in $DOTFILES_ROOT/fish/conf.d/*.fish
+		link_file $src ~/.config/fish/conf.d/(basename $src)
+			or abort 'failed to link file'
+	end
+
+	for src in $DOTFILES_ROOT/*/*.symlink
+		link_file $src $HOME/.(basename $src .symlink)
+			or abort 'failed to link file'
+	end
+
+	success 'dotfiles'
 end
 
 setup_gitconfig
+	and info installing dependencies
+	and curl -L https://get.oh-my.fish | fish
+	and success oh-my-fish installed
 
-info installing dependencies
-curl -L https://get.oh-my.fish | fish
-success oh-my-fish installed
-
-install_dotfiles
-
-omf install
 switch (uname)
 case Darwin
 	# noop
 case '*'
 	omf install pbcopy
+		and success 'pbcopy'
 end
+
+omf install
+	and success 'plugins'
+
 # https://github.com/oh-my-fish/oh-my-fish/blob/master/docs/Themes.md#pure-----
 ln -sf $OMF_PATH/themes/pure/conf.d/pure.fish ~/.config/fish/conf.d/pure.fish
-success oh-my-fish plugins installed
+	and success 'theme'
 
 ./bin/dot_update
-success installed config files
+	and success 'dot_update'
 
 if ! grep (command -v fish) /etc/shells
 	info adding (command -v fish) to /etc/shells
 	command -v fish | sudo tee -a /etc/shells
+		or abort 'failed to setup shell'
 	echo
 end
-chsh -s (which fish)
-success set (fish --version) as the default shell
 
-echo 'done!'
+chsh -s (which fish)
+	and success set (fish --version) as the default shell
+
+echo ''
+echo '  All installed!'
