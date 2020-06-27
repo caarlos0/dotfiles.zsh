@@ -1,0 +1,2 @@
+#!/usr/bin/env fish
+gh pr create -w

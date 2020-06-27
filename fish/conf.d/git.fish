@@ -25,6 +25,6 @@ end
 if command -q gh
 	function gpr
 		git push origin HEAD
-		gh pr create -w
+		git pr
 	end
 end

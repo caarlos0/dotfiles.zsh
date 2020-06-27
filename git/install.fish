@@ -1,19 +1,20 @@
-#!/bin/sh
+#!/usr/bin/env fish
 
 # Don't ask ssh password all the time
-if [ "$(uname -s)" = "Darwin" ]; then
+switch (uname)
+case Darwin
 	git config --global credential.helper osxkeychain
-else
+case '*'
 	git config --global credential.helper cache
-fi
+end
 
 # better diffs
-if command -v diff-so-fancy >/dev/null 2>&1; then
+if command -q diff-so-fancy
 	git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
-fi
+end
 
 # use vscode as mergetool
-if command -v code >/dev/null 2>&1; then
+if command -q code
 	git config --global merge.tool vscode
-	git config --global mergetool.vscode.cmd "code --wait $MERGED"
-fi
+		and git config --global mergetool.vscode.cmd "code --wait $MERGED"
+end

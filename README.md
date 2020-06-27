@@ -24,16 +24,17 @@ First, make sure you have all those things installed:
 - `tar`: to extract downloaded stuff
 - `fish`: to actually run the dotfiles
 - `sudo`: some configs may need that
+- `oh-my-fish`: is what we use to manage plugins and etc
 
 ### Install
 
 Then, run these steps:
 
 ```console
+$ curl -sfL https://get.oh-my.fish | fish
 $ git clone https://github.com/caarlos0/dotfiles.git ~/.dotfiles
 $ cd ~/.dotfiles
-$ fish ./script/bootstrap.fish
-$ fish # or just close and open your terminal again.
+$ ./script/bootstrap.fish
 ```
 
 > All changed files will be backed up with a `.backup` suffix.
@@ -53,7 +54,7 @@ fuzzy finder, used in `,t` on vim, for example;
 - [`kubectx`](https://github.com/ahmetb/kubectx) for better kubernetes context
   and namespace switch;
 - [`grc`]() to colorize more commands;
-- [gh]() for github integration in the terminal;
+- [`gh`]() for github integration in the terminal;
 
 ### macOS defaults
 

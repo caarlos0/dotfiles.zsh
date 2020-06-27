@@ -19,5 +19,6 @@ mkdir -p $vscode_home
 
 cat $DOTFILES/vscode/extensions.txt | while read module
 	code --install-extension "$module"
+		and echo "vscode: $module"
 		or echo "vscode: failed to install $module"
 end
