@@ -2,4 +2,14 @@ function c
 	cd $PROJECTS/$argv
 end
 
-complete --command c --no-files --arguments='(find $PROJECTS -mindepth 1 -maxdepth 1 -exec basename "{}" \;)'
+function __c_complete
+	set arg (commandline -ct)
+	set saved_pwd $PWD
+
+	builtin cd $PROJECTS
+		and complete -C "cd $arg"
+
+	builtin cd $saved_pwd
+end
+
+complete --command c --arguments '(__c_complete)'
