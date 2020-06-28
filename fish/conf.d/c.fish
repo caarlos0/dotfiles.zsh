@@ -1,4 +1,4 @@
-function c
+function c -d "quick cd into $PROJECTS"
 	cd $PROJECTS/$argv
 end
 

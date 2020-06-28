@@ -1,4 +1,4 @@
-function h
+function h -d "quick cd into $HOME"
 	cd $HOME/$argv
 end
 

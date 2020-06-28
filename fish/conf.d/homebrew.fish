@@ -1,6 +1,6 @@
 if command -q brew
-	function brew
-		switch "$1"
+	function brew -w brew
+		switch $argv[1]
 		case cleanup
 			brew-cleanup
 		case bump

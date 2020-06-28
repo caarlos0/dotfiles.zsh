@@ -16,14 +16,14 @@ abbr --add gs 'git status -sb'
 abbr --add glnext 'git log --oneline $(git describe --tags --abbrev=0 @^)..@'
 
 if command -q svu
-	function gtn
+	function gtn -d "create the next semantic tag and push"
 		git tag (svu n)
 		svu c
 	end
 end
 
 if command -q gh
-	function gpr
+	function gpr -d "git push and fill the pull request on the browser"
 		git push origin HEAD
 		git pr
 	end
