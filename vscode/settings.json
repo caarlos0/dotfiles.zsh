@@ -67,10 +67,6 @@
 	"go.alternateTools": {
 		"go-langserver": "gopls"
 	},
-	"go.languageServerExperimentalFeatures": {
-		"format": true,
-		"autoComplete": true
-	},
 	"window.newWindowDimensions": "maximized",
 	"go.buildFlags": [
 		"-v"
