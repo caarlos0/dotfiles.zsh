@@ -3,13 +3,13 @@ dawhite.mustache
 dracula-theme.theme-dracula
 eamodio.gitlens
 EditorConfig.EditorConfig
+golang.go
+hashicorp.terraform
 heptio.jsonnet
 HookyQR.beautify
 logerfo.procfile-support
-mauve.terraform
 ms-azuretools.vscode-docker
 ms-python.python
-ms-vscode.Go
 patbenatar.advanced-new-file
 pnp.polacode
 quicktype.quicktype
@@ -17,4 +17,5 @@ rebornix.ruby
 rust-lang.rust
 shanoor.vscode-nginx
 timonwong.shellcheck
+wingrunr21.vscode-ruby
 wmaurer.change-case
