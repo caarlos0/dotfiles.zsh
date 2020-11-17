@@ -1,3 +1,8 @@
+> **Important**: I'm now using the Fish shell, so I have a new repository for my fish dotfiles.
+> This repo will be eventually be replaced by it.
+>
+> Check it out [here](https://github.com/caarlos0/dotfiles.fish).
+
 # carlos' dotfiles
 
 [![Build Status][tb]][tp]
